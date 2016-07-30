@@ -1,0 +1,788 @@
+@charset "utf-8";
+/*
+	WebSite: www.bearzdesignconcepts.net
+	CSS Document: banner_Logo.css
+	Supports: all .html pages,
+	Color pallette  Gold: rgba(170,127,85,1)  	Deep Red: rgba(70,0,0,1) 		   Light Sky Blue: rgba(135,206,250,1)
+	rgba values		Deep Blue: rgba(0,0,60,1)  	Dark Slate Grey: rgba(51,51,102,1)  Khaki:	rgba(240,230,140,1)
+	here you will find all banner rules 
+*/
+
+/**************************** PAGE BANNER RULES ###line 103 starts HTML Zone### ***************************
+		 *******************************************
+			 Page Banner\Header Special Effects  
+		 *******************************************/
+.myHeader
+{
+	background-image:url(../images/headerImage.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100% 100%;
+	height:9.5rem;
+	padding:0;
+	text-align:center;
+}
+.myHeader2
+{
+	background-image:url(../images/headerImage.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100% 100%;
+	height:11.5rem;
+	padding:0;
+	text-align:center;
+}
+.splashHeader
+{
+	height:12.75rem;
+	width:100%;
+	margin:0 auto 1.5rem;
+	padding:0;
+	text-align:center;
+/*	border:1px solid green;    ********************************/
+}
+.siteName, .myCodingZoneSiteName
+{
+    font-family: 'courier_primeregular';
+	height:9.5rem;
+	width:75%;
+	margin:0 auto;
+	position:relative;
+	top:.5rem;
+	z-index:2;
+	color:rgba(180,140,80,1);
+	text-transform:uppercase;
+	text-shadow:0px 0px 8px rgba(30,0,0,1);
+}
+/*.backName, .myCodingZoneBackName
+{
+	font-family: 'courier_primeregular';
+	height:9.5rem;
+	width:75%;
+	margin:0 auto;
+	position:relative;
+	top:-9.15rem;
+	z-index:1;
+	color:rgba(60,0,0,.8);
+	text-transform:uppercase;
+	transform:scale(1.0675);
+	text-shadow: -2px 2px 15px rgba(217,0,0,1);
+	background-image: -moz-radial-gradient(50% 50%, ellipse cover, rgba(25,25,110,.5), rgba(135,206,250,0) 75%);
+	background-image: -webkit-radial-gradient(50% 50%, ellipse cover, rgba(25,25,110,.5), rgba(135,206,250,0) 75%);
+	background-image: -o-radial-gradient(50% 50%, ellipse cover, rgba(25,25,110,.5), rgba(135,206,250,0) 75%);
+	background-image: -ms-radial-gradient(50% 50%, ellipse cover, rgba(25,25,110,.5), rgba(135,206,250,0) 75%);
+	background-image: radial-gradient(50% 50%, ellipse cover, rgba(25,25,110,.5), rgba(135,206,250,0) 75%);
+}
+.myCodingZoneBackName
+{
+	transform:scale(1.0525);
+}*/
+.headerBackgroundDim
+{
+	text-align:center;
+	background: rgba(135,206,250,.5); /* Old browsers rgba(255,255,175,.8),rgba(25,25,50,.8) */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,175,.3) 15%, rgba(25,25,100,.2) 75%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(15%,rgba(255,255,175,.3)), color-stop(75%,rgba(25,25,100,.2))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,175,.3) 15%,rgba(25,25,100,.2) 75%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,175,.3) 15%,rgba(25,25,100,.2) 75%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,175,.3) 15%,rgba(25,25,100,.2) 75%); /* IE10+ */
+	background: radial-gradient(ellipse at center, rgba(255,255,175,.3) 15%,rgba(25,25,100,.2) 75%); /* W3C */
+}
+/*+++++++++++ fades in the header text +++++++++++++++++*/
+.siteNameFadeIn 
+{ 
+	-webkit-animation-delay:1.5s;
+	-moz-animation-delay:1.5s;
+	animation-delay:1.5s;
+    -webkit-animation-name: siteNameFadeIn; 
+	-moz-animation-name: siteNameFadeIn;
+    animation-name: siteNameFadeIn;
+	-webkit-animation-duration: 1.25s; 
+	-moz-animation-duration: 1.25s;
+    animation-duration: 1.25s; 
+    -webkit-animation-fill-mode: both; 
+	-moz-animation-fill-mode: both;
+    animation-fill-mode: both; 
+    -webkit-animation-timing-function: ease-in-out;
+	-moz-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; 
+}
+.siteNameFadeInSplash
+{ 
+	-webkit-animation-delay:1.25s;
+	-moz-animation-delay:1.25s;
+	animation-delay:1.25s;
+    -webkit-animation-name: siteNameFadeIn; 
+	-moz-animation-name: siteNameFadeIn;
+    animation-name: siteNameFadeIn;
+	-webkit-animation-duration:.5s; 
+	-moz-animation-duration:.5s;
+    animation-duration:.5s; 
+    -webkit-animation-fill-mode: both; 
+	-moz-animation-fill-mode: both;
+    animation-fill-mode: both; 
+    -webkit-animation-timing-function: ease-in-out;
+	-moz-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; 
+}
+@-webkit-keyframes siteNameFadeIn 
+{ 
+    0% {opacity: 0; transform:scale(.1);} 
+    100% {opacity: 1; transform:scale(1);} 
+} 
+@-moz-keyframes siteNameFadeIn 
+{ 
+    0% {opacity: 0; transform:scale(.1);} 
+    100% {opacity: 1; transform:scale(1);} 
+}
+@keyframes siteNameFadeIn 
+{ 
+    0% {opacity: 0; transform:scale(.1);} 
+    100% {opacity: 1; transform:scale(1);} 
+}
+.HTMLZoneHeader,.CSSZoneHeader,.BearZCodingZoneHeader
+{
+    font-family: 'courier_primeregular';
+	height:9rem;
+	width:75%;
+	margin:0 auto;
+	position:relative;
+	top:.5rem;
+	z-index:2;
+	color:rgba(180,140,80,1);
+	text-transform:uppercase;
+	text-shadow:0px 0px 8px rgba(30,0,0,1);
+}
+/******** The HTML Zone *********/
+.htmlHeader-The, .htmlHeader-HTML, .htmlHeader-Zone, .bearzHeader-Zone
+{
+	font-family:'courier_primeregular';
+	height:3.2rem;
+}
+.htmlHeader-Zone
+{
+	margin-top:1rem;
+}
+/**************************** The HTML Zone Header  ***************************/
+.htmlHeader-T
+{
+	display:inline-block;
+	transform:scale(3,4) skewX(-20deg);
+	position:relative;
+	top:1.5rem;
+	left:-5.85rem;
+	font-weight:700;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1.25px 1.25px 2px rgba(245,245,0,1);
+}
+.htmlHeaderT-he
+{
+	display:inline-block;
+	transform:scale(2.25) skew(10deg);
+	position:relative;
+	font-weight:700;
+	z-index:98;
+	top:-.2rem;
+	left:-.85rem;
+	padding:0 0 0 .5rem;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1.5px 1.5px 2px rgba(245,245,0,1);
+}
+.borderT-he
+{
+	display:inline-block;
+	position:relative;
+	transform:skewX(-20deg);
+	z-index:98;
+	top:1.525rem;
+	left:-5.65rem;
+	border-bottom:4px solid rgba(180,140,80,1);
+	padding:0 0 0 .75rem;
+	width:2.25rem;
+	box-shadow: 0px 2px 0px rgba(25,25,110,1);
+}
+.htmlHeader-H
+{
+	display:inline-block;
+	position:relative;
+	transform:scale(4,5.15) skewX(-20deg);
+	font-weight:700;
+	top:.05rem;
+	left:-.65rem;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1.15px 1.15px 3px rgba(245,245,0,.8);
+}
+.htmlHeaderH-tml
+{
+	display:inline-block;
+	transform:scale(2.25,3.25);
+	font-weight:700;
+	position:relative;
+	z-index:96;
+	top:-.65rem;
+	left:-.15rem;
+	padding:0;
+	letter-spacing:.1rem;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1.5px 1.5px 2px rgba(245,245,0,1);
+}
+.borderH-tml
+{
+	display:inline-block;
+	position:relative;
+	transform:skewX(-20deg);
+	z-index:100;
+	top:.4rem;
+	left:-.1rem;
+	border-bottom:.375rem solid rgba(180,140,80,1);
+	padding:0 0 0 .35rem;
+	width:4.5rem;
+	box-shadow: 0px 4px 0px rgba(25,25,110,1);
+}
+.htmlHeader-Z, .bearzHeaderZone-Z
+{
+	display:inline-block;
+    font-family: 'savatageregular';
+	position:relative;
+	font-weight:700;
+	transform:scale(3.5,2.5) skew(-15deg);
+	z-index:99;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1.5px 1.5px 2px rgba(245,245,0,.8);
+}
+.htmlHeader-Z
+{
+	top:-1.5rem;
+	left:6.5rem;
+}
+.bearzHeaderZone-Z
+{
+	top:.5rem;
+	left:5.5rem;
+}
+.htmlHeaderZ-one
+{
+	display:inline-block;
+	transform:scale(2,3.15) skewX(-72deg) rotate(-7deg);
+	position:relative;
+	font-weight:700;
+	z-index:98;
+	top:-1rem;
+	left:2.4rem;
+	padding:0;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1.5px 1.5px 2px rgba(245,245,0,1);
+}
+.htmlHeaderZ-oneSava, .bearzHeaderZ-oneSava
+{
+	display:inline-block;
+    font-family: 'savatageregular';
+	letter-spacing:.125rem;
+	transform:scale(1.05,2.25) skewX(-78deg) rotate(-7deg);
+	position:relative;
+	font-weight:700;
+	z-index:98;
+	top:-1rem;
+	left:2.4rem;
+	padding:0;
+	text-shadow: 2px 2px 0px rgba(25,25,110,1), 2.75px 2.75px 2px rgba(245,245,0,1);
+}
+.bearzHeaderZ-oneSava
+{
+	top:-.75rem;
+	left:1.65rem;
+}
+.borderZ-one, .bearzBorderZ-one
+{
+	display:inline-block;
+	position:relative;
+	transform:skewX(70deg) rotate(8deg);
+	z-index:99;
+	top:-1rem;
+	left:6.2rem;
+	border-bottom:.45rem solid rgba(180,140,80,1);
+	padding:0 0 0 .5rem;
+	width:5.5rem;
+	border-radius:0 0 2rem 0;	
+	box-shadow: 0px 4px 0px rgba(25,25,110,1);
+}
+.bearzBorderZ-one
+{
+	top:.75rem;
+	left:5.6rem;
+}
+	/***********************************************
+		###END###  The HTML Zone Header Text
+
+		###START###  Bearz CSS Zone Header Text
+	 ***********************************************/
+.CSSZoneHeader-BearZ
+{
+	position:relative;
+	z-index:2;
+	padding:0;
+	transform:skewX(-15deg) rotate(-10deg);
+	text-align:center;
+	height:3rem;
+	margin:0 auto;
+	width:12rem;
+	height:3.2rem;
+	top:.05rem;
+	left:-1rem;
+}
+.CSSZoneHeaderBearZ-B
+{
+	font-family:'savatageregular';
+	display:inline-block;
+	position:relative;
+	z-index:99;
+	padding:0;
+	top:2rem;
+	left:-3rem;
+	text-transform:uppercase;
+	transform: skewX(-15deg) scale(2.5,2.75) rotate(-5deg);
+	text-shadow: 2px 2px 0px rgba(25,25,110,1), 2px 2px 3px rgba(245,245,0,1);
+}
+.CSSZoneHeaderBearZ-ear
+{
+	display:inline-block;
+	font-family:'savatageregular';
+	font-variant:small-caps;
+	width:5rem;
+	transform:scale(1.4,1.35) rotate(-10deg) skewX(-15deg);
+	position:relative;
+	z-index:100;
+	top:1.75rem;
+	left:-3.15rem;
+	text-shadow: 2px 2px 0px rgba(25,25,110,1), 2px 2px 3px rgba(245,245,0,1);
+}
+.CSSZoneHeaderBearZ-Z
+{
+	display:inline-block;
+	font-family:'savatageregular'; 
+	width:1rem;
+	transform:scale(2.25,2.5) skewX(-20deg) rotate(-5deg);
+	text-transform:uppercase;
+	position:relative;
+	z-index:98;
+	top:1.65rem;
+	left:-3.5rem;
+	padding:0;
+	text-shadow: 2px 2px 0px rgba(25,25,110,1), 2px 2px 3px rgba(245,245,0,1);
+}
+.CSSZoneHeader-CSS
+{
+	position:relative;
+	z-index:2;
+	padding:0;
+	transform:skewX(-15deg) rotate(2deg);
+	text-align:center;
+	height:3rem;
+	margin:0 auto;
+	width:12rem;
+	height:3.2rem;
+	top:.05rem;
+	left:2rem;
+}
+.CSSZoneHeaderCSS-C
+{
+	display:inline-block;
+	font-family:'savatageregular';
+	position:relative;
+	transform:scale(2.5,2.75) skewX(5deg);
+	font-weight:700;
+	top:-1.25rem;
+	left:.5rem;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1.25px 1.25px 1px rgba(245,245,0,.8);
+}
+.CSSZoneHeaderCSS-SS
+{
+	display:inline-block;
+	font-family:'savatageregular';
+	transform:scale(2.15,2.15) skewX(10deg) rotate(-5deg);
+	font-weight:700;
+	position:relative;
+	z-index:96;
+	top:-2rem;
+	left:2.65rem;
+	padding:0;
+	letter-spacing:.05rem;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1.5px 1.5px 2px rgba(245,245,0,1);
+}
+.borderC-SS
+{
+	display:inline-block;
+	position:relative;
+	transform:skewY(-1.5deg);
+	z-index:97;
+	top:-.75rem;
+	left:2.25rem;
+	border-bottom:.375rem solid rgba(180,140,80,1);
+	border-radius:0 0 0 2rem;
+	padding:0 0 0 .35rem;
+	width:5rem;
+	height:.5rem;
+	box-shadow: 4px 4px 0px rgba(25,25,110,1), 3px 3px 1px rgba(245,245,0,1);
+}
+.CSSZoneHeader-Zone
+{
+	position:relative;
+	top:1rem;
+	left:-6.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+	/***********************************************
+		###END###  Bearz CSS Zone Header Text
+	 ***********************************************/
+@media only screen and (min-width : 900px)  and (max-width : 1065px) {
+}
+@media only screen and (min-width : 770px) and (max-width : 900px) {
+}
+@media only screen and (max-width : 700px) {
+}
+/******** BearZ Coding Zone *********/
+.bearzHeader, .bearzHeader-Coding, .bearzHeader-Zone
+{
+	position:relative;
+	z-index:99;
+	top:.15rem;
+	padding:0;
+	transform:skewX(-15deg);
+	text-align:center;
+	height:3rem;
+	margin:0 auto;
+	width:100%;
+	height:3.2rem;
+}
+.bearzHeader-Zone2
+{
+	position:relative;
+	z-index:99;
+	transform:skewX(15deg);
+	top:3rem;
+	left:-4.25rem;
+	padding:0;
+	text-align:center;
+	margin:0 auto;
+	width:100%;
+	height:3.2rem;
+/*	border:1px solid rgba(0,125,255,1);    ********************************/
+}
+/*****************  Splash page header  ***************************/
+.bearzHeader-B
+{
+	font-family:'savatageregular';
+	display:inline-block;
+	position:relative;
+	z-index:99;
+	padding:0;
+	top:3rem;
+	left:-2rem;
+	text-transform:uppercase;
+	transform: skewX(-15deg) scale(2.8,3) rotate(-10deg);
+	text-shadow: 2px 2px 0px rgba(25,25,110,1), 2px 2px 3px rgba(245,245,0,1);
+/*	border:1px solid rgba(125,0,255,1);    ********************************/
+}
+.bearzHeaderB-ear
+{
+	display:inline-block;
+	font-family:'savatageregular';
+	font-variant:small-caps;
+	width:5rem;
+	transform:scale(1.4,1.35) rotate(-15deg);
+	position:relative;
+	z-index:99;
+	top:2.55rem;
+	left:-2.05rem;
+	text-shadow: 2px 2px 0px rgba(25,25,110,1), 2px 2px 3px rgba(245,245,0,1);
+/*	border:1px solid rgba(250,125,250,1);    ********************************/
+}
+.bearzHeader-Z
+{
+	display:inline-block;
+	font-family:'savatageregular'; 
+	width:1rem;
+	transform:scale(2.5,2.95) skewX(-15deg) rotate(-10deg);
+	text-transform:uppercase;
+	position:relative;
+	z-index:98;
+	top:2rem;
+	left:-2.5rem;
+	padding:0;
+	text-shadow: 2px 2px 0px rgba(25,25,110,1), 2px 2px 3px rgba(245,245,0,1);
+/*	border:1px solid rgba(0,125,0,1);    ********************************/
+}
+.dropC
+{
+	display:inline-block;
+	transform:scale(4,5.5) skewX(-12deg);
+	text-transform:uppercase;
+	font-weight:700;
+	position:relative;
+	z-index:97;
+	top:2.25rem;
+	left:-1.4rem;
+	padding:0;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1px 1px 3px rgba(245,245,0,1);
+/*	border:1px solid rgba(190,190,190,1);    ********************************/
+}
+/***********************************************************
+		splash.html page second Header
+ ***********************************************************/
+
+/***********************************************************
+		theCodingZone.html and siteMap.html page Header
+ ***********************************************************/
+.headerC
+{
+	display:inline-block;
+	transform:scale(4,6) skewX(-12deg);
+	text-transform:uppercase;
+	font-weight:700;
+	position:relative;
+	z-index:97;
+	top:3rem;
+	left:-1rem;
+	padding:0;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1px 1px 3px rgba(245,245,0,1);
+/*	border:1px solid rgba(190,190,190,1);    ********************************/
+}
+.C-ODING
+{
+	display:inline-block;
+	transform: scale(1.8,2.15) skewX(15deg);
+	text-transform:uppercase;
+	font-weight:700;
+	position:relative;
+	z-index:98;
+	top:-1.65rem;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1px 1px 3px rgba(245,245,0,1);
+}
+.codingBorder
+{
+	display:inline-block;
+	position:relative;
+	z-index:98;
+	top:4.5rem;
+	left:-.9rem;
+	width:5.9rem;
+	border-top:.35rem solid rgba(190,150,80,1);
+	border-radius:.5rem 0 0 0;
+	padding-left:.25rem;
+}
+.headerZ
+{
+	display:inline-block;
+	transform:scale(4,6) skewX(-12deg);
+	text-transform:uppercase;
+	font-weight:700;
+	position:relative;
+	z-index:97;
+	top:1.25rem;
+	left:4.5rem;
+	padding:0;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1px 1px 3px rgba(245,245,0,1);
+/*	border:1px solid red;   ********************************/
+}
+.Z-ONE
+{
+	display:inline-block;
+	transform: scale(1.8,2.15) skewX(15deg);
+	text-transform:uppercase;
+	font-weight:700;
+	position:relative;
+	z-index:98;
+	top:-1.65rem;
+	text-shadow: 1px 1px 0px rgba(25,25,110,1), 1px 1px 3px rgba(245,245,0,1);
+/*	border:1px solid red;    ********************************/
+}
+.zoneBorder
+{
+	display:inline-block;
+	position:relative;
+	top:-.25rem;
+	z-index:98;
+	top:2rem;
+	left:4.8rem;
+	width:3.95rem;
+	border-top:.45rem solid rgba(190,150,80,1);
+	border-radius:.25em 0 0 0;
+	padding-left:.25rem;
+}
+.Back
+{	border-bottom:none !important;}
+	/****************************************************
+		###END### Bearz Coding Zone Header Text
+	*****************************************************/
+	/****************************************************
+		###START### Splash Page BearZ Coding Zone
+	*****************************************************/
+
+	/****************************************************
+		###END### Splash Page BearZ Coding Zone
+	*****************************************************/
+	/****************************************************
+		###START### Phone Header Text
+	*****************************************************/
+.phoneHeader,.phoneHeaderLower
+{
+	margin:1rem auto;
+	height:8rem;
+}
+.phoneHeader p:first-child, .phoneHeaderLower p:first-child
+{
+	width:5rem;
+	margin:0 auto;
+	-webkit-transform:rotate(-15deg) skewX(-15deg) scale(1.25,1.05);
+	transform:rotate(-15deg) skewX(-15deg) scale(1.25,1.05);
+}
+.phoneHeader p:first-child
+{
+	position:relative;
+	top:1.5rem;
+	left:-3rem;
+}
+.phoneHeaderLower p:first-child
+{
+	position:relative;
+	top:1.25rem;
+	left:-3rem;
+}
+.phoneHeader p:nth-child(2), .phoneHeaderLower p:nth-child(2)
+{
+	width:7rem;
+	margin:0 auto;
+}
+.phoneHeader p:nth-child(2)
+{
+	position:relative;
+	top:2.4rem;
+	left:-1rem;
+}
+.phoneHeaderLower p:nth-child(2)
+{
+	position:relative;
+	top:2.25rem;
+	left:-1rem;
+}
+.phoneHeader p:last-child, .phoneHeaderLower p:last-child
+{
+	width:5rem;
+	margin:0 auto;
+	-webkit-transform:scale(1.5,1.1);
+	transform:scale(1.5,1.1);
+}
+.phoneHeader p:last-child
+{
+	position:relative;
+	top:2.65rem;
+	left:2rem;
+}
+.phoneHeaderLower p:last-child
+{
+	position:relative;
+	top:2.65rem;
+	left:2rem;
+}
+.phoneHeader p span.bearzLogoPlainText, .phoneHeaderLower p span.bearzLogoPlainText
+{
+	text-transform:uppercase;
+	font-weight:700;
+	color:rgba(160,127,80,1) !important;
+	position:relative;
+	top:-7px;
+	text-shadow:2px 2px 1px rgba(200,200,50,.5);
+}
+.phoneHeader p span.bearzLogoBody, .phoneHeaderLower p span.bearzLogoBody,
+.phoneHeader p span.bearzCap, .phoneHeaderLower p span.bearzCap,
+.phoneHeader p span.bearzCapZ, .phoneHeaderLower p span.bearzCapZ,
+.phoneHeader p span.bearzCap2, .phoneHeaderLower p span.bearzCap2,
+.phoneHeader p span.bearzCap2Z, .phoneHeaderLower p span.bearzCap2Z
+{
+	color:rgba(160,127,80,1) !important;
+	text-shadow:2px 2px 1px rgba(200,200,50,.5);
+}
+	/******************************************
+		###END### Phone Header Text
+		###START### Bearz Logo used in Body text
+	*******************************************/
+.BCZBodyText,.BCZBodyText span
+{	display:inline-block;
+	position:relative;
+	text-shadow:1px 1px 0 rgba(225,200,100,1), 2.5px 2.5px 2px rgba(100,20,20,1);
+}
+.BCZBodyText
+{
+	font-family:'savatageregular';
+	font-variant:small-caps;
+	color:rgba(20,20,100,1);
+	font-style:italic;
+	font-weight:700;
+	margin:.25rem .5rem .25rem .25rem;
+}
+.BCZ-B
+{
+	font-size:110%;
+	margin-right:.15rem;
+}
+.BCZ-ear
+{
+	top:-3px;
+	font-size:95%;
+	letter-spacing:.115rem;
+	text-shadow:1px 1px 0 rgba(225,200,100,1), 2px 2px 2px rgba(100,20,20,1) !important;
+}
+.BCZ-Z
+{
+	font-size:120%;
+	transform:skew(-8deg) scaleY(1.1);
+	top:3px;
+}
+.BCZ-C
+{
+	font-size:120%;
+	transform:skew(-5deg) scaleY(1.1);
+	top:3px;
+	margin-left:1rem;
+}
+.BCZ-oding
+{
+    font-family: 'courier_primeregular';
+	color:rgba(20,20,100,1);
+	font-size:145%;
+	font-variant:small-caps;
+	text-transform:lowercase;
+	top:-2px;
+	text-shadow:1px 1px 0 rgba(225,200,100,1), 1px 1px 1px rgba(100,20,20,1) !important;
+	letter-spacing:.035rem;
+	margin-right:.55rem;
+}
+.BCZ-one
+{
+}
+	/******************************************
+		###END### Bearz Logo used in Body text
+	*******************************************/
+/************************  End page banner rules ***********************************/
+.line-numbers-rows>span {
+pointer-events: none;
+display: block;
+counter-increment: linenumber;
+}
+.line-numbers-rows>span:before {
+content: counter(linenumber);
+color: #999;
+display: block;
+padding-right: .8rem;
+text-align: right;
+}
+
+
+
+
+
+
