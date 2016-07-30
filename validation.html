@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--
+	Website: Bearz Design Concepts, The HTML Zone
+    URL: www.bearzdesignconcepts.net/validation.html
+    File Name: validation.html
+    Author: Barry Smith
+    resources: WHATWG HTML: The Living Standard,  W3C HTML 5.1 Nightly Editor's Draft
+-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="Barry Smith, Bearz Design Concepts, Bears Design Concepts, 
+    	Bearz Design, Bears Design, Bears Web and Graphics, Bearz Web and Graphics, The Coding Zone, HTML Elements, 
+        HTML5 Elements, HTML Tags, HTML Tag Use, Typography, HTML Syntax, CSS Default Display Settings, 
+        Coding, Validation, HTML, HTHL5, CSS3, Coding Zone">
+	<meta name="description" content="An HTML5/CSS3 Instructional web site with the student in mind">
+    <title>
+    	HTML5 Validation - Bearz Coding Zone
+	</title>
+			<!-- supporting CSS and JavaScript and favicon files -->
+	<link href="css3/MainLayout.css" rel="stylesheet" type="text/css">
+	<link href="css3/MainLayoutv2.css" rel="stylesheet" type="text/css">
+	<link href="css3/banner_Logo.css" rel="stylesheet" type="text/css">
+	<link href="css3/nav.css" rel="stylesheet" type="text/css">
+	<link href="css3/textStyles.css" rel="stylesheet" type="text/css">
+	<link href="css3/myAlerts.css" rel="stylesheet" type="text/css">
+	<link href="css3/cssToolTip.css" rel="stylesheet" type="text/css">
+	<link href="css3/specialEffects.css" rel="stylesheet" type="text/css">
+	<link href="css3/targetSelectors.css" rel="stylesheet" type="text/css">
+	<link href="css3/myAnimations.css" rel="stylesheet" type="text/css">
+	<link href="css3/specialEffects.css" rel="stylesheet" type="text/css">
+	<link href="TheCSSZone/embeddedFonts/fontSavatage/savatage.css" rel="stylesheet" type="text/css">
+	<link href="TheCSSZone/embeddedFonts/embeddedFonts.css" rel="stylesheet" type="text/css">
+	<link href="TheCSSZone/embeddedFonts/inconsolata/inconsolata.css" rel="stylesheet" type="text/css">
+	<link href="TheCSSZone/embeddedFonts/alluraWebReady/allura.css" rel="stylesheet" type="text/css">
+	<link href="css3/responsiveCSS.css" rel="stylesheet" type="text/css">
+    <link href="/apple-icon-57X57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="icon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="icon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="icon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="icon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="icon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="icon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="icon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="icon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="icon/manifest.json" rel="manifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="scripts/siteFunctions.js" type="text/javascript"></script>
+    <script src="scripts/jquery_v2.0.0.js" type="text/javascript"></script>
+    <!-- used for my floating back button in lower right corner -->
+	<script>
+		$(document).ready(function () {  $('.backToTopScroll').hide();//Check to see if the window is top if not then display button
+		$(window).scroll(function () {  if ($(this).scrollTop() > 650) {    $('.backToTopScroll').fadeIn();  } else {    $('.backToTopScroll').fadeOut();  }}); //Click event to scroll to top
+		$('.backToTopScroll').click(function () {  $('html, body').animate({ scrollTop: 0 }, 900);  return false;  });});
+    </script>
+</head>
+<body id="validation-page">
+    <section id="siteNavSpecsPage" class="wrapperPopupNav displayNone myAppearIn">
+        <h1 class="czSiteMap2 pointerFadeIn courierPrimeBoldItalic">The Coding Zone<br>General Topics</h1>
+        <nav id="siteMap" class="siteWideContainer">
+        	<h2 class="siteWideNavHeader"><span>Site<b class="enemDash">&#45;</b>Wide Navigation</span></h2>
+            <table class="innerFadeIn siteWideNav">
+                <caption class="czSiteMapColumnsCaption"></caption>
+                <tbody>
+                    <tr>
+                        <td><a class="reduceBotMarg-6em" href="TheHTMLZone/index.html">HTML/HTML<sub style="position:relative; top:4px; font-size:95%">5</sub></a></td>
+                        <td><a class="reduceBotMarg-4em" href="TheCSSZone/index.html">CSS/CSS<sub style="position:relative; top:4px; font-size:95%">3</sub></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="TheHTMLZone/elementSpecs.html">Element Specifications</a></td>
+                        <td><a href="TheCSSZone/cssDefault.html">CSS Default Settings</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="TheHTMLZone/descriptions.html">Element Descriptions</a></td>
+                        <td><a href="TheCSSZone/typography.html">Typography</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="index.html">HTML Content<small style="font-size:65%;"><b class="overSizedBrace">&#40;</b>Categories<b class="overSizedBrace">&#41;</b></small></a></td>
+                        <td><a href="TheCSSZone/presentationalHints.html">Presentational Hints</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="TheHTMLZone/extras.html">Element Extras</a></td>
+                        <td><a href="animations.html">CSS Animations</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=".codingExamples.html">Code Examples</a></td>
+                        <td><a href="TheCSSZone/moreTypography.html#embeddedFonts">Embedding Fonts</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="TheHTMLZone/tagsAndAttributes.html">Tags &amp; Attributes</a></td>
+                        <td><a href="TheCSSZone/index.html#mediaQueries">Media Queries</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="TheHTMLZone/browserSupport.html">Browser Support</a></td>
+                        <td><a href="#" hidden>PLACEHOLDER</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="innerFadeIn topicsTableNav" style="margin:.5rem auto 1rem;">
+                <caption class="czSiteMapHeader2">general topics</caption>
+                <tbody>
+                    <tr>
+                        <td><a class="siteWideNavLink" href="terminology.html">Terminology</a>&emsp;</td>
+                        <td>&emsp;<a class="siteWideNavLink" href="validation.html">Validation</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="siteWideNavLink" href="TheHTMLZone/history.html"><abbr class="htmlBold"></abbr> History</a>&emsp;</td>
+                        <td>&emsp;<a class="siteWideNavLink" href="TheHTMLZone/genRationale.html" >General Rationale</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <p class="backToTopContainer siteMapCloseButton"><a class="backLink" href="javascript:history.back()" onClick="siteNavSpecialClose()">Close Site Map</a></p>
+    </section><a class="topLeftBackButton" href="javascript:history.back()"></a><a class="backToTopScroll" onClick="scrollToTopClose()">Page Top</a>
+        <h2 class="siteName siteNameFadeIn displayNone">BearZ Coding Zone</h2>
+        <div class="landscapeView colGradient"><!-- backNameFadeIn  -->
+            <div class="phoneHeader">
+                <p><span class="bearzLogoBody"><span class="bearzCap">B</span>ear<span class="bearzCapZ">Z</span></span></p>
+                <p><span class="bearzCap2">C</span><span class="bearzLogoPlainText">oding</span></p>
+                <p><span class="bearzLogoBody"><span class="bearzCap2Z">Z</span>one</span></p>
+            </div>
+            <div class="articleRepeatingRadial">
+                <p><span class="landscapeViewFirstLetter">m</span>y Apologizes&#44;</p>
+                <p><span class="landscapeViewFirstLetter">p</span>lease view this site in landscape view&#46;</p>
+                <p><span class="landscapeViewFirstLetter">t</span>his site is not optimized for less than <span class="landscapeViewNumber">575</span> pixel width&#46;&ensp;</p>
+                <p><span class="landscapeViewFirstLetter">f</span>or devices with a maximum width <span class="parentheses mySmall andadaBoldItalic" style="color:inherit;">landscape view</span>&#44; of less than 575 pixels&#44; slight horizontal scrolling is necessary&#46;&ensp;</p>
+            </div><!--    -->
+            <div class="phoneHeaderLower">
+                <p><span class="bearzLogoBody"><span class="bearzCap">B</span>ear<span class="bearzCapZ">Z</span></span></p>
+                <p><span class="bearzCap2">C</span><span class="bearzLogoPlainText">oding</span></p>
+                <p><span class="bearzLogoBody"><span class="bearzCap2Z">Z</span>one</span></p>
+            </div>
+        </div>
+    <section id="wrapper" class="gradient pageFadeIn">
+		<header id="Banner/Logo" class="myHeader2"><!-- myCodingZoneHeader -->
+            <div class="siteName siteNameFadeIn"><!--myCodingZoneSiteName -->
+                <p class="bearzHeader"><span class="bearzHeader-B">b</span><span class="bearzHeaderB-ear">&ensp;ear&thinsp;</span><span class="bearzHeader-Z">z</span> </p>
+                <p class="bearzHeader-Coding"><span class="headerC">c</span><span class="codingBorder"><span class="C-ODING">oding</span></span> </p> 
+                <p class="bearzHeader-Zone"><span class="bearzHeaderZone-Z">z</span><span class="bearzBorderZ-one"><span class="bearzHeaderZ-oneSava">one</span></span></p><!--  -->
+            </div>
+        </header><!-- end of header -->
+		<nav id="topNavBar" class="topNav navBarGradient">
+			<a class="navBlur" href="siteMap.html">Topics</a>
+            <a class="navBlur" href="contactInfo.html">Contact</a>
+            <a class="navBlur" href="index.php">Bearz Home</a>
+            <a class="navBlur" href="http://www.codingzone.org" target="_blank" rel="external">codingzone<b>&#46;</b>org</a>
+			<hr class="fadingStyle">
+        </nav>
+		<nav id="breadCrumbLinks" class="speedInLeft">
+			<script type="text/javascript">breadcrumbs()</script>
+		</nav>
+		<section class="sectionWrapper">
+            <header class="headerContainer">
+            	<h2 class="myH2 subHeader"><span class="displayMarkHTML5">html</span> Validation</h2>
+                <nav id="tableOfContents" class="headerNav">
+                    <h3 class="tocHeader"><b class="tocCaps">page contents</b></h3>
+                    <table class="tblTOC2">
+                        <tbody>
+                            <tr>
+                                <td><a class="tocLinks" href="#isValidationImportant">Is Validation Important<b>&#63;</b></a></td>
+                                <td><a class="tocLinks" href="#whyValidate">Why validate<b>&#63;</b></a></td>
+                                
+                            </tr>
+                            <tr>
+                                <td><a class="tocLinks" href="#cssValidation"><abbr class="cssBold" style="color:inherit;">css</abbr> Validation</a></td>
+                                <td><a class="tocLinks" href="#validatorExp">Validator Experience&#33;</a></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </nav>
+            </header>
+            <article class="articleContainer">
+            	<h2 class="courierPrimeBoldItalic myH3">Validation</h2>
+                <p class="bodyText">
+                    Validation is a checking system created by the <span class="tip"><abbr class="whatwg"></abbr><span class="tipZoomIn"><mark>w</mark>eb <mark>h</mark>ypertext <mark>a</mark>pplication<br><mark>t</mark>echnology <mark>w</mark>orking <mark>g</mark>roup</span></span> and the <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr><span class="slideInTip"><abbr class="abbrBold">w3</abbr> &ndash; <mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><abbr class="abbrBold">c</abbr> &ndash; <mark>c</mark>onsortium</span></span><b>&#46;</b>&ensp;It is used to check web pages for conformance to the web standards.
+                </p>
+                	<ul class="olulListContainer">
+                        <li class="olulListSubHeader">Web Standards</li>
+                        <li class="longListItemIndent">Web development is made easier by following the set of web standards<b>&#46;</b>&ensp;</li>
+                        <li class="longListItemIndent">Web standards are created by the <span class="tip"><abbr class="whatwg"></abbr><samp><mark>w</mark>eb <mark>h</mark>ypertext <mark>a</mark>pplication<br><mark>t</mark>echnology <mark>w</mark>orking <mark>g</mark>roup</samp></span> and the <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr><span class="tipZoomIn"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium</span></span><b>&#46;</b>&ensp;</li>
+                        <li class="olulListSubHeader">Why Web Standards<b>&#63;</b>&ensp;</li>
+                        <li class="longListItemIndent">To make internet a better place<b>&#44;</b> for both developers and visitors<b>&#44;</b> it is important that both browsers and Web developers follow the Web standards<b>&#46;</b>&ensp;</li>
+                        <li class="longListItemIndent">When developers follow the Web standards<b>&#44;</b> the development is simplified<b>&#44;</b> since it is easier for a developer to understand another's coding<b>&#46;</b>&ensp;</li>
+                        <li class="longListItemIndent">Using Web standards will ensure that all browsers will display your Web site properly<b>&#44;</b> without time-consuming rewrites<b>&#46;</b>&ensp;</li>
+                        <li class="longListItemIndent">Web pages that conform to the standards are easier for search engines to access and index<b>&#44;</b> easier to convert to other formats<b>&#44;</b> and easier to access with program code (like JavaScript and the DOM)<b>&#46;</b>&ensp;</li>
+					</ul>
+            </article>
+            <section id="isValidatonImportant" class="sectionWrapper">
+        		<h3 class="articleHeaderH3">Is Validation Important<b>&#63;</b></h3>
+            	<article class="articleContainer">
+					<h4 class="validationH3">Why Web professionals choose to validate</h4>
+                    <p class="bodyText">
+                    	There are a number of reasons to <b>&ldquo;</b>validate<b>&rdquo;</b> your code<b>&#46;</b>&ensp;Search Engine webcrawlers react better with valid code<b>&#46;</b>&ensp;However<b>&#44;</b> when I did a validation of google.com<b>&#44;</b> I got 29 errors and 3 warnings<b>&#46;</b>&ensp;That gave me a good laugh<b>&#46;</b>&ensp;<abbr class="w3c">w<sub>3</sub>c</abbr> gives these five reasons to validate your web pages<b>&#58;</b>
+                    </p>
+                    <article class="articleContainer">
+                        <h5 class="validationH4">Validation as a debugging tool</h5>
+                        <p class="validationBodyText">
+                            While contemporary Web browsers do an increasingly good job of parsing even the worst <abbr class="htmlBold"></abbr> <b>&ldquo;</b>tag soup<b>&rdquo;</b><b>&#44;</b> some errors are not always caught gracefully<b>&#46;</b>&ensp;Very often<b>&#44;</b> different software on different platforms will not handle errors in a similar fashion<b>&#44;</b> making it extremely difficult to apply style or layout consistently<b>&#46;</b>&ensp;
+                        </p>
+                        <p class="validationBodyText">
+                        	Using standard<b>&#44;</b> interoperable markup and stylesheets<b>&#44;</b> on the other hand<b>&#44;</b> offers a much greater chance of having your page handled consistently across platforms and user<b class="enemDash">&#45;</b>agents<b>&#46;</b>&ensp;Indeed<b>&#44;</b> most developers creating rich Web applications know that reliable scripting needs the document to be parsed by User<b class="enemDash">&#45;</b>Agents without any unexpected error<b>&#44;</b> and will make sure that their markup and <abbr class="cssBold">css</abbr> is validated before creating a rich interactive layer<b>&#46;</b>&ensp;
+                        </p>
+                        <p class="validationBodyText">
+                        	When surveyed<b>&#44;</b> a large majority of Web professionals will state that validation errors is the first thing they will check whenever they run into a Web styling or scripting bug<b>&#46;</b>&ensp;
+                        </p>
+                    </article>
+                    <article class="articleContainer">
+                        <h5 class="validationH4">Validation as a future<b class="enemDash">&#45;</b>proof quality check</h5>
+                        <p class="validationBodyText">
+                        	Checking that a page <b>&ldquo;</b>displays fine<b>&rdquo;</b> in several contemporary browsers may be a reasonable insurance that the page will <b>&ldquo;</b>work<b>&rdquo;</b> today<b>&#44;</b> but it does not guarantee that it will work tomorrow<b>&#46;</b>&ensp;
+                        </p>
+                        <p class="validationBodyText">
+                        	In the past<b>&#44;</b> many authors who relied on the quirks of <i>Netscape 1.1</i> suddenly found their pages appeared totally blank in <i>Netscape 2.0</i><b>&#46;</b>&ensp;While Internet Explorer initially set out to be bug<b class="enemDash">&#45;</b>compatible with <i>Netscape</i><b>&#44;</b> it too has moved towards standards compliance in later releases<b>&#46;</b>&ensp;
+                        </p>
+                        <p class="validationBodyText">
+                        	Validation is one of the simplest ways to check whether a page is built in accordance with Web standards<b>&#44;</b> and provides one of the most reliable guarantee that future Web platforms will handle it as designed<b>&#46;</b>&ensp;
+                        </p>
+                    </article>
+                    <article class="articleContainer">
+                        <h5 class="validationH4">Validation eases maintenance</h5>
+                        <p class="validationBodyText">
+                        	It is reasonable to consider that standards such as <abbr class="htmlBold"></abbr> and <abbr class="cssBold">css</abbr> are a form of <b>&ldquo;</b>coding style<b>&rdquo;</b> which is globally agreed upon<b>&#46;</b>&ensp;Creating Web pages or applications according to a widely accepted coding style makes them easier to maintain<b>&#44;</b> even if the maintenance and evolution is performed by someone else<b>&#46;</b>
+                        </p>
+                    </article>
+                    <article class="articleContainer">
+                        <h5 class="validationH4">Validation helps teach good practices</h5>
+                        <p class="validationBodyText">
+                        	Many professionals have been authoring the Web with <abbr class="htmlBold"></abbr> and <abbr class="cssBold">css</abbr> for years and know these technologies by heart<b>&#46;</b>&ensp;Beginners and students<b>&#44;</b> on the other hands<b>&#44;</b> will find automated checking tools invaluable in spotting mistakes<b>&#46;</b>&ensp;Some teachers also stress that automated validation tests are a good introduction to broader<b>&#44;</b> more complex quality concepts such as accessibility<b>&#46;</b>&ensp;
+                        </p>
+                    </article>
+                    <article class="articleContainer">
+                        <h5 class="validationH4">Validation is a sign of professionalism</h5>
+                        <p class="validationBodyText">
+                        	As of today<b>&#44;</b> there is little or no certification for Web professionals<b>&#44;</b> and only few universities teach Web technologies<b>&#44;</b> leaving most Web-smiths to learn by themselves<b>&#44;</b> with varied success<b>&#46;</b>&ensp;Seasoned<b>&#44;</b> able professionals will take pride in creating Web content using semantic and well-formed markup<b>&#44;</b> separation of style and content<b>&#44;</b> etc<b>&#46;</b>&ensp;Validation can then be used as a quick check to determine whether the code is the clean work of a seasoned <abbr class="htmlBold"></abbr> author<b>&#44;</b> or quickly hacked-together tag soup<b>&#46;</b>&ensp;
+                        </p>
+                    </article>
+                </article>
+<!-- Why Validate -->
+            	<article id="whyValidate" class="articleContainer">
+        			<h3 class="articleHeaderH3">Why validate<b>&#63;</b></h3>
+The core reason to run your <abbr class="htmlBold"></abbr> documents through a conformance checker is simple: To catch unintended mistakes—mistakes you might have otherwise missed—so that you can fix them.
+
+Beyond that, some document-conformance requirements <b class="codeBrace">&#40;</b>validity rules<b class="codeBrace">&#41;</b> in the <abbr class="htmlBold"></abbr> spec are there to help you and the users of your documents avoid certain kinds of potential problems. To explain the rationale behind those requirements, the <abbr class="htmlBold"></abbr> spec contains these two sections:
+
+    <a class="textLink" href="genRational.html#syntaxLevelErrors">syntax-level errors</a>
+    <a class="textLink" href="genRational.html#restrictionsOnContentModels">restrictions on content models and on attribute values</a>
+
+To summarize what's stated in those two sections:
+
+    There are some markup cases defined as errors because they are potential problems for accessibility, usability, interoperability, security, or maintainability—or because they can result in poor performance, or that might cause your scripts to fail in ways that are hard to troubleshoot.
+    Along with those, some markup cases are defined as errors because they can cause you to run into potential problems in HTML parsing and error-handling behavior—so that, say, you'd end up with some unintuitive, unexpected result in the <abbr class="domBold"></abbr>. 
+
+Validating your documents alerts you to those potential problems. 
+                </article>
+            </section>
+<!-- Experience with validators -->
+            <section id="validatorExp" class="sectionWrapper">
+                <h3 class="sectionH3">Experience with the Validators<b>&#58;</b></h3>
+                <p class="bodyText">
+                        While building this site<b>/</b>project<b>&#44;</b> and in my learning process of correct semantics<b>&#44;</b> I intentionally placed invalid code in different sections after reading what <i>&ldquo;is allowed&rdquo;</i> and <i>&ldquo;is not allowed&rdquo;</i> in the <abbr class="htmlBold">html<sub>5</sub></abbr> syntax<b>&#46;</b>&ensp;Checking my code in both the <span class="tip"><abbr class="whatwg"></abbr><samp><mark>w</mark>eb <mark>h</mark>ypertext <mark>a</mark>pplication<br><mark>t</mark>echnology <mark>w</mark>orking <mark>g</mark>roup</samp></span> <a class="textLink" href="https://html5.validator.nu/" target="_blank" rel="external">Liviing Validator<samp>Living Validator<br>html5.validator.nu</samp></a> and the 
+                        <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr><span class="tipZoomIn"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium</span></span> <a class="textLink" href="http://validator.w3.org/">Markup Validation Service<samp>Markup Validation Service<br>validator.w3.org</samp></a><b>&#46;</b>&ensp;The following sections give examples of the warning or error messages<b>&#46;</b>&ensp;
+                    </p>
+                <p class="bodyText">
+                    I have &ldquo;grouped&rdquo; the appropriate errors and warnings together<b>&#46;</b>&ensp;The <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr> <i>validator</i><samp>Markup Validation<br>Service</samp></span><b class="apos"></b>s  first <i>&ldquo;warning&rdquo;</i> section<b>&#44;</b> contains information that the validator is still in an experimental feature<b>&#46;</b>&ensp;
+                </p>
+                <p class="bodyText">
+                    The <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr> <i>validator</i><samp>Markup Validation<br>Service</samp></span><b class="apos"></b>s  first <i>&ldquo;warning&rdquo;</i> section<b>&#44;</b> contains information that the validator is still in an experimental feature<b>&#46;</b>&ensp;
+                </p>
+    <!-- result: Passed -->
+                <article id="html5Warning" class="articleContainer">
+                    <h3 class="articleHeaderH3">result&#58;&emsp;<span style="background-color:rgba(255,255,255,.3); text-shadow:none;"><span class="forestGreen">passed </span><span class="gold">1 warning<span class="lowercase">&#40;s&#41;</span></span></span></h3>
+                    <p class="bodyText">
+                        Every <abbr class="htmlBoldHeader">html</abbr><span class="display5">5</span> Document gets this warning from the <abbr class="w3c">w<sub>3</sub>c</abbr> validator<b>&#46;</b>&ensp;
+                    </p>
+                    <p class="bodyText">
+                        Unfortunately<b>&#44;</b> until the <abbr class="w3c">w<sub>3</sub>c</abbr> <a class="textLink" href="http://validator.w3.org/#validate_by_upload" target="_blank" rel="external">Markup Validation Service</a> update it<b class="apos"></b>s validator<b>&#44;</b> all <abbr class="htmlBold">html<sub>5</sub></abbr> documents will receive this <i>warning</i><b>&#46;</b>&ensp;
+                    </p>
+                    <div class="validatorMessageContainer">
+                        <div class="diamond">
+                            <p class="diamondText">i</p>
+                        </div>
+                        <p class="validatorInformationMessage">Using experimental feature<b>&#58;</b> <abbr class="htmlBold">html<sub>5</sub></abbr> Conformance Checker<b>&#46;</b>&ensp;</p>
+                        <p class="validatorBodyText">
+                            The validator checked your document with an experimental feature: <abbr class="htmlBold">html<sub>5</sub></abbr> Conformance Checker. This feature has been made available for your convenience, but be aware that it may be unreliable, or not perfectly up to date with the latest development of some cutting-edge technologies. If you find any issues with this feature, please report them. Thank you.
+                        </p>
+                        <p class="validatorBodyText forestGreen"><b>Congratulations</b></p>
+                        <p class="validatorBodyText">
+                            The uploaded document <b>&ldquo;example.html&rdquo;</b> was successfully checked as <abbr class="htmlBold">html<sub>5</sub></abbr><b>&#46;</b>&ensp;This means that the resource in question identified itself as <b>&ldquo;</b><abbr class="htmlBold">html<sub>5</sub></abbr><b>&rdquo;</b> and that we successfully performed a formal validation of it<b>&#46;</b>&ensp;The parser implementations we used for this check are based on <b>&ldquo;validator.nu&rdquo;</b> <b class="overSizedBrace">&#40;</b><abbr class="htmlBold">html<sub>5</sub></abbr><b class="overSizedBrace">&#41;</b><b>&#46;</b>&ensp;
+                        </p>
+                    </div><hr class="hr-noLine-spacer1">
+                    <p class="bodyText">
+                        However<b>&#44;</b> the <abbr class="whatwg"></abbr><b class="apos"></b>s <i>Living Validator</i> has no such <i>warning</i><b>&#46;</b>
+                    </p>
+                    <p style="border:5px double rgba(0,70,0,1); padding:.5em; font-size:90%; margin:.5em 1em">
+                        The document is valid HTML5 <b class="overSizedPlus">&#43;</b> ARIA <b class="overSizedPlus">&#43;</b> SVG 1.1 <b class="overSizedPlus">&#43;</b><span class="mathml">2.0</span><b>&#40;</b>subject to the utter previewness of this service<b>&#41;&#46;</b>
+                    </p><hr class="hr-noLine-spacer1pt25">
+                    <p>
+                        <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                    </p>
+                </article>
+    <!-- No DOCTYPE -->
+                <article id="noDoctype" class="articleContainer">
+                    <h4 class="articleHeaderH3">Not including a <code class="codeDOCTYPE"> <code class="codeLowercase">html</code></code></h4>
+                    <p class="bodyText">
+                        The <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr> <i>validator</i><samp>Markup Validation<br>Service</samp></span> output<b>&#58;</b><b>&#46;</b>&ensp;
+                    </p>
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting warning</h4>
+                        <p class="validatorWarning"><b class="warningIcon"></b></p>
+                        <p class="validatorBodyText">
+                            <b>no <span class="boldAllCaps">doctype</span> found<b>&#33;</b>&ensp;Checking with default <abbr class="html401"></abbr> Transitional Document Type<b>&#46;</b>&ensp;</b>
+                        </p>
+                        <p class="validatorBodyText">
+                            No <span class="boldAllCaps">doctype</span> Declaration could be found or recognized in this document<b>&#46;</b>&ensp;This generally means that the document is not declaring its Document Type at the top<b>&#46;</b>&ensp;It can also mean that the <span class="boldAllCaps">doctype</span> declaration contains a spelling error<b>&#44;</b> or that it is not using the correct syntax<b>&#46;</b>&ensp;
+                        </p>
+                        <p class="validatorBodyText">
+                            The document was checked using a default <b>&ldquo;</b>fallback<b>&rdquo;</b> Document Type Definition that closely resembles <b>&ldquo;</b><abbr class="html401"></abbr> Transitional<b>&rdquo;&#46;</b>
+                        </p><hr class="hr-noLine-spacer1">
+                        <h4 class="warningH4">resulting error</h4>
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 2<b>&#44;</b> Column 1<b>&#58;</b></i> <b>No document type declaration; implying <b>&ldquo;</b><code class="codeDOCTYPE"> HTML SYSTEM</code><b>&rdquo;</b></b>
+                        </p>
+                        <p class="locatedCodeError">
+                            <code class="validatorCode"><strong class="tip darkRed">&lt;<samp>Position where<br>error was detected<b>&#46;</b></samp></strong>html <code class="attributeCode">lang</code><code class="codeValue">en<b class="enemDash">&#45;</b>US</code>&gt;</code>
+                        </p>
+                        <p class="validatorBodyText">
+                            The checked page did not contain a document type <b class="overSizedBrace">&#40;&ldquo;<span class="uppercase">doctype</span>&rdquo;&#41;</b> declaration<b>&#46;</b>&ensp;The Validator has tried to validate with a fallback <abbr class="abbrBold">dtd&#44;</abbr> but this is quite likely to be incorrect and will generate a large number of incorrect error messages<b>&#46;</b>&ensp;It is highly recommended that you insert the proper <span class="boldAllCaps">doctype</span> declaration in your document<b>&#46;</b>&ensp;It is necessary to have this declaration before the page can be declared to be valid<b>&#46;</b>&ensp;
+                        </p><hr class="hr-noLine-spacer1pt5">
+                        <hr class="hr-noLine-spacer1pt5">
+                    </div>
+                    <p class="bodyText">
+                        <b class="blackRed myRegCapsBold">note&#58;</b> If you have created an <abbr class="htmlBold">html<sub>5</sub></abbr> document using the correct syntax<b>&#44;</b> all of that syntax <strong><em><u>will not</u></em></strong> validate<b>&#59;</b> therefore produce errors<b>&#33;</b>
+                    </p>
+                    <p>
+                        <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                    </p>
+                </article>
+    <!-- the hr tag within the p tag -->
+                <article id="theHrTagWithinThePTag" class="articleContainer">
+                    <h4 class="articleHeaderH3">The <code class="openingTag">hr</code> element inside the <code class="openingTag">p</code> element</h4>
+                    <p class="bodyText">The <code class="openingTag">hr</code> element placed inside a <code class="openingTag">p</code> element<b>&#44;</b> while it does act correctly<b>&#44;</b> will not validate<b>&#46;</b>&ensp;It apparently causes the validator to not see the beginning <code class="closingTag">p</code> tag<b>&#46;</b>&ensp;Showing the following <b class="darkRed emSpecial">Error</b> message<b>&#58;</b></p>
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting error</h4>
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 6862<b>&#44;</b> Column 430<b>&#58;</b></i>No <code class="lineCode">p</code> element in scope but a <code class="lineCode">p</code> end tag seen&#46;
+                        </p>
+                        <p class="locatedCodeError">
+                            <code class="validatorCode"><b>&#46;&#46;&#46;&thinsp;</b>the ending text of this paragraph&#46;&lt;<code class="lineCode">/p</code><strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b>&ensp;</samp></strong></code>
+                        </p>
+                        <hr class="hr-noLine-spacer1pt5">
+                    </div>
+                    <p class="bodyText">
+                        This is because the <code class="openingTag">p</code> element represents a <a class="textLink" href="index.html#paragraph">paragraph<samp><abbr class="htmlBold">html<sub>5</sub></abbr>&nbsp;Content<br>A&nbsp;Coding&nbsp;Zone Document</samp></a><b>&#44;</b> and the <code class="openingTag">hr</code> element represents a <a class="textLink" href="index.html#paragraph">paragraph<samp><abbr class="htmlBold">html<sub>5</sub></abbr>&nbsp;Content<br>A&nbsp;Coding&nbsp;Zone Document</samp></a><b class="enemDash">&#45;</b>level thematic break<b>&#46;</b>&ensp;Therefore<b>&#44;</b> logically you can not place a <a class="textLink" href="index.html#paragraph">paragraph<samp><abbr class="htmlBold">html<sub>5</sub></abbr>&nbsp;Content<br>A&nbsp;Coding&nbsp;Zone Document</samp></a> 
+                        inside a <a class="textLink" href="index.html#paragraph">paragraph<samp><abbr class="htmlBold">html<sub>5</sub></abbr>&nbsp;Content<br>A&nbsp;Coding&nbsp;Zone Document</samp></a><b>&#46;</b>&ensp;
+                    </p>
+                    <p>
+                        <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                    </p>
+                </article>
+    <!-- obsolete hgroup element --><a id="validatorExp-hgroup"></a>
+                <article id="obsoleteHgroupElement" class="articleContainer">
+                    <h4 class="articleHeaderH3">The <code class="openingTag">hgroup</code> element</h4>
+                    <p class="bodyText">The<code class="closingTag">hgroup</code> element will validate if you use the <a class="textLink" href="https://html5.validator.nu/" target="_blank" rel="external">Validator<samp>html5.validator.nu/<br><b class="overSizedBrace">&#40;</b>Living Validator<b class="overSizedBrace">&#41;</b></samp></a> provided by the <abbr class="whatwg"></abbr>&#46;&ensp;However<b>&#44;</b> because the <abbr class="w3c">w<sub>3</sub>c</abbr> has <a class="textLink" href="http://www.w3.org/html/wg/drafts/html/master/obsolete.html#non-conforming-features" target="_blank" rel="external">decided to remove<samp><abbr class="w3c">w<sub>3</sub>c</abbr> Specifications<br>Obsolete Non<b class="enemDash">&#45;</b>Conforming Elements</samp></a> the <code class="openingTag">hgroup</code> element from 
+                        it<b class="apos"></b>s specification<b>&#44;</b> when using 
+                        the <abbr class="w3c">w<sub>3</sub>c</abbr> <a class="textLink" href="https://validator.w3.org/nu/" target="_blank" rel="external">Validator<samp>validator.w3.org/#validate_by_uri<br>Markup Validation Service</samp></a><b>&#44;</b> you will get these two <b class="darkRed emSpecial">Error</b> message<b>&#58;</b>
+                    </p>
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting error</h4>
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 699<b>&#44;</b> Column 28<b>&#58;</b></i>Element hgroup not allowed as child of element section in this context<b>&#46;</b>&ensp;&#40;Suppressing further errors from this subtree&#46;&#41;</p>
+                        <h4 class="mySmall">Content model for element section<b>&#58;</b></h4>
+                        <p class="mySmall reduceTopMarg-1pt5em">
+                            <a class="textLink" href="index.html#flowContent">Flow content<samp><abbr class="htmlBold">html<sub>5</sub></abbr>&nbsp;Content<br>A&nbsp;Coding&nbsp;Zone Document</samp></a>
+                        </p>
+                    </div><hr class="hrMarginReducer1pt5">
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting error</h4>
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 699<b>&#44;</b> Column 28<b>&#58;</b></i>The <code class="lineCode">hgroup</code> element is obsolete<b>&#46;</b>&ensp;To mark up subheadings<b>&#44;</b> consider either just putting the subheading into a <code class="lineCode">p</code> element after the <code class="lineCode">h1</code><b class="enemDash">&#45;</b><code class="lineCode">h6</code> element containing the main heading&#44; or else putting the subheading directly within the <code class="lineCode">h1</code><b class="enemDash">&#45;</b><code class="lineCode">h6</code> element containing the main heading&#44; but separated from the main heading by punctuation and/or within&#44; for example, a <code class="closingTag">span <code class="attributeCode">class</code><code class="codeValue">subheading</code></code> element with differentiated styling&#46;&ensp;To group headings and subheadings&#44; 
+                            alternative titles&#44; or taglines&#44; consider using the <code class="lineCode">header</code> or <code class="lineCode">div</code> elements&#46;
+                        </p>
+                        <pre>
+                        <code class="validatorCode">&lt;hgroup<strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b>&ensp;</samp></strong></code>
+                        </pre>
+                    </div>
+    Error: Element hgroup not allowed as child of element article in this context. (Suppressing further errors from this subtree.)
+
+    From line 938, column 21; to line 938, column 52
+
+              <code class="openingTag">hgroup class="headerContainer"</code>
+
+    Content model for element article:
+        Flow content.
+
+    Error: The hgroup element is obsolete. To mark up subheadings, consider either just putting the subheading into a p element after the h1-h6 element containing the main heading, or else putting the subheading directly within the h1-h6 element containing the main heading, but separated from the main heading by punctuation and/or within, for example, a span class="subheading" element with differentiated styling. To group headings and subheadings, alternative titles, or taglines, consider using the header or div elements.
+
+    From line 938, column 21; to line 938, column 52
+
+              <code class="openingTag">hgroup class="headerContainer"</code>
+                    <p class="bodyText">
+                        Because the <code class="openingTag">hgroup</code> is a <i>&ldquo;New Feature&rdquo;</i> in <abbr class="htmlBold">html<sub>5</sub></abbr> I was curious why I got these error messages<b>&#46;</b>&ensp;I did some research on the subject and <a class="textLink" href="http://lists.w3.org/Archives/Public/public-html/2013Apr/0005.html" target="_blank" rel="external">found this<samp>plan to remove<code class="closingTag">hgroup</code> from<br><abbr class="w3c">w<sub>3</sub>c</abbr> Specifications</samp></a><b>&#46;</b>&ensp;As a subscriber to the <span class="tip"><abbr class="whatwg"></abbr><samp><mark>w</mark>eb <mark>h</mark>ypertext <mark>a</mark>pplication<br><mark>t</mark>echnology <mark>w</mark>orking <mark>g</mark>roup</samp></span> e<b class="enemDash">&#45;</b>mail mailing list<b>&#44;</b> I was able to 
+                        ask the <b>&ldquo;</b>Head Man<b>&rdquo;</b> about this<b>&#46;</b>&ensp;Here is a <a class="textLink" href="explainPDF/the%20obsolete%20hgroup%20element.pdf" target="_blank"><abbr class="abbrBold">pdf</abbr> of that email</a> response from <a class="textLink" href="https://plus.google.com/+IanHickson/posts" target="_blank">Ian Hickson<samp>I think of Ian Hickson<br>as &ldquo;Editor<b class="enemDash">&#45;</b>In<b class="enemDash">&#45;</b>Chief&rdquo;</samp></a><b>&#46;</b>&ensp;
+                    </p>
+                    <p>
+                        <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                    </p>
+                </article>
+    <!-- Using sizes Attribute -->
+                <article id="sizesBadValue" class="articleContainer">
+                    <h4 class="articleHeaderH3">Using the <code class="attributeCode">sizes</code><code class="codeValue"></code> attribute</h4>
+                    <p class="bodyText">
+                        While building this site<b>&#44;</b> and learning correct semantics as I progressed<b>&#44;</b> I intentionally placed invalid code in different sections<b>&#44;</b> after reading what <i>&ldquo;is allowed&rdquo;</i> and <i>&ldquo;is not allowed&rdquo;</i> in <abbr class="htmlBold">html<sub>5</sub></abbr> syntax<b>&#46;</b>&ensp;Following the rules set <a class="textLink" href="TheHTMLZone/extras.html#sizesValue">in this section<samp>Element Extras<br>A Coding Zone Document</samp></a><b>&#44;</b> I ran into this problem using a capitol <b>&ldquo;X&rdquo;</b> in the value<b>&#58;</b>
+                    </p>
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting error</h4>
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 22<b>&#44;</b> Column 76<b>&#58;</b></i>Bad value 16X16 for attribute sizes on element <code class="lineCode">link</code>&#46;
+                        </p>
+                        <p class="locatedCodeError">
+                            <code class="validatorCode">&lt;link <code class="attributeCode">rel</code><code class="codeValue">icon</code> <code class="attributeCode">sizes</code><code class="codeValue">16X16</code> <code class="attributeCode">href</code><code class="codeValue">/myIcon<b class="enemDash">&#45;</b>16x16&#46;png</code><strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b>&ensp;</samp></strong></code>
+                        </p>
+                        <hr class="hr-noLine-spacer1pt5">
+                    </div>
+                    <p>
+                        <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                    </p>
+                </article>
+    <!-- No character encoding -->
+                <article id="noCharacterEncoding" class="articleContainer">
+                    <h4 class="articleHeaderH3">document with no character encoding</h4>
+                    <ul class="basicListContainer groupingList">
+                        <li class="listing1">When the <i>Encoding Declaration State</i> is completely left out<b>&#58;</b></li>
+                        <li class="listIndent-1pt25"><code class="openingTag">meta <code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code> <code class="attributeCode">content</code><code class="codeValue">text/html<b>&#59;</b> <code class="attributeCode">charset</code>utf<b class="enemDash">&#45;</b>8</code></code></li>
+                        <li class="listing1">The <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr> <i>validator</i><samp>Markup Validation<br>Service</samp></span> output<b>&#58;</b></li>
+                    </ul><hr class="hr-noLine-spacer1">
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting warning</h4>
+                        <p class="validatorWarning"><b class="warningIcon"></b></p>
+                        <p class="validatorBodyText">
+                            <b>No Character Encoding Found&#33;&ensp;Falling back to <code class="lineCode"><abbr class="uppercase">uft&ndash;8</abbr></code><b>&#46;</b>&ensp;</b>
+                        </p>
+                        <p class="validatorBodyText">
+                            None of the standards sources gave any information on the character encoding labeling for this document<b>&#46;</b>&ensp;Without encoding information it is impossible to reliably validate the document<b>&#46;</b>&ensp;As a fallback solution<b>&#44;</b> the <code class="lineCode codeUppercase"><b>&ldquo;</b>utf<b class="enemDash">&#45;</b>8<b>&rdquo;</b></code> encoding was used to read the content and attempt to perform the validation<b>&#44;</b> but this is likely to fail for all non<b class="enemDash">&#45;</b>trivial documents<b>&#46;</b>&ensp;
+                        </p>
+                        <div class="diamond">
+                            <p class="diamondText">i</p>
+                        </div>
+                        <p class="validatorInformationMessage">No Character encoding declared at document level<b>&#46;</b>&ensp;</p>
+                        <p class="validatorBodyText">
+                            No character encoding information was found within the document<b>&#44;</b> either in an <abbr class="htmlBold"></abbr> meta element or an XML declaration<b>&#46;</b>&ensp;It is often recommended to declare the character encoding in the document itself<b>&#44;</b> especially if there is a chance that the document will be read from or saved to disk<b>&#44;</b> CD<b>&#44;</b> etc<b>&#46;</b>&ensp;
+                        </p><hr class="hr-noLine-spacer1pt5">
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <span class="validatorWarning">The character encoding was not declared<b>&#46;</b>&ensp;Proceeding using windows<b class="enemDash">&#45;</b>1252</span><b>&#46;</b>
+                        </p>
+                        <hr class="hr-noLine-spacer1pt5">
+                    </div>
+                    <p>
+                        <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                    </p>
+                </article>
+    <!-- INCORRECT META TAG INSERTED -->
+                <article id="incorrectMetaTagInserted" class="articleContainer">
+                    <h4 class="articleHeaderH3">incorrect <code class="closingTag">meta</code> tag inserted</h4>
+                    <ul class="basicListContainer groupingList">
+                        <li class="listing1">When the <i>Encoding Declaration State</i> has been separated within the <code class="openingTag">meta</code> tag<b>&#58;</b></li>
+                        <li class="listIndent-1pt25"><code class="openingTag"><b>&#46;&#46;&#46;&thinsp;</b><code class="attributeCode">content</code><code class="lineCode"><b>&ldquo;</b>text/html<mark class="myMarkHighlite"><b>&rdquo;</b></mark></code> <code class="attributeCode">charset</code><code class="lineCode"><mark class="myMarkHighlite"><b>&ldquo;</b></mark>utf<b class="enemDash">&#45;</b>8<b>&rdquo;</b></code></code></li>
+                        <li class="listing1">These two <i>errors</i> are generated<b>&#58;</b></li>
+                        <li class="listing1">Along with the above <i>warning</i> and <i>informational</i><b>&#44;</b></li>
+                    </ul>
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting errors</h4>
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 4<b>&#44;</b> Column 69<b>&#58;</b></i>Attribute charset not allowed on element meta at this point<b>&#46;</b>&ensp;
+                        </p>
+                        <p class="locatedCodeError">
+                            <code class="validatorCode">&lt;meta <code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code> <code class="attributeCode">content</code><code class="codeValue">text/html</code> <code class="attributeCode">charset</code><code class="codeValue">utf<b class="enemDash">&#45;</b>8</code><strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b>&ensp;</samp></strong></code>
+                        </p>
+                        <h4 class="mySmall reduceTopMarg-pt25em">Attributes for element <code class="closingTag">meta</code><b>&#58;</b></h4>
+                        <ul class="mySmall reduceTopMarg-1pt5em">
+                            <li><a class="textLink" href="TheHTMLZone/tagsAndAttributes.html#globalAttributes">Global Attributes<samp>Tags &amp; Attributes<br>A Coding Zone Document</samp></a></li>
+                            <li><a class="textLink" href="#name">name<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#http_equip">http<b class="enemDash">&#45;</b>equiv<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#content">content<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#charset">charset<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                        </ul>
+                    </div><hr class="hrMarginReducer1pt5">
+                    <div class="validatorMessageContainer">
+                        <hr class="hr-noLine-spacer1pt5">
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 4<b>&#44;</b> Column 69<b>&#58;</b></i>Bad value <code class="lineCode">text/html</code> for attribute <code class="codeAttribute">content</code> on element <code class="closingTag">meta</code>&#58; The legacy encoding declaration did not start with <code class="lineCode">text/html&#59;</code><b>&#46;</b>&ensp;
+                        </p>
+                        <p class="locatedCodeError">
+                            <code class="validatorCode">&lt;meta <code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code> <code class="attributeCode">content</code><code class="codeValue">text/html</code> <code class="attributeCode">charset</code><code class="codeValue">utf<b class="enemDash">&#45;</b>8</code><strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b>&ensp;</samp></strong></code>
+                        </p>
+                        <ul class="mySmall groupingList">
+                            <li class="olulListItem"><a class="textLink" href="TheHTMLZone/extras.html#encodingDeclarationSyntax">Syntax of legacy character encoding declaration<samp>Element Extras<br>A Coding Zone Document</samp></a><b>&#46;</b>&ensp;</li>
+                            <li class="longListItemIndent"><code class="attributeCode">content</code><code class="codeValue">text/html&#59; <code class="attributeCode">charset</code><code class="codeUppercase">utf<b class="enemDash">&#45;</b>8</code></code></li>
+                        </ul>
+                    </div>
+                    <p class="bodyText">
+                        In the case of the <i>Encoding Declaration State&#44;</i> the <code class="codeAttribute">charset</code> attribute is actually a value of the <code class="codeAttribute">content</code> attribute<b>&#46;</b>&ensp;
+                    </p>
+                    <p>
+                        <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                    </p>
+                </article>
+    <!-- No Content Attribute -->
+                <article id="noContentAttribute" class="articleContainer">
+                    <h4 class="articleHeaderH3">No <code class="attributeCode">content</code><code class="codeValue"></code> attribute</h4>
+                    <ul class="basicListContainer groupingList">
+                        <li class="listing1"><i>Encoding Declaration State</i> as such&#58;</li>
+                        <li class="listIndent-1pt25"><code class="openingTag">meta <code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code> <code class="attributeCode">charset</code><code class="codeValue codeUppercase">utf<b class="enemDash">&#45;</b>8</code></code></li>
+                        <li class="listing1">Along with the above <a class="textLink" href="#noCharacterEncoding"><i>warning</i> and <i>informational</i><samp>Section On&#58;<br>No Character Encoding Found</samp></a><b>&#44;</b></li>
+                        <li class="listing1">The <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr> <i>validator</i><samp>Markup Validation<br>Service</samp></span> produces these two errors</li>
+                    </ul>
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting errors</h4>
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 4<b>&#44;</b> Column 49<b>&#58;</b></i>Attribute <code class="codeAttribute">charset</code> not allowed on element <code class="closingTag">meta</code> at this point&#46;
+                        </p>
+                        <p class="locatedCodeError">
+                            <code class="lineCode">&lt;meta <code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code> <code class="attributeCode">charset</code><code class="codeValue codeUppercase">utf<b class="enemDash">&#45;</b>8</code><strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b>&ensp;</samp></strong></code>
+                        </p>
+                        <h4 class="mySmall reduceTopMarg-pt25em">Attributes for element <code class="closingTag">meta</code><b>&#58;</b></h4>
+                        <ul class="mySmall reduceTopMarg-1pt5em">
+                            <li><a class="textLink" href="TheHTMLZone/tagsAndAttributes.html#globalAttributes">Global Attributes<samp>Tags &amp; Attributes<br>A Coding Zone Document</samp></a></li>
+                            <li><a class="textLink" href="#name">name<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#http_equip">http<b class="enemDash">&#45;</b>equiv<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#content">content<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#charset">charset<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                        </ul>
+                    </div><hr class="hrMarginReducer1pt5">
+                    <div class="validatorMessageContainer">
+                        <hr class="hr-noLine-spacer1pt5">
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 4<b>&#44;</b> Column 49<b>&#58;</b></i>Element <code class="closingTag">meta</code> is missing required attribute <code class="codeAttribute">content</code>&#46;
+                        </p>
+                        <p class="locatedCodeError">
+                            <code class="lineCode">&lt;meta <code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code> <code class="attributeCode">charset</code><code class="codeValue codeUppercase">utf<b class="enemDash">&#45;</b>8</code><strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b>&ensp;</samp></strong></code>
+                        </p>
+                        <h4 class="mySmall reduceTopMarg-pt25em">Attributes for element <code class="closingTag">meta</code><b>&#58;</b></h4>
+                        <ul class="mySmall reduceTopMarg-1pt5em">
+                            <li><a class="textLink" href="TheHTMLZone/tagsAndAttributes.html#globalAttributes">Global Attributes<samp>Tags &amp; Attributes<br>A Coding Zone Document</samp></a></li>
+                            <li><a class="textLink" href="#name">name<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#http_equip">http<b class="enemDash">&#45;</b>equiv<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#content">content<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#charset">charset<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                        </ul><hr class="hr-noLine-spacer1pt5">
+                    </div>
+                        <ul class="olulListContainer">
+                            <li class="olulListItem"><a class="textLink" href="TheHTMLZone/extras.html#encodingDeclarationSyntax">Character Encoding Declaration<samp>Element Extras<br>A Coding Zone Document</samp></a> Syntax<b>&#46;</b>&ensp;</li>
+                            <li class="longListItemIndent"><code class="attributeCode">content</code><code class="codeValue">text/html&#59; <code class="attributeCode">charset</code><code class="codeUppercase">utf<b class="enemDash">&#45;</b>8</code></code></li>
+                        </ul><hr class="hr-noLine-spacer1pt5">
+                    <p>
+                        <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                    </p>
+                </article>
+    <!-- Separating Encoding Declaration State -->
+                <article id="separateEncodingDeclarationState" class="articleContainer">
+                    <h4 class="articleHeaderH3">Separated encoding declaration state</h4>
+                    <ul class="basicListContainer groupingList">
+                        <li class="listing1"><code class="openingTag">meta</code> tags for the <i>Encoding Declaratione State</i> as such<b>&#58;</b></li>
+                        <li class="listIndent-1pt25"><code class="openingTag">meta&nbsp;<code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code>&nbsp;<code class="attributeCode">content</code><code class="codeValue">text/html</code></code></li>
+                        <li class="listIndent-1pt25"><code class="openingTag">meta&nbsp;<code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code>&nbsp;<code class="attributeCode">charset</code><code class="codeValue">utf<b class="enemDash">&#45;</b>8</code></code></li>
+                        <li class="listing1">The <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr> <i>validator</i><samp>Markup Validation<br>Service</samp></span> produces these three errors</li>
+                        <li class="listing1">Along with the above <a class="textLink" href="#noCharacterEncoding"><i>warning</i> and <i>informational</i><samp>Section On&#58;<br>No Character Encoding Found</samp></a><b>&#44;</b></li>
+                    </ul>
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting errors</h4>
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 4<b>&#44;</b> Column 53<b>&#58;</b></i>Bad value <code class="lineCode">text/html</code> for attribute <code class="codeAttribute">content</code> on element <code class="openingTag">meta</code>&#58; The legacy encoding declaration did not start with <code class="lineCode">text/html&#59;</code>.&#46;
+                        </p>
+                        <p class="locatedCodeError">
+                            <code class="lineCode">&lt;meta <code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code> <code class="attributeCode">content</code><code class="codeValue">text/html</code></code><strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b>&ensp;</samp></strong>
+                        </p>
+                        <ul class="mySmall groupingList">
+                            <li class="olulListItem"><a class="textLink" href="TheHTMLZone/extras.html#encodingDeclarationSyntax">Syntax of legacy character encoding declaration<samp>Element Extras<br>A Coding Zone Document</samp></a><b>&#46;</b>&ensp;</li>
+                            <li class="longListItemIndent"><code class="attributeCode">content</code><code class="codeValue">text/html&#59; <code class="attributeCode">charset</code><code class="codeUppercase">utf<b class="enemDash">&#45;</b>8</code></code></li>
+                        </ul>
+                    </div><hr class="hrMarginReducer1pt5">
+                    <div class="validatorMessageContainer">
+                        <hr class="hr-noLine-spacer1pt5">
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 5<b>&#44;</b> Column 49<b>&#58;</b></i>Attribute <code class="codeAttribute">charset</code> not allowed on element <code class="closingTag">meta</code> at this point&#46;
+                        </p>
+                        <p class="locatedCodeError">
+                            <code class="lineCode">&lt;meta <code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code> <code class="attributeCode">charset</code><code class="codeValue">utf<b class="enemDash">&#45;</b>8</code><strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b>&ensp;</samp></strong></code>
+                        </p>
+                        <h4 class="mySmall reduceTopMarg-pt25em">Attributes for element <code class="closingTag">meta</code><b>&#58;</b></h4>
+                        <ul class="mySmall reduceTopMarg-1pt5em">
+                            <li><a class="textLink" href="TheHTMLZone/tagsAndAttributes.html#globalAttributes">Global Attributes<samp>Tags &amp; Attributes<br>A Coding Zone Document</samp></a></li>
+                            <li><a class="textLink" href="#name">name<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#http_equip">http<b class="enemDash">&#45;</b>equiv<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#content">content<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#charset">charset<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                        </ul>
+                    </div><hr class="hrMarginReducer1pt5">
+                    <div class="validatorMessageContainer">
+                        <hr class="hr-noLine-spacer1pt5">
+                        <p class="validatorError"></p>
+                        <p class="validatorErrorMessage">
+                            <i class="errorLocation">Line 5<b>&#44;</b> Column 49<b>&#58;</b></i>Element <code class="closingTag">meta</code> is missing required attribute <code class="codeAttribute">content</code>&#46;
+                        </p>
+                        <p class="locatedCodeError">
+                            <code class="lineCode">&lt;meta <code class="attributeCode">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">Content<b class="enemDash">&#45;</b>Type</code> <code class="attributeCode">charset</code><code class="codeValue">utf<b class="enemDash">&#45;</b>8</code><strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b>&ensp;</samp></strong></code>
+                        </p>
+                        <h4 class="mySmall reduceTopMarg-pt25em">Attributes for element <code class="closingTag">meta</code><b>&#58;</b></h4>
+                        <ul class="mySmall reduceTopMarg-1pt5em">
+                            <li><a class="textLink" href="TheHTMLZone/tagsAndAttributes.html#globalAttributes">Global Attributes<samp>Tags &amp; Attributes<br>A Coding Zone Document</samp></a></li>
+                            <li><a class="textLink" href="#name">name<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#http_equip">http<b class="enemDash">&#45;</b>equiv<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#content">content<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                            <li><a class="textLink" href="#charset">charset<samp>Section On&#58;<br><code class="closingTag">meta</code> Attributes</samp></a></li>
+                        </ul>
+                    </div>
+                    <p>
+                        <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                    </p>
+                </article>
+    <!-- details summary and dialog elements --><a id="detailsWarning"></a><a id="summaryWarning"></a><a id="dialogWarning"></a>
+                <article class="articleContainer">
+                    <h4 class="articleHeaderH3">Unsupported <code class="closingTag">details</code> element</h4>
+                    <p class="basicListContainer">
+                        Both validators<b>&#44;</b> <span class="tip"><abbr class="whatwg"></abbr><samp>The Living Validator<br>www.validator.nu</samp></span> and <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr><samp>Markup Validation<br>Service</samp></span><b>&#44;</b> issues this warning<b>&#58;</b>&ensp;
+                    </p>
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting warning</h4>
+                        <p class="validatorWarning"><b class="warningIcon"></b></p>
+                        <p class="validatorWarningMessage">
+                            <i class="errorLocation">Line 43<b>&#44;</b> Column 21<b>&#58;</b></i><b>The details element is not supported properly by browsers yet. It would probably be better to wait for implementations</b>
+                        </p>
+                        <pre class="preLocatedCodeError">
+                            <code class="validatorCode">&lt;details<strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b></samp></strong></code>
+                        </pre>
+                    </div>
+                        <p class="bodyText">
+                            <b class="blackRed myRegCapsBold">Author&rsquo;s opinion&#58; </b>This is a very useful element introduced in <abbr class="htmlBold">html<sub>5</sub></abbr><b>&#44;</b> if only it was fully supported<b>&#46;</b>&ensp;The browsers that do not support it<b>&#44;</b> really need to <i>get with the program&#33;</i>
+                        </p><hr class="hr-noLine-spacer1">
+                        <p>
+                            <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                        </p>
+                </article>
+    <!-- border attribute on table element -->
+                <article id="borderAttributeOnTable" class="articleContainer">
+                    <h4 class="articleHeaderH4">border attribute on table element</h4>
+                    <p class="basicListContainer">
+                        Both validators<b>&#44;</b> <span class="tip"><abbr class="whatwg"></abbr><samp>The Living Validator<br>www.validator.nu</samp></span> and <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr><samp>Markup Validation<br>Service</samp></span><b>&#44;</b> issues this warning<b>&#58;</b>&ensp;
+                    </p>
+                    <div class="validatorMessageContainer">
+                        <h4 class="warningH4">resulting warning</h4>
+                        <p class="validatorWarning"><b class="warningIcon"></b></p>
+                        <p class="validatorWarningMessage">
+                            <i class="errorLocation">Line 1359<b>&#44;</b> Column 97<b>&#58;</b></i><b>The border attribute on the table element is presentational markup. Consider using CSS instead. For example: table, td, th { border: 1px solid gray }</b>
+                        </p>
+                        <pre class="preLocatedCodeError">
+                            <code class="validatorCode">&lt;table border="1"<strong class="tip darkRed">&gt;<samp>Position where<br>error was detected<b>&#46;</b></samp></strong></code>
+                        </pre>
+                    </div>
+                        <p>
+                            <a class="returnLinks" href="javascript:history.back(1)">Previous&nbsp;Location<b>&#33;</b></a>
+                        </p>
+                </article>
+            </section>
+            <section id="cssValidation" class="sectionWrapper">
+            	<header>
+                    <h2>CSS Validation Service</h2>
+                    <h3>Check Cascading Style Sheets (CSS) and (X)HTML documents with style sheets </h3>
+                    <h4>W3C CSS Validator results for styles.css (CSS level 3)</h4>
+                    <h4>Sorry! We found the following errors (6)</h4>
+                    <h5>URI : MainLayout.css</h5>
+                </header>
+                <ul><!--  Validator Errors -->
+<li>799 	.radialBackground, .articleBackground, .navBackground 	Value Error : background ellipse is not a color value )</li>
+<li>808 	.tblRowBackground 	Value Error : background-image ellipse is not a color value )</li>
+<li>817 	.tblHeaderBackground 	Value Error : background ellipse is not a color value )</li>
+<li>1483 	.pageNavigationBackground 	Value Error : background-image ellipse is not a color value )</li>
+<li>2787 	.tableHeader 	Value Error : background-image ellipse is not a color value )</li>
+<li>2927 	.innerTableHeader 	Value Error : background-image ellipse is not a color value )</li>
+				</ul>
+                <ul>
+                <li>Whereever you use <b>&ldquo;</b><i>vendor extensions</i> you will receive these warnings&#58;</li>
+<li>27		-moz-background-size is an unknown vendor extension</li>
+<li>28		-webkit-background-size is an unknown vendor extension</li>
+<li>29		-o-background-size is an unknown vendor extension</li>
+<li>214		-ms-columns is an unknown vendor extension</li>
+				</ul>
+            </section>
+        </section>
+        <footer class="pgFooter">
+			<script src="scripts/footer.js" type="text/javascript"></script><hr class="hr-noLine-spacerPt5">
+			<script type="text/javascript">modDate();</script>
+        </footer>
+	</section><!-- end of wrapper -->
+</body>
+</html>
