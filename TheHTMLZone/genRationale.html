@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--
+	Website: Bearz Design Concepts, The HTML Zone
+    URL: www.bearzdesignconcepts.net/genRationale.html
+    File Name: genRationale.html
+    Author: Barry Smith
+    resources: WHATWG and W3C Specs
+-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="Barry Smith, Bearz Design Concepts, Bears Design Concepts, 
+    	Bearz Design, Bears Design, Bears Web and Graphics, Bearz Web and Graphics, The Coding Zone, HTML Elements, 
+        HTML5 Elements, HTML Tags, HTML Tag Use, Typography, HTML Syntax, CSS Default Display Settings, 
+        Coding, Validation, HTML, HTHL5, CSS3, Coding Zone">
+	<meta name="description" content="An HTML5/CSS3 Instructional web site with the student in mind">
+    <title>
+    	General Rational / The Coding Zone
+	</title>
+			<!-- supporting CSS and JavaScript and favicon files -->
+	<link href="../css3/MainLayout.css" rel="stylesheet" type="text/css">
+	<link href="../css3/banner_Logo.css" rel="stylesheet" type="text/css">
+	<link href="../css3/nav.css" rel="stylesheet" type="text/css">
+	<link href="../css3/textStyles.css" rel="stylesheet" type="text/css">
+	<link href="../css3/myAlerts.css" rel="stylesheet" type="text/css">
+	<link href="../css3/cssToolTip.css" rel="stylesheet" type="text/css">
+	<link href="../css3/responsiveCSS.css" rel="stylesheet" type="text/css">
+	<link href="../css3/specialEffects.css" rel="stylesheet" type="text/css">
+	<link href="../css3/targetSelectors.css" rel="stylesheet" type="text/css">
+	<link href="../css3/myAnimations.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/embeddedFonts.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/inconsolata/inconsolata.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/alluraWebReady/allura.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/fontSavatage/savatage.css" rel="stylesheet" type="text/css">
+    <link href="../icon/apple-icon-57X57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="../icon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="../icon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../icon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="../icon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../icon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="../icon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="../icon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="../icon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="../icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="../icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="../icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="../icon/manifest.json" rel="manifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="../scripts/siteFunctions.js" type="text/javascript"></script>
+    <script src="../scripts/jquery_v2.0.0.js" type="text/javascript"></script>
+    <script>document.createElement("tooltip")</script><!-- satisfies IE for a my custom element-->
+    <!-- used for my floating back button in lower right corner -->
+	<script>
+		$(document).ready(function () {  $('.backToTopScroll').hide();//Check to see if the window is top if not then display button
+		$(window).scroll(function () {  if ($(this).scrollTop() > 650) {    $('.backToTopScroll').fadeIn();  } else {    $('.backToTopScroll').fadeOut();  }}); //Click event to scroll to top
+		$('.backToTopScroll').click(function () {  $('html, body').animate({ scrollTop: 0 }, 900);  return false;  });});
+    </script>
+</head>
+<body><a class="topLeftBackButton" href="javascript:history.back()"></a><a class="backToTopScroll" onClick="scrollToTopClose()">Page Top</a>
+        <h1 class="siteName siteNameFadeIn displayNone">The<br>Coding Zone</h1>
+        <h1 class="backName backNameFadeIn displayNone">The<br>Coding Zone</h1>
+        <h2 class="siteName siteNameFadeIn displayNone">The<br>Coding Zone</h2>
+        <div class="landscapeView colGradient"><!-- backNameFadeIn  -->
+            <p class="phoneHeader">
+                <span class="phoneHeader-B">b</span><span class="phoneHeaderB-ear">&ensp;ear&thinsp;</span><span class="phoneHeaderBear-Z">z</span>
+                <span class="phoneHeader-C">c</span><span class="phoneHeaderCodingBorder"><span class="phoneHeaderC-oding">oding</span></span>
+                <span class="phoneHeader-Z">z</span><span class="phoneHeaderZoneBorder"><span class="phoneHeaderZ-one">one</span></span>
+            </p><hr class="hr-noLine-spacer1">
+            <p class="articleRepeatingRadial"><span class="landscapeViewFirstLetter">m</span>y Apologizes&#44;<br><span class="landscapeViewFirstLetter">p</span>lease view this site in landscape view&#46;<br><span class="landscapeViewFirstLetter">t</span>his site is not optimized for less than <span class="landscapeViewNumber">575</span> pixel width&#46;&ensp;<br><span class="landscapeViewFirstLetter">f</span>or devices with a maximum width <span class="parentheses mySmall andadaBoldItalic">landscape view</span>&#44; of less than 575 pixels&#44; slight horizontal scrolling is necessary&#46;&ensp;</p><!--    -->
+            <p class="phoneHeader">
+                <span class="phoneHeader-B">b</span><span class="phoneHeaderB-ear">&ensp;ear&thinsp;</span><span class="phoneHeaderBear-Z">z</span>
+                <span class="phoneHeader-C">c</span><span class="phoneHeaderCodingBorder"><span class="phoneHeaderC-oding">oding</span></span>
+                <span class="phoneHeader-Z">z</span><span class="phoneHeaderZoneBorder"><span class="phoneHeaderZ-one">one</span></span>
+            </p>
+        </div>
+    <section id="wrapper" class="gradient pageFadeIn">
+		<header id="Banner/Logo" class="myHeader"><!--  -->
+        	<h2 class="backName backNameFadeIn displayNone">The<br>Coding Zone</h2>
+            <div class="siteName siteNameFadeIn"><!--  -->
+            	<p class="htmlHeader-The"><span class="htmlHeader-T">t</span><span class="borderT-he"><span class="htmlHeaderT-he">he</span></span></p>
+                <p class="htmlHeader-HTML"><span class="htmlHeader-H">h</span><span class="borderH-tml"><span class="htmlHeaderH-tml">tml</span></span></p> 
+                <p class="htmlHeader-Zone"><span class="htmlHeader-Z">z</span><span class="borderZ-one"><span class="htmlHeaderZ-one">one</span></span></p><!--  -->
+            </div>
+        </header><!-- end of header -->
+		<nav id="topNavBar" class="topNav navBarGradient">
+			<a class="navBlur" href="../siteMap.html">Topics</a>
+            <a class="navBlur" href="../contact.php">Contact</a>
+            <a class="navBlur" href="../index.php">Bearz Home</a>
+            <a class="navBlur" href="http://www.codingzone.org" target="_blank" rel="external">codingzone<b>&#46;</b>org</a>
+			<hr class="fadingStyle">
+        </nav>
+		<nav id="breadCrumbLinks" class="speedInLeft">
+			<script type="text/javascript">breadcrumbs()</script>
+		</nav>
+    <h2><span class="mw-headline" id="General_Rationale">General Rationale</span></h2>
+    <h3><span class="mw-headline" id="In_overall_terms.2C_what_determines_what.E2.80.99s_in_the_spec.3F">In overall terms, what determines what&#8217;s in the spec?</span></h3>
+    <h4><span class="mw-headline" id="Already-implemented_features">Already-implemented features</span></h4>
+    <p>The contents of the spec is largely determined by what&#8217;s already been implemented in browsers. Historically, vendors competed with one another by implementing features without regard to any specification. It&#8217;s a relatively recent phenomenon that vendors compete by their conformance to the spec.
+    </p><p>One of the main purposes of the spec is to describe reality. Thus, the spec must include all already-implemented features regardless of what the spec editor, members, and contributors think. A feature may be moved to the obsolete section if there is consensus that the feature should be dropped.
+    </p>
+    <h4><span class="mw-headline" id="Member_and_contributor_feedback">Member and contributor feedback</span></h4>
+    <p>When adding features to the spec, the editor takes into account member and contributor feedback (via the WHATWG mailing list and IRC channel). If the editor believes inclusion of a feature is justified, he will add it to the spec. Ultimately, whether a feature remains in the spec depends on whether or not vendors (at least two) decide to implement the feature.
+    </p>
+    <h3><span class="mw-headline" id="One_vendor.2C_one_veto">One vendor, one veto</span></h3>
+    <p>Part of the the goal of the WHATWG is to document how web browsers actually handle HTML. As such, browser vendors already have veto power&#8212;by not following the standard. The W3C and WHATWG do not have any enforcement power and can only write what browsers are willing to implement. Not removing features from the HTML standard that at least one browser vendor has stated they are unwilling to implement causes the HTML spec to not accurately document reality.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup>. The veto isn&#8217;t a power that we grant browsers; it&#8217;s a right that they earn on their own by virtue of having users. The minimum market share for a veto is somewhere around 1%.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup>
+    </p>
+    <h3><span class="mw-headline" id="Why_is_everything_else_around_us_developing_so_fast.2C_but_the_web_is_so_slow_to_adopt_anything.3F.5B4.5D">Why is everything else around us developing so fast, but the web is so slow to adopt anything?<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></span></h3>
+    <p>Because to get something adopted in a browser, you need to do the following (not always in this order):
+    </p>
+    <ol>
+     <li>Have someone design the feature.
+     <li>Have someone write a specification for it.
+     <li>Have some people write tests for it.
+     <li>Have one browser implement it.
+     <li>Have another browser implement it.
+     <li>Have another browser implement it.
+     <li>Have another browser implement it.
+     <li>Have people document it.
+    </ol>
+    <p>This is in contrast to &#8220;everything else,&#8221; which just needs:
+    </p>
+    <ol>
+     <li>Someone to implement it.
+    </ol>
+    <h3><span class="mw-headline" id="Using_elements_where_scripts_.E2.80.9Cwork.E2.80.9D">Using elements where scripts &#8220;work&#8221;</span></h3>
+    <p>In addition, arguments were made that JavaScript-based implementations of details suffer from problems and limitations. Scripting behavior may be inconsistent across browsers, or even unavailable in some contexts. Accessibility is "bolted on", allowing more opportunity for author error, even when using libraries. The data model is not exposed in a consistent way in the markup. And matching native appearance and behavior across a range of platforms may be impractical.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup>
+    </p>
+    <h3><span class="mw-headline" id="It_isn.E2.80.99t_just_about_web_browsers">It isn&#8217;t just about web browsers</span></h3>
+    <p>Web browsers are not the only programs that use HTML. Sometimes elements and features are needed even when browsers won&#8217;t use them in any meaningful way. Document authoring tools, validators, search engines, screen readers, outliners, researchers, etc. all need and can use more information than a browser can. Furthermore if you provide more information than is currently used by browsers it opens up room for innovation.
+    </p>
+    <h3><span class="mw-headline" id="Experimenting_with_features">Experimenting with features</span></h3>
+    <p>New unknown and untested features are unlikely to get accepted into the WHATWG spec. Browsers and browser extensions (like Google Gears) are expected to first establish use cases and implementation possibilities before the spec is changed. <sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup>
+    </p>
+    <h3><span class="mw-headline" id="Versioning_the_spec">Versioning the spec</span></h3>
+    <p>Most authors don&#8217;t care about whether or not an implementation supports an entire, full specification; they just want to know &#8220;Can I use this feature in this browser?&#8221; So saying that all major implementations support much of CSS 2 to a high degree of correctness is useless for knowing if, say, the author can use display: run-in. In other words, the feature tables are what web authors would actually use in real life.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup>
+    </p>
+    <h3><span class="mw-headline" id="Modifying_existing_semantics">Modifying existing semantics</span></h3>
+    <p>Some elements have different semantics than what HTML users would expect. Semantic markup isn&#8217;t very useful if most pages use elements in a manner that conflicts with the defined semantics. For example, if a search engine treated <code>dd</code> as enclosing a term being defined, for the purposes of searching for definitions, it would not find many definitions, and it would misclassify things.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup>
+    </p>
+    <h3><span class="mw-headline" id="What_is_the_purpose_of_defining_elements_semantically.3F">What is the purpose of defining elements semantically?</span></h3>
+    <p>Semantic definitions allow HTML processors, such as Web browsers or search engines, to present and use documents and applications in a wide variety of contexts that the author might not have considered.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup>
+    </p><p>Consider a Web page written by an author who only considered desktop computer Web browsers. Because HTML conveys <em>meaning</em>, rather than presentation, the same page can also be used by a small browser on a mobile phone, without any change to the page. Instead of headings being in large letters as on the desktop, for example, the browser on the mobile phone might use the same size text for the whole the page, but with the headings in bold.
+    </p><p>The same page could equally be used by a blind user using a browser based around speech synthesis, which instead of displaying the page on a screen, reads the page to the user, e.g., using headphones. Instead of large text for the headings, the speech browser might use a different volume or a slower voice.
+    </p><p>Since the browsers know which parts of the page are the headings, they can create a document outline that the user can use to quickly navigate around the document, using keys for &#8220;jump to next heading&#8221; or &#8220;jump to previous heading&#8221;. Such features are especially common with speech browsers, where users would otherwise find quickly navigating a page quite difficult.
+    </p><p>Even beyond browsers, software can make use of this information. Search engines can use the headings to more effectively index a page, or to provide quick links to subsections of the page from their results. Tools can use the headings to create a table of contents (that is in fact how the table of contents of the WHATWG HTML specification is generated).
+    </p><p>This example has focused on headings, but the same principle applies to all of the semantics in HTML.
+    </p>
+    <h3><span class="mw-headline" id="Why_is_it_important_to_stick_to_the_semantics_as_defined_in_the_spec.3F">Why is it important to stick to the semantics as defined in the spec?</span></h3>
+    <p>Not adhering to the spec&#8217;s semantics prevents software that assumes and relies on said semantics from correctly processing the document.
+    </p><p>For example, the following document is non-conforming, despite being syntactically correct:
+    </p>
+    <pre>!DOCTYPE HTML
+    html lang=&quot;en-GB&quot;
+     head title Demonstration /title /head
+     body
+      table
+       tr td My favourite animal is the cat. /td /tr
+       tr
+        td
+         a href=&quot;http://example.org/~ernest/&quot;citeErnest/cite/a,
+         in an essay from 1992
+        /td
+       /tr
+      /table
+     /body
+    /html</pre>
+    <p>&#8230;because the data placed in the cells is clearly not tabular data (and the <code>cite</code> element is misused). This would make software that relies on these semantics fail. For example, a speech browser that allowed a blind user to navigate tables in the document would report the quote above as a table, confusing the user; similarly, a tool that extracted titles of works from pages would extract &#8220;Ernest&#8221; as the title of a work, even though it&#8217;s actually a person&#8217;s name, not a title.
+    </p><p>A corrected version of this document might be:
+    </p>
+    <pre>!DOCTYPE HTML
+    html lang=&quot;en-GB&quot;
+     head title Demonstration /title /head
+     body
+      blockquote
+       p My favourite animal is the cat. /p
+      /blockquote
+      p
+       —a href=&quot;http://example.org/~ernest/&quot;Ernest/a,
+       in an essay from 1992
+      /p
+     /body
+    /html</pre>
+    <h2><span class="mw-headline" id="Specific_Elements">Specific Elements</span></h2>
+    <h3><span class="mw-headline" id="The_DOCTYPE_.28Document_Type_Declaration.29">The DOCTYPE (Document Type Declaration)</span></h3>
+    <p>Because HTML has moved to an unversioned model, the <code>DOCTYPE</code> does not a have version number. The inclusion of a document type declaration is necessary merely for legacy browsers that will operate in quirks mode (a non-spec compliant rendering mode) if a <code>DOCTYPE</code> is absent.
+    </p>
+    <h3><span class="mw-headline" id="Document_metadata">Document metadata</span></h3>
+    <h4><span class="mw-headline" id="The_charset_attribute_on_the_meta_element_in_XML_documents">The <code>charset</code> attribute on the <code>meta</code> element in XML documents</span></h4>
+    <p>The <code>charset</code> attribute on the <code>meta</code> element has no effect in XML documents; it is only allowed in order to facilitate migration to and from XHTML.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup>
+    </p>
+    <h4><span class="mw-headline" id="Inclusion_of_the_application-name_metadata_name_value">Inclusion of the <code>application-name</code> metadata <code>name</code> value</span></h4>
+    <p>User agents may want to use the Web application name in UI in preference to the page&#8217;s <code>title</code>, as the title might include status messages and the like relevant to the status of the page at a particular moment in time instead of just being the name of the application.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup>
+    </p>
+    <h4><span class="mw-headline" id="On_the_continued_inclusion_of_the_keyword_metadata_name_value">On the continued inclusion of the <code>keyword</code> metadata <code>name</code> value</span></h4>
+    <p>Considering that the <code>keyword</code> value has historically been used unreliably and even misleadingly as a way to spam search engine results (i.e., to garner higher search engine rankings), why is this feature still included in the spec? Because a content management system, for example, can use the keyword information of pages within the system to populate the index of a site-specific search engine. In short, keywords have use beyond the large-scale content aggregators (e.g., Google) that pervade the Web.
+    </p>
+    <h3><span class="mw-headline" id="Sections">Sections</span></h3>
+    <h4><span class="mw-headline" id="hgroup_and_other_heading_elements"><code>hgroup</code> and other heading elements</span></h4>
+    <p>The point of <code>hgroup</code> is to hide the subtitle from the outlining algorithm.
+    </p>
+    <h4><span class="mw-headline" id="header_and_footer"><code>header</code> and <code>footer</code></span></h4>
+    <blockquote>The primary purpose of these elements is merely to help the author write self-explanatory markup that is easy to maintain and style; they are not intended to impose specific structures on authors.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup></blockquote>
+    <h3><span class="mw-headline" id="Grouping_content">Grouping content</span></h3>
+    <h4><span class="mw-headline" id="The_blockquote_element">The <code>blockquote</code> element</span></h4>
+    <h5><span class="mw-headline" id="Why_is_it_non-conforming_to_place_attributions_and_inline_citations_inside_the_blockquote_element.3F">Why is it non-conforming to place attributions and inline citations inside the <code>blockquote</code> element?</span></h5>
+    <p>Because the specification does not consider attributions and inline citations to be part of a block quote proper.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup> In other words, the <code>blockquote</code> element represents only the quote itself.
+    </p>
+    <h3><span class="mw-headline" id="Text-level_semantics">Text-level semantics</span></h3>
+    <h3><span class="mw-headline" id="Embedded_content">Embedded content</span></h3>
+    <h4><span class="mw-headline" id="On_the_status_of_image">On the status of <code>image</code></span></h4>
+    <p>The <code>image</code> element is treated as an alternate (but invalid) name for <code>img</code>. This is because some sites (around 0.2%<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup>) make this mistake. It is already treated as an image by most major browsers.
+    </p>
+    <h4><span class="mw-headline" id="The_img_element_and_alternate_.28alt.29_text">The <code>img</code> element and alternate (<code>alt</code>) text</span></h4>
+    <p>On certain types of pages adding alternate text (with the <code>alt</code> attribute) is impossible (e.g., sites where the user can upload but with no mechanism to supply a description). Because of this, the <code>alt</code> attribute is optional. <sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup><sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup><sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup>
+    A longdesc attribute is not needed <sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup>
+    </p>
+    <h3><span class="mw-headline" id="Forms">Forms</span></h3>
+    <h4><span class="mw-headline" id="textarea"><code>textarea</code></span></h4>
+    <p>The text area defaults to soft wrapping of the text area. The attribute @wrap can have one of the following values: soft, hard, or off.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup>. "off" is considered a non-conforming value because it appears to have no purpose other than a visual presentational effect. <sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup><sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup>
+    </p>
+    <h4><span class="mw-headline" id="meter_and_progress_.28are_not_the_same_thing.29"><code>meter</code> and <code>progress</code> (are not the same thing)</span></h4>
+    <p><code>meter</code> is not just a special case of <code>progress</code>.  The <code>meter</code> element represents a scalar measurement within a known range, such as storage quota usage, a relative popularity rating or relevance indicator.  The control allows for the indication of high and low ranges, or minimum, maximum and optimal levels.
+    </p><p>The <code>progress</code> element, on the other hand, represents the completion progress of a task.  This could be a real time indicator for background processing task (e.g. using Web Workers or a file upload).  <code>progress</code> elements can also be in the indeterminate state, indicating that something is in progress, but its completion progress is unknown.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup>
+    </p><p>See <a rel="nofollow" class="external text" href="http://www.mail-archive.com/whatwg@lists.whatwg.org/msg01308.html">Re: progress draft</a> for details.
+    </p>
+    <h3><span class="mw-headline" id="Interactive_elements">Interactive elements</span></h3>
+    <h4><span class="mw-headline" id="details_element"><code>details</code> element</span></h4>
+    <p>The <code>details</code> element is needed to provide an accessible way of reflecting a
+    common application widget in HTML-based applications without requiring authors
+    to use extensive scripting, <abbr title="Accessible">ARIA</abbr>, and platform-specific CSS to get the same
+    effect.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup><sup id="cite_ref-24" class="reference"><a href="#cite_note-24">[24]</a></sup>
+    </p>
+    <h2><span class="mw-headline" id="HTML_parsing">HTML parsing</span></h2>
+    <h3><span class="mw-headline" id="script_element">script element</span></h3>
+    <p>Why the <a rel="nofollow" class="external text" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#restrictions-for-contents-of-script-elements">restrictions for contents of script elements</a>? Why the <a rel="nofollow" class="external text" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tokenization.html#script-data-double-escaped-dash-dash-state">complicated parsing rules for script elements</a>?
+    </p><p>See <a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/public-html-comments/2010Mar/0017.html">http://lists.w3.org/Archives/Public/public-html-comments/2010Mar/0017.html</a>
+    </p>
+    <h4><span class="mw-headline" id=".40DEFER_and_.40ASYNC">@DEFER and @ASYNC</span></h4>
+    <p>ASYNC tells the browsers to run the script with its following content at the SAME time(namely, asynchronously).
+    DEFER tells the browsers to run the script LATER, and to run the following content first(the browsers will run the script until the page is ready).<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">[25]</a></sup>
+    </p>
+    <h3><span class="mw-headline" id="quirks_mode">quirks mode</span></h3>
+    <p>The HTML parser has <a rel="nofollow" class="external text" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tokenization.html#parsing-main-inbody">the following</a> behavior difference in quirks mode:
+    </p>
+    <blockquote><dl><dt>A start tag whose tag name is "table"
+    <dd>If the Document is not set to quirks mode, and the stack of open elements has a p element in scope, then act as if an end tag with the tag name "p" had been seen.</dl></blockquote>
+    <p>Why? See <a rel="nofollow" class="external free" href="http://hsivonen.iki.fi/last-html-quirk/">http://hsivonen.iki.fi/last-html-quirk/</a>
+    </p>
+    <h3><span class="mw-headline" id="ignored_white_space_before_head">ignored white space before head</span></h3>
+    <p>White space before the <code>head</code> tag is ignored. The main reason is that, given the markup
+    </p>
+    <pre>
+    !DOCTYPE html
+    html
+     head
+      titleSample page/title
+    ...,
+    </pre>
+    <p>some people expect
+    </p>
+    <pre>
+    document.documentElement.firstChild
+    </pre>
+    <p>to return the <code>head</code> element.<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">[26]</a></sup>
+    </p><p><br />
+    </p>
+    <h2><span class="mw-headline" id="Rejected_proposals">Rejected proposals</span></h2>
+    <h3><span class="mw-headline" id="A_.E2.80.9C.3Ccomment.3E.E2.80.9D_element_for_marking_up_user_comments_.28i.e..2C_user_compositions_in_response_to_newspaper_or_magazine_articles.2C_blog_entries.2C_discussion_topics.2C_status_updates.2C_images.2C_videos.2C_etc..29">A &#8220;<code>comment</code>&#8221; element for marking up user comments (i.e., user compositions in response to newspaper or magazine articles, blog entries, discussion topics, status updates, images, videos, etc.)</span></h3>
+    <h4><span class="mw-headline" id="Why_isn.E2.80.99t_there_an_element_for_user_comments.3F_.28e.g..2C_.3Ccomment.3E.29">Why isn&#8217;t there an element for user comments? (e.g., <code>comment</code>)</span></h4>
+    <p>There is: <code>article</code>.
+    </p>
+    <h4><span class="mw-headline" id="But_comments_are_not_articles">But comments are not articles</span></h4>
+    <p>Unfortunately, it is basically impossible for a single word or letter to stand for a careful description of an element&#8217;s semantics, and the element name &#8220;article&#8221; isn&#8217;t intended to carry the same meaning as its corresponding dictionary entry or any colloquial understanding of the term.<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">[27]</a></sup> The term &#8220;article&#8221; is defined broadly in HTML to include any complete or self-contained composition. This includes:
+    </p>
+    <ul>
+    <li> forum posts
+    </li>
+    <li> newspaper articles
+    </li>
+    <li> magazine articles
+    </li>
+    <li> books
+    </li>
+    <li> blog posts
+    </li>
+    <li> comment on a forum post
+    </li>
+    <li> comment on a newspaper article
+    </li>
+    <li> comment on a magazine article
+    </li>
+    <li> comment on a blog post
+    </li>
+    <li> an embeddable interactive widget
+    </li>
+    <li> a post with a photograph on a social network
+    </li>
+    <li> a comment on a photograph on a social network
+    </li>
+    <li> a specification
+    </li>
+    <li> an e-mail
+    </li>
+    <li> a reply to an e-mail
+    </li>
+    </ul>
+    <p>Comments are considered articles&#8212;in the HTML sense&#8212;because they are <em>complete</em> compositions unto themselves i.e., they are not part of the piece of writing that they are commenting on (though they are obviously <em>related</em> to what they are commenting on, for example, &#8220;is in response to.&#8221; This relationship is demonstrated by nesting the comment article inside the article it&#8217;s responding to).
+    </p>
+    <h4><span class="mw-headline" id="Surely_the_comment_.E2.80.9CLOL.E2.80.9D_is_not_an_article.3F">Surely the comment &#8220;LOL&#8221; is not an article?</span></h4>
+    <p>According to the HTML spec, it is. It&#8217;s true that many comments need a context to be appreciated or fully understood, but then again many (most?, all?) newspaper or magazine articles need some greater context to be fully understood as well. The point is that the definition of <code>article</code> does not require a piece of writing to be fully intelligible on its own. All that matters is that the comment is separate from the thing that it&#8217;s commenting on. It&#8217;s that separateness that makes it an article (in the HTML sense).
+    </p>
+    <h4><span class="mw-headline" id="Robots_and_plugins_can_extract_comments_from_web_pages_more_easily_if_they_have_their_own_element._Comments_can_then_be_more_easily_syndicated.2C_displayed.2C_hidden.2C_styled.2C_etc.">Robots and plugins can extract comments from web pages more easily if they have their own element. Comments can then be more easily syndicated, displayed, hidden, styled, etc.</span></h4>
+    <p>There&#8217;s no compelling argument that a dedicated <code>comment</code> element would make this meaningfully easier than nested <code>article</code> elements.
+    </p>
+    <h4><span class="mw-headline" id="Comments_can_sometimes_appear_in_a_different_region_of_the_page_than_the_composition_they_are_referencing._By_defining_comments_as_nested_articles.2C_the_spec_is_artificially_forcing_comments_to_be_contained_within_the_markup_of_the_composition_they_are_referencing.">Comments can sometimes appear in a different region of the page than the composition they are referencing. By defining comments as nested articles, the spec is artificially forcing comments to be contained within the markup of the composition they are referencing.</span></h4>
+    <p>No evidence has been put forth to suggest that this is a significant authorship issue.
+    </p>
+    <h4><span class="mw-headline" id="Why_should_the_spec_suggest_any_one_specific_method_for_marking_up_comments.3F">Why should the spec suggest any one specific method for marking up comments?</span></h4>
+    <p>If it is clear that an <code>article</code> within an <code>article</code> represents a comment, one can easily:
+    </p>
+    <ul>
+    <li> programmatically find comments in HTML
+    </li>
+    <li> write interoperable style sheets for comments, using the selector <code>article  article</code>
+    </li>
+    <li> use HTML fragments in a document store for content management (e.g., blog software with a git backend)
+    </li>
+    </ul>
+    <p>Without having one interoperable way of expressing comments, all that becomes a lot harder.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">[28]</a></sup>
+    </p><p>Also see <a href="/wiki/Rationale#Why_is_it_important_to_stick_to_the_semantics_as_defined_in_the_spec.3F" title="Rationale">Why is it important to stick to the semantics as defined in the spec?</a> on this page.
+    </p>
+    <h3><span class="mw-headline" id="Why_isn.E2.80.99t_there_a_dedicated_element_for_advertisements.3F_.28e.g..2C_.3Cad.3E.2C_or_.3Cadvert.3E.2C_or_.3Cbanner.3E.2C_or_whatever.29">Why isn&#8217;t there a dedicated element for advertisements? (e.g., <code>ad</code>, or <code>advert</code>, or <code>banner</code>, or whatever)</span></h3>
+    <p>Because it would give users a relatively easy method for hiding or otherwise disabling ads, in which case the element would very likely end up not being used by content authors<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">[29]</a></sup><sup id="cite_ref-30" class="reference"><a href="#cite_note-30">[30]</a></sup>:
+    </p>
+    <pre> How should advertisements be marked up?
+       
+    It's worth considering that an advert element (or banner or whatever 
+    you decide to call it) would just cause style rules like advert 
+    {display:none;} to become widespread (e.g. by integration into Adblock 
+    and equivalent). Therefore I can't see this type of markup being used by 
+    most advertisers.</pre>
+    <pre> I've joined this list to put forward the argument that there should be
+     elements for comment and ad included in the HTML5 spec.
+    
+     These are both extremely common features of many web pages; I would say
+     at least as common as &quot;article&quot;.
+    
+    For ad, there's the obvious potential usage of setting
+    
+    ad { display: none !important }
+    
+    in a user style sheet. I don't think this possibility would make ad
+    popular among authors.</pre>
+    <p>Ian Hickson recommends using the <code>aside</code> element instead<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">[31]</a></sup>:
+    </p>
+    <pre> I've joined this list to put forward the argument that there should be 
+     elements for comment and ad included in the HTML5 spec.
+    
+    For advertisments, I do not think it makes sense to add an element. In 
+    practice, it would likely not end up being used, since doing so would make 
+    it too easy to hide advertisments.
+    
+    However, the aside element is a close fit for the semantic, so I would 
+    recommend using that.</pre>
+    <h3><span class="mw-headline" id="Why_isn.E2.80.99t_there_a_grouping-type_element_for_description_lists_to_represent_individual_name-value_groups_.28e.g..2C_a_.E2.80.9Cdli.E2.80.9D_element.29.3F_It_would_make_styling_as_well_as_adding_microdata_to_individual_groups_much_easier..5B32.5D">Why isn&#8217;t there a grouping-type element for description lists to represent individual name-value groups (e.g., a &#8220;<code>dli</code>&#8221; element)? It would make styling as well as adding microdata to individual groups much easier.<sup id="cite_ref-32" class="reference"><a href="#cite_note-32">[32]</a></sup></span></h3>
+    <pre>On Sun, 30 Dec 2012, Brian Tremblay wrote:
+    
+     I'm using dl markup for a restaurant menu, and have added product
+     microdata markup from schema.org. Because items in a dl are defined
+     implicitly -- dt element(s) followed by dd element(s) -- there's no
+     easy way to scope them individually. What I'm left doing is adding 2 id
+     attributes for each menu item, and using itemref:
+    
+     http://tsmchughs.com/test/dessert
+    
+    That's one way to do it, yeah.
+    
+    
+     If we had a dli element, to scope each item in a description list, the
+     markup needed to add microdata (or microformats) would be much simpler.
+    
+     [...]
+    
+     Therefore, I think we need a dli element. This has come up in the
+     past. If I understand correctly, the editor has declined, saying that
+     the need for dli is only to make styling easier, so the problem should
+     be solved in css. But I think the problem here is not styling, it's
+     creating natural, discrete items in a description list, which might be
+     used for styling, or for microdata, or perhaps for other reasons which I
+     haven't thought of. Without dli, use of dl becomes much harder to
+     use even though it may be the best markup choice.
+    
+    You're right that this is a much better reason for adding a dl grouping
+    element.
+    
+    Unfortunately, lack of use cases isn't the only reason we haven't added
+    it. One of the other reasons is that it would require parser changes. For
+    example, take this:
+    
+     dl
+      di
+       dta
+       ddb
+      /di
+      di
+       dtc
+       ddd
+      /di
+     /dl
+    
+    This looks like it should work, but right now it gets parsed as:
+    
+     dl
+      di
+       dta/dt
+       ddb
+        di
+         dtc/dt
+         ddd/dd
+        /di
+       /dd
+      /di
+     /dl
+    
+    (Another reason is that it makes the processing model for dl more
+    complicated for tools that want to process groups of items in dls.)
+    
+    
+    Still, you make a very good point, that for microdata, the lack of
+    grouping here is a more serious issue than styling-system limitations.
+    
+    I guess it comes down to a question of how common microdata on dl groups
+    is, vs how painful changing the parser and legacy tools would be. It's
+    probably a close call (not much usage, but not a huge amount of pain).</pre>
+    <h3><span class="mw-headline" id="Why_isn.E2.80.99t_there_a_sandbox_attribute_on_the_html_element.3F">Why isn&#8217;t there a <code>sandbox</code> attribute on the <code>html</code> element?</span></h3>
+    <p>HTML is the wrong level for disabling scripts or other features. This is the kind of thing should be done at the HTTP layer.<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">[33]</a></sup><sup id="cite_ref-34" class="reference"><a href="#cite_note-34">[34]</a></sup>
+    </p>
+    <h3><span class="mw-headline" id="feature_queries">feature queries</span></h3>
+    <p>Various proposals have come up with the idea of being able to determine if a certain feature is available.<sup id="cite_ref-35" class="reference"><a href="#cite_note-35">[35]</a></sup> These fail for a variety of reasons:
+    Part of the problem is that browser vendors will be economical with the truth.  Marketing people always have an over-optimistic view of the compliance of their product, and will always give themselves the benefit of the doubt in borderline cases.  Also, changing the compliance statement, to remove false claims that are exposed, is likely to a very low priority for the developers.<sup id="cite_ref-36" class="reference"><a href="#cite_note-36">[36]</a></sup>
+    With regard to CSS feature compliance: Remember that CSS
+    provides hints and implementations don't have to accept those hints, and
+    hardware may sometimes prevent their being implemented.<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">[37]</a></sup> 
+    Some other reasons can be found in the footnotes.<sup id="cite_ref-38" class="reference"><a href="#cite_note-38">[38]</a></sup><sup id="cite_ref-39" class="reference"><a href="#cite_note-39">[39]</a></sup>
+    </p>
+    <h3><span class="mw-headline" id="Why_aren.E2.80.99t_authors_allowed_to_make_custom_HTML_elements.3F">Why aren&#8217;t authors allowed to make custom HTML elements?</span></h3>
+    <p>Custom elements make it impossible for search engines, developers, and browsers to understand the semantics of a page.<sup id="cite_ref-40" class="reference"><a href="#cite_note-40">[40]</a></sup>
+    </p><p><br />
+    </p>
+    <h2><span class="mw-headline" id="Other_Pages">Other Pages</span></h2>
+    <ul>
+    <li> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/html-design-principles/">HTML Design Principles</a>
+    </li>
+    <li> <a href="/wiki/Why_no_namespaces" title="Why no namespaces">Why no namespaces</a>
+    </li>
+    <li> <a href="/wiki/Why_no_script_implements" title="Why no script implements">Why no script implements</a>
+    </li>
+    <li> <a href="/wiki/Why_not_reuse_legend" title="Why not reuse legend">Why not reuse legend or another <i>mini-header</i> element.</a>
+    </li>
+    <li> <a href="/wiki/XHTML2_versus_HTML5" title="XHTML2 versus HTML5">XHTML2 versus HTML5</a>
+    </li>
+    <li> <a rel="nofollow" class="external text" href="http://lists.w3.org/Archives/Public/public-html/2008Aug/0300.html">meta http-equiv=content-language </a>
+    </li>
+    <li> <a rel="nofollow" class="external text" href="http://www.w3.org/html/wg/wiki/RationalesGathering">earlier page started with the same purpose.</a>
+    </li>
+    <li> <a rel="nofollow" class="external text" href="http://www.w3.org/html/wg/wiki/ChangeProposals/KeepNewElements">rationale for some new HTML5 elements</a>
+    </li>
+    <li> <a rel="nofollow" class="external text" href="http://wiki.whatwg.org/wiki/FAQ">WHATWG FAQ</a>
+    </li>
+    </ul>
+    <h2><span class="mw-headline" id="References">References</span></h2>
+    <ol class="references">
+    <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/public-html/2009Jul/0257.html">http://lists.w3.org/Archives/Public/public-html/2009Jul/0257.html</a> -- Re: Codecs for video and audio/a</span>
+    </li>
+    <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/www-archive/2009Jul/0075.html">http://lists.w3.org/Archives/Public/www-archive/2009Jul/0075.html</a> --Formal Objection to One vendor, One Veto</span>
+    </li>
+    <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2010-June/026897.html">http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2010-June/026897.html</a></span>
+    </li>
+    <li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2013-October/041037.html">http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2013-October/041037.html</a></span>
+    </li>
+    <li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/public-html/2010Jun/att-0659/issue-93-decision.html">http://lists.w3.org/Archives/Public/public-html/2010Jun/att-0659/issue-93-decision.html</a></span>
+    </li>
+    <li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.mail-archive.com/whatwg@lists.whatwg.org/msg22577.html">http://www.mail-archive.com/whatwg@lists.whatwg.org/msg22577.html</a></span>
+    </li>
+    <li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.mail-archive.com/whatwg@lists.whatwg.org/msg23306.html">http://www.mail-archive.com/whatwg@lists.whatwg.org/msg23306.html</a></span>
+    </li>
+    <li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.whatwg.org/htdig.cgi/help-whatwg.org/2010-October/000668.html">http://lists.whatwg.org/htdig.cgi/help-whatwg.org/2010-October/000668.html</a></span>
+    </li>
+    <li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#elements">http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#elements</a></span>
+    </li>
+    <li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-meta-element">http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-meta-element</a></span>
+    </li>
+    <li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-meta-element">http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-meta-element</a></span>
+    </li>
+    <li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://developers.whatwg.org/sections.html#the-footer-element">http://developers.whatwg.org/sections.html#the-footer-element</a></span>
+    </li>
+    <li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://developers.whatwg.org/grouping-content.html#the-blockquote-element">http://developers.whatwg.org/grouping-content.html#the-blockquote-element</a></span>
+    </li>
+    <li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">Email from Ian Hickson; comment in spec source</span>
+    </li>
+    <li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.paciellogroup.com/resources/articles/altinhtml_html5.html">http://www.paciellogroup.com/resources/articles/altinhtml_html5.html</a></span>
+    </li>
+    <li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://juicystudio.com/article/requiring-alt-attribute-html5.php">http://juicystudio.com/article/requiring-alt-attribute-html5.php</a></span>
+    </li>
+    <li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/public-html/2007Jun/0393.html">http://lists.w3.org/Archives/Public/public-html/2007Jun/0393.html</a></span>
+    </li>
+    <li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://juicystudio.com/article/html5-image-element-no-alt.php">http://juicystudio.com/article/html5-image-element-no-alt.php</a></span>
+    </li>
+    <li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.whatwg.org/specs/web-apps/current-work/#the-textarea-element-0">http://www.whatwg.org/specs/web-apps/current-work/#the-textarea-element-0</a></span>
+    </li>
+    <li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-August/022022.html">http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-August/022022.html</a></span>
+    </li>
+    <li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.mail-archive.com/whatwg@lists.whatwg.org/msg22660.html">http://www.mail-archive.com/whatwg@lists.whatwg.org/msg22660.html</a></span>
+    </li>
+    <li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://html5doctor.com/your-questions-answered-11/">http://html5doctor.com/your-questions-answered-11/</a></span>
+    </li>
+    <li id="cite_note-23"><span class="mw-cite-backlink"><a href="#cite_ref-23">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.w3.org/Bugs/Public/show_bug.cgi?id=8379#c13">http://www.w3.org/Bugs/Public/show_bug.cgi?id=8379#c13</a></span>
+    </li>
+    <li id="cite_note-24"><span class="mw-cite-backlink"><a href="#cite_ref-24">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.w3.org/html/wg/wiki/ChangeProposals/removedetails">http://www.w3.org/html/wg/wiki/ChangeProposals/removedetails</a></span>
+    </li>
+    <li id="cite_note-25"><span class="mw-cite-backlink"><a href="#cite_ref-25">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.mail-archive.com/whatwg@lists.whatwg.org/msg22436.html">http://www.mail-archive.com/whatwg@lists.whatwg.org/msg22436.html</a></span>
+    </li>
+    <li id="cite_note-26"><span class="mw-cite-backlink"><a href="#cite_ref-26">↑</a></span> <span class="reference-text"><cite><a rel="nofollow" class="external text" href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-March/014148.html">&#91;whatwg&#93; several messages about the tree construction stage of HTML parsing</a></cite></span>
+    </li>
+    <li id="cite_note-27"><span class="mw-cite-backlink"><a href="#cite_ref-27">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/public-whatwg-archive/2012Jan/0226.html">http://lists.w3.org/Archives/Public/public-whatwg-archive/2012Jan/0226.html</a></span>
+    </li>
+    <li id="cite_note-28"><span class="mw-cite-backlink"><a href="#cite_ref-28">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/public-whatwg-archive/2013Feb/0129.html">http://lists.w3.org/Archives/Public/public-whatwg-archive/2013Feb/0129.html</a></span>
+    </li>
+    <li id="cite_note-29"><span class="mw-cite-backlink"><a href="#cite_ref-29">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2008-February/013939.html">http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2008-February/013939.html</a></span>
+    </li>
+    <li id="cite_note-30"><span class="mw-cite-backlink"><a href="#cite_ref-30">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2011-September/033086.html">http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2011-September/033086.html</a></span>
+    </li>
+    <li id="cite_note-31"><span class="mw-cite-backlink"><a href="#cite_ref-31">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/public-whatwg-archive/2012Jan/0226.html">http://lists.w3.org/Archives/Public/public-whatwg-archive/2012Jan/0226.html</a></span>
+    </li>
+    <li id="cite_note-32"><span class="mw-cite-backlink"><a href="#cite_ref-32">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.whatwg.org/htdig.cgi/help-whatwg.org/2013-October/001245.html">http://lists.whatwg.org/htdig.cgi/help-whatwg.org/2013-October/001245.html</a></span>
+    </li>
+    <li id="cite_note-33"><span class="mw-cite-backlink"><a href="#cite_ref-33">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.w3.org/Bugs/Public/show_bug.cgi?id=8849">http://www.w3.org/Bugs/Public/show_bug.cgi?id=8849</a></span>
+    </li>
+    <li id="cite_note-34"><span class="mw-cite-backlink"><a href="#cite_ref-34">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://wiki.mozilla.org/Security/CSP">https://wiki.mozilla.org/Security/CSP</a></span>
+    </li>
+    <li id="cite_note-35"><span class="mw-cite-backlink"><a href="#cite_ref-35">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/www-style/2009Dec/0130.html">http://lists.w3.org/Archives/Public/www-style/2009Dec/0130.html</a></span>
+    </li>
+    <li id="cite_note-36"><span class="mw-cite-backlink"><a href="#cite_ref-36">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/www-style/2010Jul/0097.html">http://lists.w3.org/Archives/Public/www-style/2010Jul/0097.html</a></span>
+    </li>
+    <li id="cite_note-37"><span class="mw-cite-backlink"><a href="#cite_ref-37">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/www-style/2003Nov/0000.html">http://lists.w3.org/Archives/Public/www-style/2003Nov/0000.html</a></span>
+    </li>
+    <li id="cite_note-38"><span class="mw-cite-backlink"><a href="#cite_ref-38">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/www-style/2003Oct/0074.html">http://lists.w3.org/Archives/Public/www-style/2003Oct/0074.html</a></span>
+    </li>
+    <li id="cite_note-39"><span class="mw-cite-backlink"><a href="#cite_ref-39">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://lists.w3.org/Archives/Public/www-style/2004Mar/0282.html">http://lists.w3.org/Archives/Public/www-style/2004Mar/0282.html</a></span>
+    </li>
+    <li id="cite_note-40"><span class="mw-cite-backlink"><a href="#cite_ref-40">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://html5doctor.com/your-questions-13/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+html5doctor+%28HTML5doctor%29">http://html5doctor.com/your-questions-13/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+html5doctor+%28HTML5doctor%29</a></span>
+    </li>
+    </ol>
+    
+    <!-- 
+    NewPP limit report
+    CPU time usage: 0.664 seconds
+    Real time usage: 0.667 seconds
+    Preprocessor visited node count: 1087/1000000
+    Preprocessor generated node count: 3300/1000000
+    Post‐expand include size: 0/2097152 bytes
+    Template argument size: 0/2097152 bytes
+    Highest expansion depth: 4/40
+    Expensive parser function count: 0/100
+    -->
+    
+    <!-- Saved in parser cache with key whatwikidb:pcache:idhash:1934-0!*!0!!en!*!* and timestamp 20141011054830 and revision id 9434
+     -->
+                                    <div class="printfooter">
+                    Retrieved from "<a href="https://wiki.whatwg.org/index.php?title=Rationale&amp;oldid=9434">https://wiki.whatwg.org/index.php?title=Rationale&amp;oldid=9434</a>"				</div>
+                                                    <div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+                                
+            
+            <div id="mw-navigation">
+                <h2>Navigation menu</h2>
+                <div id="mw-head">
+                    <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        <h3 id="p-personal-label">Personal tools</h3>
+        <ul>
+    <li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Rationale" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+    </div>
+                    <div id="left-navigation">
+                        <div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+        <h3 id="p-namespaces-label">Namespaces</h3>
+        <ul>
+                        <li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Rationale"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+                        <li  id="ca-talk" class="new"><span><a href="/index.php?title=Talk:Rationale&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+                </ul>
+    </div>
+    <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+        <h3 id="mw-vector-current-variant">
+            </h3>
+        <h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+        <div class="menu">
+            <ul>
+                        </ul>
+        </div>
+    </div>
+                    </div>
+                    <div id="right-navigation">
+                        <div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+        <h3 id="p-views-label">Views</h3>
+        <ul>
+                        <li id="ca-view" class="selected"><span><a href="/wiki/Rationale" >Read</a></span></li>
+                        <li id="ca-viewsource"><span><a href="/index.php?title=Rationale&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+                        <li id="ca-history" class="collapsible"><span><a href="/index.php?title=Rationale&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+                </ul>
+    </div>
+    <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+        <h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+        <div class="menu">
+            <ul>
+                        </ul>
+        </div>
+    </div>
+    <div id="p-search" role="search">
+        <h3><label for="searchInput">Search</label></h3>
+        <form action="/index.php" id="searchform">
+                        <div id="simpleSearch">
+                        <input type="search" name="search" placeholder="Search" title="Search WHATWG Wiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+        </form>
+    </div>
+                    </div>
+                </div>
+                <div id="mw-panel">
+                        <div id="p-logo" role="banner"><a style="background-image: url(//www.whatwg.org/images/logo);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+                    <div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+        <h3 id='p-navigation-label'>Navigation</h3>
+        <div class="body">
+            <ul>
+                <li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+                <li id="n-popularpages"><a href="/wiki/Special:PopularPages">Popular pages</a></li>
+                <li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+                <li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="portal" role="navigation" id='p-WHATWG' aria-labelledby='p-WHATWG-label'>
+        <h3 id='p-WHATWG-label'>WHATWG</h3>
+        <div class="body">
+            <ul>
+                <li id="n-Specifications"><a href="http://spec.whatwg.org/" rel="nofollow">Specifications</a></li>
+                <li id="n-FAQ"><a href="/wiki/FAQ">FAQ</a></li>
+                <li id="n-IRC"><a href="/wiki/IRC">IRC</a></li>
+                <li id="n-Mailing-lists"><a href="http://www.whatwg.org/mailing-list" rel="nofollow">Mailing lists</a></li>
+                <li id="n-GitHub"><a href="/wiki/GitHub">GitHub</a></li>
+                <li id="n-What-you-can-do"><a href="/wiki/What_you_can_do">What you can do</a></li>
+                <li id="n-To-do-list"><a href="/wiki/Specs_todo">To-do list</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="portal" role="navigation" id='p-Registries' aria-labelledby='p-Registries-label'>
+        <h3 id='p-Registries-label'>Registries</h3>
+        <div class="body">
+            <ul>
+                <li id="n-.3Cmeta-name.3E"><a href="/wiki/MetaExtensions">meta name</a></li>
+                <li id="n-.3Cmeta-http-equiv.3E"><a href="/wiki/PragmaExtensions">meta http-equiv</a></li>
+                <li id="n-canvas.getContext.28.29"><a href="/wiki/CanvasContexts">canvas.getContext()</a></li>
+                <li id="n-.40rel"><a href="http://microformats.org/wiki/existing-rel-values" rel="nofollow">@rel</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+        <h3 id='p-tb-label'>Tools</h3>
+        <div class="body">
+            <ul>
+                <li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Rationale" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+                <li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Rationale" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+                <li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+                <li id="t-print"><a href="/index.php?title=Rationale&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+                <li id="t-permalink"><a href="/index.php?title=Rationale&amp;oldid=9434" title="Permanent link to this revision of the page">Permanent link</a></li>
+                <li id="t-info"><a href="/index.php?title=Rationale&amp;action=info">Page information</a></li>
+            </ul>
+        </div>
+    </div>
+                </div>
+            </div>
+        <footer class="pgFooter">
+			<script src="../scripts/footer.js" type="text/javascript"></script><hr class="hr-noLine-spacerPt5">
+			<script type="text/javascript">modDate();</script>
+        </footer>
+	</section>
+</body>
+</html>
