@@ -2,14 +2,52 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="The Coding Zone, HTML Elements, HTML5 Elements, HTML Tags, HTML Tag Use, Typography, HTML Syntax, CSS Default Display Settings, Coding, Validation, HTML, HTHL5, CSS3">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="Barry Smith, Bearz Design Concepts, Bears Design Concepts, 
+    	Bearz Design, Bears Design, Bears Web and Graphics, Bearz Web and Graphics, The Coding Zone, The HTML Zone, Bearz CSS Zone, 
+        HTML Elements, HTML5 Elements, HTML Tags, HTML Tag Use, Typography, HTML Syntax, CSS Default Display Settings, 
+        Coding, Validation, HTML, HTHL5, CSS3, Coding Zone">
+	<meta name="description" content="An HTML5/CSS3 Instructional web site with the student in mind. Based on the WHATWG and W3C Specifications">
     <title>
-        The Coding Zone
-    </title>
-    <link href="css3/splash.css" rel="stylesheet" type="text/css"/>
+    	BearZ Coding Zone
+	</title>
+			<!-- supporting CSS and JavaScript and favicon files -->
+	<link href="css3/splash.css" rel="stylesheet" type="text/css"/>
     <link href="css3/banner_Logo.css" rel="stylesheet" type="text/css"/>
-	<link href="css3/responsiveCSS.css" rel="stylesheet" type="text/css">
 	<link href="css3/specialEffects.css" rel="stylesheet" type="text/css">
+	<link href="css3/cssToolTip.css" rel="stylesheet" type="text/css">
+	<link href="css3/responsiveCSS.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/embeddedFonts.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/inconsolata/inconsolata.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/alluraWebReady/allura.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/fontSavatage/savatage.css" rel="stylesheet" type="text/css">
+    <link href="icon/iconCZ/apple-icon-57X57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="icon/iconCZ/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="icon/iconCZ/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="icon/iconCZ/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="icon/iconCZ/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="icon/iconCZ/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="icon/iconCZ/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="icon/iconCZ/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="icon/iconCZ/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="icon/iconCZ/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="icon/iconCZ/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="icon/iconCZ/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="icon/iconCZ/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="icon/iconCZ/manifest.json" rel="manifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-70x70.png">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="scripts/jquery_v2.0.0.js" type="text/javascript"></script>
+    <script src="scripts/siteFunctions.js" type="text/javascript"></script>
+    <!-- used for my floating back button in lower right corner -->
+	<script>
+		$(document).ready(function () {  $('.backToTopScroll').hide();//Check to see if the window is top if not then display button
+		$(window).scroll(function () {  if ($(this).scrollTop() > 650) {    $('.backToTopScroll').fadeIn();  } else {    $('.backToTopScroll').fadeOut();  }}); //Click event to scroll to top
+		$('.backToTopScroll').click(function () {  $('html, body').animate({ scrollTop: 0 }, 900);  return false;  });});
+    </script>
+</head>
     <link href="TheCSSZone/embeddedFonts/embeddedFonts.css" rel="stylesheet" type="text/css"/>
     <link href="TheCSSZone/embeddedFonts/inconsolata/inconsolata.css" rel="stylesheet" type="text/css"/>
     <link href="TheCSSZone/embeddedFonts/fontSavatage/savatage.css" rel="stylesheet" type="text/css"/>
@@ -88,70 +126,18 @@
             <div class="openingDialog centerAlign" style="width:80%">
                 <a href="bearzCodingZone.html" class="enter">&ensp;Enter&ensp;</a><hr class="hr-noLine-spacer1pt25">At Your Own Risk
             </div>
-		<footer class="pgFooter2">
-            <hr class="codingZone2"><script 
-  type="text/JavaScript" 
-  language="JavaScript">
-<!-- 
-function date_ddmmmyy(date)
-{
-  var d = date.getDate();
-  var m = date.getMonth() + 1;
-  var y = date.getYear();
-  // handle different year values returned by IE and NS in the year 2000.
-  if(y >= 2000)
-  {
-    y -= 2000;
-  }
-  if(y >= 100)
-  {
-    y -= 100;
-  }
-  // could use splitString() here but the following method is more compatible
-  var mmm = 
-    ( 1==m)?'January':( 2==m)?'February':(3==m)?'March':
-    ( 4==m)?'April':( 5==m)?'May':(6==m)?'June':
-    ( 7==m)?'July':( 8==m)?'Aug':(9==m)?'Sep':
-    (10==m)?'October':(11==m)?'November':'December';
-  return " " + mmm +" "+ (d<10?"0"+d:d) +  "&#44; " +"20"+ (y<10?"0"+y:y);
-}
-//get last modified date of the current document.
-function date_lastmodified()
-{
-  var lmd = document.lastModified;
-  var s   = "Unknown";
-  var d1;
-  // check if we have a valid date before proceeding
-  if(0 != (d1=Date.parse(lmd)))
-  {
-    s = "" + date_ddmmmyy(new Date(d1));
-  }
-  return s;
-}
--->
-</script><strong>
-<script language="JavaScript" type="text/javascript">
-<!-- 
-document.write( 
-  "Last Update on <time class='modifiedDate'>" + date_lastmodified()+"</time>");
-// -->
-</script>
-</strong><br>
-
-            This Web Site has been created using the latest in <img src="images/HTML5Logo.png" style="width: 25px; heigth: 20px; vertical-align: middle;" alt="Valid HTML5!"> Technology<hr class="hr-noLine-spacer1">
-            Copyright <b>&copy;</b> 2014&thinsp;<b>&ndash;</b>&thinsp;<span id="copyright">...</span><hr class="hr-noLine-spacer1"><span class="sava">Bear<span class="footerSmall">Z</span> &thinsp;Web<span class="bearzAmpersand"></span>Gra<small class="footerSmall">F&thinsp;X</small> &thinsp;De<small class="footerSmall">Z</small>ign</span> <sup>&trade;</sup>&emsp;All rights reserved<b>&#46;</b><hr class="hr-noLine-spacer1">
-            This work is licensed under<hr class="hr-noLine-spacer1"><a class="textLinkBottom ccTarget" rel="license external" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><samp class="tipZoomIn">https://creativecommons.org/licenses/by/4.0/</samp>Creative Commons Attribution 4.0 International License</a>
-            <hr class="hr-noLine-spacer1">
+		<footer class="pgFooter2"><h5 class="bdc"></h5>
+            <p>This Web Site has been created using the latest in <img class="footerImage" src="images/HTML5Logo.png" alt="Valid HTML5!"> Technology</p>
+            <p>Copyright <b>&copy;</b> 2014 &ndash; <?php echo date("Y"); ?>
             <script type="text/javascript">
-            function copyDate() {
-              var cpyrt = document.getElementById("copyright")
-              if (cpyrt) {
-                 cpyrt.firstChild.nodeValue = (new Date()).getFullYear();
-              }
-            }
-            window.onload = copyDate;
-            </script><hr class="hr-noLine-spacer1">
-			<script> 
+				var today = new Date()
+				var year = today.getFullYear()
+				document.write(year)
+			</script></p><p><span class="bearzLogoFooter">Bear<span class="footerSmall">Z</span> &thinsp;Web <span class="bearzAmpersand"></span> Gra<small class="footerSmall">F&thinsp;X</small> &thinsp;De<small class="footerSmall">Z</small>ign</span></p>
+            <p>All rights reserved<b>&#46;</b></p>
+            <p><span class="italics">Resource<span class="letterBraces">s</span> <b>&#58;</b></span>&ensp;<a class="footerLink" href="https://whatwg.org" target="_blank" rel="external"><abbr class="whatwgFooter"></abbr><span class="tipZoomInCaps"><mark>W</mark>eb <mark>H</mark>ypertext <mark>A</mark>pplication<span><mark>T</mark>echnology<mark>W</mark>orking <mark>G</mark>roup<span class="lowercase">whatwg.org</span></span></span></a> and <a class="imgTipSquare" href="http://www.w3.org" target="_blank" rel="external"><img class="footerImageW3C" src="images/w3cLogo.png" alt="W3C Logo"><span class="tipZoomInCaps"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium www.w3.org</span></a> <span class="regMark">&reg;</span></p>
+            <p>This work is licensed under</p><p><a class="footerLink" rel="license external" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><span class="tipZoomIn">https://creativecommons.org/licenses/by/4.0/</span>Creative Commons Attribution 4.0 International License</a></p>
+			<p><script> 
 				months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; 
 				var d=new Date();
 				var weekday=new Array(7); weekday[0]="Sunday"; weekday[1]="Monday"; weekday[2]="Tuesday"; weekday[3]="Wednesday"; weekday[4]="Thursday"; weekday[5]="Friday"; weekday[6]="Saturday";
@@ -160,10 +146,20 @@ document.write(
 				var theDate = new Date(document.lastModified); 
 				theDate.setTime((theDate.getTime()+(60*60)) ) 
 				with (theDate) { 
-				document.write("<span class='italicsBold'>Last Modified<b>&#58;</b></span> <time class='modifiedDate'>"+weekday[getDay()]+'<b>&#44;&thinsp;</b>'+months[getMonth()]+'&thinsp;'+getDate()+'<b>&#44;&thinsp;</b>'+d.getFullYear()+'<b>&ensp;&#64;&ensp;</b>'+getHours()+':'+getMinutes()+"</time>&thinsp;&ensp;<span class='italicsBold'>EST</span>") 
-				} 
-			</script><hr class="hr-noLine-spacer2"><hr class="codingZoneBottomFooter">
+				document.write("<span class='italicsBold'>Last Modified<b>&#58;</b></span> <time class='modifiedDate'>"+weekday[getDay()]+'<b>&#44;&thinsp;</b>'+months[getMonth()]+'&thinsp;'+getDate()+'<b>&#44;&thinsp;</b>'+d.getFullYear()+'<b>&ensp;&#64;&ensp;</b>'+getHours()+':'+getMinutes()+"</time>&thinsp;&ensp;<span class='italicsBold'>EST</span>") } 
+			</script></p>
         </footer>
+<script> 
+	var $buoop = {c:2}; 
+	function $buo_f(){ 
+		var e = document.createElement("script"); 
+		e.src = "//browser-update.org/update.min.js"; 
+		document.body.appendChild(e);
+	};
+	try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+	catch(e){window.attachEvent("onload", $buo_f)}
+</script>
     </section><!-- end of id="wrapperOutline" -->
 </body>
 </html>
+
