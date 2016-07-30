@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--
+	Web Site:  The Coding Zone
+	File Name: bearzCodingZone.html
+	Author: Barry Smith
+	Version 6
+	Content source: 
+-->
+<head>
+	<title>
+		Bearz Coding Zone
+	</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="BearZ Coding Zone, Bears Coding Zone, General Topics, HTML, HTML5, CSS, CSS3, HTML Elements, HTML5 Elements, HTML Tags, Typography, CSS Animations, Presentational Hints, Browser Support, HTML Content, HTML Categories, HTML Specifications, Element Descriptions, Element Extras, Terminology, Validation, CSS Default Display Settings, Code Examples, Coding Zone">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="An HTML5/CSS3 Instructional web site with the student in mind"> 
+			<!-- supporting CSS and JavaScript and favicon files -->
+	<link href="css3/MainLayout.css" rel="stylesheet" type="text/css">
+	<link href="css3/banner_Logo.css" rel="stylesheet" type="text/css">
+	<link href="css3/nav.css" rel="stylesheet" type="text/css">
+	<link href="css3/textStyles.css" rel="stylesheet" type="text/css">
+	<link href="css3/myAlerts.css" rel="stylesheet" type="text/css">
+	<link href="css3/cssToolTip.css" rel="stylesheet" type="text/css">
+	<link href="css3/responsiveCSS.css" rel="stylesheet" type="text/css">
+	<link href="css3/specialEffects.css" rel="stylesheet" type="text/css">
+	<link href="css3/targetSelectors.css" rel="stylesheet" type="text/css">
+	<link href="css3/myShowHide.css" rel="stylesheet" type="text/css">
+	<link href="css3/myAnimations.css" rel="stylesheet" type="text/css">
+	<link href="TheCSSZone/embeddedFonts/embeddedFonts.css" rel="stylesheet" type="text/css">
+	<link href="TheCSSZone/embeddedFonts/inconsolata/inconsolata.css" rel="stylesheet" type="text/css">
+	<link href="TheCSSZone/embeddedFonts/alluraWebReady/allura.css" rel="stylesheet" type="text/css">
+	<link href="TheCSSZone/embeddedFonts/fontSavatage/savatage.css" rel="stylesheet" type="text/css">
+    <link href="/apple-icon-57X57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="icon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="icon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="icon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="icon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="icon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="icon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="icon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="icon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="icon/manifest.json" rel="manifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="scripts/siteFunctions.js" type="text/javascript"></script>
+    <script src="scripts/jquery_v2.0.0.js" type="text/javascript"></script>
+    <!-- used for my floating back button in lower right corner -->
+	<script>
+		$(document).ready(function () {  $('.backToTopScroll').hide();//Check to see if the window is top if not then display button
+			$(window).scroll(function () {  if ($(this).scrollTop() > 650) {    $('.backToTopScroll').fadeIn();  } else {    $('.backToTopScroll').fadeOut();  }}); //Click event to scroll to top
+			$('.backToTopScroll').click(function () {  $('html, body').animate({ scrollTop: 0 }, 900);  return false;  });});
+    </script>
+</head>
+<body id="bearzCodingZone-page"><button class="topLeftBackButton" onClick="location.href='javascript:history.back()'" type="button"><span class="slideRightSmallCaps">previous location</span></button><button class="topLeftRefresh" onClick="window.location.reload()" type="button"><span class="slideRightSmallCaps">reload current page</span></button><button class="backToTopScroll" onClick="scrollToTopClose()" type="button">Page Top</button>
+        <h1 class="siteName siteNameFadeIn displayNone">BearZ Coding Zone</h1>
+        <div class="landscapeView colGradient"><!-- backNameFadeIn  -->
+            <div class="phoneHeader">
+                <p><span class="bearzLogoBody"><span class="bearzCap">B</span>ear<span class="bearzCapZ">Z</span></span></p>
+                <p><span class="bearzCap2">C</span><span class="bearzLogoPlainText">oding</span></p>
+                <p><span class="bearzLogoBody"><span class="bearzCap2Z">Z</span>one</span></p>
+            </div>
+            <div class="articleRepeatingRadial">
+                <p><span class="landscapeViewFirstLetter">m</span>y Apologizes&#44;</p>
+                <p><span class="landscapeViewFirstLetter">p</span>lease view this site in landscape view&#46;</p>
+                <p><span class="landscapeViewFirstLetter">t</span>his site is not optimized for less than <span class="landscapeViewNumber">575</span> pixel width&#46;&ensp;</p>
+                <p><span class="landscapeViewFirstLetter">f</span>or devices with a maximum width <span class="parentheses mySmall andadaBoldItalic" style="color:inherit;">landscape view</span>&#44; of less than 575 pixels&#44; slight horizontal scrolling is necessary&#46;&ensp;</p>
+            </div><!--    -->
+            <div class="phoneHeaderLower">
+                <p><span class="bearzLogoBody"><span class="bearzCap">B</span>ear<span class="bearzCapZ">Z</span></span></p>
+                <p><span class="bearzCap2">C</span><span class="bearzLogoPlainText">oding</span></p>
+                <p><span class="bearzLogoBody"><span class="bearzCap2Z">Z</span>one</span></p>
+            </div>
+        </div>
+    <section id="wrapper" class="bearzCodingZoneGradient pageFadeIn">
+        <h2 class="siteName siteNameFadeIn displayNone">The<br>Coding Zone</h2>
+		<header id="Banner/Logo" class="myHeader2">
+            <div class="siteName siteNameFadeIn">
+                <p class="bearzHeader"><span class="bearzHeader-B">b</span><span class="bearzHeaderB-ear">&ensp;ear&thinsp;</span><span class="bearzHeader-Z">z</span> </p>
+                <p class="bearzHeader-Coding"><span class="headerC">c</span><span class="codingBorder"><span class="C-ODING">oding</span></span> </p> 
+                <p class="bearzHeader-Zone"><span class="bearzHeaderZone-Z">z</span><span class="bearzBorderZ-one"><span class="bearzHeaderZ-oneSava">one</span></span></p><!--  -->
+            </div>
+        </header><!-- end of header -->
+		<nav id="topNavBar" class="topNav navBarGradient">
+			<h3 class="navHeader displayNone">Menu</h3>
+			<a class="navBlur" href="siteMap.html">Topics</a>
+            <a class="navBlur" href="index.php">Bearz Home</a>
+            <a class="navBlur" href="contact.php">Contact </a>
+			<hr class="topNavBorder">
+        </nav>
+		<aside id="asideLeft" class="leftAside"><!-- left aside -->
+            <h3 class="navHeader">Interesting Quotes</h3><hr class="hr-noLine-spacer1">
+<!-- left side quote one -->
+            <p class="sideQuote"><b>&ldquo;</b>I am always doing that which I cannot do<b>&#44;</b><br> in order that I may learn how to do it<b>&#46;</b>&ensp;<b>&rdquo;</b><b>&#46;&#46;&#46;</b><br>
+            <span class="sign">Pablo Picasso</span></p>
+            <hr class="style-seven">
+<!-- left side quote three -->
+            <p class="sideQuote"><b>&ldquo;</b>You got to be your own&nbsp;man<b>&#46;</b><br>Just because everybody else jumps off the bridge<b>&#44;</b> don't mean you have to!<b>&rdquo;</b><b>&#46;&#46;&#46;</b><br>
+            <span class="sign">Auzie Smith</span></p>
+            <hr class="style-seven">
+<!-- left side quote four -->
+            <p class="sideQuote"><b>&ldquo;</b>If you don't have time to do it right<b>&#44;</b><b>&#44;</b><b>&#44;</b> the first time<b>&#44;</b> when will you have time to do it over<b>&#63;</b><b>&rdquo;</b><b>&#46;&#46;&#46;</b><br>
+            <span class="sign">Geneva Smith</span></p>
+            <hr class="style-seven">
+		</aside><!-- end left column -->
+		<aside id="rightSide" class="rightAside"><!-- Right aside -->
+			<h3 class="navHeader displayNone">Bearz Coding Zone</h3>
+			<nav class="sideNav">
+            	<h3 class="navHeader">On This Page</h3>
+                <ul class="groupingList">
+                    <li><a href="#artiOne" class="pageNavigation">What is <abbr class="html5"></abbr><b>&#63;</b></a></li>
+                    <li><a href="#artiTwo" class="pageNavigation">What is <abbr class="css3"></abbr><b>&#63;</b></a></li>
+                    <li><a href="#artiThree" class="pageNavigation">Typography</a></li>
+                </ul>
+			</nav>
+            <div class="floatRightImages">
+				<img src="images/bearzDezignz.png" alt="Bearz Web and Graphics Dezign">
+            </div>
+		</aside><!-- end rightSide -->
+		<section id="content" class="basicContainerNoBackground">
+        	<h2 class="myH2Subhead displayNone">Coding Quotes</h2><hr class="hr-noLine-spacer2pt25">
+            <blockquote class="quote">
+            	<b>&ldquo;</b>Debugging is twice as hard as writing the code in the first place<b>&#46;</b>&ensp;Therefore<b>&#44;</b> if you write the code as cleverly as possible<b>&#44;</b> you are<b>&#44;</b> by definition<b>&#44;</b> not smart enough to debug it<b>&#46;&rdquo;</b><hr class="hr-noLine">
+                <p class="sign"><span class="ellipsis"></span>Brian W<b>&#46;</b> Kernighan</p>
+            </blockquote>
+                <hr class="hr-noLine"><hr class="style-seven">
+            <blockquote class="quote"><b>&ldquo;</b>If the code is complex<b>&#44;</b> you<b class="apos"></b>re not going to be able to grasp all of it at once<b>&#44;</b> 
+                so you won't be effective at debugging it<b>&#46;</b>&ensp;This is why code maintainability <b class="sentenceBrace">&#40;</b>and to a 
+                lesser extent<b>&#44;</b> initial development<b class="sentenceBrace">&#41;</b> is all about limiting complexity<b>&#44;</b> such as by breaking 
+                the program up into independent units<b>&#46;&rdquo;</b>
+                <p class="sign"><span class="ellipsis"></span>Steven Sudit<br><span class="webLink">Stackoverflow<b>&#46;</b>com</span></p>
+            </blockquote>
+                <hr class="hr-noLine"><hr class="style-seven">
+            <blockquote class="quote"><b>&ldquo;</b>I have no special talent<b>&#46;</b>&ensp;I am only passionately curious<b>&#46;</b>&ensp;<b>&rdquo;</b>
+                <p class="sign">Albert Einstein</p>
+            </blockquote>
+                <hr class="hr-noLine"><hr class="style-seven">
+            <blockquote class="quote">
+            	<b>&ldquo;</b>Things that are impossible just take longer<b>&#46;</b>&ensp;<b>&rdquo;</b>
+            	<p class="sign">Ian Hickson<br class="br1-5em"><span class="courierPrimeItalic">WHATWG</span></p>
+                <hr class="hr-noLine"><hr class="style-seven">
+            </blockquote>
+            <blockquote class="quote"><b>&ldquo;</b>The most exciting phrase to hear in science<b>&#44;</b><br> 
+                the one that heralds new discoveries<b>&#44;</b> is not Eureka<b>&#33;</b><br>but <b>&lsquo;</b>That is funny&hellip;<b class="apos"></b><b>&rdquo;</b><br>
+            </blockquote>
+                <p class="sign"><span class="ellipsis"></span>Isaac Asimov</p>
+                <hr class="style-seven hr-noLine">
+        </section>
+        <section class="mainContent">
+			<h2 class="subHeader2">Brief Introductions</h2>
+       		<article id="artiOne" class="basicContainerNoBackground">
+				<h3 class="articleHeaderH3"><a class="textLink" href="TheHTMLZone/index.html">What is <abbr class="html5"></abbr>&#63;<span class="tipZoomInSmall"><abbr class="html2Bold"></abbr><span>an <abbr class="htmlBold"></abbr> zone document</span></span></a></h3>
+				<p class="bodyText">
+					<b>&ldquo;</b><span class="abbrHighlite">H</span>yper<span class="abbrHighlite">T</span>ext <span class="abbrHighlite">M</span>arkup <span class="abbrHighlite">L</span>anguage <b class="enemDash">&#45;</b> Version <span class="body5 abbrHighlite">5</span>&rdquo;
+                </p><hr class="hr-noLine-spacer1">
+                <p class="bodyText">
+					<abbr class="html5"></abbr> is the fifth revision and newest version for the standards that define <abbr class="htmlBold"></abbr><b>&#46;</b>&ensp;
+                </p>
+				<p class="bodyText">
+                	First off<b>&#44;</b> <span class="tip"><abbr class="htmlBold"></abbr><span class="tipZoomIn"><mark>H</mark>yper<mark>T</mark>ext <mark>M</mark>arkup <mark>L</mark>anguage<br>Refers to the <b class="andadaBoldItalic">language</b> itself<br> <b class="andadaBoldItalic">NOT</b> any particular version</span></span> is a standardized system used for tagging text files<b>&#44;</b> with <a class="textLink" href="terminology.html#dfnHTMLElement"><abbr class="htmlBold"></abbr> elements<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> to achieve graphic<b>&#44;</b> and hyperlink effects of a hypertext <a class="textLink" href="terminology.html#htmlDocument">document<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> <span class="parentheses"><em>web page</em></span><b>&#46;</b>&ensp;<abbr class="htmlBold"></abbr> is the language used for describing the structure of web pages<b>&#46;</b>
+                </p>
+				<div class="olulListContainer">
+                	<p class="myH4"><abbr class="htmlBold"></abbr> gives authors the means to&#58;</p>
+                    <p class="listItem">Publish online documents with headings<b>&#44;</b> text<b>&#44;</b> tables<b>&#44;</b> lists<b>&#44;</b> photos<b>&#44;</b> etc<b>&#46;</b></p>
+                    <p class="listItem">Retrieve online information via hypertext links<b>&#44;</b> at the click of a button<b>&#46;</b></p>
+                    <p class="listItem">Design forms for conducting transactions with remote services<b>&#44;</b> for use in searching for information<b>&#44;</b> making reservations<b>&#44;</b> ordering products<b>&#44;</b> etc<b>&#46;</b></p>
+                    <p class="listItem">Include spread<span class="dashLine"></span>sheets<b>&#44;</b> video clips<b>&#44;</b> sound clips<b>&#44;</b> and other applications directly in their documents<b>&#46;</b></p>
+                </div>
+                <p class="bodyText">
+					With <abbr class="htmlBold"></abbr><b>&#44;</b> authors describe the structure of pages using markup<b>&#46;</b>&ensp;Markup is pretty much using the elements of <abbr class="htmlBold"></abbr> and <span class="html5"></span> and placing them in <span class="italicsBold">&ldquo;tags&rdquo;&#46;</span>&ensp;These elements of the language label pieces of content such as <span class="italicsBold">&ldquo;paragraph&rdquo;&#44;</span> <span class="italicsBold">&ldquo;list&rdquo;&#44;</span> <span class="italicsBold">&ldquo;table&rdquo;&#44;</span> and so on<b>&#46;</b>&ensp;It is the standard protocol for formatting and displaying these <a class="textLink" href="terminology.html#htmlDocument">documents<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> on the World Wide Web<b>&#46;</b>&ensp;
+                </p>
+                    <!--  PURE CSS SHOW AND HIDE DROPDOWN CAPABILITY -->
+                <div class="bodyText">
+                    <label id="labelHTML" for="showHTML" class="textLink" onClick="document.getElementById('labelHTML').style.display='none'">More&thinsp;<b>&#46;&#46;&#46;</b></label>
+                    <input type="radio" id="showHTML" name="group"><hr class="hr-noLine-spacer1">
+                    <span class="contentDropDown paragraphSeparator">
+                    	<i>Tim Berners<b class="enemDash">&#45;</b>Lee</i><b>&#44;</b> is considered the <b>&ldquo;</b>Father<b>&rdquo;</b> and inventor of <abbr class="htmlBold"></abbr> and the internet<b>&#46;</b>&ensp;In <span class="numbers">1989</span><b>&#44;</b> <i>Tim Berners&ndash;Lee</i> <a class="textLink textLinkRightSidePage" href="http://www.w3.org/History/1989/proposal.html" target="_blank" rel="external">invented<span class="tipZoomIn">You can view Tim Berners&ndash;Lee's<br>Original Proposal he made to <abbr class="myRegCapsBold">cern</abbr></span></a> the World Wide Web<b>&#46;</b>&ensp;He coined the term <b>&ldquo;</b>World Wide Web<b>&rdquo;</b><b>&#44;</b> wrote the first World Wide Web server<b>&#44;</b><span class="tip"><abbr class="abbrBold">httpd</abbr><span class="tipZoomIn"><mark>h</mark>yper<mark>t</mark>ext <mark>t</mark>ransfer <mark>p</mark>rotocol <mark>d</mark>aemon<br>the first web server</span></span><b>&#44;</b> and the first client program<b>&#44;</b> 
+                        in October <span class="numbers">1990</span><b>&#46;</b>&ensp;He wrote the first version of the <span class="italicsBoldCaps">&ldquo;HyperText Markup Language&rdquo;&#44;</span> the document formatting language with the capability for hypertext links that became the primary publishing format for the Web<b>&#46;</b>&ensp;His initial specifications for <a class="textLink" href="terminology.html#dfnURI"><abbr class="abbrBold">uri</abbr><span class="tipZoomIn">Terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a><b class="apos"></b>s<b>&#44;</b> <a class="textLink" href="terminology.html#dfnHTTP"><abbr class="abbrBold">http</abbr><span class="tipZoomIn">Terminology<br>A <abbr class="bearzLogoBody">bearz</abbr> Coding Zone Document</span></a><b>&#44;</b> and <abbr class="htmlBold"></abbr> were refined and discussed in larger circles as Web technology spread<b>&#46;</b>&ensp;
+                    </span><hr class="hr-noLine-spacer1">
+                    <span class="contentDropDown paragraphSeparator">
+                        The previous version of <abbr class="htmlBold"></abbr> <b class="enemDash">&#45;</b> <abbr class="html401"></abbr><b>&#44;</b> was implemented in <span class="numbers">1999</span><b>&#44;</b> and the internet has changed significantly since then<b>&#46;</b>&ensp;<abbr class="html5"></abbr> has been designed to replace both <abbr class="html401"></abbr> and <abbr class="abbrBold">xhtml&#44;</abbr> and the <abbr class="htmlBold"></abbr> <span class="tip"><abbr class="domBold"></abbr><span class="tipZoomIn"><mark>d</mark>ocument <mark>o</mark>bject <mark>m</mark>odel</span></span> Level 2<b>&#46;</b>&ensp;<abbr class="html5"></abbr> is specially designed to deliver rich content without the need for additional plug<span class="dashLine"></span>ins<b>&#46;</b>&ensp;The current version delivers everything from animation to graphics<b>&#44;</b> music to movies<b>&#44;</b> and can also be used to build complicated web 
+                        applications<b>&#46;</b>&ensp;<abbr class="html5"></abbr> is also cross<span class="dashLine"></span>platform<b>&#44;</b> meaning it is designed to work whether you are using a Desktop or Laptop<b>&#44;</b> a Tablet<b>&#44;</b> a Smart<span class="dashLine"></span>phone<b>&#44;</b> or a Smart TV<b>&#46;</b>&ensp;
+                    </span><hr class="hr-noLine-spacer1">
+                    <span class="contentDropDown">
+                        <label for="hideHTML" class="textLink hide" onClick="document.getElementById('labelHTML').style.display='inline'">Close</label>    
+                        <input type="radio" id="hideHTML" name="group">
+                    </span>
+                </div>
+				<hr class="style-seven">
+			</article>
+            <article id="artiTwo" class="articleContainer">
+            	<h3 class="courierPrimeBoldItalic articleHeaderH3">
+                	<a class="textLink" href="TheCSSZone/index.html">What Is <abbr class="css3"></abbr><b>&#63;</b><span class="tipZoomInSmall">What Is <abbr class="css2Bold"></abbr><br>A <abbr class="cssBold"></abbr> Zone Document</span></a>
+                </h3>
+                <div class="articleSubContainer">
+                    <p class="bodyText"><abbr class="cssBold"></abbr> stands for <b class="bold"><span class="abbrHighlite">C</span>ascading <span class="abbrHighlite">S</span>tyle <span class="abbrHighlite">S</span>heet</b><b>&#46;</b>&ensp;Ok<b>&#44; &#44; &#44;</b> but what is <abbr class="cssBold"></abbr> you ask<b>&#63;</b>&ensp;Well here is a little history<b>&#46;</b>&ensp;
+                        <abbr class="cssBold"></abbr> was first developed in 1997<b>&#44;</b> as a way for Web developers to define the look and feel of their Web pages<b>&#46;</b>&ensp;It was intended to allow developers to separate content from design so that <abbr class="htmlBold"></abbr> could perform more of the function that it was originally based on <b class="enemDash">&#45;</b> the markup of content<b>&#44;</b> without worry about the design and layout<b>&#46;</b>&ensp;
+                        <abbr class="cssBold"></abbr> didn't gain in popularity until around 2000<b>&#44;</b> when Web browsers began using more than the basic font and color aspects of <abbr class="cssBold"></abbr><b>&#46;</b>&ensp;And now<b>&#44;</b> all modern browsers support all of <abbr class="cssBold"></abbr> Level 1<b>&#44;</b> most of <abbr class="cssBold"></abbr> Level 2<b>&#44;</b> and some aspects of <abbr class="cssBold"></abbr> Level 3<b>&#46;</b>&ensp; 
+                        Web Designers that don't use <abbr class="cssBold"></abbr> for their design and development of Web sites have become a thing of the past<b>&#46;</b>&ensp;And it is arguably as important to understand <abbr class="cssBold"></abbr> as it is to know <abbr class="htmlBold"></abbr> <b class="enemDash">&#45;</b> and some would say it was more important to know <abbr class="cssBold"></abbr><b>&#46;</b>&ensp; <br>
+                    </p>
+                    <div class="bodyText">
+                        <!--  PURE CSS SHOW AND HIDE DROPDOWN CAPABILITY -->
+                        <label id="labelCSS" for="showCSS" class="textLink" onClick="document.getElementById('labelCSS').style.display='none'">More&thinsp;<b>&#46;&#46;&#46;</b></label>
+                        <input type="radio" id="showCSS" name="group"><hr class="hr-noLine-spacer1">
+                        <span class="contentDropDown paragraphSeparator">
+                            <i class="emSpecial">Stylesheet</i> refers to the document itself<b>&#46;</b>&ensp;Stylesheets have been used for document design for years<b>&#46;</b>&ensp;They are the technical specifications for a layout<b>&#44;</b> whether print or online<b>&#46;</b>&ensp;Print designers use stylesheets to insure that their designs are printed exactly to specifications<b>&#46;</b>&ensp;A stylesheet for a Web page serves the same purpose<b>&#44;</b> and also tells the <span class="tip"><abbr class="abbrBold">ua</abbr><span class="tipZoomIn"><mark>u</mark>ser <mark>a</mark>gent &ndash;<br>&emsp;Web Browser</span></span><b>&#44;</b> how to render<b>&#44;</b> or present<b>&#44;</b> the web 
+                            page<b>&#46;</b>&ensp;<i class="emSpecial">Cascade</i> is the special part<b>&#46;</b>&ensp;A Web stylesheet is intended to cascade through a series of stylesheets<b>&#44;</b> like a river over a waterfall<b>&#46;</b>&ensp;The water in the river hits all the rocks in the waterfall<b>&#44;</b> but only the ones at the bottom affect exactly where the water will flow<b>&#46;</b>&ensp;The same is true of <abbr class="cssBold"></abbr> stylesheets<b>&#46;</b>&ensp;
+                        </span><hr class="hr-noLine-spacer1">
+                        <span class="contentDropDown">
+                            <label for="hideCSS" class="textLink" onClick="document.getElementById('labelCSS').style.display='inline'">Close</label>    
+                            <input type="radio" id="hideCSS" name="group">
+                        </span>
+                    </div>
+                </div>
+            </article>
+            <article id="artiThree" class="articleContainer">
+				<h2 class="courierPrimeBoldItalic articleHeaderH3">
+					<a class="textLink" href="TheCSSZone/typography.html">Typography<span class="tipZoomIn tipSubSec">Typography<br>A <abbr class="cssBold"></abbr> Zone Document</span></a>
+				</h2>
+                <div class="articleSubContainer">
+					<p class="bodyText">
+                    	From as early as I can remember<b>&#44;</b> I have always been fascinated by the different forms of type used in the different logos I grew up with<b>&#46;</b>&ensp;Most were typefaces like <span class="italicsBold">&ldquo;Arial&rdquo;&#44;</span> <span class="italicsBold">&ldquo;Times New Roman&rdquo;&#44;</span> the basic <span class="italicsBold">&ldquo;sans<span class="dashLine"></span>serif&rdquo;</span> and <span class="italicsBold">&ldquo;serif&rdquo;</span> type<b>&#44;</b> with a few modifications of course<b>&#46;</b>&ensp;However<b>&#44;</b> there were the ones that did have the fancy type<b>&#46;</b>&ensp;Many of my early drawings were of typefaces drawn in <span class="italicsBold">&ldquo;3<span class="dashLine"></span>D&rdquo;&#44;</span> like making my own book<b>&#45;</b>covers<b>&#46;</b>&ensp;Even when I was in school<b>&#44;</b> everything that I wrote had to have the correct spacing for it to look good<b>&#44;</b> without gaps and overly 
+                        spaced<b>&#46;</b>&ensp;At the time<b>&#44;</b> proper spacing was just something you did when writing<b>&#44;</b> without even thinking about it<b>&#46;</b>&ensp;It was just the way we were taught to write<b>&#46;</b>&ensp;<span class="italicsBold">&ldquo;Kerning&rdquo;&#44;</span> <span class="italicsBold">&ldquo;Tracking&rdquo;&#44;</span> <span class="italicsBold">&ldquo;Leading&rdquo;&#44;</span> were not terms we were taught<b>&#46;</b>&ensp;Now<b>&#44;</b> with most things being dependent on computers<b>&#44;&thinsp;&#44;&thinsp;&#44;</b>
+                    </p>
+                    <div class="bodyText">
+                        <!--  PURE CSS SHOW AND HIDE DROPDOWN CAPABILITY -->
+                        <label id="labelTYPO" for="showTYPO" class="textLink" onClick="document.getElementById('labelTYPO').style.display='none'">More&thinsp;<b>&#46;&#46;&#46;</b></label>
+                        <input type="radio" id="showTYPO" name="group"><hr class="hr-noLine-spacer1"> 
+                        <span class="contentDropDown paragraphSeparator">Now<b>&#44;</b> with most things being dependent on computers<b>&#44;</b> and with the creation of tens<b class="enemDash">&#45;</b>of<b class="enemDash">&#45;</b>thousands of different typefaces <span class="parentheses">fonts</span><b>&#44;</b> proper spacing between the letters and words have become extremely important<b>&#46;</b>&ensp;When I started my studies of <span class="italics">Graphic Design</span> at <span class="italicsBold">Lakeland Community College</span> in Kirtland<b>&#44;</b> Ohio<b>&#44;</b> one of first classes I enrolled in was <span class="italicsBold">&ldquo;Typography&rdquo;&#46;</span>&ensp;It was taught by <span class="tip">Carol Ryan<span class="tipZoomIn">Graphic Design Department<br>Lakeland Community College<br>Kirtland<b>&#44;</b> Ohio</span><b>&#44;</b></span> a local Graphic Designer<b>&#44;</b> 
+                            whom I have a great deal of respect for<b>&#44;</b> and she <strong>knows</strong> her typography<b>&#46;</b>&ensp;I became more intrigued and fascinated by the art of typography and the different typefaces <span class="parentheses">fonts</span> available for use by Graphic Designers<b>&#46;</b>&ensp;As a result of her class and teachings<b>&#44;</b> I have <span class="boldedNumbers">1&#46;36 G&thinsp;B</span> or <span class="boldedNumbers">19&#44;625</span> typefaces <span class="parentheses">fonts</span> installed on my computers<b>&#46;</b>&ensp;That does not include all the <span class="boldedNumbers">1&#44;768</span> <a class="textLink" href="moreTypogrphy.html#@fontface">&ldquo;Web Ready&rdquo;<span class="tipZoomIn">Using the <abbr class="cssBold"></abbr> <code class="cssSelector lowercase">@font-face</code> Declaration<b>&#46;</b>&ensp;<br>A <abbr class="cssBold"></abbr> Zone Document</span></a> 
+                            fonts<b>&#44;</b> which are used to embed a specific font onto a web page<b>&#46;</b>&emsp; <a class="textLink" href="TheCSSZone/typography.html">Read more on typography here<span class="tipZoomIn">Typography<br>A <abbr class="cssBold"></abbr> Zone Document</span></a>
+                        </span><hr class="hr-noLine-spacer1pt25">
+                        <span class="contentDropDown">
+                            <label for="hideTYPO" class="textLink" onClick="document.getElementById('labelTYPO').style.display='inline'">Close</label>    
+                            <input type="radio" id="hideTYPO" name="group">
+                        </span>
+                    </div>
+				</div>
+			</article>
+		</section><!--end of main -->
+        <div id="lightDisclaimer" class="disclaimer myAlertFlipIn">
+            <p class="headerBackgroundAboutBox"><img src="images/BDC.png" alt="BearZ Design Concepts Banner Logo"></p>
+            <div class="aboutContentContainer">
+                <p class="aboutIcon"></p>
+                <p class="alertMessage2"><span class="firstLetter">c</span>reated using the latest in</p>
+                <p class="alertMessage2"><abbr class="html5"></abbr> and <abbr class="css3"></abbr> Technology</p>
+                <img class="aboutImageLeft" src="images/HTML5Logo.png" alt="HTML5 Logo"> <img class="aboutImageRight" src="images/cssLogo.png" alt="CSS3 Logo Shield">
+                <p class="alertMessage2 inconsolata">Copyright <span class="libSansBold">&copy;</span> 2014<script>new Date().getFullYear()>2010&&document.write(" &ndash; "+new Date().getFullYear());</script></p>
+                <p class="alertMessage2"><span class="bearzLogoFooter">BearZ &thinsp;Web <span class="bearzAmpersand"></span>GraF&thinsp;X &thinsp;DeZign</span></p>
+                <p class="alertMessage3 libSerifBoldItalic alignCenter">All rights reserved<b>&#46;</b></p>
+                <p class="sentMessageSign"></p>
+                <button id="disclaimerClose" class="closeDisclaimer" onClick="disclaimerClose();" type="button"></button>
+            </div>
+        </div>
+        <div id="fadeDisclaimer" class="blackLight" onClick="disclaimerClose();"></div>
+		<script>
+            $(document).ready(function() {
+                $('#disclaimerClose, #fadeDisclaimer').click(function(){
+                    $('html, body').animate({scrollTop:$(document).height()}, 'fast');return false;});});
+        </script>
+		<footer class="footer"><h5 class="bdc"></h5>
+            <p>This Web Site has been created using the latest in <img class="footerImage" src="images/HTML5Logo.png" alt="Valid HTML5!"> Technology</p>
+            <p>Copyright <b>&copy;</b> 2014 &ndash; <?php echo date("Y"); ?>
+            <script type="text/javascript">
+				var today = new Date()
+				var year = today.getFullYear()
+				document.write(year)
+			</script></p><p><span class="bearzLogoFooter">Bear<span class="footerSmall">Z</span> &thinsp;Web <span class="bearzAmpersand"></span> Gra<small class="footerSmall">F&thinsp;X</small> &thinsp;De<small class="footerSmall">Z</small>ign</span></p>
+            <p>All rights reserved<b>&#46;</b>&emsp;<a class="footerLink capitalize" onClick="disclaimerOpen()">site disclaimer<span class="tipZoomInCaps">BearZ Coding Zone<br>The HTML Zone <b class="forwardSlash"></b> Bearz CSS Zone</span></a></p>
+            <p><span class="italics">Resource<span class="letterBraces">s</span> <b>&#58;</b></span>&ensp;<a class="footerLink" href="https://whatwg.org" target="_blank" rel="external"><abbr class="whatwgFooter">whatwg&thinsp;</abbr><span class="tipZoomInCaps"><mark>W</mark>eb <mark>H</mark>ypertext <mark>A</mark>pplication <mark>T</mark>echnology<mark>W</mark>orking <mark>G</mark>roup<br><small class="lowercase">whatwg.org</small></span></a> and <a class="imgTipSquare" href="http://www.w3.org" target="_blank" rel="external"><img class="w3cLogo" src="images/w3cLogo.png" alt="W3C Logo"><span class="tipZoomInCaps"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium www.w3.org</span></a> <span class="regMark">&reg;</span></p>
+            <p>This work is licensed under</p><p><a class="footerLink" rel="license external" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><span class="tipZoomIn">https://creativecommons.org/licenses/by/4.0/</span>Creative Commons Attribution 4.0 International License</a></p>
+			<p><script> 
+				months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; 
+				var d=new Date();
+				var weekday=new Array(7); weekday[0]="Sunday"; weekday[1]="Monday"; weekday[2]="Tuesday"; weekday[3]="Wednesday"; weekday[4]="Thursday"; weekday[5]="Friday"; weekday[6]="Saturday";
+				var d = new Date();
+				(d.getFullYear());
+				var theDate = new Date(document.lastModified); 
+				theDate.setTime((theDate.getTime()+(60*60)) ) 
+				with (theDate) { 
+				document.write("<span class='italicsBold'>Last Modified<b>&#58;</b></span> <time class='modifiedDate'>"+weekday[getDay()]+'<b>&#44;&thinsp;</b>'+months[getMonth()]+'&thinsp;'+getDate()+'<b>&#44;&thinsp;</b>'+d.getFullYear()+'<b>&ensp;&#64;&ensp;</b>'+getHours()+':'+getMinutes()+"</time>&thinsp;&ensp;<span class='italicsBold'>EST</span>") } 
+			</script></p>
+        </footer>
+	</section><!-- end of wrapper -->
+<script> 
+	var $buoop = {c:2}; 
+	function $buo_f(){ 
+		var e = document.createElement("script"); 
+		e.src = "//browser-update.org/update.min.js"; 
+		document.body.appendChild(e);
+	};
+	try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+	catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+</body>
+</html>
+<!--</div>-->
