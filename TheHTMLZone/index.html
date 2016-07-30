@@ -1,0 +1,1746 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<!--
+	Website: The Coding Zone www.codingzone.org
+    File Name: html_html5.html
+    Author: Barry Smith
+    resources: 	Mozilla Developer Network
+    			WHATWG HTML: The Living Standard
+    			W3C HTML 5.1 Nightly Editor's Draft
+-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="The Coding Zone, General Topics, HTML, HTML5, CSS, CSS3, HTML Elements, HTML5 Elements, HTML Tags, Typography, CSS Animations, Presentational Hints, Browser Support, HTML Content, HTML Categories, HTML Specifications, Element Descriptions, Element Extras, Terminology, Validation, CSS Default Display Settings, Code Examples, Coding Zone">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="An HTML5/CSS3 Instructional web site with the student in mind"> 
+	<title>
+		HTML5 / The Coding Zone
+	</title>
+			<!-- supporting CSS and JavaScript and favicon files -->
+	<link href="../css3/MainLayout.css" rel="stylesheet" type="text/css">
+	<link href="../css3/banner_Logo.css" rel="stylesheet" type="text/css">
+	<link href="../css3/nav.css" rel="stylesheet" type="text/css">
+	<link href="../css3/textStyles.css" rel="stylesheet" type="text/css">
+	<link href="../css3/myAlerts.css" rel="stylesheet" type="text/css">
+	<link href="../css3/cssToolTip.css" rel="stylesheet" type="text/css">
+	<link href="../css3/responsiveCSS.css" rel="stylesheet" type="text/css">
+	<link href="../css3/specialEffects.css" rel="stylesheet" type="text/css">
+	<link href="../css3/targetSelectors.css" rel="stylesheet" type="text/css">
+	<link href="../css3/myAnimations.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/embeddedFonts.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/inconsolata/inconsolata.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/alluraWebReady/allura.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/fontSavatage/savatage.css" rel="stylesheet" type="text/css">
+    <link href="../icon/apple-icon-57X57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="../icon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="../icon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../icon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="../icon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../icon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="../icon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="../icon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="../icon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="../icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="../icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="../icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="../icon/manifest.json" rel="manifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="../scripts/siteFunctions.js" type="text/javascript"></script>
+    <!--<script src="TheHTMLZoneFunctions.js" type="text/javascript"></script>-->
+    <script src="../scripts/jquery_v2.0.0.js" type="text/javascript"></script>
+    <!-- used for my floating back button in lower right corner -->
+	<script>
+		$(document).ready(function () {  $('.backToTopScroll').hide();//Check to see if the window is top if not then display button
+		$(window).scroll(function () {  if ($(this).scrollTop() > 650) {    $('.backToTopScroll').fadeIn();  } else {    $('.backToTopScroll').fadeOut();  }}); //Click event to scroll to top
+		$('.backToTopScroll').click(function () {  $('html, body').animate({ scrollTop: 0 }, 900);  return false;  });});
+    </script>
+</head>
+<body id="html_html5-page">
+    <section id="siteNavSpecsPage" class="wrapperPopupNav displayNone myAppearIn"><!--   -->
+        <h1 class=" pointerFadeIn"><span class="bearzLogoBody"><span class="bearzCap">B</span>ear<span class="bearzCapZ">Z</span>&ensp;<span class="bearzCap2">C</span></span><span class="bearzLogoPlainText">oding</span> <span class="bearzLogoBody"><span class="bearzCap2Z">Z</span>one</span></h1>
+        <p class="czSiteMap2 pointerFadeIn courierPrimeBoldItalic">General Topics</p>
+        <nav id="siteMap" class="siteWideContainer">
+        <h2 class="siteWideNavHeader"><span>Site<b class="enemDash">&#45;</b>Wide Navigation</span></h2>
+            <table class="innerFadeIn siteWideNav">
+                <caption class="czSiteMapColumnsCaption"></caption>
+                <tbody>
+                    <tr>
+                        <td><a class="reduceBotMarg-6em" href="index.html"><span class="tipZoomInSmall"> already on this page</span>HTML/HTML<sub style="position:relative; top:4px; font-size:95%">5</sub></a></td>
+                        <td><a class="reduceBotMarg-4em" href="../TheCSSZone/index.html">CSS/CSS<sub style="position:relative; top:4px; font-size:95%">3</sub></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="elementSpecs.html">Element Specifications</a></td>
+                        <td><a href="../TheCSSZone/cssDefault.html">CSS Default Settings</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="descriptions.html">Element Descriptions</a></td>
+                        <td><a href="../TheCSSZone/typography.html">Typography</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../index.html">HTML Content <small class="parentheses400" style="font-size:60%;">Categories</small></a></td>
+                        <td><a href="../TheCSSZone/presentationalHints.html">Presentational Hints</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="extras.html">Element Extras</a></td>
+                        <td><a href="../animations.html">CSS Animations</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="codingExamples.html">Code Examples</a></td>
+                        <td><a href="../TheCSSZone/moreTypography.html#embeddedFonts">Embedding Fonts</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="tagsAndAttributes.html">Tags &amp; Attributes</a></td>
+                        <td><a href="../TheCSSZone/index.html#mediaQueries">Media Queries</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="browserSupport.html">Browser Support</a></td>
+                        <td><a href="#" hidden>PLACEHOLDER</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="topicsTableNav" style="margin:.5rem auto 1rem;">
+                <caption class="czSiteMapHeader2">general topics</caption>
+                <tbody>
+                    <tr>
+                        <td><a class="siteWideNavLink" href="../terminology.html">Terminology</a>&emsp;</td>
+                        <td>&emsp;<a class="siteWideNavLink" href="../validation.html">Validation</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="siteWideNavLink" href="history.html">HTML History</a>&emsp;</td>
+                        <td>&emsp;<a class="siteWideNavLink" href="genRationale.html" >General Rationale</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <p class="backToTopContainer siteMapCloseButton"><a class="backLink" href="javascript:history.go(-1)" onClick="siteNavSpecialClose()">Close Site Map</a></p>
+    </section><button class="topLeftBackButton" onClick="location.href='javascript:history.back()'" type="button"><span class="slideRightSmallCaps">previous location</span></button><button class="topLeftRefresh" onClick="window.location.reload()" type="button"><span class="slideRightSmallCaps">reload current page</span></button><button class="backToTopScroll" onClick="scrollToTopClose()" type="button">Page Top</button>
+        <h2 class="siteName siteNameFadeIn displayNone">BearZ Coding Zone</h2>
+        <div class="landscapeView colGradient"><!-- backNameFadeIn  -->
+            <div class="phoneHeader">
+                <p><span class="bearzLogoBody"><span class="bearzCap">B</span>ear<span class="bearzCapZ">Z</span></span></p>
+                <p><span class="bearzCap2">C</span><span class="bearzLogoPlainText">oding</span></p>
+                <p><span class="bearzLogoBody"><span class="bearzCap2Z">Z</span>one</span></p>
+            </div>
+            <div class="articleRepeatingRadial">
+                <p><span class="landscapeViewFirstLetter">m</span>y Apologizes&#44;</p>
+                <p><span class="landscapeViewFirstLetter">p</span>lease view this site in landscape view&#46;</p>
+                <p><span class="landscapeViewFirstLetter">t</span>his site is not optimized for less than <span class="landscapeViewNumber">575</span> pixel width&#46;&ensp;</p>
+                <p><span class="landscapeViewFirstLetter">f</span>or devices with a maximum width <span class="parentheses mySmall andadaBoldItalic" style="color:inherit;">landscape view</span>&#44; of less than 575 pixels&#44; slight horizontal scrolling is necessary&#46;&ensp;</p>
+            </div><!--    -->
+            <div class="phoneHeaderLower">
+                <p><span class="bearzLogoBody"><span class="bearzCap">B</span>ear<span class="bearzCapZ">Z</span></span></p>
+                <p><span class="bearzCap2">C</span><span class="bearzLogoPlainText">oding</span></p>
+                <p><span class="bearzLogoBody"><span class="bearzCap2Z">Z</span>one</span></p>
+            </div>
+        </div>
+    <section id="wrapper" class="gradient pageFadeIn">
+        <h2 class="backName backNameFadeIn displayNone">The HTML Zone</h2>
+		<header id="Banner/Logo" class="myHeader"><!--  -->
+            <div class="HTMLZoneHeader siteNameFadeIn"><!--  -->
+            	<p class="htmlHeader-The"><span class="htmlHeader-T">t</span><span class="borderT-he"><span class="htmlHeaderT-he">he</span></span></p>
+                <p class="htmlHeader-HTML"><span class="htmlHeader-H">h</span><span class="borderH-tml"><span class="htmlHeaderH-tml">tml</span></span></p> 
+                <p class="htmlHeader-Zone"><span class="htmlHeader-Z">z</span><span class="borderZ-one"><span class="htmlHeaderZ-one">one</span></span></p><!--  -->
+            </div>
+        </header><!-- end of header -->
+		<nav id="topNavBar" class="topNav navBarGradient">
+			<a class="navBlur" href="../siteMap.html">Topics</a>
+            <a class="navBlur" href="../contactInfo.html">Contact</a>
+            <a class="navBlur" href="../index.php">Bearz Home</a>
+            <a class="navBlur" href="http://www.codingzone.org" target="_blank" rel="external">codingzone<b>&#46;</b>org</a>
+			<hr class="fadingStyle">
+        </nav>
+        <div id=breadCrumbLinks class=speedInLeft><script type="text/javascript">breadcrumbs()</script></div>
+        <aside id="rightSide" class="rightAside"><!-- Right aside -->
+            <h3 class="navHeader displayNone">Bearz Coding Zone</h3>
+            <nav class="sideNav">
+                <h3 class="navHeader">Quick links</h3>
+                <ul class="groupingList">
+                    <li><a class="pageNavigation" hidden href="history.html">History</a></li>
+                    <li><a class="pageNavigation" href="elementSpecs.html">Element Specs</a></li>
+                    <li><a class="pageNavigation" href="codingExamples.html">Code Examples</a></li>
+                    <li><a class="pageNavigation" href="descriptions.html">Definitions</a></li>
+                    <li><a class="pageNavigation" href="../index.html">Categories</a></li>
+                    <li><a class="pageNavigation" href="extras.html">Extras</a></li>
+                </ul>
+            </nav>
+            <div class="floatRightImages">
+                <img src="../images/bearzDezignz.png" alt="Bearz Teez Web and Graphics Dezign">
+                <img src="../images/sideBarLogo.png" alt="The HTML Zone Logo">
+            </div>
+        </aside><!-- end rightSide -->
+		<section class="sectionWrapper">
+			<header class="subHeader reduceBotMarg-6em">
+				<h2 class="myH1"><abbr class="html2Bold"></abbr></h2>
+			</header>
+			<article class="leadContainerWithFloat">
+                <h3 class="myH3">Is there really <abbr class="html5"></abbr>&#63;</h3>
+                <p class="bodyText">
+                	In short<b>&#58;</b> Yes<b>&#46;</b>&ensp;This is the fifth major revision of the <span class="tip"><abbr class="htmlBold"></abbr><span class="tipZoomIn"><mark>H</mark>yper<mark>T</mark>ext <mark>M</mark>arkup <mark>L</mark>anguage<br>Refers to the language itself<br><u class="italics">NOT</u> any particular version</span></span> language<b>&#46;</b>&ensp;
+                </p>
+                <p class="bodyText">
+                	In more length<b>&#58;</b> The term <b>&ldquo;</b><abbr class="html5"></abbr><b>&rdquo;</b> is widely used as a buzzword to refer to modern Web technologies<b>&#44;</b> many of which <span class="parentheses">though by no means all</span> are developed at the <span class="tip"><abbr class="whatwg"></abbr><span class="tipZoomIn"><mark>w</mark>eb <mark>h</mark>ypertext <mark>a</mark>pplication<br><mark>t</mark>echnology <mark>w</mark>orking <mark>g</mark>roup</span></span><b>&#44;</b> along with the <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr><span class="tipZoomIn"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium</span></span>&#46;
+                    &ensp;Most of the information in this web site has been retrieved from just such documents<b><b>&#59;</b></b> others are available from the <a class="textLink" href="https://whatwg.org/specs/" target="_blank" rel="external">WHATWG specification index<span class="tipZoomIn">Specifications<br>whatwg.org/specs/</span></a> and the <abbr class="w3c">w<sub>3</sub>c</abbr><b>&#39;</b>s <a class="textLink" href="http://www.w3.org/TR/tr-groups-all#tr_HTML_Working_Group" target="_blank" rel="external">Specifications by group<span class="tipZoomIn">The <abbr class="w3c">w<sub>3</sub>c</abbr> Specifications<br>Sorted by Group</span></a> page<b>&#46;</b>&ensp;
+				</p>
+                <h3 class="myH3 courierPrimeBold">How Did <abbr class="html5"></abbr> Get Started<b>&#63;</b></h3>
+				<p class="bodyText">
+					<span class="tip"><abbr class="html5"></abbr><span class="tipZoomIn">Represents the latest <abbr class="htmlBold"></abbr> specifications<br>written or to be written</span></span> started out as a cooperation between the <span class="tip">World Wide Web Consortium<span class="tipZoomIn">Better Known and refered to as <abbr class="w3c">w<sub>3</sub>c</abbr></span></span> and the <span class="tip">Web Hypertext Application Technology Working Group<span class="tipZoomIn">Refered to as the <abbr class="whatwg"></abbr><br>or the <abbr class="whatwg">what</abbr> Working Group</span></span><b>&#46;</b>&ensp;<span class="tip"><abbr class="whatwg"></abbr><span class="tipZoomIn"><mark>w</mark>eb <mark>h</mark>ypertext <mark>a</mark>pplication<br><mark>t</mark>echnology <mark>w</mark>orking <mark>g</mark>roup</span></span> 
+                    was working with web forms and applications<b>&#44;</b> and the <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr><span class="tipZoomIn"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium</span></span> was working with <span class="tip"><abbr class="abbrBold">xhtml 2.0</abbr><span class="tipZoomIn">E<mark>x</mark>tensible <mark>H</mark>yper<mark>t</mark>ext<br><mark>m</mark>arkup <mark>l</mark>anguage Version 2</span></span><b>&#46;</b>&ensp;
+                </p>
+                <div class="bodyListContainer">
+                    <p class="bodyText">In October of 2006<b>&#44;</b> they decided to cooperate and create a new version of <abbr class="htmlBold"></abbr><b>&#46;</b>&ensp;
+                    <p class="bodyListHeader">Some basic rules for <abbr class="html5"></abbr> were established<b>&#58;</b></p>
+                    <ul class="bodyList">
+                        <li>New features should be based on <abbr class="htmlBold"></abbr><b>&#44;</b> <abbr class="cssBold"></abbr><b>&#44;</b> the <abbr class="domBold"></abbr><b>&#44;</b> and <span class="myRegCapsBold">javascript</span></li>
+                        <li>The need for external plugins <span class="parentheses">like Flash</span> should be reduced</li>
+                        <li>Error handling should be easier than in previous versions</li>
+                        <li>Scripting has to be replaced by more markup</li>
+                        <li><abbr class="html5"></abbr> should be device<span class="dashLine"></span>independent</li>
+                        <li>The development process should be visible to the public</li>
+                    </ul>
+                </div>
+                <div class="paragraphSeparator">
+                <p class="bodyText">
+                    In 2008<b>&#44;</b> the first version of <abbr class="html5"></abbr> was published<b>&#46;</b>&ensp;On December 2012<b>&#44;</b> after six years<b>&#44;</b> the <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr><span class="tipZoomIn"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium</span></span> announced that they had completed their three&ndash;year quest to finalize the <abbr class="html5"></abbr> specification<b>&#46;</b>&ensp;<abbr class="html5"></abbr> and the related technologies like <a class="textLink" href="#">JavaScript<span class="tipZoomIn">Often shortened to <abbr class="abbrBold">js</abbr></span></a> is most known as the scripting language for Web pages<b>&#46;</b>&ensp; 
+					and <a class="textLink" href="../TheCSSZone/index.html"><abbr class="cssBold"></abbr><span class="tipZoomIn"><mark>c</mark>ascading <mark>s</mark>tyle <mark>s</mark>heets Level <mark>3</mark><br>A <abbr class="cssBold"></abbr> Zone Document</span></a> provide a way to write rich web applications designed to run on any device that follows the specifications<b>&#46;</b>&ensp;Even though the specifications are feature complete<b>&#44;</b> meaning nothing more will be added to it<b>&#44;</b> there is still a lot of work to be done<b>&#46;</b>&ensp;From what I have read on the <a class="textLink" href="http://dev.w3.org/html5/decision-policy/html5-2014-plan.html" target="_blank" rel="external"><abbr class="w3c">w<sub>3</sub>c</abbr> website<span class="tipZoomIn"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb <mark>c</mark>onsortium<br>Read the <abbr class="w3c">w<sub>3</sub>c</abbr>&nbsp;2014 Plan</span></a> there are still more changes and recommendations to come<b>&#46;</b>&ensp;
+                </p>
+                <p class="bodyText">
+                    If you are interested<b>&#44;</b> you can read the <a class="textLink" href="http://w3c.github.io/html/" target="_blank" rel="external"><abbr class="w3c">w<sub>3</sub>c</abbr><span class="tipZoomIn"><abbr class="html51"></abbr> Editor's Draft<br>w3c.github.io/html/</span></a><b>&#44;</b> or <a class="textLink" href="https://html.spec.whatwg.org/multipage/semantics.html" target="_blank" rel="external"><abbr class="whatwg"></abbr><span class="tipZoomIn"><abbr class="whatwg"></abbr> <abbr class="htmlBold"></abbr><b>&#58;</b> The Living Standard<br>Technical Specifications</span></a> specifications<b>&#46;</b>&ensp;I use these websites on a regular basis for writing my <abbr class="htmlBold"></abbr> code<b>&#44;</b> and it is referenced continuously throughout the following sections and pages<b>&#46;</b>&ensp;
+				</p>
+                <p class="bodyText">
+                    These specifications define the 5th major version of the core language of the World Wide Web<b>&#58;</b>&ensp;the Hypertext Markup Language <span class="parentheses"><abbr class="htmlBold"></abbr></span><b>&#46;</b>&ensp;In this version<b>&#44;</b> new features continue to be introduced to help Web application authors<b>&#44;</b> new elements continue to be introduced based on research into prevailing authoring practices<b>&#44;</b> and special attention continues to be given to defining clear conformance criteria for user agents in an effort to improve <a class="textLink" href="../terminology.html#dfnInteroperability">interoperability<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a><b>&#46;</b>&ensp;
+				</p>
+                </div>
+            </article>
+            <article class="articleSubContainer">
+                <h3 class="myH3"><a class="textLink" href="browserSupport.html">Browser Support<span class="tipZoomIn tipSmall">Browser Support<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> for <abbr class="html5"></abbr></h3>
+                <p class="bodyText">
+                    All major browsers &ndash; <span class="chromeBrowserBody"></span><b>&#44;</b> <span class="firefoxBrowserBody"></span><b>&#44;</b> <span class="IEBrowserBody"></span><b>&#44;</b> <span class="safariBrowserBody"></span><b>&#44;</b> <span class="operaBrowserBody"></span> &ndash; support most of the new <abbr class="html5"></abbr> elements and <abbr class="abbrBold">api</abbr>s<b>&#44;</b> and continue to add new <abbr class="html5"></abbr> features to their latest versions<b>&#46;</b>&ensp;The <abbr class="html5"></abbr> working group includes <abbr class="italicsBoldAllCaps">aol</abbr><b>&#44;</b> <span class="italics">Apple</span><b>&#44;</b> <span class="italics">Google</span><b>&#44;</b> <abbr class="italicsBoldAllCaps">ibm</abbr><b>&#44;</b> <span class="italics">Microsoft</span><b>&#44;</b> <span class="italics">Mozilla</span><b>&#44;</b> <span class="italics">Nokia</span><b>&#44;</b> <span class="italics">Opera</span><b>&#44;</b> and hundreds of other vendors<b>&#46;</b>
+                </p>
+                <p class="bodyText">    
+                    <span class="myNote"></span> <em class="emSpecial">Not all browsers are created equally&#33;</em>
+                </p>
+            </article>
+<!-- HTML 5 DOCTYPE -->
+            <article id="html5Doctype" class="articleSubContainer">
+                <h3 class="articleHeaderH3"><abbr class="html5"></abbr>&ensp;<code class="codeDOCTYPE">doctype</code></h3>
+                <p class="bodyText">
+                    In <abbr class="html5"></abbr> there is only one document type declaration<b>&#44;</b> and it is very simple<b>&#58;</b>
+                </p>
+                <p class="bodyText">
+                    <code class="doctypeString"><code class="codeDOCTYPE"> <code class="lowercase">html</code></code></code>
+                </p>
+                <p class="bodyText">
+                	You may be thinking<b>&#44;&#44;&#44;</b>&ensp;Wait a minute<b>&#33;&#33;&#33;</b>&ensp;That is it<b>&#63;&#63;&#63;</b>
+                </p>
+                <p class="bodyText">
+                    Yes<b>&#44;&#44;&#44;</b> simple is not the word&#33;&ensp;Especially after having to deal with the <a class="textLink" href="#declarations"><abbr class="html401"></abbr> and <abbr class="abbrBold">xhtml</abbr> document types<span class="tipZoomIn"><code class="codeDOCTYPE"></code> Declarations<br>Section Below</span></a><b>&#46;</b>&ensp;
+                </p>
+                    <button class="previousLocation" onClick="javascript:history.back(1)" type="button">Previous Location&thinsp;&#33;</button>
+            </article>
+        </section>
+<!-- New Features Section -->
+        <section id="features" class="sectionWrapper">
+        	<h2 class="myH2">New <abbr class="html5"></abbr> Features</h2>
+        	<fieldset class="articleSubContainer">
+                <p class="bodyText">
+                    <span class="myNote">author </span> As stated before<b>&#44;</b> this website continual references to both the <abbr class="w3c">w<sub>3</sub>c</abbr> and the <abbr class="whatwg"></abbr> specifications<b>&#46;</b>&ensp;You will also find references to the <span class="tip"><abbr class="abbrBold">mdn</abbr><span class="tipZoomIn"><mark>M</mark>ozilla <mark>D</mark>eveloper <mark>N</mark>etwork</span></span> website<b>&#46;</b>&ensp;
+                </p><hr class="hr-noLine-spacer1pt25"><a id="htmlTabs"></a> <a id="tabOne"></a> <a id="tabSection"></a> <a id="tabThree"></a> <a id="tabFour"></a>
+                    <div id="contentFigureImg" class="listContainer">
+                        <p class="simpleListHeader">&ensp;Some of the most interesting new features in <abbr class="html5"></abbr> are<b>&#58;</b></p>
+                        <ul class="bodyList">
+                            <li>The <code class="codeElement">canvas</code> element for 2D drawing<b>&#46;</b></li>
+                            <li>The <code class="codeElement">video</code> and <code class="codeElement">audio</code>elements for media playback<b>&#46;</b></li>
+                            <li>Support for local storage<b>&#46;</b>&ensp;</li>
+                            <li>New content-specific elements &ndash; <code class="codeElement">header</code><b>&#44;</b> <code class="codeElement">nav</code><b>&#44;</b> <code class="codeElement">section</code><b>&#44;</b> <code class="codeElement">article</code><b>&#44;</b> <code class="codeElement">footer</code><b>&#46;</b></li>
+                            <li>New form controls &ndash; <code class="codeValueBody">calendar</code><b>&#44;</b> <code class="codeValueBody">date</code><b>&#44;</b> <code class="codeValueBody">time</code><b>&#44;</b> <code class="codeValueBody">email</code><b>&#44;</b> <code class="codeValueBody">url</code><b>&#44;</b> <code class="codeValueBody">search</code><b>&#46;</b></li>
+                        </ul>
+                    </div>
+                    <p class="bodyText">
+                        In particular<b>&#44;</b> <abbr class="html5"></abbr> adds many new syntactic features<b>&#46;</b>&ensp;These include the new <code class="codeElement">video</code><b>&#44;</b> <code class="codeElement">audio</code> and <code class="codeElement">canvas</code> elements<b>&#44;</b> as well as the integration of <mark class="abbrHighlite">S</mark>calable <mark class="abbrHighlite">V</mark>ector <mark class="abbrHighlite">G</mark>raphics &mdash; <span class="parentheses"><abbr class="abbrBold">svg</abbr></span><b>&#44;</b> replacing generic <code class="codeElement">object</code> tags<b>&#44;</b> and <a class="textLink" href="http://www.w3.org/Math/" target="_blank" rel="external"><abbr class="mathML">math</abbr><span class="tipZoomIn"><abbr class="w3c">w<sub>3</sub>c</abbr> <abbr class="mathml"></abbr><br>www.w3.org/Math/</span></a> for mathematical formulas<b>&#46;</b>&ensp;These features are designed to make it easy to include and handle multimedia and graphical content on the web without having to 
+                        use third<span class="dashLine"></span>party<b>&#44;</b> privately<span class="dashLine"></span>owned &ndash; plugins and <span class="tip"><abbr class="abbrBold">api</abbr><span class="tipZoomIn"><mark>a</mark>pplication <mark>p</mark>rogram <mark>i</mark>nterface</span></span>s such as <span class="italicsCaps">adobe flash player</span><b>&#46;</b>&ensp;
+                    </p>
+                    <p id="featuresTables" class="bodyText">
+                        Other new elements<b>&#44;</b> such as <code class="codeElement">section</code><b>&#44;</b> <code class="codeElement">article</code><b>&#44;</b> <code class="codeElement">header</code> and <code class="codeElement">nav</code><b>&#44;</b> are designed to enrich the semantic content of documents<b>&#46;</b>&ensp;New attributes have been introduced for the same purpose<b class="">&#44;</b> while some elements and attributes have been removed<b>&#46;</b>&ensp;Some elements<b>&#44;</b> such as <code class="codeElement">a</code><b>&#44;</b> <code class="codeElement">cite</code> and <code class="codeElement">menu</code> have been changed<b>&#44;</b> redefined or standardized<b>&#46;</b>&ensp;The <span class="tip"><abbr class="abbrBold">api</abbr><span class="tipZoomIn"><mark>a</mark>pplication <mark>p</mark>rogram <mark>i</mark>nterface</span></span>s 
+                        and <span class="tip"><abbr class="domBold"></abbr><span class="tipZoomIn"><mark>d</mark>ocument <mark>o</mark>bject <mark>m</mark>odel</span></span> are no longer after<span class="dashLine"></span>thoughts<b>&#44;</b> but are fundamental parts of the <abbr class="html5"></abbr> specification<b>&#46;</b>&ensp;<abbr class="html5"></abbr> also defines in some detail the required processing for invalid documents so that syntax errors will be treated uniformly by all conforming browsers and other user agents<b>&#46;</b>&ensp;
+                    </p>
+                <span class="myH3">New <abbr class="html5"></abbr> Elements&emsp;<a id="imageDivLink" href="javascript:newFeatures('contentDivImg', 'imageDivLink');"><img src="../images/plusSign.png" style="vertical-align:middle" alt="Plus Opens Information Container"></a></span>
+                <div id="contentDivImg" style="display: none;">
+                    <article class="sectionWrapper">
+                        <h3 class="myH3 libSerifRegular">New <abbr class="html5"></abbr> Elements</h3>
+                        <p class="bodyText">New <abbr class="html5"></abbr> Semantic<b class="overSizedSlash">&thinsp;&frasl;&ensp;</b>Structural Elements offers better document structure<b>&#58;</b></p>
+                        <p class="bodyText">Below is a list of the new <abbr class="html5"></abbr> elements<b>&#44;</b> and a description of what they are used for.</p>
+                    </article>
+                    <figure class="scrollingTableContainer">
+                        <table class="scrollingTableHeader">
+                            <colgroup>
+                                <col span="1" style="width:8.3em;">
+                                <col span="1">
+                            </colgroup>
+                            <thead>
+                                <tr class="trBackgroundBrowSup">
+                                    <th class="tblTopLeft tblColBackground basicTableHeaderText">Tag</th>
+                                    <th class="tblTopRight tblHeaderBackground basicTableHeaderText">Description</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="scrollingTableBodyContainer">
+                        <table class="scrollingTableBody">
+                            <tbody class="scrollingTableBodyText">
+                                <tr id="features-article">
+                                    <td class="tblColBackground"><code class="codeElement">article</code></td>
+                                    <td style="text-align:left;">Defines an article in the document<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-aside">
+                                    <td class="tblColBackground"><code class="codeElement">aside</code></td>
+                                    <td style="text-align:left;">Defines content aside from the page content<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-bdi">
+                                    <td class="tblColBackground"><code class="codeElement">bdi</code></td>
+                                    <td style="text-align:left;">Defines a part of text that might be formatted in a different direction from other text<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-details">
+                                    <td class="tblColBackground"><code class="codeElement">details</code></td>
+                                    <td style="text-align:left;">Defines additional details that the user can view or hide<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-dialog">
+                                    <td class="tblColBackground"><code class="codeElement">dialog</code></td>
+                                    <td style="text-align:left;">Defines a dialog box or window<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-figcaption">
+                                    <td class="tblColBackground"><code class="codeElement">figcaption</code></td>
+                                    <td style="text-align:left;">Defines a caption for a <code class="codeElement">figure</code> element<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-figure">
+                                    <td class="tblColBackground"><code class="codeElement">figure</code></td>
+                                    <td style="text-align:left;">Defines self-contained content<b>&#44;</b> like illustrations<b>&#44;</b> diagrams<b>&#44;</b> photos<b>&#44;</b> code listings<b>&#44;</b> etc<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-footer">
+                                    <td class="tblColBackground"><code class="codeElement">footer</code></td>
+                                    <td style="text-align:left;">Defines a footer for the document or a section<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-header">
+                                    <td class="tblColBackground"><code class="codeElement">header</code></td>
+                                    <td style="text-align:left;">Defines a header for the document or a section<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-main">
+                                    <td class="tblColBackground"><code class="codeElement">main</code></td>
+                                    <td style="text-align:left;">Defines the main content of a document<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-mark">
+                                    <td class="tblColBackground"><code class="codeElement">mark</code></td>
+                                    <td style="text-align:left;">Defines marked or highlighted text<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-menuitem">
+                                    <td class="tblColBackground"><code class="codeElement">menuitem</code></td>
+                                    <td style="text-align:left;">Defines a command&ensp;<b>&frasl;&ensp;</b>menu item that the user can invoke from a popup menu<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-meter">
+                                    <td class="tblColBackground"><code class="codeElement">meter</code></td>
+                                    <td style="text-align:left;">Defines a scalar measurement within a known range&thinsp;&ndash;&thinsp;a gauge<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-nav">
+                                    <td class="tblColBackground"><code class="codeElement">nav</code></td>
+                                    <td style="text-align:left;">Defines navigation links group in the document<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-progress">
+                                    <td class="tblColBackground"><code class="codeElement">progress</code></td>
+                                    <td style="text-align:left;">Defines the progress of a task<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-ruby">
+                                    <td class="tblColBackground"><code class="codeElement">ruby</code></td>
+                                    <td style="text-align:left;">Defines a ruby annotation<b>&#44;</b> generally used for East Asian typography<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-rp">
+                                    <td class="tblColBackground"><code class="codeElement">rp</code></td>
+                                    <td style="text-align:left;">Defines what to show in browsers that do not support ruby annotations<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-rt">
+                                    <td class="tblColBackground"><code class="codeElement">rt</code></td>
+                                    <td style="text-align:left;">Defines a ruby annotation explanation&ensp;<b>&frasl;&ensp;</b>pronunciation of base text characters<b>&#44;</b> generally used for East Asian typography<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-rtc">
+                                    <td class="tblColBackground"><code class="codeElement">rtc</code></td>
+                                    <td style="text-align:left;">Defines a Ruby Text Container for ruby text components in a ruby annotation<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-section">
+                                    <td class="tblColBackground"><code class="codeElement">section</code></td>
+                                    <td style="text-align:left;">Defines a section in the document<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-summary">
+                                    <td class="tblColBackground"><code class="codeElement">summary</code></td>
+                                    <td style="text-align:left;">Defines a visible heading for a <code class="codeElement">details</code> element<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-time">
+                                    <td class="tblColBackground"><code class="codeElement">time</code></td>
+                                    <td style="text-align:left;">Defines a date&ensp;<b>&frasl;&ensp;</b>time<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr id="features-wbr">
+                                    <td class="tblColBackground"><code class="codeElement">wbr</code></td>
+                                    <td style="text-align:left;">Defines a possible line-break<b>&#46;</b>&ensp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </figure>
+                    <table class="basicTable">
+                        <colgroup>
+                            <col span="1" class="trBackgroundBrowSup">
+                            <col span="1">
+                        </colgroup>
+                        <thead class="basicTableHeader basicTableHeaderText">
+                            <tr>
+                                <th colspan="2" class="tblTop tblHeaderBackground">New <abbr class="html5"></abbr> Form Elements</th>
+                            </tr>
+                            <tr>
+                                <th class="tblColBackground">Tag</th>
+                                <th class=" tblHeaderBackground">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="scrollingTableBodyText">
+                            <tr id="featuresForm-datalist">
+                                <td class="tblColBackground"><code class="codeElement">datalist</code></td>
+                                <td style="text-align:left;">Defines pre-defined options for input controls<b>&#46;</b>&ensp;</td>
+                            </tr>
+                            <tr id="featuresForm-output">
+                                <td class="tblColBackground tblBottomLeft"><code class="codeElement">output</code></td>
+                                <td class="tblBottomRight" style="text-align:left;">Defines the result of a calculation<b>&#46;</b>&ensp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="basicTable">
+                        <colgroup>
+                            <col span="1" class="trBackgroundBrowSup">
+                            <col span="1">
+                        </colgroup>
+                        <thead>
+                            <tr class="basicTableHeader basicTableHeaderText">
+                                <th colspan="2" class="tblTopRight tblHeaderBackground">New <abbr class="html5"></abbr> Graphics Elements</th>
+                            </tr>
+                            <tr class="basicTableHeader basicTableHeaderText">
+                                <th class="tblColBackground">Tag</th>
+                                <th class="tblHeaderBackground">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="scrollingTableBodyText">
+                            <tr id="featuresGraphics-canvas">
+                                <td class="tblColBackground"><code class="codeElement">canvas</code></td>
+                                <td style="text-align:left;">Defines graphic drawing using JavaScript<b>&#46;</b></td>
+                            </tr>
+                            <tr id="featuresGraphics-svg">
+                                <td class="tblColBackground tblBottomLeft"><code class="codeElement">svg</code></td>
+                                <td class="tblBottomRight" style="text-align:left;">Defines graphic drawing using SVG<b>&#46;</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="basicTable">
+                        <colgroup>
+                            <col span="1" class="trBackgroundBrowSup">
+                            <col span="1">
+                        </colgroup>
+                        <thead>
+                            <tr class="basicTableHeader basicTableHeaderText">
+                                <th colspan="2" class="tblTopRight tblHeaderBackground">New <abbr class="html5"></abbr> Media Elements</th>
+                            </tr>
+                            <tr class="basicTableHeader basicTableHeaderText">
+                                <th class="tblColBackground">Tag</th>
+                                <th class="tblHeaderBackground">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="scrollingTableBodyText">
+                            <tr id="featuresMedia-audio">
+                                <td class="tblColBackground"><code class="codeElement">audio</code></td>
+                                <td style="text-align:left;">Defines sound or music content<b>&#46;</b></td>
+                            </tr>
+                            <tr id="featuresMedia-embed">
+                                <td class="tblColBackground"><code class="codeElement">embed</code></td>
+                                <td style="text-align:left;">Defines containers for external applications like plug-ins<b>&#46;</b></td>
+                            </tr>
+                            <tr id="featuresMedia-source">
+                                <td class="tblColBackground"><code class="codeElement">source</code></td>
+                                <td style="text-align:left;">Defines sources for <code class="codeElement">video</code> and <code class="codeElement">audio</code><b>&#46;</b></td>
+                            </tr>
+                            <tr id="featuresMedia-track">
+                                <td class="tblColBackground"><code class="codeElement">track</code></td>
+                                <td style="text-align:left;">Defines tracks for <code class="codeElement">video</code> and <code class="codeElement">audio</code><b>&#46;</b></td>
+                            </tr>
+                            <tr id="featuresMedia-video">
+                                <td class="tblColBackground tblBottomLeft"><code class="codeElement">video</code></td>
+                                <td class="tblBottomRight" style="text-align:left;">Defines video or movie content<b>&#46;</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="basicTable">
+                        <caption class="basicCaption"><span class="basicTableHeaderText"><abbr class="html5"></abbr> allows 4 different syntaxes for attributes.</span><hr class="hr-noLine"><span class="basicTableHeaderText">The examples below shows the different syntaxes used in an</span> <code class="codeElement">input</code> <span class="basicTableHeaderText">tag<b>&#58;</b></span></caption>
+                        <colgroup>
+                            <col span="1" class="trBackgroundBrowSup">
+                            <col span="1">
+                        </colgroup>
+                        <thead>
+                            <tr class="basicTableHeader basicTableHeaderText">
+                                <th colspan="2" class="tblTopRight tblHeaderBackground" style="border-bottom:none;">New <abbr class="html5"></abbr> Attribute Syntax</th>
+                            </tr>
+                            <tr class="basicTableHeader basicTableHeaderText">
+                                <th class="tblColBackground">Type</th>
+                                <th class="tblHeaderBackground">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody class="scrollingTableBodyText">
+                            <tr>
+                                <td class="tblColBackground">Empty</td>
+                                <td style="text-align:left;"><code class="openingTag">input type=&ldquo;text&rdquo; value=&ldquo;John Doe&rdquo; disabled</code></td>
+                            </tr>
+                            <tr>
+                                <td class="tblColBackground">Unquoted</td>
+                                <td style="text-align:left;"><code class="openingTag">input type=&ldquo;text&rdquo; value=John</code></td>
+                            </tr>
+                            <tr>
+                                <td class="tblColBackground">Single-quoted</td>
+                                <td style="text-align:left;"><code class="openingTag">input type=&ldquo;text&rdquo; value=&lsquo;John Doe&rsquo;</code></td>
+                            </tr>
+                            <tr>
+                                <td class="tblColBackground">Double-quoted</td>
+                                <td style="text-align:left;"><code class="openingTag">input type=&ldquo;text&rdquo; value=&ldquo;John Doe&rdquo;</code></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="tblBottom">In <abbr class="html5"></abbr><b>&#44;</b> all 4 syntaxes may be used<b>&#44;</b> depending on what is needed for the attribute<b>&#46;</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="centerAlignBackButton"><a class="backButton" href="#featuresTables" onClick="javascript:newFeatures('contentDivImg', 'imageDivLink');">Close</a></p>
+                </div>
+            </fieldset>
+        </section>
+<!-- ****************  Three Basic Document **************** -->
+            <section id="basicHTMLDocument" class="sectionWrapper">
+                <header class="bodyText">
+                    <h3 class="myH3 libSerifRegular">Your basic <abbr class="html5"></abbr> Document</h3>
+                    <p class="myH5"><abbr class="html5"></abbr> document<b>&#44;</b> with the basic required tags<b>&#58;</b></p>
+                </header>
+                <p class="myTextEditorHeader">Simulated Text Editor</p>
+				<figure id="basicHTML5List" class="htmlEditor">
+					<ol start="1">
+						<li class="editorCodeLine"><code class="codeDOCTYPE"> <code class="lowercase">html</code></code></li>
+						<li class="editorCodeLine"><code class="openingTag">html <code class="attributeCode">lang</code><code class="codeValue">en<b>&#45;</b><code class="codeUppercase">us</code></code></code></li>
+						<li class="editorCodeLine"><code class="openingTag">head</code></li>
+						<li class="codeLineIndent1"><code class="openingTag">meta <code class="codeAttribute">http<b class="enemDash">&#45;</b>equiv&#61;</code><code class="codeValue">content<b class="enemDash">&#45;</b>type</code> <code class="codeAttribute">content&#61;</code><code class="codeValue">text<b>/</b>html<b>&#59;</b> <code class="attributeCode">charset</code><code class="codeUppercase">utf<b class="enemDash">&#45;</b>8</code></code></code></li>
+						<li class="codeLineIndent1"><code class="openingTag">title</code></li>
+						<li class="codeLineIndent2"><span class="docText">My First HTML Document</span></li> 
+						<li class="codeLineIndent1"><code class="closingTag">title</code></li>
+						<li class="codeLineCommentIndentXX"><code class="codeComment">Supporting External CSS and Javascript files</code></li>
+						<li class="codeLineCommentIndentXX"><code class="codeComment">Along with internal CSS styles and JavaScript go here</code></li>
+						<li class="editorCodeLine"><code class="closingTag">head</code></li>
+						<li class="editorCodeLine"><code class="openingTag">body</code></li>
+						<li class="codeLineCommentIndentXX"><code class="codeComment">Document Content goes here </code></li>
+						<li class="editorCodeLine"><code class="closingTag">body</code></li>
+						<li class="editorCodeLine"><code class="closingTag">html</code></li>
+						<li class="editorCodeLine">&ensp;<!-- nothing --></li>
+					</ol>
+				</figure>
+                <div class="paragraphContainer">
+                	<h3 class="sectionHeader1">Code Indention</h3>
+                    <p class="bodyText">
+                        Indenting your code is not necessarily required<b>&#44;</b> nor are there certain rules you should or have to follow<b>&#46;</b>&ensp;It is purely at the author's disgression as to whether or how the document is indented<b>&#46;</b>&ensp;As you can see<b>&#44;</b> I have my own style or &quot;rules&quot; for writing my <abbr class="htmlBold"></abbr><b>&#46;</b>&ensp;I indent everything that is inside a "grouping" tag<b>&#44;</b> like <code class="codeElement">body</code><b>&#44;</b> <code class="codeElement">header</code><b>&#44;</b> <code class="codeElement">div</code><b>&#44;</b> <code class="codeElement">p</code><b>&#44;</b> with the opening and closing tags lining up<b>&#46;</b>&ensp;It is not necessarily the correct way<b>&#44;</b> nor is it the wrong way<b>&#44;</b> it is just my way<b>&#46;</b>&ensp;It just makes for easier reading<b>&#46;</b>
+                    </p>
+                    <p class="bodyText">
+                        Consider the following with no indentation<b>&#58;</b>
+                    </p>
+                </div>
+				<p class="myTextEditorHeader">Simulated Text Editor</p>
+				<figure id="noIndent" class="htmlEditor">
+					<ol start="1">
+						<li class="editorCodeLine"><code class="codeDOCTYPE"> <code class="lowercase">html</code></code></li>
+						<li class="editorCodeLine"><code class="openingTag">html <code class="codeAttributeEditor">lang</code><code class="codeValue">en<b>&#45;</b><code class="codeUppercase">us</code></code></code></li>
+						<li class="editorCodeLine"><code class="openingTag">head</code></li>
+						<li class="editorCodeLine"><code class="openingTag">meta <code class="codeAttributeEditor">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">content<b class="enemDash">&#45;</b>type</code> <code class="codeAttributeEditor">content</code><code class="codeValue">text<b>/</b>html<b>&#59;</b> <code class="codeAttributeEditor">charset</code><code class="codeUppercase">utf<b class="enemDash">&#45;</b>8</code></code></code></li>
+						<li class="editorCodeLine"><code class="openingTag">title</code></li>
+						<li class="editorCodeLine"><span class="docText">My First Website</span></li> 
+						<li class="editorCodeLine"><code class="closingTag">title</code></li>
+						<li class="editorCodeLine"><code class="codeComment">Supporting External CSS and Javascript files</code></li>
+						<li class="editorCodeLine"><code class="closingTag">head</code></li>
+						<li class="editorCodeLine"><code class="openingTag">body</code><code class="codeComment">All your content for the document goes here&hellip;</code></li>
+						<li class="editorCodeLine"><code class="openingTag">header <code class="codeAttributeEditor">id</code><code class="codeValue">pageHeader</code></code></li>
+                        <li class="editorCodeLine"><code class="openingTag">h1</code><span class="docText">Your Page Banner/Header would go here</span><code class="closingTag">h1</code></li>
+						<li class="editorCodeLine"><code class="openingTag">nav</code></li>
+                        <li class="editorCodeLine"><code class="openingTag">h2</code><span class="docText">Main Page Navigation would go here</span><code class="closingTag">h2</code></li>
+						<li class="editorCodeLine"><code class="closingTag">nav</code></li>
+						<li class="editorCodeLine"><code class="closingTag">header</code></li>
+						<li class="editorCodeLine"><code class="openingTag">section</code></li>
+                        <li class="editorCodeLine"><code class="openingTag">p</code></li>
+                        <li class="editorCodeLine"><span class="docText">It's not like a battle between Genius and </span></li>
+                        <li class="editorCodeLine"><span class="docText">Insanity would go unnoticed<b>&#46;</b></span></li>
+                        <li class="editorCodeLine"><code class="closingTag">p</code></li>
+                        <li class="editorCodeLine"><code class="openingTag">p</code></li>
+                        <li class="editorCodeLine"><span class="docText">But it might ruin my reputation<b>&#46;</b></span></li>
+                        <li class="editorCodeLine"><code class="closingTag">p</code></li>
+						<li class="editorCodeLine"><code class="closingTag">section</code></li>
+                        <li class="editorCodeLine"><code class="openingTag">footer <code class="attributeCode">class</code><code class="codeValue" style="text-transform:none;">myFooter</code></code></li>
+                        <li class="editorCodeLine"><code class="openingTag">p</code><span class="docText">A Load of Dummy Text &mdash; Dummy Text<b>&#44;</b> Inc<b>&#46;</b></span><code class="closingTag">p</code></li>
+                        <li class="editorCodeLine"><code class="openingTag">p</code><span class="docText">Copyright<code class="openingTag">sup</code><b>&thinsp;&copy;&thinsp;</b><code class="closingTag">sup</code>2014<b>&#46;</b>&ensp;All Rights Reserved<b>&#33;</b></span><code class="closingTag">p</code></li>
+                        <li class="editorCodeLine"><code class="closingTag">footer</code></li>
+						<li class="editorCodeLine"><code class="closingTag">body</code></li>
+						<li class="editorCodeLine"><code class="closingTag">html</code></li>
+						<li class="editorCodeLine">&ensp;<!-- nothing --></li>
+					</ol>
+				</figure>
+                <div class="paragraphContainer">
+                    <p class="bodyText">
+                        To play the &ldquo;devil's advocate&rdquo; here<b>&#44;</b> yes<b>&#44;</b> you can read the code<b>&#46;</b>&ensp;However<b>&#44;</b> to me<b>&#44;</b> it is just hard to follow and not get somewhat confused<b>&#46;</b>&ensp;Especially<b>&#44;</b> once your code starts getting longer<b>&#44;</b> with hundreds<b>&#44;</b> if not thousands of lines of code<b>&#44;</b> and you have to start scrolling to find certain parts<b>&#46;</b>&ensp;Indenting code also helps you make sure you have the closing tags<b>&#46;</b>&ensp;Granted<b>&#44;</b> this just my viewpoint<b>&#46;</b>&ensp;I personally do not like things right up against the left edge<b>&#46;</b>&ensp;To me it is easier to read the same document when spaced and indented like the following<b>&#58;</b>
+                    </p>
+                </div>
+				<p class="myTextEditorHeader">Simulated Text Editor</p>
+				<figure id="indentExample1" class="htmlEditor">
+					<ol start="1">
+						<li class="editorCodeLine"><code class="codeDOCTYPE"> <code class="lowercase">html</code></code></li>
+						<li class="editorCodeLine"><code class="openingTag">html <code class="codeAttributeEditor">lang</code><code class="codeValue">en<b>&#45;</b><code class="codeUppercase">us</code></code></code></li>
+						<li class="editorCodeLine"><code class="openingTag">head</code></li>
+						<li class="codeLineIndent1"><code class="openingTag">meta <code class="codeAttributeEditor">http<b class="enemDash">&#45;</b>equiv</code><code class="codeValue">content<b class="enemDash">&#45;</b>type</code> <code class="codeAttributeEditor">content</code><code class="codeValue">text<b>/</b>html<b>&#59;</b> <code class="codeAttributeEditor">charset</code><code class="codeUppercase">utf<b class="enemDash">&#45;</b>8</code></code></code></li>
+						<li class="codeLineIndent1"><code class="openingTag">title</code></li>
+						<li class="codeLineIndent2"><span class="docText">My First Website</span></li> 
+						<li class="codeLineIndent1"><code class="closingTag">title</code></li>
+						<li class="codeLineCommentIndentXX"><code class="codeComment">Supporting External CSS and Javascript files</code></li>
+						<li class="editorCodeLine"><code class="closingTag">head</code></li>
+						<li class="editorCodeLine"><code class="openingTag">body</code><code class="codeComment">All your content for the document goes here&hellip;</code></li>
+						<li class="codeLineIndent2"><code class="openingTag">header <code class="codeAttributeEditor">id</code><code class="codeValue">pageHeader</code></code></li>
+                        <li class="codeLineIndent3"><code class="openingTag">h1</code><span class="docText">Your Page Banner/Header would go here</span><code class="closingTag">h1</code></li>
+						<li class="codeLineIndent3"><code class="openingTag">nav</code></li>
+                        <li class="codeLineIndent4"><code class="openingTag">h2</code><span class="docText">Main Page Navigation would go here</span><code class="closingTag">h2</code></li>
+						<li class="codeLineIndent3"><code class="closingTag">nav</code></li>
+						<li class="codeLineIndent2"><code class="closingTag">header</code></li>
+						<li class="codeLineIndent1"><code class="openingTag">section</code></li>
+                        <li class="codeLineIndent2"><code class="openingTag">p</code></li>
+                        <li class="codeLineIndent3"><span class="docText">It's not like a battle between Genius and </span></li>
+                        <li class="codeLineIndent3"><span class="docText">Insanity would go unnoticed<b>&#46;</b></span></li>
+                        <li class="codeLineIndent2"><code class="closingTag">p</code></li>
+                        <li class="codeLineIndent2"><code class="openingTag">p</code></li>
+                        <li class="codeLineIndent3"><span class="docText">But it might ruin my reputation<b>&#46;</b></span></li>
+                        <li class="codeLineIndent2"><code class="closingTag">p</code></li>
+						<li class="codeLineIndent1"><code class="closingTag">section</code></li>
+                        <li class="codeLineIndent1"><code class="openingTag">footer <code class="attributeCode">class</code><code class="codeValue" style="text-transform:none;">myFooter</code></code></li>
+                        <li class="codeLineIndent2"><code class="openingTag">p</code><span class="docText">A Load of Dummy Text &mdash; Dummy Text<b>&#44;</b> Inc<b>&#46;</b></span><code class="closingTag">p</code></li>
+                        <li class="codeLineIndent2"><code class="openingTag">p</code><span class="docText">Copyright<code class="openingTag">sup</code><b>&thinsp;&copy;&thinsp;</b><code class="closingTag">sup</code>2014<b>&#46;</b>&ensp;All Rights Reserved<b>&#33;</b></span><code class="closingTag">p</code></li>
+                        <li class="codeLineIndent1"><code class="closingTag">footer</code></li>
+						<li class="editorCodeLine"><code class="closingTag">body</code></li>
+						<li class="editorCodeLine"><code class="closingTag">html</code></li>
+						<li class="editorCodeLine">&ensp;<!-- nothing --></li>
+					</ol>
+				</figure>
+                <div class="paragraphContainer">
+                    <p class="bodyText">
+                        Please understand that this is just the <span class="italicsBold">&ldquo;rules&rdquo;</span> I set for myself<b>&#46;</b>&ensp;However<b>&#44;</b> I have talked to quite a few programmers<b>&#44;</b> and they all agree that indenting and spacing your code<b>&#44;</b> while no specific rules are set<b>&#44;</b> <span class="emSpecial">it is just proper etiquette&#46;</span>
+                    </p>
+                </div>
+            </section>
+<!-- **************** Obsolete Features Section **************** -->
+            <section id="obsoleteFeatures" class="sectionWrapper">
+                <header class="headerContainer">
+                    <h2 class="myH2">obsolete features</h2>
+                    <h3 class="myH3Subhead">Obsolete but conforming features<br>and the warnings validators may put out</h3>
+                </header>
+                <p class="bodyText">
+                    To ease the transition from <abbr class="html401"></abbr> <i class="emSpecial">Transitional</i> documents to the <abbr class="html5"></abbr> specifications<b>&#44;</b> and to discourage the use of these features that are allowed only in very few circumstances<b>&#44;</b> conformance checkers <span class="parentheses">validators</span> must warn the user when these following features are used in a document<b>&#46;</b>&ensp;These are generally old obsolete features that have no effect<b>&#44;</b> and are allowed only to distinguish between likely mistakes <span class="parentheses">regular conformance errors</span> and mere vestigial markup or unusual and discouraged practices<b>&#46;</b>&ensp;
+                </p>
+                <nav id="warningsNav">
+                    <figure  class="tabsInnerContainer">
+                        <figcaption class="tocHeader tocCaps"><span class="myH4">table of contents</span></figcaption>
+                        <ul>
+                            <li><a class="tabTOC" href="#borderAttribute">The presence of a <code class="codeAttribute">border</code> attribute on an <code class="codeElement">img</code> element</a></li>
+                            <li><a class="tabTOC" href="#languageAttribute">The presence of a <code class="codeAttribute">language</code> attribute on a <code class="codeElement">script</code> element</a></li>
+                            <li><a class="tabTOC" href="#nameAttribute">The presence of a <code class="codeAttribute">name</code> attribute on <code class="codeElement">a</code> element</a></li>
+                            <li><a class="tabTOC" href="#maxlength_sizeAttribute">The presence of a <code class="codeAttribute">maxlength</code> and <code class="codeAttribute">size</code> attribute on a <code class="codeElement">input</code> element.</a></li>
+                            <li><a class="tabTOC" href="#presenceOfObsoletePermittedDOCTYPE">The presence of an Obsolete Permitted <code class="codeDOCTYPE"></code></a></li>
+                            <li><a class="tabTOC" href="#nonConformingElements">Non<b class="enemDash">&#45;</b>Conforming Obsolete <span class="midniteBlue">Elements</span></a></li>
+                            <li><a class="tabTOC" href="#nonConformingAttributes">Non<b class="enemDash">&#45;</b>Conforming Obsolete <span class="darkRed">Attributes</span></a></li>
+                            <li><a class="tabTOC" href="#obsoletePermittedDOCTYPEs">Obsolete Permitted <code class="codeDOCTYPE"></code>&ensp;<span class="lowercase">s</span></a></li>
+                        </ul>
+                    </figure>
+                </nav>
+                <div class="paragraphContainer">
+                    <p class="bodyText"><span class="myNote"></span> Features listed in this section will trigger warnings or errors in conformance checkers<b>&#46;</b>&ensp;I have intentionally placed an obsolete feature in my code in order to trigger these warnings or errors<b>&#46;</b>&ensp;The following features must be categorised as described above<b>&#58;</b></p>
+                </div>
+<!-- border attribute -->
+                <article id="borderAttribute" class="articleSubContainer">
+                    <h4 class="subContainerHeading">The presence of a <code class="codeAttribute">border</code> attribute on an <code class="codeElement">img</code> element</h4>
+                    <div id="exceptionBorder" class="paragraphContainer">
+                        <p class="bodyText"><span class="myNote"><abbr class="html5"></abbr> </span> Authors should not specify a <code class="codeAttribute">border</code> attribute on an <code class="codeElement">img</code> element<b>&#46;</b>&ensp;You should<b>&#44;</b> and more appropriately<b>&#44;</b> use <abbr class="cssBold"></abbr><b>&#44;</b> for this<b>&#46;</b>&ensp;
+                    	<p class="bodyText"><span class="myNote"></span> If the attribute is present<b>&#44;</b> its value must be the string <b>&ldquo;0&rdquo;&#46;</b></p>
+                    	<p class="bodyText"><span class="inlineContainer"><code class="openingTag">img <code class="codeAttributeEditor">src</code><code class="codeValue">images/HTML5Logo.png</code> <code class="codeAttributeEditor">alt</code><code class="codeValue">HTML5 logo</code> <code class="codeAttributeEditor">border</code><code class="codeValue">1</code></code></span>&ensp;will trigger the following<b>&#58;</b>&ensp;</p>
+                    </div>
+                    <div class="validatorMessageContainer">
+                        <p>Resulting error</p>
+                        <p><span class="errorSpan"></span><span>Bad value <code class="validatorOutline">1</code> for attribute <code class="validatorOutline">border</code> on element <code class="validatorOutline">img</code>&thinsp;&#58; Only <code class="validatorOutline">0</code> is a permitted zero literal<b>&#46;</b></span></p>
+                        <p>From line 674<b>&#44;</b> column 302<b>&#59;</b>&ensp; to line 674<b>&#44;</b> column 388</p>
+                        <p><span class="validatorCodeMarker"><code class="openingTag">img <code class="codeAttributeEditor">src</code><code class="codeValue">images/HTML5Logo.png</code> <code class="codeAttributeEditor">alt</code><code class="codeValue">HTML5 logo</code> <code class="codeAttributeEditor">border</code><code class="codeValue">1</code></code></span></p>
+                    </div>
+                    <div class="validatorMessageContainer">
+                        <p>resulting warning</p>
+                        <p><span class="warningSpan"></span><span>The <code class="validatorOutline">border</code> attribute is obsolete<b>&#46;</b>&ensp;Consider specifying <code class="validatorOutline">img <code class="curlyBraces">border: 0;</code></code> in CSS instead<b>&#46;</b></span>
+                        <p>From line 674<b>&#44;</b> column 302<b>&#59;</b>&ensp; to line 674<b>&#44;</b> column 388</p>
+                        <p><span class="validatorCodeMarker"><code class="openingTag">img <code class="codeAttributeEditor">src</code><code class="codeValue">images/HTML5Logo.png</code> <code class="codeAttributeEditor">alt</code><code class="codeValue">HTML5 logo</code> <code class="codeAttributeEditor">border</code><code class="codeValue">1</code></code></span></p>
+                    </div>
+                    <nav class="innerPageNavigation">
+                        <ul>
+                        	<li><a class="tocLinksSWN" href="#warningsNav">Table Of Contents</a></li>
+                            <li><a accesskey="m" class="tocLinksSWN" onClick="siteNavSpecialDisplay(); location.href='#tagsAndAttributes-page'">Site Map<span class="tipZoomIn"> General Site Topics</span></a></li>
+                            <li><a accesskey="k" class="tocLinksSWN" onClick="location.href='javascript:history.go(-1)'">Back<span class="tipZoomIn"> Previous Location</span></a></li>
+                        </ul>
+                    </nav>
+                </article>
+<!-- language attribute -->
+                <article id="languageAttribute" class="articleSubContainer">
+                    <h4 class="subContainerHeading">The presence of a <code class="codeAttribute">language</code> attribute on a <code class="codeElement">script</code> element</h4>
+                    <div id="exceptionLanguage" class="paragraphContainer">
+                    	<p class="bodyText"><span class="myNote"><abbr class="html5"></abbr> </span> Authors should not specify a <code class="codeAttribute">language</code> attribute on a <code class="codeElement">script</code> element<b>&#46;</b>&ensp;Use the <code class="codeAttribute">type</code> attribute with its value as <a class="textLink" href="../terminology.html#caseInsensitive"><abbr class="asciiBold"></abbr> case<b class="dashLine"></b>insensitive<span class="tipZoomIn">Case&#45;Sensitivity And<br>String Comparison Section<br>A Coding Zone Document</span> match</a> for the string <span class="codeValue">text/javascript</span><b>&#46;</b>&ensp;</p>
+                        <p class="bodyText">
+                            <span class="myNote"></span> If the attribute is present<b>&#44;</b> its value must be an <a class="textLink" href="../terminology.html#caseInsensitive"><abbr class="asciiBold"></abbr> case<b class="dashLine"></b>insensitive<span class="tipZoomIn">Case&#45;Sensitivity And<br>String Comparison Section<br>A Coding Zone Document</span> match</a> for the string <span class="italicsBold">&ldquo;JavaScript&rdquo;</span> and either the <code class="codeAttribute">type</code> attribute must be omitted or its value must be an <a class="textLink" href="../terminology.html#caseInsensitive"><abbr class="asciiBold"></abbr> case<b class="dashLine"></b>insensitive<span class="tipZoomIn">Case&#45;Sensitivity And<br>String Comparison Section<br>A Coding Zone Document</span> match</a> for the string <code class="codeAttribute">&ldquo;text/javascript&rdquo;</code><b>&#46;</b>&ensp;The attribute should be entirely omitted 
+                            instead <span class="parentheses">with the value &ldquo;JavaScript&rdquo;<b>&#44;</b> it has no effect</span><b>&#44;</b> or replaced with use of the <code class="codeAttribute">type</code> attribute<b>&#46;</b>&ensp;
+                        </p>
+                    	<p class="bodyText"><span class="inlineContainer"><code class="openingTag">script <code class="codeAttributeEditor">src</code><code class="codeValue">site_functions.js</code> <code class="codeAttributeEditor">language</code><code class="codeValue">javascript</code></code><code class="closingTag">script</code></span>&ensp;will trigger the following<b>&#58;</b>&ensp;</p>
+                    </div>
+                    <div class="validatorMessageContainer">
+                        <p>resulting warning</p>
+                        <p><span class="warningSpan"></span><span>The <code class="validatorOutline">language</code> attribute on the <code class="validatorOutline">script</code> element is obsolete<b>&#46;</b>&ensp;You can safely omit it<b>&#46;</b></span></p>
+                        <p>From line 704<b>&#44;</b> column 27<b>&#59;</b>&ensp; to line 704<b>&#44;</b> column 56</p>
+                        <p><span class="validatorCodeMarker"><code class="openingTag">script <code class="codeAttributeEditor">src</code><code class="codeValue">site_functions.js</code> <code class="codeAttributeEditor">language</code><code class="codeValue">javascript</code></code></span><code class="closingTag">script</code></p>
+                    </div>
+                    <nav class="innerPageNavigation">
+                        <ul>
+                        	<li><a class="tocLinksSWN" href="#warningsNav">Table Of Contents</a></li>
+                            <li><a accesskey="m" class="tocLinksSWN" onClick="siteNavSpecialDisplay(); location.href='#tagsAndAttributes-page'">Site Map<span class="tipZoomIn"> General Site Topics</span></a></li>
+                            <li><a accesskey="k" class="tocLinksSWN" onClick="location.href='javascript:history.go(-1)'">Back<span class="tipZoomIn"> Previous Location</span></a></li>
+                        </ul>
+                    </nav>
+                </article>
+<!-- name attribute -->
+                <article id="nameAttribute" class="articleSubContainer">
+                    <h4 class="subContainerHeading">The presence of a <code class="codeAttribute">name</code> attribute on <code class="codeElement">a</code> element</h4>
+                    <div id="exceptionName" class="paragraphContainer">
+                    	<p class="bodyText">
+                        	<span class="myNote"><abbr class="html5"></abbr> </span> Authors should not specify the <code class="codeAttribute">name</code> attribute on <code class="codeElement">a</code> elements<b>&#46;</b>&ensp;In earlier versions of the language<b>&#44;</b> this attribute was intended as a way to specify possible targets for <a class="textLink" href="../terminology.html#dfnFragmentIdentifiers">fragment identifiers in URLs<span class="tipZoomIn">Terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a><b>&#46;</b>&ensp;The <code class="codeAttribute">id</code> attribute should be used instead<b>&#46;</b>
+                        </p>
+                        <p class="bodyText">
+                        	<span class="myNote">author </span> Because of backward compatability reasons<b>&#44;</b> using the <code class="codeAttribute">name</code> attribute on an <code class="codeElement">a</code> element does still work<b>&#44;</b> but <span class="italicsBoldCaps">&ldquo;<abbr class="html5"></abbr> valid&rdquo;</span> documents<b>&#59;</b> it <em class="underline">should not</em> be used<b>&#46;</b>&ensp;
+                        </p>
+                    	<p class="bodyText"><span class="inlineContainer"><code class="openingTag">a <code class="codeAttributeEditor">href</code><code class="codeValue">html_html5.html#obsoleteAttribute</code> <code class="codeAttributeEditor">name</code><code class="codeValue">obsoleteAttribute</code></code>name attribute<code class="closingTag">a</code></span>&ensp;will trigger the following<b>&#58;</b>&ensp;</p>
+                    </div>
+                    <div class="validatorMessageContainer">
+                        <p>resulting error</p>
+                        <p><span class="errorSpan"></span><span>The <code class="validatorOutline">name</code> attribute is obsolete<b>&#46;</b>&ensp;Consider putting an <code class="validatorOutline">id</code> attribute on the nearest container instead<b>&#46;</b></span></p>
+                        <p>From line 729<b>&#44;</b> column 29<b>&#59;</b>&ensp; to line 729<b>&#44;</b> column 111</p>
+                        <p><span class="validatorCodeMarker"><code class="openingTag">a <code class="codeAttributeEditor">href</code><code class="codeValue">html_html5.html#obsoleteAttribute</code> <code class="codeAttributeEditor">name</code><code class="codeValue">obsoleteAttribute</code></code></span></p>
+                    </div>
+                    <nav class="innerPageNavigation">
+                        <ul>
+                        	<li><a class="tocLinksSWN" href="#warningsNav">Table Of Contents</a></li>
+                            <li><a accesskey="m" class="tocLinksSWN" onClick="siteNavSpecialDisplay(); location.href='#tagsAndAttributes-page'">Site Map<span class="tipZoomIn"> General Site Topics</span></a></li>
+                            <li><a accesskey="k" class="tocLinksSWN" onClick="location.href='javascript:history.go(-1)'">Back<span class="tipZoomIn"> Previous Location</span></a></li>
+                        </ul>
+                    </nav>
+                </article>
+<!-- maxlength and size attributes -->
+                <article id="maxlength_sizeAttribute" class="articleSubContainer">
+                    <h4 class="subContainerHeading">The presence of a <code class="codeAttribute">maxlength</code> attribute<b>&#44;</b> the presence of a <code class="codeAttribute">size</code> attribute on a <code class="codeElement">input</code> element when the <code class="codeAttribute">type</code> attribute is in the <a class="textLink" href="extras.html#inputStates">Number<span class="tipZoomIn">States of the <code class="codeAttribute">type</code> attribute<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> state</h4>
+                    <p class="bodyText">
+                        <span class="myNote">in <abbr class="html5"></abbr></span> Authors should not specify the <code class="codeAttribute">maxlength</code> and <code class="codeAttribute">size</code> attributes on <code class="codeElement">input</code> elements whose <code class="codeAttribute">type</code> attributes are in the <a class="textLink" href="extras.html#inputStates" >Number<span class="tipZoomIn">States of the <code class="codeAttribute">type</code> attribute<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> state<b>&#46;</b>&ensp;One valid reason for using these attributes<b>&#44;</b> regardless<b>&#44;</b> is to help legacy user agents that do not support <code class="codeElement">input</code> elements with <code class="codeAttribute">type=&ldquo;number&rdquo;</code> to still render the text field with a useful width.
+                    </p>
+                    <p class="bodyText"><span class="inlineContainer"><code class="openingTag">input <code class="codeAttributeEditor">maxlength</code><code class="codeValue">140</code> <code class="codeAttributeEditor">type</code><code class="codeValue">number</code> <code class="codeAttributeEditor">size</code><code class="codeValue">75</code> <code class="codeAttributeEditor">name</code><code class="codeValue">status</code></code></span> will trigger the following<b>&#46;</b></p>
+                    <div class="validatorMessageContainer">
+                        <p>resulting error</p>
+                        <p><span class="errorSpan"></span><span>Attribute <code class="validatorOutline">maxlength</code> is only allowed when the input type is <code class="validatorOutline">email</code>&thinsp;<b>&#44;</b> <code class="validatorOutline">password</code>&thinsp;<b>&#44;</b> <code class="validatorOutline">search</code>&thinsp;<b>&#44;</b> <code class="validatorOutline">tel</code>&thinsp;<b>&#44;</b> <code class="validatorOutline">text</code>&thinsp;<b>&#44;</b> or <code class="validatorOutline">url</code>&thinsp;<b>&#46;</b></span></p>
+                        <p>From line 751<b>&#44;</b> column 25<b>&#59;</b>&ensp; to line 751<b>&#44;</b> column 85</p>
+                        <p><span class="validatorCodeMarker"><code class="openingTag">input <code class="codeAttributeEditor">maxlength</code><code class="codeValue">140</code> <code class="codeAttributeEditor">type</code><code class="codeValue">number</code> <code class="codeAttributeEditor">size</code><code class="codeValue">75</code> <code class="codeAttributeEditor">name</code><code class="codeValue">status</code></code></span></p>
+                    </div>
+                    <nav class="innerPageNavigation">
+                        <ul>
+                        	<li><a class="tocLinksSWN" href="#warningsNav">Table Of Contents</a></li>
+                            <li><a accesskey="m" class="tocLinksSWN" onClick="siteNavSpecialDisplay(); location.href='#tagsAndAttributes-page'">Site Map<span class="tipZoomIn"> General Site Topics</span></a></li>
+                            <li><a accesskey="k" class="tocLinksSWN" onClick="location.href='javascript:history.go(-1)'">Back<span class="tipZoomIn"> Previous Location</span></a></li>
+                        </ul>
+                    </nav>
+                </article>
+<!-- Obsolete permitted DOCTYPE -->
+                <article id="presenceOfObsoletePermittedDOCTYPE" class="articleSubContainer">
+                    <h4 class="subContainerHeading">The presence of an obsolete permitted <code class="codeDOCTYPE"></code></h4>
+                    <div class="paragraphContainer">
+                        <p class="bodyText">
+                            In the <abbr class="htmlBold"></abbr> syntax<b>&#44;</b> specifying a <code class="codeDOCTYPE"></code> that is an obsolete permitted <code class="codeDOCTYPE"></code> will also trigger a warning<b>&#44;</b> when option is set to check for an <abbr class="html5"></abbr> document<b>&#46;</b>&ensp;
+                        </p>
+                        <p class="myNoteContainer">
+                            <span class="myNote">author </span> The <abbr class="whatwg"></abbr><b>&rsquo;s</b> <a class="textLink" href="https://html5.validator.nu/" target="_blank" rel="external">Validator.nu <abbr class="abbrBold"><b class="preBraces">X</b><abbr class="html5"></abbr></abbr> Validator<span class="tipZoomIn">validator&#46;nu<br>html5.validator.nu/</span></a> and the <abbr class="w3c">w<sub>3</sub>c</abbr><b>&rsquo;s</b> <a class="textLink" href="https://validator.w3.org/nu/" target="_blank" rel="external">Nu <abbr class="htmlBold"></abbr> Checker<span class="tipZoomIn">Nu <abbr class="htmlBold"></abbr> Checker<br>validator.w3.org/nu/</span></a> will at times give different results<b>&#46;</b>&ensp;
+                        </p>
+                        <div class="paragraphSeparator">
+                            <p class="bodyText">Using the <span class="italicsBoldCaps">&ldquo;transitional&rdquo; <code class="codeDOCTYPE"></code></span><b>&#58;</b>
+                            <p class="codeContainer"><span><code class="codeDOCTYPE"> <code class="lowercase">html</code> public <code class="codeValue">-//W3C//DTD HTML 4.01 Transitional//EN</code> <code class="codeValue">http://www.w3.org/TR/html4/loose.dtd</code></code></span></p>
+                            <p class="bodyText">will trigger the following<b>&#46;</b>&ensp;
+                        </div>
+                    </div>
+                    <div class="validatorMessageContainer paddingBottom-5">
+                        <p><abbr class="whatwg"></abbr> Validator Resulting Warning<span class="letterBraces">s</span></p>
+                        <p><span class="warningSpan"></span><span>Almost standards mode doctype<b>&#46;</b>&ensp;Expected <code class="codeDOCTYPE"> html</code></span></p>
+                        <p>From line 1<b>&#44;</b> column 1<b>&#59;</b>&ensp; to line 1<b>&#44;</b> column 102</p>
+						<p><span class="validatorCodeMarker"><code class="codeDOCTYPE"> <code class="lowercase">html</code> public <code class="codeValue">-//W3C//DTD HTML 4.01 Transitional//EN</code> <code class="codeValue">http://www.w3.org/TR/html4/loose.dtd</code></code></span></p>
+					</div>
+                    <div class="whatwgMessageBox">There were errors<b>&#46;</b>&ensp;<span class="parentheses">Tried in the text/html mode&#46;</span></div>
+                    <div class="validatorMessageContainer paddingBottom-2">
+                        <p><abbr class="w3c">w<sub>3</sub>c</abbr> resulting message</p>
+                        <p><span class="infoSpan"></span><span><abbr class="htmlBold">4</abbr><span class="dashLine"></span>specific tokenization errors are enabled<b>&#46;</b></span></p>
+                        <p class="displayNone">From line <b>&#44;</b> column <b>&#59;</b>&ensp; to line <b>&#44;</b> column </p>
+                        <p class="displayNone"><span class="validatorCodeMarker"></span></p>
+                    </div>
+                    <div class="paragraphContainer">
+                        <div class="paragraphSeparator">
+                            <p class="bodyText">Using the <span class="italicsBoldCaps">&ldquo;strict&rdquo; <code class="codeDOCTYPE"></code></span><b>&#58;</b></p>
+                            <p class="codeContainer"><span><code class="codeDOCTYPE"> <code class="lowercase">html</code> public <code class="codeValue">-//W3C//DTD HTML 4.01//EN</code> <code class="codeValue">http://www.w3.org/TR/html4/strict.dtd</code></code></span></p>
+                            <p class="bodyText">will trigger the following<b>&#46;</b>&ensp;</p>
+                        </div>
+                    </div>
+                    <div class="validatorMessageContainer">
+                        <p><abbr class="whatwg"></abbr> Validator Resulting Warning<span class="letterBraces">s</span></p>
+                        <p><span class="warningSpan"></span><span>Obsolete doctype<b>&#46;</b>&ensp;Expected <code class="codeDOCTYPE"> html</code></span></p>
+                        <p>From line 1<b>&#44;</b> column 1<b>&#59;</b>&ensp; to line 1<b>&#44;</b> column 90</p>
+						<p><span class="validatorCodeMarker"><code class="codeDOCTYPE"> <code class="lowercase">html</code> public <code class="codeValue">-//W3C//DTD HTML 4.01//EN</code> <code class="codeValue">http://www.w3.org/TR/html4/strict.dtd</code></code></span></p>
+					</div>
+                    <div class="validatorMessageContainer paddingBottom-2">
+                        <p><abbr class="w3c">w<sub>3</sub>c</abbr> resulting message</p>
+                        <p><span class="infoSpan"></span><span><abbr class="htmlBold">4</abbr><span class="dashLine"></span>specific tokenization errors are enabled<b>&#46;</b></span></p>
+                        <p class="displayNone">From line <b>&#44;</b> column <b>&#59;</b>&ensp; to line <b>&#44;</b> column </p>
+                        <p class="displayNone"><span class="validatorCodeMarker"></span></p>
+                    </div>
+                    <p class="paragraphSeparator">
+                        <span class="warningH4">Or you may see something like this<b>&#58;</b></span>
+                    </p>
+                    <div class="validatorMessageContainer paddingBottom-2">
+                        <p>possible message</p>
+                    	<p><span class="warningSpan"></span><span><span class="codeDOCTYPE">doctype</span> Override in effect&#33;</span></p>
+                        <p>The detected <span class="codeDOCTYPE">doctype</span> Declaration<span class="validatorCodeMarker"><code class="codeDOCTYPE"> <code class="codeLowercase">html</code> PUBLIC <code class="codeValueBody">&#45;//W3C//DTD HTML 4.01 Transitional//EN</code> <code class="codeValueBody">http://www.w3.org/TR/html4/loose.dtd</code></code></span> has been suppressed and the <span class="codeDOCTYPE">doctype</span> for <b>&ldquo;</b><abbr class="html5"></abbr><b>&rdquo;</b> inserted instead<b>&#44;</b> but even if no errors are shown below the document will not be Valid until you update it to reflect this new <span class="codeDOCTYPE">doctype</span><b>&#46;</b></p>
+                        <p class="displayNone"></p>
+                    </div>
+                    <div class="paragraphContainer">
+                        <p class="bodyText">
+                            Please read <a class="textLink" href="../validation.html#validationOptions">Validation Options<span class="tipZoomIn">Validation<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+                        </p>
+                        <p class="bodyText">
+                            <a class="textLink" href="#obsoletePermittedDOCTYPEs">Obsolete Permitted <code class="codeDOCTYPE"></code>s</a> section below<b>&#46;</b>&ensp;
+                        </p>
+                        <p class="bodyText">
+                            <b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b> The <code class="codeDOCTYPE"></code> declaration is<b>&#58;</b> <code class="codeDOCTYPE"> html</code>
+                        </p>
+                        <p class="bodyText">
+                            Conformance checkers must distinguish between pages that have no conformance errors and have none of these obsolete features<b>&#44;</b> and pages that have no conformance errors but do have some of these obsolete features<b>&#46;</b>
+                        </p>
+                        <p class="bodyText">
+                            For example<b>&#44;</b> a validator could report some pages as <span class="italicsBold">&ldquo;Valid <abbr class="htmlBold"></abbr>&rdquo;</span> and others as <span class="italicsBold">&ldquo;Valid <abbr class="htmlBold"></abbr> with warnings&rdquo;</span><b>&#46;</b>
+                        </p>
+                	</div>
+                    <nav class="innerPageNavigation">
+                        <ul>
+                        	<li><a class="tocLinksSWN" href="#warningsNav">Table Of Contents</a></li>
+                            <li><a accesskey="m" class="tocLinksSWN" onClick="siteNavSpecialDisplay(); location.href='#tagsAndAttributes-page'">Site Map<span class="tipZoomIn"> General Site Topics</span></a></li>
+                            <li><a accesskey="k" class="tocLinksSWN" onClick="location.href='javascript:history.go(-1)'">Back<span class="tipZoomIn"> Previous Location</span></a></li>
+                        </ul>
+                    </nav>
+                </article>
+            </section>
+<!-- Non-Conforming Obsolete Elements -->
+            <section id="nonConformingElements" class="sectionWrapper">
+            	<h3 class="myH3">Non<b class="enemDash">&#45;</b>Conforming Obsolete Elements</h3>
+                <article class="articleSubContainer">
+                	<h3 class="myH3Subhead">Elements in the following table are <strong class="emSpecial"><em><u>entirely obsolete</u></em></strong><b>&#44;</b> and must not be used by authors<b>&#58;</b></h3>
+                    <div class="divTableHeader">
+                        <div class="divTableHeaderRow">
+                            <p class="tblTopLeft divTableHeaderCellLeft">Obsolete Element</p>
+                            <p class="tblTopRight divTableHeaderCellRight">What to do in <abbr class="html5"></abbr></p>
+                        </div>
+                    </div>
+                    <figure class="divTableContainer">
+                        <div class="divTable">
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">applet</code></p>
+                                <p class="divTableCellRight">Use <code class="codeElement">embed</code> or <code class="codeElement">object</code> instead<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">acronym</code></p>
+                                <p class="divTableCellRight">Use <code class="codeElement">abbr</code> instead<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">bgsound</code></p>
+                                <p class="divTableCellRight">Use <code class="codeElement">audio</code> instead<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">dir</code></p>
+                                <p class="divTableCellRight">Use <code class="codeElement">ul</code> instead<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">frame</code> <code class="codeElement">frameset</code> <code class="codeElement">noframes</code></p>
+                                <p class="divTableCellRight">Either use <code class="codeElement">iframe</code> and <abbr class="cssBold"></abbr> instead<b>&#44;</b> or use server<span class="dashLine"></span>side includes to generate complete pages with the various invariant parts merged in<b>&#46;</b></p>      
+                            </div>
+                            <div id="obsoleteHgroupElement" class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">hgroup</code></p>
+                                <p class="divTableCellRight">Headings<b>&#44;</b> subheadings<b>&#44;</b> alternative titles<b>&#44;</b> or taglines can be grouped using the <code class="codeElement">header</code> or <code class="codeElement">div</code> elements<b>&#46;</b>&ensp;<span class="parentheses">See <a class="textLinkBottom" href="../validation.html#validatorExp-hgroup">Validator Experience<span class="tipZoomIn">Validation<br>BearZ Coding Zone</span></a> for more information</span></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">isindex</code></p>
+                                <p class="divTableCellRight">Use an explicit <code class="codeElement">form</code> and <a class="textLink" href="extras.html#text_and_searchStates">text field<span class="tipZoomIn">Text <small class="parentheses"><code class="codeAttributeBody">type</code><code class="codeValue">text</code></small><span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> combination instead<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">listing</code></p>
+                                <p class="divTableCellRight">Use <code class="codeElement">pre</code> and <code class="codeElement">code</code> instead<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">nextid</code></p>
+                                <p class="divTableCellRight">Use <a class="textLink" href="../terminology.html#dfnGUID"><abbr class="abbrBold">guid</abbr>s<span class="tipZoomIn">Terminology<br>A Coding Zone Doacument</span></a> instead<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">noembed</code></p>
+                                <p class="divTableCellRight">Use <code class="codeElement">object</code> instead of embed<code class="codeElement">embed</code> when fallback is necessary<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">plaintext</code></p>
+                                <p class="divTableCellRight">Use  <code class="codeValueBody">text/plain</code> <a class="textLink" href="http://tools.ietf.org/html/rfc2046#section-4.1.3" target="_blank" rel="external"><abbr class="abbrBold">mime</abbr> type<span class="tipZoomIn">The <mark>I</mark>nternet <mark>E</mark>ngineering <mark>T</mark>ask <mark>F</mark>orce<br>RFC 2046 4.1. Text Media Type<br>Sub Section 4.1.3. Plain Subtype</span></a> instead<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">strike</code></p>
+                                <p class="divTableCellRight">Use <code class="codeElement">del</code> instead if the element is marking an edit<b>&#44;</b> otherwise use s<code class="codeElement">s</code> instead<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">xmp</code></p>
+                                <p class="divTableCellRight">Use <code class="codeElement">pre</code> and <code class="codeElement">code</code> instead<b>&#44;</b> and escape <span class="italicsBold">&ldquo;<code class="codeElement"> </code>&rdquo;</span> and <span class="italicsBold">&ldquo;<code>&amp;</code>&rdquo;</span> characters as <span class="italicsBold">&ldquo;<code>&amp;gt; &amp;lt;</code>&rdquo;</span> and <span class="italicsBold">&ldquo;<code>&amp;amp;</code>&rdquo;</span> respectively<b>&#46;</b></p>      
+                            </div>
+                            <div class="divTableRow">
+                                <p class="divTableCellLeft"><code class="codeElement">basefont</code> <code class="codeElement">big</code> <code class="codeElement">blink</code> <code class="codeElement">center</code> <code class="codeElement">font</code> <code class="codeElement">marquee</code> <code class="codeElement">multicol</code> <code class="codeElement">nobr</code> <code class="codeElement">spacer</code> <code class="codeElement">tt</code></p>
+                                <p class="divTableCellRight">Use appropriate elements with <abbr class="cssBold"></abbr> instead<b>&#46;</b>&ensp; See the <a class="textLink" href="codingExamples.html#textLevelSemanticsUsageSummary">Text-Level Semantics Usage Summary<span class="tipZoomIn">Text Level Semantics Usage Summary<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> for suggestions with examples<b>&#46;</b>&ensp;</p>      
+                            </div>
+                        </div>
+                        <div class="paragraphContainer">
+                            <p class="paragraphSeparator">
+                                Where the<code class="codeElement">tt</code>element would have been used to mark up keyboard input<b>&#44;</b> you should use the<code class="codeElement">kbd</code> element<b>&#59;</b> for variables<b>&#44;</b> you will use the <code class="codeElement">var</code> element<b>&#59;</b> for computer code<b>&#44;</b> you should use the <code class="codeElement">code</code> element<b>&#59;</b> and for computer output<b>&#44;</b> you should use the <code class="codeElement">samp</code> element<b>&#46;</b>
+                            </p>
+                            <p class="paragraphSeparator">
+                                Similarly<b>&#44;</b> if the<code class="codeElement">big</code>element is being used to denote a heading<b>&#44;</b> You should use the <code class="codeElement">h1</code>&ndash;<code class="codeElement">h6</code> elements<b>&#59;</b> If it is being used for marking up important passages<b>&#44;</b> the <code class="codeElement">strong</code> element would be more appropriate<b>&#59;</b> and if it is being used for highlighting text for reference purposes<b>&#44;</b> you should use the <code class="codeElement">mark</code> element<b>&#46;</b>
+                            </p>
+                        </div>
+                    </figure>
+                </article>
+                <nav class="innerPageNavigation">
+                    <ul>
+                        <li><a class="tocLinksSWN" href="#warningsNav">Table Of Contents</a></li>
+                        <li><a class="tocLinksSWN" onClick="siteNavSpecialDisplay(); location.href='#tagsAndAttributes-page'">Site Map<span class="tipZoomIn"> General Site Topics</span></a></li>
+                        <li><a class="tocLinksSWN" onClick="location.href='javascript:history.go(-1)'">Back<span class="tipZoomIn"> Previous Location</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+<!-- Non Conforming Obsolete Attributes -->
+            <section id="nonConformingAttributes" class="sectionContainer">
+            	<h3 class="myH3">Non<b class="enemDash">&#45;</b>Conforming Obsolete Attributes</h3>
+                <article class="articleSubContainer">
+                    <hgroup class="headerContainer"><!-- The hgroup element will not validate using W3C Markup Validation Service, but will Validate using the Validator from WHATWG  -->
+                        <h5 class="myH5"><span class="myNote">author </span> These <strong class="bold"><em>elements</em></strong> are still part of <abbr class="html5"></abbr><b>&#44;</b> the following <strong class="bold"><em>attributes</em></strong> are obsolete<b>&#44;</b> and must not be used by authors<b>&#46;</b>&ensp;</h5>
+                        <h6 class="myH6"><span class="myNote">author </span> This list is a compilation of both the <span class="tip"><abbr class="whatwg"></abbr><span class="tipZoomIn"><mark>w</mark>eb <mark>h</mark>ypertext <mark>a</mark>pplication<br><mark>t</mark>echnology <mark>w</mark>orking <mark>g</mark>roup<br><small class="tipSubSec">Section 19<b>&#46;</b>2 Non&#45;Conforming Features</small></span></span><!-- Section 19.2 --> and <span class="tip"><abbr class="w3c">w<sub>3</sub>c</abbr><span class="slideInTipCaps"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb <mark>c</mark>onsortium<br><small class="tipSubSec">Section 11.2<br>&emsp;Non&#45;Conforming Features</small></span></span><!-- Section 11.2 --> Non<span class="dashLine"></span>Conforming Features Section of the respective specifications<b>&#46;</b></h6>
+                    </hgroup>
+                        <div class="divTableHeader">    
+                            <div class="divTableHeaderRow">
+                                <p class="tblTop divTableHeaderCell">
+                                    Obsolete <code class="codeAttribute">Attribute</code> Used On <code class="codeElement">element</code>
+                                </p>
+                            </div>
+                        </div>
+                    <figure class="scrollingTableContainer">
+                        <div class="scrollingTableBodyContainer">
+                        	<table class="scrollingTableBody">
+                                <tbody class="scrollingTableBodyText">
+                                    <tr>
+                                        <td><code class="codeAttribute">charset</code> on <code class="codeElement">a</code> elements</td>
+                                        <td><code class="codeAttribute">charset</code> on<code class="codeElement">link</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use an<span class="tip"><abbr class="abbrBold">http</abbr><span class="tipZoomIn"><mark>h</mark>yper<mark>t</mark>ext <mark>t</mark>ransfer <mark>p</mark>rotocol Content-Type</span></span> header on linked resource instead<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="codeAttribute">coords</code> on <code class="codeElement">a</code> elements</td>
+                                        <td><code class="codeAttribute">shape</code> on <code class="codeElement">a</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><span class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></span>&ensp;Use <code class="codeElement">area</code> instead of <code class="codeElement">a</code> for image maps<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="codeAttribute">methods</code> on <code class="codeElement">a</code> elements</td>
+                                        <td><code class="codeAttribute">methods</code> on <code class="codeElement">link</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use the<span class="tip"><abbr class="abbrBold">http</abbr><span class="tipZoomIn"><mark>h</mark>yper<mark>t</mark>ext <mark>t</mark>ransfer <mark>p</mark>rotocol</span></span> <abbr class="htmlBold"></abbr> options feature instead<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="codeAttribute">name</code> on <code class="codeElement">a</code> elements</td>
+                                        <td><code class="codeAttribute">name</code> on <code class="codeElement">embed</code> elements</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="codeAttribute">name</code> on <code class="codeElement">img</code> elements</td>
+                                        <td><code class="codeAttribute">name</code> on <code class="codeElement">option</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use the <code class="codeAttribute">id</code> attribute instead<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="codeAttribute">rev</code> on <code class="codeElement">a</code> elements</td>
+                                        <td><code class="codeAttribute">rev</code> on <code class="codeElement">link</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use the <a class="textLink" href="../index.html#rel-attribute"><code class="codeAttribute">rel</code><span class="tipZoomIn">Attributes Section<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> attribute instead<b>&#44;</b> with an opposite term<b>&#46;</b>&ensp;For example<b>&#44;</b> instead of <code class="codeAttribute">rev=&ldquo;made&rdquo;</code><b>&#44;</b> use <code class="codeAttribute">rel=&ldquo;author&rdquo;</code><b>&#46;</b></td></tr>
+                                    
+                                    <tr>
+                                        <td><code class="codeAttribute">urn</code> on <code class="codeElement">a</code> elements</td>
+                                        <td><code class="codeAttribute">urn</code> on <code class="codeElement">link</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><span class="myNote"><abbr class="html5"></abbr> </span>Specify the preferred persistent identifier using the <a class="textLink" href="../index.html#href-attribute"><code class="codeAttribute">href</code><span class="tipZoomIn">Attributes Section<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> attribute instead<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">accept</code> on <code class="codeElement">form</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use the <a class="textLink" href="../index.html#accept-attribute"><code class="codeAttribute">accept</code><span class="tipZoomIn">Attributes Section<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> attribute directly on <code class="codeElement">input</code> elements instead<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">nohref</code> on <code class="codeElement">area</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Omitting the <a class="textLink" href="../index.html#href-attribute"><code class="codeAttribute">href</code><span class="tipZoomIn">Attributes Section<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> attribute is sufficient; the <code class="codeAttribute">nohref</code> attribute is unnecessary<b>&#46;</b>&ensp;Omit it altogether</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">profile</code> on <code class="codeElement">head</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;When declaring which <code class="codeElement">meta</code> terms are used in the document<b>&#44; unnecessary not needed&#44;</b> <a class="textLink" href="extras.html#registerNames" >register the names<span class="tipZoomIn">Elements Extras<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a><b>&#46;</b><hr class='hr-noLine-spacer1'>When used for triggering specific user agent behaviors<b>&#58;</b> use a <code class="codeElement">link</code> element instead<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">version</code> on <code class="codeElement">html</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Unnecessary<b>&#46;</b>&ensp;Omit it altogether<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">ismap</code> on <code class="codeElement">input</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Unnecessary<b>&#46;</b>&ensp;Omit it altogether<b>&#46;</b>&ensp;All input elements with a <a class="tipTableRight" href="../index.html#input-type-attribute"><code class="codeAttribute">type</code><span>Attributes Section<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> attribute in the <a class="tipTableRight" href="extras.html#imageButtonState">Image Button state<span>Elements Extras<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> are processed as server<span class="dashLine"></span>side image maps<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">usemap</code> on <code class="codeElement">input</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use <code class="codeElement">img</code> instead of <code class="codeElement">input</code> for image maps<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="codeAttribute">longdesc</code> on <code class="codeElement">iframe</code> elements</td>
+                                        <td><code class="codeAttribute">longdesc</code> on <code class="codeElement">img</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use a regular <code class="codeElement">a</code> element to link to the description<b>&#44;</b> or in the case of images<b>&#44;</b> use an <a class="textLink" href="extras.html#imageMaps">image map<span class="tipZoomIn">Elements Extras<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> to provide a link from the image to the image's description<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">lowsrc</code> on <code class="codeElement">img</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use a progressive <span class="boldAllCaps">jpeg</span> image <b class="overSizedBraceMedium">&#40;</b>given in the <a class="textLink" href="../index.html#src-attribute"><code class="codeAttribute">src</code><span class="tipZoomIn">Attributes Section<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> attribute<b class="overSizedBraceMedium">&#41;</b><b>&#44;</b> instead of using two separate images<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">target</code> on <code class="codeElement">link</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Unnecessary<b>&#46;</b>&ensp;Omit it altogether<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">scheme</code> on <code class="codeElement">meta</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use only one scheme per field<b>&#44;</b> or make the scheme declaration part of the value<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">lang</code> on <code class="codeElement">meta</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Using the <code class="codeElement">meta</code> element to specify the document<b class="enemDash">&#45;</b>wide default language is obsolete<b>&#46;</b>&ensp;Use the <code class="htmlBold">html</code> element to set the language of the document<b>&#46;</b>&ensp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="codeAttribute">archive</code> on <code class="codeElement">object</code> elements</td>
+                                        <td><code class="codeAttribute">classid</code> on <code class="codeElement">object</code> elements</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="codeAttribute">code</code> on <code class="codeElement">object</code> elements</td>
+                                        <td><code class="codeAttribute">codebase</code> on <code class="codeElement">object</code> elements</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">codetype</code> on <code class="codeElement">object</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use the <code class="codeAttribute">data</code> and <code class="codeAttribute">type</code> attributes to invoke plugins<b>&#46;</b>&ensp;To set parameters with these names in particular<b>&#44;</b> the <code class="codeElement">param</code> element can be used<b>&#46;</b>&ensp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">declare</code> on <code class="codeElement">object</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter"><td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Repeat the <code class="codeElement">object</code> element completely each time the resource is to be reused<b>&#46;</b>&ensp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">standby</code> on <code class="codeElement">object</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Optimise the linked resource so that it loads quickly or<b>&#44;</b> at least<b>&#44;</b> incrementally<b>&#46;</b>&ensp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="codeAttribute">type</code> on <code class="codeElement">param</code> elements</td>
+                                        <td><code class="codeAttribute">valuetype</code> on <code class="codeElement">param</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use the <a class="textLink" href="../index.html#name-attribute"><code class="codeElement">name</code><span class="tipZoomIn">Attributes Section<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> and <a class="textLink" href="../index.html#value-attribute"><code class="codeElement">value</code><span class="tipZoomIn">Attributes Section<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> attributes without declaring value types<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">language</code> on <code class="codeElement">script</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use the <a class="textLink" href="extras.html#script-type-attribute"><code class="codeAttribute">type</code><span class="tipZoomIn">Script Section<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> attribute instead<b>&#46;</b>&ensp;<small><a class="textLink" href="#exceptionLanguage"><small class="parentheses">Exception to the rules<span class="tipZoomIn">The presence of a <code class="codeAttribute">language</code> attribute<br> on a <code class="codeElement">script</code> element as stated above</span></small></a></small></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="codeAttribute">event</code> on <code class="codeElement">script</code> elements</td>
+                                        <td><code class="codeAttribute">for</code> on <code class="codeElement">script</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use <span class="tip"><abbr class="domBold"></abbr><span class="tipZoomIn"><mark>d</mark>ocument <mark>o</mark>bject <mark>m</mark>odel</span></span> Events mechanisms to register event listeners<b>&#46;</b><hr class="hr-noLine"><span class="a-squareBrackets"><a class="textLink" href="http://www.w3.org/TR/html5/references.html#refsDOM" target="_blank" rel="external"><abbr class="domBold"></abbr><span class="tipZoomIn">References Page<br>www.w3.org/TR/html5/references.html</span></a></span></td>
+                                    </tr>
+                                    <tr>
+                                    	<td colspan="2"><code class="codeAttribute">media</code> on <code class="codeElement">source</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use <a class="textLink" href="extras.html#useScriptMediaResources">script to select the media resource<small class="letterBraces">s</small><span class="tipZoomIn">Element&nbsp;Extras<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> to use<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                    	<td colspan="2"><code class="codeAttribute">datapagesize</code> on <code class="codeElement">table</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Unnecessary<b>&#46;</b>&ensp;Omit it altogether<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">summary</code> on <code class="codeElement">table</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use one of the <a class="textLink" href="extras.html#descriptionTechniques">techniques for describing tables<span class="tipZoomIn">Element&nbsp;Extras<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> given in the table section instead<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">axis</code> on <code class="codeElement">td</code> and <code class="codeElement">th</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use the <a class="textLink" href="../index.html#scope-attribute"><code class="codeAttribute">scope</code><span class="tipZoomIn">Attributes Section<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> attribute on relevant th<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">scope</code> on <code class="codeElement">td</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use th elements for heading cells<b>&#46;</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><code class="codeAttribute">datasrc</code> on&ensp;
+                                            <code class="codeElement">a</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">button</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">div</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">iframe</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">img</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">input</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">label</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">legend</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">object</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">option</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">select</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">span</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">table</code> and&ensp;
+                                            <code class="codeElement">textarea</code> elements
+                                        </td> 
+                                    </tr>
+                                    <tr>    	
+                                        <td colspan="2"><code class="codeAttribute">datafld</code> on&ensp;
+                                            <code class="codeElement">a</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">button</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">div</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">fieldset</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">iframe</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">img</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">input</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">label</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">legend</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">object</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">param</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">select</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">span</code> and&ensp;
+                                            <code class="codeElement">textarea</code> elements</td>
+                                    </tr>
+                                    <tr>					
+                                        <td colspan="2">
+                                            <code class="codeAttribute">dataformatas</code> on&ensp;
+                                            <code class="codeElement">button</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">div</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">input</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">label</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">legend</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">object</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">option</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">select</code><b>&#44;</b>&ensp;
+                                            <code class="codeElement">span</code> and&ensp;
+                                            <code class="codeElement">table</code> elements</td>
+                                    </tr>
+                                    <tr class="scrollingTableFooter">
+                                        <td colspan="2" class="tblRowBackground" style="border-bottom:3px solid rgba(25,25,100,1);">
+                                        	<b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use script and a mechanism such as <span class="myRegCapsBold"><abbr class="abbrBold">xmlhttp</abbr>Request</span> to populate the page dynamically.<hr class="hr-noLine">&emsp;&emsp;<a class="textLink" href="http://www.w3.org/TR/html5/references.html#refsXHR" target="_blank" rel="external"><b class="overSizedBrace">&#91;</b>XHR<b class="overSizedBrace">&#93;</b><span class="tipZoomIn"><abbr class="w3c">w<sub>3</sub>c</abbr> References Page<br>www.w3.org/TR/html5/references.html</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <figure class="scrollingTableContainer">
+                                                <table class="scrollingTableHeader">    
+                                                    <tbody>
+                                                        <tr class="scrollingTableFooter">
+                                                            <td class="tblTop tblRowBackground"><b class="blackRed myRegCapsBold">in <abbr class="html5"></abbr><b>&#58;</b></b>&ensp;Use <abbr class="cssBold">css</abbr> instead of the following <span class="darkRed">attitrbute</span>s
+                                        				</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="scrollingTableBodyContainer">
+                                                    <table class="scrollingTableBody">
+                                                        <colgroup>
+                                                            <col span="1">
+                                                        </colgroup>
+                                                        <tbody class="scrollingTableBodyText">
+                                                            <tr>
+                                                                <td><code class="codeAttribute">alink</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">bgcolor</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">link</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">marginbottom</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">marginheight</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">marginleft</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">marginright</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">margintop</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">marginwidth</code><b>&#44;</b>
+                                                                    <code class="codeAttribute">text</code> and 
+                                                                    <code class="codeAttribute">vlink</code>
+                                                                    on <code class="codeElement">body</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                	<code class="codeAttribute">clear</code> on 
+                                                                    <code class="codeElement">br</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                	<code class="codeAttribute">align</code> on 
+                                                                    <code class="codeElement">caption</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code><b>&#44;</b>  
+                                                                    <code class="codeAttribute">char</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">charoff</code><b>&#44;</b>  
+                                                                    <code class="codeAttribute">valign</code> and 
+                                                                    <code class="codeAttribute">width</code>
+                                                                    on <code class="codeElement">col</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code> on 
+                                                                    <code class="codeElement">div</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">compact</code> on 
+                                                                    <code class="codeElement">dl</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">hspace</code> and 
+                                                                    <code class="codeAttribute">vspace</code> 
+                                                                    on <code class="codeElement">embed</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">color</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">noshade</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">size</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">width</code><b>&#44;</b> 
+                                                                    on <code class="codeElement">hr</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code> 
+                                                                    on <code class="codeElement">h1</code>-<code class="codeElement">h6</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">allowtransparency</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">frameborder</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">hspace</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">marginheight</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">marginwidth</code> 
+                                                                    <code class="codeAttribute">scrolling</code> and 
+                                                                    <code class="codeAttribute">vspace</code> 
+                                                                    on <code class="codeElement">iframe</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code><b>&#44;</b>
+                                                                    <code class="codeAttribute">hspace</code> and 
+                                                                    <code class="codeAttribute">vspace</code> 
+                                                                    on <code class="codeElement">input</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">border</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">hspace</code> and 
+                                                                    <code class="codeAttribute">vspace</code> 
+                                                                    on <code class="codeElement">img</code> element<hr class="hr-noLine"><span class="parentheses"><small><a class="textLink" href="#exceptionBorder">Exception to the rules<span class="tipZoomIn"><abbr class="html5"></abbr> Content<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a></small>
+                                                                </span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code> 
+                                                                    on <code class="codeElement">legend</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">type</code> 
+                                                                    on li<code class="codeElement">li</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">compact</code> 
+                                                                    on <code class="codeElement">menu</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code> 
+                                                                    on<code class="codeElement">p</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">width</code> 
+                                                                    on <code class="codeElement">pre</code> element
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">border</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">hspace</code> and 
+                                                                    <code class="codeAttribute">vspace</code> 
+                                                                    on <code class="codeElement">object</code> elements
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">bgcolor</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">bordercolor</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">cellpadding</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">cellspacing</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">frame</code><b>&#44;</b> 
+                                                                    <code class="codeAttribute">rules</code> and 
+                                                                    <code class="codeAttribute">width</code>
+                                                                    on <code class="codeElement">table</code> elements
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code> 
+                                                                    on <code class="codeElement">tbody</code><b>&#44;</b>
+                                                                    <code class="codeElement">thead</code> and 
+                                                                    <code class="codeElement">tfoot</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">char</code> 
+                                                                    on <code class="codeElement">tbody</code><b>&#44;</b> 
+                                                                    <code class="codeElement">thead</code> and 
+                                                                    <code class="codeElement">tfoot</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">charoff</code> 
+                                                                    on <code class="codeElement">tbody</code><b>&#44;</b>
+                                                                    <code class="codeElement">thead</code> and 
+                                                                    <code class="codeElement">tfoot</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">valign</code> 
+                                                                    on <code class="codeElement">tbody</code><b>&#44;</b> 
+                                                                    <code class="codeElement">thead</code> and 
+                                                                    <code class="codeElement">tfoot</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code> 
+                                                                    on <code class="codeElement">td</code> and 
+                                                                    <code class="codeElement">th</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">bgcolor</code> 
+                                                                    on <code class="codeElement">td</code> and 
+                                                                    <code class="codeElement">th</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">char</code> 
+                                                                    on <code class="codeElement">td</code> and 
+                                                                    <code class="codeElement">th</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">charoff</code> 
+                                                                    on <code class="codeElement">td</code> and 
+                                                                    <code class="codeElement">th</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">height</code> 
+                                                                    on <code class="codeElement">td</code> and 
+                                                                    <code class="codeElement">th</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">nowrap</code> 
+                                                                    on <code class="codeElement">td</code> and 
+                                                                    <code class="codeElement">th</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">valign</code> 
+                                                                    on <code class="codeElement">td</code> and 
+                                                                    <code class="codeElement">th</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">width</code> 
+                                                                    on <code class="codeElement">td</code> and 
+                                                                    <code class="codeElement">th</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">align</code> 
+                                                                    on <code class="codeElement">tr</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">bgcolor</code> 
+                                                                    on <code class="codeElement">tr</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">char</code> 
+                                                                    on <code class="codeElement">tr</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">charoff</code> 
+                                                                    on <code class="codeElement">tr</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">valign</code> 
+                                                                    on <code class="codeElement">tr</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">compact</code> 
+                                                                    <code class="codeElement">ul</code> and
+                                                                    on <code class="codeElement">ol</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">type</code> 
+                                                                    on <code class="codeElement">ul</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <code class="codeAttribute">background</code> 
+                                                                    on <code class="codeElement">body</code><b>&#44;</b> 
+                                                                    <code class="codeElement">table</code><b>&#44;</b> 
+                                                                    <code class="codeElement">thead</code><b>&#44;</b> 
+                                                                    <code class="codeElement">tbody</code><b>&#44;</b> 
+                                                                    <code class="codeElement">tfoot</code><b>&#44;</b> 
+                                                                    <code class="codeElement">tr</code><b>&#44;</b> 
+                                                                    <code class="codeElement">td</code> and 
+                                                                    <code class="codeElement">th</code> elements 
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                	Exception for <code class="codeAttribute">border</code> attribute on <code class="codeElement">table</code><hr class="hr-noLine">
+                                                                    The <code class="codeAttribute">border</code> attribute on <code class="codeElement">table</code> elements can be used to provide basic fallback styling for the purpose of making tables legible in browsing environments where <abbr class="cssBold">css</abbr> support is limited or absent<b>&#44;</b> such as text<b class="enemDash">&#45;</b>based browsers<b>&#44;</b> <span class="tip">WYSIWYG<span class="tipZoomIn"><mark>W</mark>hat <mark>Y</mark>ou <mark>S</mark>ee <mark>I</mark>s <mark>W</mark>hat <mark>Y</mark>ou <mark>G</mark>et editors</span></span><b>&#44;</b> and in situations where <abbr class="cssBold">css</abbr> 
+                                                                    support is disabled or the style sheet is lost<b>&#46;</b>&ensp;Only the empty string and the value "1" may be used as border values for this purpose<b>&#46;</b>&ensp;Other values are considered obsolete<b>&#46;</b>&ensp;To regulate the thickness of such borders<b>&#44;</b> authors should instead use <abbr class="cssBold">css</abbr><b>&#46;</b>&ensp;<hr class="hr-noLine-spacer1">However<b>&#44;</b> you will <a class="textLinkListBottom" href="../validation.html#borderAttributeOnTable">receive this warning<span class="tipZoomIn">Validation<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a><b>&#33;</b>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                </tbody>	
+                            </table>
+                        </div>
+                    </figure>
+                </article>
+                <nav class="innerPageNavigation">
+                    <ul>
+                        <li><a class="tocLinksSWN" href="#warningsNav">Table Of Contents</a></li>
+                        <li><a accesskey="m" class="tocLinksSWN" onClick="siteNavSpecialDisplay(); location.href='#tagsAndAttributes-page'">Site Map<span class="tipZoomIn"> General Site Topics</span></a></li>
+                        <li><a accesskey="k" class="tocLinksSWN" onClick="location.href='javascript:history.go(-1)'">Back<span class="tipZoomIn"> Previous Location</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="obsoletePermittedDOCTYPEs" class="sectionWrapper">
+            	<h3 class="articleHeaderH3">Obsolete Permitted <code class="codeDOCTYPE"></code>&thinsp;<span class="lowercase">s</span></h3>
+                <article class="articleSubContainer">
+                	<h4 class="myH5">To help authors transition from <abbr class="html401"></abbr> and <abbr class="abbrBold">xhtml<span class="boldedNumbers">1</span></abbr><b>&#44;</b> an obsolete permitted <span class="boldAllCaps">doctype</span> string can be inserted into the <span class="boldAllCaps">doctype</span> <span class="parentheses">as described below</span><b>&#46;</b>&ensp;</h4>
+                	<figure class="olulListContainer">
+                        <p class="leadParagraph">The opening of the declaration<b>&#58;</b></p>
+                        <p class="listItem myBullet"><code class="boldedCode">&lt;&#33;doctype</code> and before the closing <span class="boldAllCaps">greater<b class="enemDash">&#45;</b>than sign</span> <span class="parentheses"><span class="codingSymbols">&gt;</span></span></p>
+                        <p class="p2"><strong class="emSpecial">This string must consist of<b>&#58;</b></strong></p>
+                        <ol>
+                            <li>One or more <a class="textLink" href="../terminology.html#dfnSpaceCharacters">space characters<span class="tipZoomIn">Terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a><b>&#46;</b></li>
+                            <li>A string that is an <a class="textLink" href="extras.html#caseInsensitive"><abbr class="asciiBold"></abbr><span class="tipZoomIn">Element&nbsp;Extras<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> <a class="textLink" href="../terminology.html#dfnCase-Insensitive">case-insensitive match<span class="tipZoomIn"><abbr class="htmlBold"></abbr> Terminolgy<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a> for the string <b>&ldquo;</b><abbr class="htmlBold"></abbr> <span class="boldedCode">public</span><b>&rdquo;&#46;</b></li>
+                            <li>One or more <a class="textLink" href="../terminology.html#dfnSpaceCharacters">space characters<span class="tipZoomIn">Terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a><b>&#46;</b></li>
+                            <li>A <span class="boldAllCaps">u<b class="overSizedPlus">&#43;</b>0022 quotation mark</span> or <span class="boldAllCaps">u<b class="overSizedPlus">&#43;</b>0027 apostrophe</span> character <span class="parentheses">the first quote mark</span><b>&#46;</b></li>
+                            <li>A string from one of the cells in the column labeled <b>&ldquo;</b><span class="boldAllCaps">public identifier</span><b>&rdquo;</b> from the table below<b>&#46;</b></li>
+                            <li>A matching <span class="boldAllCaps">u<b class="overSizedPlus">&#43;</b>0022 quotation mark</span> or <span class="boldAllCaps">u<b class="overSizedPlus">&#43;</b>0027 apostrophe</span> character <span class="parentheses">i.e. the same character as in the earlier step labeled first quote mark</span><b>&#46;</b>&ensp;</li>
+                            <li>If the cell in the second column of the selected row is not blank, one or more <a class="textLink" href="../terminology.html#dfnSpaceCharacters">space characters<span class="tipZoomIn">Terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a><b>&#46;</b>&ensp;</li>
+                            <li>A <span class="boldAllCaps">u<b class="overSizedPlus">&#43;</b>0022 quotation mark</span> or <span class="boldAllCaps">u<b class="overSizedPlus">&#43;</b>0027 apostrophe</span> character <span class="parentheses">the third quote mark</span><b>&#46;</b></li>
+                            <li>The string from the second column<b>&#44;</b> labeled <b>&ldquo;</b><span class="boldAllCaps">system identifier</span><b>&rdquo;</b><b>&#44;</b> of the selected row<b>&#46;</b>&ensp;</li>
+                            <li>A matching <span class="boldAllCaps">u<b class="overSizedPlus">&#43;</b>0022 quotation mark</span> or <span class="boldAllCaps">u<b class="overSizedPlus">&#43;</b>0027 apostrophe</span> character <span class="parentheses">i.e. the same character as in the earlier step labeled third quote mark</span><b>&#46;</b>&ensp;</li>
+                        </ol>
+                    </figure>
+                    <div class="paragraphContainer">
+                        <p class="header5">In other words<b>&#58;</b></p>
+                        <p><span class="inlineContainer"><code class="codeDOCTYPE"> html public <b>&ldquo;</b><span class="emSpecial">public identifier</span><b>&rdquo;</b> <b>&ldquo;</b><span class="emSpecial">System Identifier</span><b>&rdquo;</b></code></span></p>
+                        <p class="header5">all case<span class="dashLine"></span>insensitive<b>&#46;</b></p>
+                        <figure class="doctypeTableContainer">
+                            <div class="divTableHeader">
+                                <div class="divTableHeaderRow">
+                                    <p class="divTableHeaderCell tblTopLeft">public identifier</p>
+                                    <p class="divTableHeaderCell tblTopRight">system identifier</p>
+                                </div>
+                            </div>
+                            <div class="doctypeTableBodyContainer">
+                                <div class="divTable">
+                                    <div class="divTableRow">
+                                        <p class="divTableCell"><code class="lineCode"><b>&ndash;//</b>W3C<b>//</b>DTD HTML 4.01<b>//</b>EN</code></p>
+                                        <p class="divTableCell"><!-- empty --></p>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <p class="divTableCell"><code class="lineCode"><b>&ndash;//</b>W3C<b>/</b>DTD HTML 4.01 Strict<b>//</b>EN</code></p>
+                                        <p class="divTableCell"><code class="lineCode">http<b>&#58;//</b>www.w3.org<b>/</b>TR<b>/</b>html4<b>/</b>strict.dtd</code></p>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <p class="divTableCell"><code class="lineCode"><b>&ndash;//</b>W3C<b>/</b>DTD HTML 4.01 Transitional<b>//</b>EN</code></p>
+                                        <p class="divTableCell"><code class="lineCode">http<b>&#58;//</b>www.w3.org<b>/</b>TR<b>/</b>html4<b>/</b>loose.dtd</code></p>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <p class="divTableCell"><code class="lineCode"><b>&ndash;//</b>W3C<b>/</b>DTD HTML 4.01 Frameset<b>//</b>EN</code></p>
+                                        <p class="divTableCell"><code class="lineCode">http<b>&#58;//</b>www.w3.org<b>/</b>TR<b>/</b>html4<b>/</b>frameset.dtd</code></p>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <p class="divTableCell"><code class="lineCode"><b>&ndash;//</b>W3C<b>/</b>DTD XHTML 1.0<b>//</b>EN</code></p>
+                                        <p class="divTableCell"><!-- nothing --></p>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <p class="divTableCell"><code class="lineCode"><b>&ndash;//</b>W3C<b>/</b>DTD XHTML 1.0 Strict</code></p>
+                                        <p class="divTableCell"><code class="lineCode">http<b>&#58;//</b>www.w3.org<b>/</b>TR<b>/</b>xhtml1<b>/</b>DTD<b>/</b>xhtml1<b class="enemDash">&#45;</b>strict.dtd</code></p>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <p class="divTableCell"><code class="lineCode"><b>&ndash;//</b>W3C<b>/</b>DTD XHTML 1.0 Transitional<b>//</b>EN</code></p>
+                                        <p class="divTableCell"><code class="lineCode">http<b>&#58;//</b>www.w3.org<b>/</b>TR<b>/</b>xhtml1<b>/</b>DTD<b>/</b>xhtml1<b class="enemDash">&#45;</b>transitional.dtd</code></p>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <p class="divTableCell"><code class="lineCode"><b>&ndash;//</b>W3C<b>/</b>DTD XHTML 1.0 Frameset<b>//</b>EN</code></p>
+                                        <p class="divTableCell"><code class="lineCode">http<b>&#58;//</b>www.w3.org<b>/</b>TR<b>/</b>xhtml1<b>/</b>DTD<b>/</b>xhtml1<b class="enemDash">&#45;</b>frameset.dtd</code></p>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <p class="divTableCell"><code class="lineCode"><b>&ndash;//</b>W3C<b>/</b>DTD XHTML 1.1<b>//</b>EN</code></p>
+                                        <p class="divTableCell"><code class="lineCode">http<b>&#58;//</b>www.w3.org<b>/</b>TR<b>/</b>xhtml11<b>/</b>DTD<b>/</b>xhtml11.dtd</code></p>
+                                    </div>
+                                </div>
+                                <div class="divTableFooter">
+                                    <p>See <span class="boldedCode">doctype</span> Declarations Below For The Examples<b>&#46;</b>&ensp;</p>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+<!-- DOCTYPE Declarations  -->
+            <section id="declarations" class="sectionWrapper">
+                <h4 class="myH4"><code class="codeDOCTYPE"> html</code>&ensp;Declarations</h4><hr class="hr-noLine-spacer2pt25">
+                <p class="bodyText">
+                    There are four different <code class="codeDOCTYPE"> html</code>&ensp;declarations in <code class="html401"></code><b>&#44;</b> as seen below<b>&#58;</b>&ensp;These are all <span class="emSpecial">Obsolete Permitted <span class="boldAllCaps">doctype</span><b class="apos"></b>s</span><b>&#46;</b>&ensp;
+                </p>
+<!-- HTML 4.01  -->
+                <article id="html4_01" class="articleSeparator">
+                    <h4 class="articleHeaderH4"><abbr class="html401"></abbr>&ensp;</h4>
+                    <p class="bodyText">
+                        This <abbr class="dtdBold"></abbr> contains all the <abbr class="htmlBold"></abbr> elements and attributes<b>&#44;</b> but does <span class="italicsBold">not</span> include any presentational or deprecated elements like <code class="codeElement">font</code>.&ensp;Framesets are not allowed.
+                    </p>
+                    <p class="bodyText">
+                        <code class="doctypeString">&lt;&#33;DOCTYPE HTML PUBLIC &ldquo;&ndash;&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;W3C&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;DTD HTML 4.01&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;EN<b>&rdquo;</b>&gt;</code>
+                    </p>
+                    <a class="previousLocation" href="javascript:history.back(1)">Previous Location<b>&#33;</b></a><hr class="hr-noLine-spacer1pt5">
+                </article>
+<!-- HTML 4.01 Strict -->
+                <article id="html4_01Strict" class="articleSeparator">
+                    <h4 class="articleHeaderH4"><abbr class="html401"></abbr> Strict</h4>
+                    <p class="bodyText">
+                        This <abbr class="dtdBold"></abbr> contains all the <abbr class="htmlBold"></abbr> elements and attributes<b>&#44;</b> but does <span class="italicsBold">not</span> include any presentational or deprecated elements like <code class="codeElement">font</code>.&ensp;Framesets are not allowed.
+                    </p>
+                    <p class="bodyText">
+                        <code class="doctypeString">&lt;&#33;DOCTYPE HTML PUBLIC &ldquo;&ndash;&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;W3C&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;DTD HTML 4.01 Strict&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;EN<b>&rdquo;</b> <b>&ldquo;</b>http<b class="overSizedSlash">&#58;&thinsp;&frasl;&ensp;&frasl;</b>&ensp;www.w3.org&thinsp;<b>&frasl;&ensp;</b>TR&ensp;<b>&frasl;&ensp;</b>html4&ensp;<b>&frasl;&ensp;</b>strict.dtd<b>&rdquo;</b>&gt;</code>
+                    </p>
+                    <a class="previousLocation" href="javascript:history.back(1)">Previous Location<b>&#33;</b></a><hr class="hr-noLine-spacer1pt5">
+                </article>
+<!-- HTML 4.01 Transitional -->
+                <article id="html4_01Transitional" class="articleSeparator">
+                    <h4 class="articleHeaderH4"><abbr class="html401"></abbr> Transitional</h4>
+                    <p class="bodyText">
+                        This <abbr class="dtdBold"></abbr> contains all the <abbr class="htmlBold"></abbr> elements and attributes<b>&#44;</b> <span class="italicsBold">including</span> presentational and deprecated elements like <code class="codeElement">font</code>.&ensp;Framesets are not allowed.
+                    </p>
+                    <p class="bodyText">
+                        <code class="doctypeString">&lt;&#33;DOCTYPE HTML PUBLIC &ldquo;&ndash;&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;W3C&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;DTD HTML 4.01 Transitional&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;EN<b>&rdquo;</b> <b>&ldquo;</b>http&#58;&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;www.w3.org&ensp;<b>&frasl;&ensp;</b>TR&ensp;<b>&frasl;&ensp;</b>html4&ensp;<b>&frasl;&ensp;</b>loose.dtd<b>&rdquo;</b>&gt;</code>
+                    </p>
+                    <a class="previousLocation" href="javascript:history.back(1)">Previous Location<b>&#33;</b></a><hr class="hr-noLine-spacer1pt5">
+                </article>
+<!-- HTML 4.01 Frameset -->
+                <article id="html4_01Frameset" class="articleSeparator">
+                    <h4 class="articleHeaderH4"><abbr class="html401"></abbr> Frameset</h4>
+                    <p class="bodyText">
+                        This <abbr class="dtdBold"></abbr> is equal to <abbr class="html401"></abbr> transitional<b>&#44;</b> but allows the use of frameset content.
+                    </p>
+                    <p class="bodyText">
+                        <code class="doctypeString">&lt;&#33;DOCTYPE HTML PUBLIC &ldquo;&ndash;&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;W3C&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;DTD HTML 4.01 Frameset&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;EN&rdquo; &ldquo;http<b>&#58;</b>&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;www.w3.org&ensp;<b>&frasl;&ensp;</b>TR&ensp;<b>&frasl;&ensp;</b>html4&ensp;<b>&frasl;&ensp;</b>frameset.dtd<b>&rdquo;</b>&gt;</code>
+                    </p>
+                    <a class="previousLocation" href="javascript:history.back(1)">Previous Location<b>&#33;</b></a><hr class="hr-noLine-spacer1pt5">
+                </article>
+<!-- XHTML DOCTYPE's -->
+                <article class="articleSeparator">
+                    <h3 class="myH3"><abbr class="htmlBold">xhtml</abbr> <code class="codeDOCTYPE"></code>&ensp;Declarations</h3>
+                    <p class="bodyText">
+                        There are also four different <code class="codeDOCTYPE"> html</code>&ensp;declarations in <span class="tip"><abbr class="abbrBold">xhtml</abbr><span class="tipZoomIn">E<mark>x</mark>tensible <mark>H</mark>yper<mark>t</mark>ext<br><mark>m</mark>arkup <mark>l</mark>anguage</span></span><b>&#46;</b>&ensp;They are as follows<b>&#58;</b>
+                    </p>
+                </article>
+<!-- XHTML 1.0 STRICT -->
+                <article id="xhtml1_0Strict" class="articleSeparator">
+                    <h4 class="articleHeaderH4"><abbr class="abbrBold">xhtml 1.0</abbr> Strict</h4>
+                    <p class="bodyText">
+                        This <abbr class="dtdBold"></abbr> contains all the HTML elements and attributes<b>&#44;</b> but does <span class="italicsBold">not</span> include presentational or deprecated elements like <code class="codeElement">font</code>.&ensp;Framesets are not allowed.&ensp;The markup must also be written as well-formed <span class="htmlBold">xml</span>.
+                    </p>
+                    <p class="bodyText">
+                        <code  class="doctypeString">&lt;&#33;DOCTYPE html PUBLIC &ldquo;&ndash;&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;W3C&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;DTD XHTML 1.0 Strict&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;EN&rdquo; &ldquo;http<b>&#58;</b>&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;www.w3.org&ensp;<b>&frasl;&ensp;</b>TR&ensp;<b>&frasl;&ensp;</b>xhtml1&ensp;<b>&frasl;&ensp;</b>DTD&ensp;<b>&frasl;&ensp;</b>xhtml1&ensp;<b>&frasl;&ensp;</b>&ndash;strict.dtd&rdquo;&gt;</code>
+                    </p>
+                    <a class="previousLocation" href="javascript:history.back(1)">Previous Location<b>&#33;</b></a><hr class="hr-noLine-spacer1pt5">
+                </article>
+<!-- XHTML 1.0 Transitional -->
+                <article id="xhtml1_0Transitional" class="articleSeparator">
+                    <h4 class="articleHeaderH4"><abbr class="abbrBold">xhtml 1.0</abbr> Transitional</h4>
+                    <p class="bodyText">
+                        This <abbr class="dtdBold"></abbr> contains all the <abbr class="htmlBold"></abbr> elements and attributes <span class="italicsBold">including</span> presentational or deprecated elements like <code class="codeElement">font</code>.&ensp;Framesets are not allowed.&ensp;The markup must also be written as well-formed <span class="htmlBold">xml</span>.
+                    </p>
+                    <p class="bodyText">
+                        <code  class="doctypeString">&lt;&#33;DOCTYPE html PUBLIC &ldquo;&ndash;&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;W3C&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;DTD XHTML 1.0 Transitional&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;EN&rdquo; &ldquo;http<b>&#58;</b>&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;www.w3.org&ensp;<b>&frasl;&ensp;</b>TR&ensp;<b>&frasl;&ensp;</b>xhtml1&ensp;<b>&frasl;&ensp;</b>DTD&ensp;<b>&frasl;&ensp;</b>xhtml1&ensp;<b>&frasl;&ensp;</b>&ndash;transitional.dtd&rdquo;&gt;</code>
+                    </p>
+                    <a class="previousLocation" href="javascript:history.back(1)">Previous Location<b>&#33;</b></a><hr class="hr-noLine-spacer1pt5">
+                </article>
+<!-- XHTML 1.0 Frameset -->
+                <article id="xhtml1_0Frameset" class="articleSeparator">
+                    <h4 class="articleHeaderH4"><abbr class="abbrBold">xhtml 1.0</abbr> Frameset</h4>
+                    <p class="bodyText">
+                        This <abbr class="dtdBold"></abbr> is equal to <abbr class="html401"></abbr> Transitional<b>&#44;</b> but allows the use of frameset content.
+                    </p>
+                    <p class="bodyText">
+                        <code class="doctypeString">&lt;&#33;DOCTYPE html PUBLIC &ldquo;&ndash;&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;W3C&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;DTD XHTML 1.0 Frameset&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;EN&rdquo; &ldquo;http<b>&#58;</b>&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;www.w3.org&ensp;<b>&frasl;&ensp;</b>TR&ensp;<b>&frasl;&ensp;</b>xhtml1&ensp;<b>&frasl;&ensp;</b>DTD&ensp;<b>&frasl;&ensp;</b>xhtml1&ensp;<b>&frasl;&ensp;</b>&ndash;frameset.dtd&rdquo;&gt;</code>
+                    </p>
+                    <a class="previousLocation" href="javascript:history.back(1)">Previous Location<b>&#33;</b></a><hr class="hr-noLine-spacer1pt5">
+                </article>
+<!-- XHTML 1.1 -->
+                <article id="xhtml1_1" class="articleSeparator">
+                    <h4 class="articleHeaderH4"><abbr class="abbrBold">xhtml 1.1</abbr></h4>
+                    <p class="bodyText">
+                        This <abbr class="dtdBold"></abbr> is equal to <abbr class="abbrBold">xhtml 1.0</abbr> Strict<b>&#44;</b> but allows you to add modules.&ensp;For example<b>&#44;</b> to provide ruby support for East-Asian languages.
+                    </p>
+                    <p class="bodyText">
+                        <code class="doctypeString">&lt;&#33;DOCTYPE html PUBLIC &ldquo;&ndash;&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;W3C&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;DTD XHTML 1.1&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;EN&rdquo; &ldquo;http<b>&#58;</b>&ensp;<b>&frasl;&ensp;&frasl;</b>&ensp;www.w3.org&ensp;<b>&frasl;&ensp;</b>TR&ensp;<b>&frasl;&ensp;</b>xhtml1&ensp;<b>&frasl;&ensp;</b>DTD&ensp;<b>&frasl;&ensp;</b>xhtml1&ensp;<b>&frasl;&ensp;</b>&ndash;xhtml11.dtd&rdquo;&gt;</code>
+                    </p>
+                    <a class="previousLocation" href="javascript:history.back(1)">Previous Location<b>&#33;</b></a><hr class="hr-noLine-spacer1pt5">
+                </article>
+        </section>
+		<footer class="pgFooter">
+            <hr class="codingZone">
+            This Web Site has been created using the latest in <img class="footerImage" src="../images/HTML5Logo.png" alt="Valid HTML5!"> Technology<hr class="hr-noLine-spacer1">
+            Copyright <b>&copy;</b> 2014&thinsp;<b>&ndash;</b>&thinsp;<span id="copyright">...</span><hr class="hr-noLine-spacer1"><span class="bearzLogoFooter">Bear<span class="footerSmall">Z</span> &thinsp;Web &thinsp;&amp; &thinsp;Gra<small class="footerSmall">F&thinsp;X</small> &thinsp;De<small class="footerSmall">Z</small>ign</span>&ensp;All rights reserved<b>&#46;</b><hr class="hr-noLine">
+            <span class="italics">Resource<span class="letterBraces">s</span> <b>&#58;</b></span>&ensp;<a class="textLink" href="https://whatwg.org" target="_blank" rel="external"><abbr class="whatwgFooter">whatwg&thinsp;</abbr><span class="tipZoomIn"><mark>W</mark>eb <mark>H</mark>ypertext <mark>A</mark>pplication <mark>T</mark>echnology<br><mark>W</mark>orking <mark>G</mark>roup<br>whatwg.org</span></a>  and  <a class="textLink" href="http://www.w3.org" target="_blank" rel="external"><img class="w3cLogo" src="../images/w3cLogo.png" alt="W3C Logo"><span class="tipZoomIn"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium<br>www.w3.org</span></a> <span class="regMark">&reg;</span><hr class="hr-noLine-spacer1">
+            This work is licensed under<hr class="hr-noLine-spacer1"><a class="textLinkBottom ccTarget" rel="license external" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><samp class="tipZoomIn">https://creativecommons.org/licenses/by/4.0/</samp>Creative Commons Attribution 4.0 International License</a>
+            <hr class="hr-noLine-spacer1">
+            <script type="text/javascript">
+				function copyDate() {
+				  var cpyrt = document.getElementById("copyright")
+				  if (cpyrt) {
+					 cpyrt.firstChild.nodeValue = (new Date()).getFullYear();
+				  }
+				}
+				window.onload = copyDate;
+				months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; 
+				var d=new Date();
+				var weekday=new Array(7); weekday[0]="Sunday"; weekday[1]="Monday"; weekday[2]="Tuesday"; weekday[3]="Wednesday"; weekday[4]="Thursday"; weekday[5]="Friday"; weekday[6]="Saturday";
+				var d = new Date();
+				(d.getFullYear());
+				var theDate = new Date(document.lastModified); 
+				theDate.setTime((theDate.getTime()+(60*60)) ) 
+				with (theDate) { 
+				document.write("<span class='italicsBold'>Last Modified<b>&#58;</b></span> <time class='modifiedDate'>"+weekday[getDay()]+'<b>&#44;&thinsp;</b>'+months[getMonth()]+'&thinsp;'+getDate()+'<b>&#44;&thinsp;</b>'+d.getFullYear()+'<b>&emsp;<span>&#64;</span>&ensp;</b>'+getHours()+':'+getMinutes()+"</time>&thinsp;&ensp;<span class='italicsBold'>EST</span>") 
+				} 
+			</script><hr class="hr-noLine-spacer2"><hr class="footerBottom">
+        </footer>
+	</section><!-- end of wrapper -->
+</body>
+</html>

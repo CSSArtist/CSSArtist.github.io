@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--
+	Website: Bearz Design Concepts, The HTML Zone
+    URL: www.bearzdesignconcepts.net/history.html
+    File Name: history.html
+    Author: Barry Smith
+    resources: the WHATWG HTML: The Living Standard, and W3C Specifications
+-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="Barry Smith, Bearz Design Concepts, Bears Design Concepts, 
+    	Bearz Design, Bears Design, Bears Web and Graphics, Bearz Web and Graphics, The Coding Zone, HTML Elements, 
+        HTML5 Elements, HTML Tags, HTML Tag Use, Typography, HTML Syntax, CSS Default Display Settings, 
+        Coding, Validation, HTML, HTHL5, CSS3, Coding Zone">
+	<meta name="description" content="An HTML5/CSS3 Instructional web site with the student in mind">
+	<title>
+		HTML History
+	</title>
+			<!-- supporting CSS and JavaScript and favicon files -->
+	<link href="../css3/MainLayout.css" rel="stylesheet" type="text/css">
+	<link href="../css3/banner_Logo.css" rel="stylesheet" type="text/css">
+	<link href="../css3/nav.css" rel="stylesheet" type="text/css">
+	<link href="../css3/textStyles.css" rel="stylesheet" type="text/css">
+	<link href="../css3/myAlerts.css" rel="stylesheet" type="text/css">
+	<link href="../css3/cssToolTip.css" rel="stylesheet" type="text/css">
+	<link href="../css3/responsiveCSS.css" rel="stylesheet" type="text/css">
+	<link href="../css3/specialEffects.css" rel="stylesheet" type="text/css">
+	<link href="../css3/targetSelectors.css" rel="stylesheet" type="text/css">
+	<link href="../css3/myAnimations.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/embeddedFonts.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/inconsolata/inconsolata.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/alluraWebReady/allura.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/fontSavatage/savatage.css" rel="stylesheet" type="text/css">
+    <link href="../icon/apple-icon-57X57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="../icon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="../icon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../icon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="../icon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../icon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="../icon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="../icon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="../icon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="../icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="../icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="../icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="../icon/manifest.json" rel="manifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="../scripts/siteFunctions.js" type="text/javascript"></script>
+    <script src="../scripts/jquery_v2.0.0.js" type="text/javascript"></script>
+    <script>document.createElement("tooltip")</script><!-- satisfies IE for a my custom element-->
+    <!-- used for my floating back button in lower right corner -->
+	<script>
+		$(document).ready(function () {  $('.backToTopScroll').hide();//Check to see if the window is top if not then display button
+		$(window).scroll(function () {  if ($(this).scrollTop() > 650) {    $('.backToTopScroll').fadeIn();  } else {    $('.backToTopScroll').fadeOut();  }}); //Click event to scroll to top
+		$('.backToTopScroll').click(function () {  $('html, body').animate({ scrollTop: 0 }, 900);  return false;  });});
+    </script>
+</head>
+<body id="history-page">
+    <section id="siteNavSpecsPage" class="wrapperPopupNav displayNone myAppearIn">
+        <h1 class="czSiteMap2 pointerFadeIn courierPrimeBoldItalic">The Coding Zone<br>General Topics</h1>
+        <nav id="siteMap" class="siteWideContainer">
+        <h2 class="siteWideNavHeader"><span>Site<b class="enemDash">&#45;</b>Wide Navigation</span></h2>
+            <table class="innerFadeIn siteWideNav">
+                <caption class="czSiteMapColumnsCaption"></caption>
+                <tbody>
+                    <tr>
+                        <td><a class="reduceBotMarg-6em" href="index.html">HTML/HTML<sub style="position:relative; top:4px; font-size:95%">5</sub></a></td>
+                        <td><a class="reduceBotMarg-4em" href="../TheCSSZone/index.html">CSS/CSS<sub style="position:relative; top:4px; font-size:95%">3</sub></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="elementSpecs.html">Element Specifications</a></td>
+                        <td><a href="../TheCSSZone/cssDefault.html">CSS Default Settings</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="descriptions.html">Element Descriptions</a></td>
+                        <td><a href="../TheCSSZone/typography.html">Typography</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="html5Content.html">HTML Content<small style="font-size:65%;"><b class="overSizedBrace">&#40;</b>Categories<b class="overSizedBrace">&#41;</b></small></a></td>
+                        <td><a href="../TheCSSZone/presentationalHints.html">Presentational Hints</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="extras.html">Element Extras</a></td>
+                        <td><a href="../animations.html">CSS Animations</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="codingExamples.html">Code Examples</a></td>
+                        <td><a href="../TheCSSZone/moreTypography.html#embeddedFonts">Embedding Fonts</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="tagsAndAttributes.html">Tags &amp; Attributes</a></td>
+                        <td><a href="../TheCSSZone/index.html#mediaQueries">Media Queries</a></td>
+                    </tr>
+                        <td><a href="browserSupport.html">Browser Support</a></td>
+                        <td><a href="#" hidden>PLACEHOLDER</a></td>
+                    </tr>
+                
+            </table>
+            <table class="topicsTableNav" style="margin:.5rem auto 1rem;">
+                <caption class="czSiteMapHeader2">general topics</caption>
+                <tbody>
+                    <tr>
+                        <td><a class="siteWideNavLink" href="../terminology.html">Terminology</a>&emsp;</td>
+                        <td>&emsp;<a class="siteWideNavLink" href="../validation.html">Validation</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="siteWideNavLink" href="history.html"><abbr class="htmlBold"></abbr> History</a>&emsp;</td>
+                        <td>&emsp;<a class="siteWideNavLink" href="genRationale.html" >General Rationale</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <p class="backToTopContainer siteMapCloseButton"><a class="backLink" href="javascript:history.go(-1)" onClick="siteNavSpecialClose()">Close Site Map</a></p>
+    </section><a class="topLeftBackButton" href="javascript:history.back()"></a><a class="backToTopScroll" onClick="scrollToTopClose()">Page Top</a>
+        <h1 class="siteName siteNameFadeIn displayNone">The<br>Coding Zone</h1>
+        <div class="landscapeView colGradient"><!-- backNameFadeIn  -->
+            <p class="phoneHeader">
+                <span class="phoneHeader-B">b</span><span class="phoneHeaderB-ear">&ensp;ear&thinsp;</span><span class="phoneHeaderBear-Z">z</span>
+                <span class="phoneHeader-C">c</span><span class="phoneHeaderCodingBorder"><span class="phoneHeaderC-oding">oding</span></span>
+                <span class="phoneHeader-Z">z</span><span class="phoneHeaderZoneBorder"><span class="phoneHeaderZ-one">one</span></span>
+            </p><hr class="hr-noLine-spacer1">
+            <p class="articleRepeatingRadial"><span class="landscapeViewFirstLetter">m</span>y Apologizes&#44;<br><span class="landscapeViewFirstLetter">p</span>lease view this site in landscape view&#46;<br><span class="landscapeViewFirstLetter">t</span>his site is not optimized for less than <span class="landscapeViewNumber">575</span> pixel width&#46;&ensp;<br><span class="landscapeViewFirstLetter">f</span>or devices with a maximum width <span class="parentheses mySmall andadaBoldItalic">landscape view</span>&#44; of less than 575 pixels&#44; slight horizontal scrolling is necessary&#46;&ensp;</p><!--    -->
+            <p class="phoneHeader">
+                <span class="phoneHeader-B">b</span><span class="phoneHeaderB-ear">&ensp;ear&thinsp;</span><span class="phoneHeaderBear-Z">z</span>
+                <span class="phoneHeader-C">c</span><span class="phoneHeaderCodingBorder"><span class="phoneHeaderC-oding">oding</span></span>
+                <span class="phoneHeader-Z">z</span><span class="phoneHeaderZoneBorder"><span class="phoneHeaderZ-one">one</span></span>
+            </p>
+        </div>
+    <section id="wrapper" class="gradient ">
+		<header id="Banner/Logo" class="myHeader"><!-- pageFadeIn -->
+        <h2 class="backName backNameFadeIn displayNone">The<br>Coding Zone</h2>
+            <div class="siteName siteNameFadeIn"><!--  -->
+            	<p class="htmlHeader-The"><span class="htmlHeader-T">t</span><span class="borderT-he"><span class="htmlHeaderT-he">he</span></span></p>
+                <p class="htmlHeader-HTML"><span class="htmlHeader-H">h</span><span class="borderH-tml"><span class="htmlHeaderH-tml">tml</span></span></p> 
+                <p class="htmlHeader-Zone"><span class="htmlHeader-Z">z</span><span class="borderZ-one"><span class="htmlHeaderZ-one">one</span></span></p><!--  -->
+            </div>
+        </header><!-- end of header -->
+		<nav id="topNavBar" class="topNav navBarGradient">
+            <a class="navBlur" href="../index.php">Bearz Home</a>
+			<a class="navBlur" href="../siteMap.html">Topics</a>
+            <a class="navBlur" href="../contact.php">Contact</a>
+            <a class="navBlur" href="http://www.codingzone.org" target="_blank" rel="external">codingzone<b>&#46;</b>org</a>
+			<hr class="fadingStyle">
+        </nav>
+		<nav id="breadCrumbLinks" class="speedInLeft">
+			<script type="text/javascript">breadcrumbs()</script>
+		</nav>
+		<aside id="rightSide" class="rightAside"><!-- Right aside -->
+			<h3 class="navHeader displayNone">Bearz Coding Zone</h3>
+			<nav class="sideNav">
+            	<h3 class="navHeader">On This Page</h3>
+                <ul class="groupingList">
+                    <li><a href="#artiOne" class="pageNavigation">What is <abbr class="htmlBold">html<sub>5&thinsp;</sub></abbr><b>&#63;</b></a></li>
+                    <li><a href="#artiTwo" class="pageNavigation">What is <abbr class="cssBold">CSS<span>3&thinsp;</span></abbr><b>&#63;</b></a></li>
+                    <li><a href="#artiThree" class="pageNavigation">Typography</a></li>
+                </ul>
+			</nav>
+            <div class="floatRightImages">
+				<img src="../images/bearzDezignz.png" alt="Bearz Teez Web and Graphics Dezign">
+            </div>
+		</aside><!-- end rightSide -->
+        <h1 class="myH1 courierPrimeBold">History of <span class="displayMarkHTML5">html&ensp;&frasl;&ensp;html5</span></h1>
+        <h2 class="myH2 reduceTopMarg-1em">And The Specifications</h2>
+        <section>
+            For its first five years (1990-1995), <abbr class="htmlBold"></abbr> went through a number of revisions and experienced a number of extensions, primarily hosted first at CERN, and then at the IETF.
+
+With the creation of the W3C, <abbr class="htmlBold"></abbr>&rsquo;s development changed venue again. A first abortive attempt at extending <abbr class="htmlBold"></abbr> in 1995 known as <abbr class="htmlBold"></abbr> 3.0 then made way to a more pragmatic approach known as <abbr class="htmlBold"></abbr> 3.2, which was completed in 1997. <abbr class="htmlBold"></abbr>4 quickly followed later that same year.
+
+The following year, the W3C membership decided to stop evolving <abbr class="htmlBold"></abbr> and instead begin work on an XML-based equivalent, called XHTML. This effort started with a reformulation of <abbr class="htmlBold"></abbr>4 in XML, known as X<abbr class="htmlBold"></abbr> 1.0, which added no new features except the new serialisation, and which was completed in 2000. After X<abbr class="htmlBold"></abbr> 1.0, the W3C's focus turned to making it easier for other working groups to extend XHTML, under the banner of X<abbr class="htmlBold"></abbr> Modularization. In parallel with this, the W3C also worked on a new language that was not compatible with the earlier <abbr class="htmlBold"></abbr> and X<abbr class="htmlBold"></abbr> languages, calling it XHTML2.
+
+Around the time that <abbr class="htmlBold"></abbr>&rsquo;s evolution was stopped in 1998, parts of the API for <abbr class="htmlBold"></abbr> developed by browser vendors were specified and published under the name DOM Level 1 (in 1998) and DOM Level 2 Core and DOM Level 2 <abbr class="htmlBold"></abbr> (starting in 2000 and culminating in 2003). These efforts then petered out, with some DOM Level 3 specifications published in 2004 but the working group being closed before all the Level 3 drafts were completed.
+
+In 2003, the publication of XForms, a technology which was positioned as the next generation of Web forms, sparked a renewed interest in evolving <abbr class="htmlBold"></abbr> itself, rather than finding replacements for it. This interest was borne from the realization that XML's deployment as a Web technology was limited to entirely new technologies (like RSS and later Atom), rather than as a replacement for existing deployed technologies (like <abbr class="htmlBold"></abbr>).
+
+A proof of concept to show that it was possible to extend <abbr class="htmlBold"></abbr>4's forms to provide many of the features that XForms 1.0 introduced, without requiring browsers to implement rendering engines that were incompatible with existing <abbr class="htmlBold"></abbr> Web pages, was the first result of this renewed interest. At this early stage, while the draft was already publicly available, and input was already being solicited from all sources, the specification was only under Opera Software's copyright.
+
+The idea that <abbr class="htmlBold"></abbr>&rsquo;s evolution should be reopened was tested at a W3C workshop in 2004, where some of the principles that underlie the <abbr class="htmlBold">html<sub>5</sub></abbr> work (described below), as well as the aforementioned early draft proposal covering just forms-related features, were presented to the W3C jointly by Mozilla and Opera. The proposal was rejected on the grounds that the proposal conflicted with the previously chosen direction for the Web's evolution; the W3C staff and membership voted to continue developing XML-based replacements instead.
+
+Shortly thereafter, Apple, Mozilla, and Opera jointly announced their intent to continue working on the effort under the umbrella of a new venue called the WHATWG. A public mailing list was created, and the draft was moved to the WHATWG site. The copyright was subsequently amended to be jointly owned by all three vendors, and to allow reuse of the specification.
+
+The WHATWG was based on several core principles, in particular that technologies need to be backwards compatible, that specifications and implementations need to match even if this means changing the specification rather than the implementations, and that specifications need to be detailed enough that implementations can achieve complete interoperability without reverse-engineering each other.
+
+The latter requirement in particular required that the scope of the <abbr class="htmlBold">html<sub>5</sub></abbr> specification include what had previously been specified in three separate documents: <abbr class="htmlBold"></abbr>4, XHTML1, and DOM2 <abbr class="htmlBold"></abbr>. It also meant including significantly more detail than had previously been considered the norm.
+
+In 2006, the W3C indicated an interest to participate in the development of <abbr class="htmlBold">html<sub>5</sub></abbr> after all, and in 2007 formed a working group chartered to work with the WHATWG on the development of the <abbr class="htmlBold">html<sub>5</sub></abbr> specification. Apple, Mozilla, and Opera allowed the W3C to publish the specification under the W3C copyright, while keeping a version with the less restrictive license on the WHATWG site.
+
+For a number of years, both groups then worked together. In 2011, however, the groups came to the conclusion that they had different goals: the W3C wanted to publish a "finished" version of "<abbr class="htmlBold">html<sub>5</sub></abbr>", while the WHATWG wanted to continue working on a Living Standard for <abbr class="htmlBold"></abbr>, continuously maintaining the specification rather than freezing it in a state with known problems, and adding new features as needed to evolve the platform.
+
+Since then, the WHATWG has been working on this specification (amongst others), and the W3C has been copying fixes made by the WHATWG into their fork of the document, as well as making other changes, some intentional and some not, with no documentation listing or explaining the differences.
+        <section id="versionHistory" class="sectionContainer">
+            <a class="textLink" href="http://www.w3.org/MarkUp/html-spec/html-spec_toc.html" rel="external" target="_blank"><abbr class="html20"></abbr></a>
+            <a class="textLink" href="http://www.w3.org/TR/REC-html32" rel="external" target="_blank"><abbr class="html32"></abbr></a>
+            <a class="textLink" href="http://www.w3.org/TR/1998/REC-html40-19980424/" rel="external" target="_blank"><abbr class="html40"></abbr></a>
+            <a class="textLink" href="http://www.w3.org/TR/html4/cover.html#minitoc" rel="external" target="_blank"><abbr class="html401"></abbr></a>
+        </section>
+        <div id="elementIndex" class="index">
+            <h2><abbr class="htmlBold"></abbr> Elements Index</h2>
+            <p>A continuously updated list of all <abbr class="htmlBold"></abbr> elements<b>&#58;</b>&ensp;</p>
+            <div>
+                <nav>
+                    <ul class="navAlpha">
+                        <li><a class="alphaList" href="#toc-a">A</a></li>
+                        <li><a class="alphaList" href="#toc-b">B</a></li>
+                        <li><a class="alphaList" href="#toc-c">C</a></li>
+                        <li><a class="alphaList" href="#toc-d">D</a></li>
+                        <li><a class="alphaList" href="#toc-e">E</a></li>
+                        <li><a class="alphaList" href="#toc-f">F</a></li>
+                        <li><a class="alphaList" onClick="document.getElementById('alphaAlert').style.display='block'">G</a></li>
+                        <li><a class="alphaList" href="#toc-h">H</a></li>
+                        <li><a class="alphaList" href="#toc-i">I</a></li>
+                        <li><a class="alphaList" onClick="document.getElementById('alphaAlert').style.display='block'">J</a></li>
+                        <li><a class="alphaList" href="#toc-k">K</a></li>
+                        <li><a class="alphaList" href="#toc-l">L</a></li>
+                        <li><a class="alphaList" href="#toc-m">M</a></li>
+                        <li><a class="alphaList" href="#toc-n">N</a></li>
+                        <li><a class="alphaList" href="#toc-o">O</a></li>
+                        <li><a class="alphaList" href="#toc-p">P</a></li>
+                        <li><a class="alphaList" href="#toc-q">Q</a></li>
+                        <li><a class="alphaList" href="#toc-r">R</a></li>
+                        <li><a class="alphaList" href="#toc-s">S</a></li>
+                        <li><a class="alphaList" href="#toc-t">T</a></li>
+                        <li><a class="alphaList" href="#toc-u">U</a></li>
+                        <li><a class="alphaList" href="#toc-v">V</a></li>
+                        <li><a class="alphaList" href="#toc-w">W</a></li>
+                        <li><a class="alphaList" onClick="document.getElementById('alphaAlert').style.display='block'">X</a></li>
+                        <li><a class="alphaList" onClick="document.getElementById('alphaAlert').style.display='block'">Y</a></li>
+                        <li><a class="alphaList" onClick="document.getElementById('alphaAlert').style.display='block'">Z</a></li>
+                    </ul>
+                </nav>
+                <div id="alphaAlert" class="alphaNavAlertBox myAlertFlipIn">
+                    <h4 class="alertBoxHeader"><span>Message from</span> <i class="courierPrimeRegular">The <abbr class="htmlBold"></abbr> Zone<b>&#58;</b></i></h4>
+                    <p class="alertIconInfo"></p>
+                    <p class="alertMessage2">There are no elements for this letter<b>&#33;</b></p>
+                    <a class="alertButtonCenter alertButtons" onClick="document.getElementById('alphaAlert').style.display='none'">Close</a>
+                </div>
+            </div>
+            <div>
+            	<ol>
+                	<li></li>
+                	<li></li>
+                	<li></li>
+                	<li></li>
+                </ol>
+				<table id="elementHistoryTable" class="htmlElementIndexTable colGradient">
+                	<colgroup>
+                    	<col style="width: 18%;">
+                    	<col style="width: 11%;">
+                    	<col style="width: 11%;">
+                    	<col style="width: 11%;">
+                    	<col style="width: 11%;">
+                    	<col style="width: 11%;">
+                    </colgroup>
+					<thead class="trBackground">
+						<tr>
+							<th scope="col" style="position:relative; top:.85rem;" class="tblColBackground">Element</th>
+							<th scope="col"><a class="textLink" href="http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html" rel="external" target="_blank"><abbr class="html10"></abbr></a></th>
+							<th scope="col"><a class="textLink" href="http://www.w3.org/MarkUp/html-spec/html-spec_toc.html" rel="external" target="_blank"><abbr class="html20"></abbr></a></th>
+							<th scope="col"><a class="textLink" href="http://www.w3.org/TR/REC-html32" rel="external" target="_blank"><abbr class="html32"></abbr></a></th>
+							<th scope="col"><a class="textLink" href="http://www.w3.org/TR/html401/" rel="external" target="_blank"><abbr class="html401"></abbr></a></th>
+							<th scope="col"><a class="textLink" href="http://whatwg.org/html" rel="external" target="_blank"><abbr class="html5"></abbr></a></th>
+						</tr>
+						<tr>
+							<td><!-- nothing -->&emsp;</td>
+							<td class="tblColBackground">1992</td>
+							<td class="tblColBackground">1995</td>
+							<td class="tblColBackground">1997</td>
+							<td class="tblColBackground">1999</td>
+							<td class="tblColBackground"><span class="italicsBold">Current</span></td>
+						</tr>
+					</thead>
+					<tbody id="a">
+						<tr id="toc-a">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element" rel="external" target="_blank">a</a></th>
+							<td class="defined one elementAdded"><span class="tipFadeIn"><span class="fadeDown">Element was First Defined</span></span></td>
+							<td class="checkmarkYes  elementAdded"></td>
+							<td class="checkmarkYes  elementAdded"></td>
+							<td class="checkmarkYes  elementAdded"></td>
+							<td class="checkmarkYes  elementAdded"></td>
+						</tr>
+						<tr id="abbr">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-abbr-element" rel="external" target="_blank">abbr</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes  elementAdded"></td>
+						</tr>
+						<tr id="acronym">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/struct/text.html#edef-ACRONYM" rel="external" target="_blank">acronym</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="address">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-address-element" rel="external" target="_blank">address</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes  elementAdded"></td>
+							<td class="checkmarkYes  elementAdded"></td>
+							<td class="checkmarkYes  elementAdded"></td>
+							<td class="checkmarkYes  elementAdded"></td>
+						</tr>
+						<tr id="applet">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/struct/objects.html#edef-APPLET" rel="external" target="_blank">applet</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="area">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#the-area-element" rel="external" target="_blank">area</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="article">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-article-element" rel="external" target="_blank">article</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="aside">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-aside-element" rel="external" target="_blank">aside</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="audio">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-audio-element" rel="external" target="_blank">audio</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr><a id="b"></a>
+						<tr id="toc-b">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-b-element" rel="external" target="_blank">b</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="base">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-base-element" rel="external" target="_blank">base</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="basefont">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/present/graphics.html#edef-BASEFONT" rel="external" target="_blank">basefont</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="bdi">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-bdi-element" rel="external" target="_blank">bdi</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="bdo">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-bdo-element" rel="external" target="_blank">bdo</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="big">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/present/graphics.html#edef-BIG" rel="external" target="_blank">big</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="blockquote">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-blockquote-element" rel="external" target="_blank">blockquote</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="body">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-body-element" rel="external" target="_blank">body</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="br">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-br-element" rel="external" target="_blank">br</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="button">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-button-element" rel="external" target="_blank">button</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr><a id="canvas"></a>
+						<tr id="toc-c">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#the-canvas-element" rel="external" target="_blank">canvas</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="caption">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-caption-element" rel="external" target="_blank">caption</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="center">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/present/graphics.html#edef-CENTER" rel="external" target="_blank">center</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="cite">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-cite-element" rel="external" target="_blank">cite</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="code">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-code-element" rel="external" target="_blank">code</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="col">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-col-element" rel="external" target="_blank">col</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="colgroup">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-colgroup-element" rel="external" target="_blank">colgroup</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr><a id="data"></a>
+						<tr id="toc-d">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-data-element" rel="external" target="_blank">data</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="datalist">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element" rel="external" target="_blank">datalist</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="dd">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-dd-element" rel="external" target="_blank">dd</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="del">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-del-element" rel="external" target="_blank">del</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="details">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-details-element" rel="external" target="_blank">details</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="dfn">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-dfn-element" rel="external" target="_blank">dfn</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="dialog">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element" rel="external" target="_blank">dialog</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="dir">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/struct/lists.html#edef-DIR" rel="external" target="_blank">dir</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="div">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-div-element" rel="external" target="_blank">div</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="dl">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-dl-element" rel="external" target="_blank">dl</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="dt">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-dt-element" rel="external" target="_blank">dt</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr><a id="em"></a>
+						<tr id="toc-e">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-em-element" rel="external" target="_blank">em</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="embed">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-embed-element" rel="external" target="_blank">embed</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr><a id="fieldset"></a>
+						<tr id="toc-f">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-fieldset-element" rel="external" target="_blank">fieldset</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="figcaption">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-figcaption-element" rel="external" target="_blank">figcaption</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="figure">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-figure-element" rel="external" target="_blank">figure</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="font">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/present/graphics.html#edef-FONT" rel="external" target="_blank">font</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="footer">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element" rel="external" target="_blank">footer</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="form">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element" rel="external" target="_blank">form</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="frame">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/present/frames.html#edef-FRAME" rel="external" target="_blank">frame</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="frameset">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/present/frames.html#edef-FRAMESET" rel="external" target="_blank">frameset</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr><a id="h1"></a>
+						<tr id="toc-h">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h1-element" rel="external" target="_blank">h1</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="h2">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h2-element" rel="external" target="_blank">h2</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="h3">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h3-element" rel="external" target="_blank">h3</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="h4">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h4-element" rel="external" target="_blank">h4</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="h5">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h5-element" rel="external" target="_blank">h5</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="h6">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h6-element" rel="external" target="_blank">h6</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="head">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-head-element" rel="external" target="_blank">head</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="header">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-header-element" rel="external" target="_blank">header</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="hgroup">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-hgroup-element" rel="external" target="_blank">hgroup</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="hr">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element" rel="external" target="_blank">hr</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="html">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-html-element" rel="external" target="_blank">html</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr><a id="i"></a>
+						<tr id="toc-i">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-i-element" rel="external" target="_blank">i</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="iframe">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element" rel="external" target="_blank">iframe</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="img">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element" rel="external" target="_blank">img</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="input">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element" rel="external" target="_blank">input</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="ins">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-ins-element" rel="external" target="_blank">ins</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="isindex">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/interact/forms.html#edef-ISINDEX" rel="external" target="_blank">isindex</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr><a id="kbd"></a>
+						<tr id="toc-k">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-kbd-element" rel="external" target="_blank">kbd</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="label">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-label-element" rel="external" target="_blank">label</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="legend">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-legend-element" rel="external" target="_blank">legend</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="li">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-li-element" rel="external" target="_blank">li</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="link">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element" rel="external" target="_blank">link</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="listing">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/REC-html32#listing" rel="external" target="_blank">listing</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr><a id="toc-m"></a>
+						<tr id="main">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-main-element" rel="external" target="_blank">main</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="map">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#the-map-element" rel="external" target="_blank">map</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="mark">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-mark-element" rel="external" target="_blank">mark</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="menu">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-menu-element" rel="external" target="_blank">menu</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="deprecatedElement elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"></td>
+						</tr>
+						<tr id="menuitem">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-menuitem-element" rel="external" target="_blank">menuitem</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="meta">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-meta-element" rel="external" target="_blank">meta</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="meter">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-meter-element" rel="external" target="_blank">meter</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr><a id="toc-n"></a>
+						<tr id="nav">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-nav-element" rel="external" target="_blank">nav</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="nextid">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/MarkUp/html-spec/html-spec_5.html#SEC5.2.6" rel="external" target="_blank">nextid</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="noframes">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/present/frames.html#edef-NOFRAMES" rel="external" target="_blank">noframes</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="noscript">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-noscript-element" rel="external" target="_blank">noscript</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr><a id="object"></a>
+						<tr id="toc-o">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element" rel="external" target="_blank">object</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="ol">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-ol-element" rel="external" target="_blank">ol</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="optgroup">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-optgroup-element" rel="external" target="_blank">optgroup</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="option">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-option-element" rel="external" target="_blank">option</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="output">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-output-element" rel="external" target="_blank">output</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr><a id="p"></a>
+						<tr id="toc-p">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-p-element" rel="external" target="_blank">p</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="param">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-param-element" rel="external" target="_blank">param</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="plaintext">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/REC-html32#plaintext" rel="external" target="_blank">plaintext</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="pre">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-pre-element" rel="external" target="_blank">pre</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="progress">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-progress-element" rel="external" target="_blank">progress</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr><a id="q"></a>
+						<tr id="toc-q">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-q-element" rel="external" target="_blank">q</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr><a id="rp"></a>
+						<tr id="toc-r">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-rp-element" rel="external" target="_blank">rp</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="rt">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-rt-element" rel="external" target="_blank">rt</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="rtc">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/ruby/#rtc" rel="external" target="_blank">rtc</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="ruby">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-ruby-element" rel="external" target="_blank">ruby</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr><a id="s"></a>
+						<tr id="toc-s">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/present/graphics.html#edef-S" rel="external" target="_blank">s</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td id="sDefinedCell" class="elementDefined four elementAdded tableTip"><span class="fadeDown">Deprecated in <abbr class="htmlBold">html&thinsp;4&#46;01</abbr><br>Redefined in <abbr class="htmlBold">html<sub>5</sub></abbr></span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="samp">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-samp-element" rel="external" target="_blank">samp</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="script">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-element" rel="external" target="_blank">script</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="section">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-section-element" rel="external" target="_blank">section</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="select">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-select-element" rel="external" target="_blank">select</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="small">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-small-element" rel="external" target="_blank">small</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="source">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-source-element" rel="external" target="_blank">source</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="span">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-span-element" rel="external" target="_blank">span</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="strike">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/present/graphics.html#edef-STRIKE" rel="external" target="_blank">strike</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+						<tr id="strong">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-strong-element" rel="external" target="_blank">strong</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="style">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-style-element" rel="external" target="_blank">style</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="sub">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-sub-element" rel="external" target="_blank">sub</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="summary">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-summary-element" rel="external" target="_blank">summary</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="sup">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-sup-element" rel="external" target="_blank">sup</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr><a id="table"></a>
+						<tr id="toc-t">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element" rel="external" target="_blank">table</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="tbody">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tbody-element" rel="external" target="_blank">tbody</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="td">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element" rel="external" target="_blank">td</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="template">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-template-element" rel="external" target="_blank">template</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="textarea">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-textarea-element" rel="external" target="_blank">textarea</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="tfoot">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tfoot-element" rel="external" target="_blank">tfoot</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="th">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element" rel="external" target="_blank">th</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="thead">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-thead-element" rel="external" target="_blank">thead</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined fourPt1 elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="time">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element" rel="external" target="_blank">time</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="title">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-title-element" rel="external" target="_blank">title</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="tr">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tr-element" rel="external" target="_blank">tr</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="track">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-track-element" rel="external" target="_blank">track</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr>
+						<tr id="tt">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/html401/present/graphics.html#edef-TT" rel="external" target="_blank">tt</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr><a id="u"></a>
+						<tr id="toc-u">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-u-element" rel="external" target="_blank">u</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined three elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td id="uDefinedCell" class="elementDefined deprecated elementAdded tipFadeIn"><span class="fadeDown">Deprecated in <abbr class="htmlBold">html&thinsp;4&#46;01</abbr><br>Redefined in <abbr class="htmlBold">html<sub>5</sub></abbr></span></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="ul">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-ul-element" rel="external" target="_blank">ul</a></th>
+							<td class="defined one elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr><a id="var"></a>
+						<tr id="toc-v">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-var-element" rel="external" target="_blank">var</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="checkmarkYes elementAdded"></td>
+						</tr>
+						<tr id="video">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-video-element" rel="external" target="_blank">video</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr><a id="wbr"></a>
+						<tr id="toc-w">
+							<th scope="row"><a class="tableCodeLink" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-wbr-element" rel="external" target="_blank">wbr</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined five elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+						</tr><a id="xmp"></a>
+						<tr id="toc-x">
+							<th scope="row"><a class="tableCodeLink" href="http://www.w3.org/TR/REC-html32#xmp" rel="external" target="_blank">xmp</a></th>
+							<td class="checkmarkNo elementNot"></td>
+							<td class="defined two elementAdded tipFadeIn"><span class="fadeDown">Element was First Defined</span></td>
+							<td class="checkmarkYes elementAdded"></td>
+							<td class="obsoleteElement elementNot"></td>
+							<td class="obsoleteElement elementNot"></td>
+						</tr>
+                     
+                     <tfoot>
+						<tr>
+							<th scope="col">Element</th>
+							<th scope="col"><a class="textLink" href="http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html" rel="external" target="_blank"><abbr class="htmlBold">html<span>1</span></abbr></a></th>
+							<th scope="col"><a class="textLink" href="http://www.w3.org/MarkUp/html-spec/html-spec_toc.html" rel="external" target="_blank"><abbr class="htmlBold">html<span>2.0</span></abbr></a></th>
+							<th scope="col"><a class="textLink" href="http://www.w3.org/TR/REC-html32" rel="external" target="_blank"><abbr class="htmlBold">html<span>3.2</span></abbr></a></th>
+							<th scope="col"><a class="textLink" href="http://www.w3.org/TR/html401/" rel="external" target="_blank"><abbr class="htmlBold">html<span>4.01</span></abbr></a></th>
+							<th scope="col"><a class="textLink" href="http://whatwg.org/html" rel="external" target="_blank"><abbr class="htmlBold">html<sub>5</sub></abbr></a></th>
+						</tr>
+						<tr id="">
+							<th scope="row">Element Totals<span class="inlineBold">→</span></th>
+							<td>18</td>
+							<td>31</td>
+							<td>24</td>
+							<td>24</td>
+							<td>35</td>
+						</tr>
+						<tr id="">
+							<th scope="row">Total Number of <abbr class="htmlBold"></abbr> Elements<span class="inlineBold">→</span></th>
+							<td colspan="5">132</td>
+						</tr>
+                    </tfoot>
+				</table>
+                </div>
+        	</div>
+        </section><!-- end of content -->
+		<footer class="pgFooter">
+            <hr class="codingZone">
+            This Web Site has been created using the latest in <img src="../images/HTML5Logo.png" style="width: 25px; heigth: 20px; vertical-align: middle;" alt="Valid HTML5!"> Technology<hr class="hr-noLine-spacer1">
+            Copyright <b>&copy;</b> 2014&thinsp;<b>&ndash;</b>&thinsp;<span id="copyright">...</span><hr class="hr-noLine-spacer1"><span class="bearzLogoFooter">Bear<span class="footerSmall">Z</span> &thinsp;Web &thinsp;&amp; &thinsp;Gra<small class="footerSmall">F&thinsp;X</small> &thinsp;De<small class="footerSmall">Z</small>ign</span>&ensp;<hr class="hr-noLine-spacer1">All rights reserved<b>&#46;</b><hr class="hr-noLine-spacer1">
+            <span class="italics">Resource<span class="letterBraces">s</span> <b>&#58;</b></span>&ensp;<a class="footerLink" href="https://whatwg.org" target="_blank" rel="external"><abbr class="whatwgFooter">whatwg&thinsp;</abbr><span class="tipZoomIn"><mark>W</mark>eb <mark>H</mark>ypertext <mark>A</mark>pplication <mark>T</mark>echnology<br><mark>W</mark>orking <mark>G</mark>roup<br>whatwg.org</span></a>  and  <a class="footerLink" href="http://www.w3.org" target="_blank" rel="external"><img class="w3cLogo" src="../images/w3cLogo.png" style="width: 44px; heigth:20px;" alt="W3C Logo"><span class="tipZoomIn"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium<br>www.w3.org</span></a> <span class="regMark">&reg;</span><hr class="hr-noLine-spacer1">
+            This work is licensed under<hr class="hr-noLine-spacer1"><a class="textLinkBottom ccTarget" rel="license external" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><samp class="tipZoomIn">https://creativecommons.org/licenses/by/4.0/</samp>Creative Commons Attribution 4.0 International License</a>
+            <hr class="hr-noLine-spacer1">
+            <script type="text/javascript">
+            function copyDate() {
+              var cpyrt = document.getElementById("copyright")
+              if (cpyrt) {
+                 cpyrt.firstChild.nodeValue = (new Date()).getFullYear();
+              }
+            }
+            window.onload = copyDate;
+            </script><hr class="hr-noLine-spacer1">
+			<script> 
+				months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; 
+				var d=new Date();
+				var weekday=new Array(7); weekday[0]="Sunday"; weekday[1]="Monday"; weekday[2]="Tuesday"; weekday[3]="Wednesday"; weekday[4]="Thursday"; weekday[5]="Friday"; weekday[6]="Saturday";
+				var d = new Date();
+				(d.getFullYear());
+				var theDate = new Date(document.lastModified); 
+				theDate.setTime((theDate.getTime()+(60*60)) ) 
+				with (theDate) { 
+				document.write("<span class='italicsBold'>Last Modified<b>&#58;</b></span> <time class='modifiedDate'>"+weekday[getDay()]+'<b>&#44;&thinsp;</b>'+months[getMonth()]+'&thinsp;'+getDate()+'<b>&#44;&thinsp;</b>'+d.getFullYear()+'<span>&emsp;&#64;&ensp;</span>'+getHours()+':'+getMinutes()+"</time>&thinsp;&ensp;<span class='italicsBold'>EST</span>") 
+				} 
+			</script><hr class="hr-noLine-spacer2"><hr class="footerBottom">
+        </footer>
+    </section><!-- end of wrapper -->
+</body>
+</html>
