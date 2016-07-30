@@ -1,0 +1,1121 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<!--
+	Website: Bearz Design Concepts, The HTML Zone
+    URL: www.bearzdesignconcepts.net/quickHTMLReference.html
+    File Name: quickHTMLReference.html
+    Author: Barry Smith
+	Content taken from the WHATWG Specification and W3C Specification
+-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="Barry Smith, Bearz Design Concepts, Bears Design Concepts, 
+    	Bearz Design, Bears Design, Bears Web and Graphics, Bearz Web and Graphics, The Coding Zone, HTML Elements, 
+        HTML5 Elements, HTML Tags, HTML Tag Use, Typography, HTML Syntax, CSS Default Display Settings, 
+        Coding, Validation, HTML, HTHL5, CSS3, Coding Zone">
+	<meta name="description" content="An HTML5/CSS3 Instructional web site with the student in mind">
+	<title>
+    	The HTML Zone / Quick HTML Reference
+    </title>
+			<!-- supporting CSS and JavaScript and favicon files -->
+	<link href="../css3/MainLayout.css" rel="stylesheet" type="text/css">
+	<link href="../css3/banner_Logo.css" rel="stylesheet" type="text/css">
+	<link href="../css3/nav.css" rel="stylesheet" type="text/css">
+	<link href="../css3/textStyles.css" rel="stylesheet" type="text/css">
+	<link href="../css3/myAlerts.css" rel="stylesheet" type="text/css">
+	<link href="../css3/cssToolTip.css" rel="stylesheet" type="text/css">
+	<link href="../css3/responsiveCSS.css" rel="stylesheet" type="text/css">
+	<link href="../css3/specialEffects.css" rel="stylesheet" type="text/css">
+	<link href="../css3/targetSelectors.css" rel="stylesheet" type="text/css">
+	<link href="../css3/myAnimations.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/embeddedFonts.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/inconsolata/inconsolata.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/alluraWebReady/allura.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/fontSavatage/savatage.css" rel="stylesheet" type="text/css">
+    <link href="../icon/apple-icon-57X57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="../icon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="../icon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../icon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="../icon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../icon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="../icon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="../icon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="../icon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="../icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="../icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="../icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="../icon/manifest.json" rel="manifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="../scripts/siteFunctions.js" type="text/javascript"></script>
+    <script src="../scripts/jquery_v2.0.0.js" type="text/javascript"></script>
+    <script>document.createElement("tooltip")</script><!-- satisfies IE for a my custom element-->
+    <!-- used for my floating back button in lower right corner -->
+	<script>
+		$(document).ready(function () {  $('.backToTopScroll').hide();//Check to see if the window is top if not then display button
+		$(window).scroll(function () {  if ($(this).scrollTop() > 650) {    $('.backToTopScroll').fadeIn();  } else {    $('.backToTopScroll').fadeOut();  }}); //Click event to scroll to top
+		$('.backToTopScroll').click(function () {  $('html, body').animate({ scrollTop: 0 }, 900);  return false;  });});
+    </script>
+</head>
+<body id="tagsAndAttributes-page">
+    <section id="siteNavSpecsPage" class="wrapperPopupNav displayNone myAppearIn">
+        <h1 class="czSiteMap2 pointerFadeIn courierPrimeBoldItalic">The Coding Zone<br>General Topics</h1>
+        <nav id="siteMap" class="siteWideContainer">
+        <h2 class="siteWideNavHeader"><span>Site<b class="enemDash">&#45;</b>Wide Navigation</span></h2>
+            <table class="innerFadeIn siteWideNav">
+                <caption class="czSiteMapColumnsCaption"></caption>
+                <tbody>
+                    <tr>
+                        <td><a class="reduceBotMarg-6em" href="index.html">HTML/HTML<sub style="position:relative; top:4px; font-size:95%">5</sub></a></td>
+                        <td><a class="reduceBotMarg-4em" href="../TheCSSZone/index.html">CSS/CSS<sub style="position:relative; top:4px; font-size:95%">3</sub></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="elementSpecs.html">Element Specifications</a></td>
+                        <td><a href="../TheCSSZone/cssDefault.html">CSS Default Settings</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="descriptions.html">Element Descriptions</a></td>
+                        <td><a href="../TheCSSZone/typography.html">Typography</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../index.html">HTML Content<small style="font-size:65%;"><b class="overSizedBrace">&#40;</b>Categories<b class="overSizedBrace">&#41;</b></small></a></td>
+                        <td><a href="../TheCSSZone/presentationalHints.html">Presentational Hints</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="extras.html">Element Extras</a></td>
+                        <td><a href="../animations.html">CSS Animations</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="codingExamples.html">Code Examples</a></td>
+                        <td><a href="../TheCSSZone/moreTypography.html#embeddedFonts">Embedding Fonts</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="tagsAndAttributes.html">Tags &amp; Attributes</a></td>
+                        <td><a href="../TheCSSZone/index.html#mediaQueries">Media Queries</a></td>
+                    </tr>
+                        <td><a href="browserSupport.html">Browser Support</a></td>
+                        <td><a href="#" hidden>PLACEHOLDER</a></td>
+                    </tr>
+                
+            </table>
+            <table class="topicsTableNav" style="margin:.5rem auto 1rem;">
+                <caption class="czSiteMapHeader2">general topics</caption>
+                <tbody>
+                    <tr>
+                        <td><a class="siteWideNavLink" href="../terminology.html">Terminology</a>&emsp;</td>
+                        <td>&emsp;<a class="siteWideNavLink" href="../validation.html">Validation</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="siteWideNavLink" href="history.html"><abbr class="htmlBold"></abbr> History</a>&emsp;</td>
+                        <td>&emsp;<a class="siteWideNavLink" href="genRationale.html" >General Rationale</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <p class="backToTopContainer siteMapCloseButton"><a class="backLink" href="javascript:history.go(-1)" onClick="siteNavSpecialClose()">Close Site Map</a></p>
+    </section><a class="topLeftBackButton" href="javascript:history.back()"></a><a class="backToTopScroll" onClick="scrollToTopClose()">Page Top</a>
+        <h1 class="siteName siteNameFadeIn displayNone">The<br>Coding Zone</h1>
+        <div class="landscapeView colGradient"><!-- backNameFadeIn  -->
+            <p class="phoneHeader">
+                <span class="phoneHeader-B">b</span><span class="phoneHeaderB-ear">&ensp;ear&thinsp;</span><span class="phoneHeaderBear-Z">z</span>
+                <span class="phoneHeader-C">c</span><span class="phoneHeaderCodingBorder"><span class="phoneHeaderC-oding">oding</span></span>
+                <span class="phoneHeader-Z">z</span><span class="phoneHeaderZoneBorder"><span class="phoneHeaderZ-one">one</span></span>
+            </p><hr class="hr-noLine-spacer1">
+            <p class="articleRepeatingRadial"><span class="landscapeViewFirstLetter">m</span>y Apologizes&#44;<br><span class="landscapeViewFirstLetter">p</span>lease view this site in landscape view&#46;<br><span class="landscapeViewFirstLetter">t</span>his site is not optimized for less than <span class="landscapeViewNumber">575</span> pixel width&#46;&ensp;<br><span class="landscapeViewFirstLetter">f</span>or devices with a maximum width <span class="parentheses mySmall andadaBoldItalic">landscape view</span>&#44; of less than 575 pixels&#44; slight horizontal scrolling is necessary&#46;&ensp;</p><!--    -->
+            <p class="phoneHeader">
+                <span class="phoneHeader-B">b</span><span class="phoneHeaderB-ear">&ensp;ear&thinsp;</span><span class="phoneHeaderBear-Z">z</span>
+                <span class="phoneHeader-C">c</span><span class="phoneHeaderCodingBorder"><span class="phoneHeaderC-oding">oding</span></span>
+                <span class="phoneHeader-Z">z</span><span class="phoneHeaderZoneBorder"><span class="phoneHeaderZ-one">one</span></span>
+            </p>
+        </div>
+    <section id="wrapper" class="gradient pageFadeIn">
+		<header id="Banner/Logo" class="myHeader"><!--  -->
+        	<h1 class="backName backNameFadeIn displayNone">The<br>Coding Zone</h1>
+            <div class="siteName siteNameFadeIn"><!--  -->
+            	<p class="htmlHeader-The"><span class="htmlHeader-T">t</span><span class="borderT-he"><span class="htmlHeaderT-he">he</span></span></p>
+                <p class="htmlHeader-HTML"><span class="htmlHeader-H">h</span><span class="borderH-tml"><span class="htmlHeaderH-tml">tml</span></span></p> 
+                <p class="htmlHeader-Zone"><span class="htmlHeader-Z">z</span><span class="borderZ-one"><span class="htmlHeaderZ-oneSava">one</span></span></p><!--  -->
+            </div>
+        </header><!-- end of header -->
+		<nav id="topNavBar" class="topNav navBarGradient">
+			<a class="navBlur" href="../siteMap.html">Topics</a>
+            <a class="navBlur" href="../contact.php">Contact</a>
+            <a class="navBlur" href="../index.php">Bearz Home</a>
+            <a class="navBlur" href="http://www.codingzone.org" target="_blank" rel="external">codingzone<b>&#46;</b>org</a>
+			<hr class="fadingStyle">
+        </nav>
+		<nav id="breadCrumbLinks" class="speedInLeft">
+			<script type="text/javascript">breadcrumbs()</script>
+		</nav>
+<section class="sectionWrapper">
+<nav style="display: block;
+color: rgb(34, 34, 34);
+font-family: 'Droid Serif', Georgia, serif;
+font-size: 14px;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+letter-spacing: normal;
+line-height: 20.29947853088379px;
+orphans: auto;
+text-align: start;
+text-indent: 0px;
+text-transform: none;
+white-space: normal;
+widows: auto;
+word-spacing: 0px;
+-webkit-text-stroke-width: 0px;">
+<button id="toc-toggle" class="active" 
+style="border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+box-shadow: rgb(255, 255, 255) 0px -1px 0px;
+-webkit-box-shadow: rgb(255, 255, 255) 0px -1px 0px; background-color: rgb(238, 238, 238);
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(254, 254, 254)), to(rgb(238, 238, 238)));
+font-family: 'Droid Serif';
+font-style: italic;
+text-align: center;
+margin: 0.5em auto;
+font-size: 0.9em;
+padding: 0.3em 1.8em 0.3em 0.8em;
+color: rgb(102, 102, 102);
+cursor: pointer;
+text-shadow: rgb(255, 255, 255) 0em 0.1em 0em;
+border: 0.1em outset buttonface;
+background-position: initial initial;
+background-repeat: initial initial;">In this section…</button>
+<ol class="toc" style="font-weight: normal;
+margin: 0px 0px 1em;
+padding: 0px;
+color: inherit;
+display: block;">
+<li style="list-style: none;"><a href="https://developers.whatwg.org/section-index.html#index" class="no-num" style="font-weight: normal;
+margin: 0px;
+padding: 0px;
+color: rgb(3, 59, 104);
+text-decoration: none;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgb(238, 238, 238);">Index</a>
+<ol style="font-weight: normal;
+margin: 0px 0px 1em;
+padding: 0px;
+color: inherit;">
+<li style="margin-left: 1.2em;
+list-style: none;"><a href="https://developers.whatwg.org/section-index.html#elements-1" class="no-num" style="font-weight: normal;
+margin: 0px;
+padding: 0px;
+color: rgb(3, 59, 104);
+text-decoration: none;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgb(238, 238, 238);">Elements</a></li>
+<li style="margin-left: 1.2em;
+list-style: none;"><a href="https://developers.whatwg.org/section-index.html#element-content-categories" class="no-num" style="font-weight: normal;
+margin: 0px;
+padding: 0px;
+color: rgb(0, 0, 0);
+text-decoration: none;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgb(0, 0, 0);">Element content categories</a></li>
+<li style="margin-left: 1.2em;
+list-style: none;"><a href="https://developers.whatwg.org/section-index.html#attributes-1" class="no-num" style="font-weight: normal;
+margin: 0px;
+padding: 0px;
+color: rgb(3, 59, 104);
+text-decoration: none;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgb(238, 238, 238);">Attributes</a></li>
+<li style="margin-left: 1.2em;
+list-style: none;"><a href="https://developers.whatwg.org/section-index.html#element-interfaces" class="no-num" style="font-weight: normal;
+margin: 0px;
+padding: 0px;
+color: rgb(3, 59, 104);
+text-decoration: none;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgb(238, 238, 238);">Element Interfaces</a></li>
+<li style="margin-left: 1.2em;
+list-style: none;"><a href="https://developers.whatwg.org/section-index.html#all-interfaces" class="no-num" style="font-weight: normal;
+margin: 0px;
+padding: 0px;
+color: rgb(3, 59, 104);
+text-decoration: none;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgb(238, 238, 238);">All Interfaces</a></li>
+<li style="margin-left: 1.2em;
+		list-style: none;">
+<a href="https://developers.whatwg.org/section-index.html#events-0" class="no-num" style="font-weight: normal;
+        margin: 0px;
+        padding: 0px;
+        color: rgb(3, 59, 104);
+        text-decoration: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(238, 238, 238);">
+Events</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+<h2 class="no-num" id="index" style="font-weight: normal;
+        margin: 2em 0px;
+        padding: 0px;
+        color: rgb(34, 34, 34);
+        font-size: 22.399999618530273px;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        line-height: 1.5em;
+        font-family: 'M+2pheavy', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-variant: normal;
+        orphans: auto;
+        text-align: start;
+        text-indent: 0px;
+        white-space: normal;
+        widows: auto;
+        word-spacing: 0px;
+        -webkit-text-stroke-width: 0px;">
+INDEX</h2>
+
+<h2>Elements</h2>
+
+List of elements
+Element	 Description	 Categories	 Parents†	 Children	 Attributes	 Interface
+a	Hyperlink	flow; phrasing*; interactive	phrasing	transparent*	globals; href; target; download; ping; rel; hreflang; type	HTMLAnchorElement
+abbr	Abbreviation	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+address	Contact information for a page or article element	flow	flow	flow*	globals	HTMLElement
+area	Hyperlink or dead area on an image map	flow; phrasing	phrasing*	empty	globals; alt; coords; shape; href; target; download; ping; rel; hreflang; type	HTMLAreaElement
+article	Self-contained syndicatable or reusable composition	flow; sectioning	flow	flow	globals	HTMLElement
+aside	Sidebar for tangentially related content	flow; sectioning	flow	flow	globals	HTMLElement
+audio	Audio player	flow; phrasing; embedded; interactive	phrasing	source*; transparent*	globals; src; crossorigin; preload; autoplay; mediagroup; loop; muted; controls	HTMLAudioElement
+b	Keywords	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+base	Base URL and default target browsing context for hyperlinks and forms	metadata	head; template	empty	globals; href; target	HTMLBaseElement
+bdi	Text directionality isolation	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+bdo	Text directionality formatting	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+blockquote	A section quoted from another source	flow; sectioning root	flow	flow	globals; cite	HTMLQuoteElement
+body	Document body	sectioning root	html	flow	globals; onafterprint; onbeforeprint; onbeforeunload; onhashchange; onlanguagechange; onmessage; onoffline; ononline; onpagehide; onpageshow; onpopstate; onstorage; onunload	HTMLBodyElement
+br	Line break, e.g. in poem or postal address	flow; phrasing	phrasing	empty	globals	HTMLBRElement
+button	Button control	flow; phrasing; interactive; listed; labelable; submittable; reassociateable; form-associated	phrasing	phrasing*	globals; autofocus; disabled; form; formaction; formenctype; formmethod; formnovalidate; formtarget; menu; name; type; value	HTMLButtonElement
+canvas	Scriptable bitmap canvas	flow; phrasing; embedded	phrasing	transparent	globals; width; height	HTMLCanvasElement
+caption	Table caption	none	table; template	flow*	globals	HTMLTableCaptionElement
+cite	Title of a work	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+code	Computer code	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+col	Table column	none	colgroup; template	empty	globals; span	HTMLTableColElement
+colgroup	Group of columns in a table	none	table; template	col*; template*	globals; span	HTMLTableColElement
+data	Machine-readable equivalent	flow; phrasing	phrasing	phrasing	globals; value	HTMLDataElement
+datalist	Container for options for combo box control	flow; phrasing	phrasing	phrasing; option	globals	HTMLDataListElement
+dd	Content for corresponding dt element(s)	none	dl; template	flow	globals	HTMLElement
+del	A removal from the document	flow; phrasing*	phrasing	transparent	globals; cite; datetime	HTMLModElement
+details	Disclosure control for hiding details	flow; sectioning root; interactive	flow	summary*; flow	globals; open	HTMLDetailsElement
+dfn	Defining instance	flow; phrasing	phrasing	phrasing*	globals	HTMLElement
+dialog	Dialog box or window	flow; sectioning root	flow	flow	globals; open	HTMLDialogElement
+div	Generic flow container	flow	flow	flow	globals	HTMLDivElement
+dl	Association list consisting of zero or more name-value groups	flow	flow	dt*; dd*; script-supporting elements	globals	HTMLDListElement
+dt	Legend for corresponding dd element(s)	none	dl; template	flow*	globals	HTMLElement
+em	Stress emphasis	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+embed	Plugin	flow; phrasing; embedded; interactive	phrasing	empty	globals; src; type; width; height; any*	HTMLEmbedElement
+fieldset	Group of form controls	flow; sectioning root; listed; reassociateable; form-associated	flow	legend*; flow	globals; disabled; form; name	HTMLFieldSetElement
+figcaption	Caption for figure	none	figure; template	flow	globals	HTMLElement
+figure	Figure with optional caption	flow; sectioning root	flow	figcaption*; flow	globals	HTMLElement
+footer	Footer for a page or section	flow	flow	flow*	globals	HTMLElement
+form	User-submittable form	flow	flow	flow*	globals; accept-charset; action; autocomplete; enctype; method; name; novalidate; target	HTMLFormElement
+h1, h2, h3, h4, h5, h6	Section heading	flow; heading	hgroup; flow	phrasing	globals	HTMLHeadingElement
+head	Container for document metadata	none	html	metadata content*	globals	HTMLHeadElement
+header	Introductory or navigational aids for a page or section	flow	flow	flow*	globals	HTMLElement
+hgroup	heading group	flow; heading	flow	One or more h1, h2, h3, h4, h5, h6, and script-supporting elements	globals	HTMLElement
+hr	Thematic break	flow	flow	empty	globals	HTMLHRElement
+html	Root element	none	none*	head*; body*	globals; manifest	HTMLHtmlElement
+i	Alternate voice	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+iframe	Nested browsing context	flow; phrasing; embedded; interactive	phrasing	text*	globals; src; srcdoc; name; sandbox; seamless; allowfullscreen; width; height	HTMLIFrameElement
+img	Image	flow; phrasing; embedded; interactive*; form-associated	phrasing	empty	globals; alt; src; srcset; crossorigin; usemap; ismap; width; height	HTMLImageElement
+input	Form control	flow; phrasing; interactive*; listed; labelable; submittable; resettable; reassociateable; form-associated	phrasing	empty	globals; accept; alt; autocomplete; autofocus; checked; dirname; disabled; form; formaction; formenctype; formmethod; formnovalidate; formtarget; height; inputmode; list; max; maxlength; min; minlength; multiple; name; pattern; placeholder; readonly; required; size; src; step; type; value; width	HTMLInputElement
+ins	An addition to the document	flow; phrasing*	phrasing	transparent	globals; cite; datetime	HTMLModElement
+kbd	User input	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+keygen	Cryptographic key-pair generator form control	flow; phrasing; interactive; listed; labelable; submittable; resettable; reassociateable; form-associated	phrasing	empty	globals; autofocus; challenge; disabled; form; keytype; name	HTMLKeygenElement
+label	Caption for a form control	flow; phrasing; interactive; reassociateable; form-associated	phrasing	phrasing*	globals; form; for	HTMLLabelElement
+legend	Caption for fieldset	none	fieldset; template	phrasing	globals	HTMLLegendElement
+li	List item	none	ol; ul; menu*; template	flow	globals; value*	HTMLLIElement
+link	Link metadata	metadata; flow*; phrasing*	head; template; noscript*; phrasing*	empty	globals; href; crossorigin; rel; media; hreflang; type; sizes	HTMLLinkElement
+main	Container for the dominant contents of another element	flow	flow	flow	globals	HTMLElement
+map	Image map	flow; phrasing*	phrasing	transparent; area*	globals; name	HTMLMapElement
+mark	Highlight	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+menu	Menu of commands	flow	flow; menu*	li*; flow*; menuitem*; hr*; menu*; script-supporting elements*	globals; type; label	HTMLMenuElement
+menuitem	Menu command	none	menu; template	empty	globals; type; label; icon; disabled; checked; radiogroup; default; command	HTMLMenuItemElement
+meta	Text metadata	metadata; flow*; phrasing*	head; template; noscript*; phrasing*	empty	globals; name; http-equiv; content; charset	HTMLMetaElement
+meter	Gauge	flow; phrasing; labelable	phrasing	phrasing*	globals; value; min; max; low; high; optimum	HTMLMeterElement
+nav	Section with navigational links	flow; sectioning	flow	flow	globals	HTMLElement
+noscript	Fallback content for script	metadata; flow; phrasing	head*; template*; phrasing*	varies*	globals	HTMLElement
+object	Image, nested browsing context, or plugin	flow; phrasing; embedded; interactive*; listed; submittable; reassociateable; form-associated	phrasing	param*; transparent	globals; data; type; typemustmatch; name; usemap; form; width; height	HTMLObjectElement
+ol	Ordered list	flow	flow	li; script-supporting elements	globals; reversed; start; type	HTMLOListElement
+optgroup	Group of options in a list box	none	select; template	option; script-supporting elements	globals; disabled; label	HTMLOptGroupElement
+option	Option in a list box or combo box control	none	select; datalist; optgroup; template	text*	globals; disabled; label; selected; value	HTMLOptionElement
+output	Calculated output value	flow; phrasing; listed; labelable; resettable; reassociateable; form-associated	phrasing	phrasing	globals; for; form; name	HTMLOutputElement
+p	Paragraph	flow	flow	phrasing	globals	HTMLParagraphElement
+param	Parameter for object	none	object; template	empty	globals; name; value	HTMLParamElement
+pre	Block of preformatted text	flow	flow	phrasing	globals	HTMLPreElement
+progress	Progress bar	flow; phrasing; labelable	phrasing	phrasing*	globals; value; max	HTMLProgressElement
+q	Quotation	flow; phrasing	phrasing	phrasing	globals; cite	HTMLQuoteElement
+rp	Parenthesis for ruby annotation text	none	ruby; template	phrasing	globals	HTMLElement
+rt	Ruby annotation text	none	ruby; template	phrasing	globals	HTMLElement
+ruby	Ruby annotation(s)	flow; phrasing	phrasing	phrasing; rt; rp*	globals	HTMLElement
+s	Inaccurate text	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+samp	Computer output	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+script	Embedded script	metadata; flow; phrasing; script-supporting	head; phrasing; script-supporting	script, data, or script documentation*	globals; src; type; charset; async; defer; crossorigin	HTMLScriptElement
+section	Generic document or application section	flow; sectioning	flow	flow	globals	HTMLElement
+select	List box control	flow; phrasing; interactive; listed; labelable; submittable; resettable; reassociateable; form-associated	phrasing	option; optgroup; script-supporting elements	globals; autocomplete; autofocus; disabled; form; multiple; name; required; size	HTMLSelectElement
+small	Side comment	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+source	Media source for video or audio	none	video; audio; template	empty	globals; src; type	HTMLSourceElement
+span	Generic phrasing container	flow; phrasing	phrasing	phrasing	globals	HTMLSpanElement
+strong	Importance	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+style	Embedded styling information	metadata; flow*	head; noscript*; flow*	varies*	globals; media; type; scoped	HTMLStyleElement
+sub	Subscript	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+summary	Caption for details	none	details	phrasing	globals	HTMLElement
+sup	Superscript	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+table	Table	flow	flow	caption*; colgroup*; thead*; tbody*; tfoot*; tr*; script-supporting elements	globals; sortable	HTMLTableElement
+tbody	Group of rows in a table	none	table; template	tr; script-supporting elements	globals	HTMLTableSectionElement
+td	Table cell	sectioning root	tr; template	flow	globals; colspan; rowspan; headers	HTMLTableDataCellElement
+template	Template	metadata; flow; phrasing; script-supporting	metadata; phrasing; script-supporting; colgroup*	it's complicated*	globals	HTMLTemplateElement
+textarea	Multiline text field	flow; phrasing; interactive; listed; labelable; submittable; resettable; reassociateable; form-associated	phrasing	text	globals; autofocus; cols; dirname; disabled; form; inputmode; maxlength; minlength; name; placeholder; readonly; required; rows; wrap	HTMLTextAreaElement
+tfoot	Group of footer rows in a table	none	table; template	tr; script-supporting elements	globals	HTMLTableSectionElement
+th	Table header cell	interactive*	tr; template	flow*	globals; colspan; rowspan; headers; scope; sorted; abbr	HTMLTableHeaderCellElement
+thead	Group of heading rows in a table	none	table; template	tr; script-supporting elements	globals	HTMLTableSectionElement
+time	Machine-readable equivalent of date- or time-related data	flow; phrasing	phrasing	phrasing	globals; datetime	HTMLTimeElement
+title	Document title	metadata	head; template	text*	globals	HTMLTitleElement
+tr	Table row	none	table; thead; tbody; tfoot; template	th*; td; script-supporting elements	globals	HTMLTableRowElement
+track	Timed text track	none	audio; video; template	empty	globals; default; kind; label; src; srclang	HTMLTrackElement
+u	Keywords	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+ul	List	flow	flow	li; script-supporting elements	globals	HTMLUListElement
+var	Variable	flow; phrasing	phrasing	phrasing	globals	HTMLElement
+video	Video player	flow; phrasing; embedded; interactive	phrasing	source*; transparent*	globals; src; crossorigin; poster; preload; autoplay; mediagroup; loop; muted; controls; width; height	HTMLVideoElement
+wbr	Line breaking opportunity	flow; phrasing	phrasing	empty	globals	HTMLElement
+An asterisk (*) in a cell indicates that the actual rules are more complicated than indicated in the table above.
+
+† Categories in the "Parents" column refer to parents that list the given categories in their content model, not to elements that themselves are in those categories. For example, the a element's "Parents" column says "phrasing", so any element whose content model contains the "phrasing" category could be a parent of an a element. Since the "flow" category includes all the "phrasing" elements, that means the th element could be a parent to an a element.
+
+</section>
+<section class="sectionWrapper">
+Element content categories
+
+List of element content categories
+Category	 Elements	 Elements with exceptions
+Metadata content	base; link; meta; noscript; script; style; template; title	 —
+Flow content	a; abbr; address; article; aside; audio; b; bdi; bdo; blockquote; br; button; canvas; cite; code; data; datalist; del; details; dfn; dialog; div; dl; em; embed; fieldset; figure; footer; form; h1; h2; h3; h4; h5; h6; header; hgroup; hr; i; iframe; img; input; ins; kbd; keygen; label; main; map; mark; math; menu; meter; nav; noscript; object; ol; output; p; pre; progress; q; ruby; s; samp; script; section; select; small; span; strong; sub; sup; svg; table; template; textarea; time; u; ul; var; video; wbr; Text	area (if it is a descendant of a map element); link (if the itemprop attribute is present); meta (if the itemprop attribute is present); style (if the scoped attribute is present)
+Sectioning content	article; aside; nav; section	 —
+Heading content	h1; h2; h3; h4; h5; h6; hgroup	 —
+Phrasing content	a; abbr; audio; b; bdi; bdo; br; button; canvas; cite; code; data; datalist; del; dfn; em; embed; i; iframe; img; input; ins; kbd; keygen; label; map; mark; math; meter; noscript; object; output; progress; q; ruby; s; samp; script; select; small; span; strong; sub; sup; svg; template; textarea; time; u; var; video; wbr; Text	area (if it is a descendant of a map element); link (if the itemprop attribute is present); meta (if the itemprop attribute is present)
+Embedded content	audio; canvas; embed; iframe; img; math; object; svg; video	 —
+Interactive content*	a; button; details; embed; iframe; keygen; label; select; textarea	audio (if the controls attribute is present); img (if the usemap attribute is present); input (if the type attribute is not in the Hidden state); object (if the usemap attribute is present); th (for sorting interface th elements) video (if the controls attribute is present)
+Sectioning roots	blockquote; body; details; dialog; fieldset; figure; td	 —
+Form-associated elements	button; fieldset; input; keygen; label; object; output; select; textarea; img	 —
+Listed elements	button; fieldset; input; keygen; object; output; select; textarea	 —
+Submittable elements	button; input; keygen; object; select; textarea	 —
+Resettable elements	input; keygen; output; select; textarea	 —
+Labelable elements	button; input; keygen; meter; output; progress; select; textarea	 —
+Reassociateable elements	button; fieldset; input; keygen; label; object; output; select; textarea	 —
+Palpable content	a; abbr; address; article; aside; b; bdi; bdo; blockquote; button; canvas; cite; code; data; details; dfn; div; em; embed; fieldset; figure; footer; form; h1; h2; h3; h4; h5; h6; header; hgroup; i; iframe; img; ins; kbd; keygen; label; main; map; mark; math; meter; nav; object; output; p; pre; progress; q; ruby; s; samp; section; select; small; span; strong; sub; sup; svg; table; textarea; time; u; var; video	audio (if the controls attribute is present); dl (if the element's children include at least one name-value group); input (if the type attribute is not in the Hidden state); menu (if the type attribute is in the toolbar state); ol (if the element's children include at least one li element); ul (if the element's children include at least one li element); Text that is not inter-element whitespace
+Script-supporting elements	script; template	 —
+* The tabindex attribute can also make any element into interactive content.
+</section>
+<section class="sectionWrapper">
+
+                <div id="prohibitedChildElements" class="paragraphList">
+<a href="https://w3c.github.io/editing/execCommand.html#common-definitions">resourse</a>
+                    <p class="definitionHeaderH5">prohibited <code class="codeElement">p</code> child elements are<b>&#58;</b></p>
+                    <ul class="elementList">
+                        <li><code class="element">address</code></li><li><code class="element">article</code></li><li><code class="element">aside</code></li><li><code class="element">blockquote</code></li>
+                        <li><code class="element">caption</code></li><li><code class="element">col</code></li><li><code class="element">colgroup</code></li><li><code class="element">dd</code></li>
+                        <li><code class="element">details</code></li><li><code class="element">dir</code></li><li><code class="element">div</code></li><li><code class="element">dl</code></li>
+                        <li><code class="element">dt</code></li><li><code class="element">fieldset</code></li><li><code class="element">figcaption</code></li><li><code class="element">figure</code></li>
+                        <li><code class="element">footer</code></li><li><code class="element">form</code></li><li><code class="element">h1</code></li><li><code class="element">h2</code></li>
+                        <li><code class="element">h3</code></li><li><code class="element">h4</code></li><li><code class="element">h5</code></li><li><code class="element">h6</code></li>
+                        <li><code class="element">header</code></li><li><code class="element">hgroup</code></li><li><code class="element">hr</code></li><li><code class="element">li</code></li>
+                        <li><code class="element">menu</code></li><li><code class="element">nav</code></li><li><code class="element">ol</code></li><li><code class="element">p</code></li>
+                        <li><code class="element">pre</code></li><li><code class="element">section</code></li><li><code class="element">summary</code></li><li><code class="element">table</code></li>
+                        <li><code class="element">tbody</code></li><li><code class="element">td</code></li><li><code class="element">tfoot</code></li><li><code class="element">th</code></li>
+                        <li><code class="element">thead</code></li><li><code class="element">tr</code></li><li><code class="element">ul</code></li>
+                    </ul>
+                    <p class="simpleNoteContainer">
+                        <span class="myNote">author</span> <span class="italicsBold">As far as I have found&#44;</span> these are all the elements that will auto<span class="wordBreak"></span>close a <code class="codeElement">p</code> element when found as a descendant<b>&#46;</b>&ensp;Except <abbr class="htmlBold"></abbr> tables will not auto-close the <code class="codeElement">p</code> element<b>&#46;</b>
+                    </p>
+                </div>
+</section>
+<section class="sectionWrapper">
+Attributes
+
+List of attributes (excluding event handler content attributes)
+Attribute	 Element(s)	 Description	 Value
+abbr	th	 Alternative label to use for the header cell when referencing the cell in other contexts	Text*
+accept	input	 Hint for expected file type in file upload controls	Set of comma-separated tokens* consisting of valid MIME types with no parameters or audio/*, video/*, or image/*
+accept-charset	form	 Character encodings to use for form submission	Ordered set of unique space-separated tokens,<abbr class="asciiBold"></abbr>case-insensitive, consisting of labels of ASCII-compatible character encodings*
+accesskey	HTML elements	 Keyboard shortcut to activate or focus element	Ordered set of unique space-separated tokens, case-sensitive, consisting of one Unicode code point in length
+action	form	URL to use for form submission	Valid non-empty URL potentially surrounded by spaces
+allowfullscreen	iframe	 Whether to allow the iframe's contents to use requestFullscreen()	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+alt	area; img; input	 Replacement text for use when images are not available	Text*
+async	script	 Execute script asynchronously	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+autocomplete	form	 Default setting for autofill feature for controls in the form	 "on"; "off"
+autocomplete	input; select; textarea	 Hint for form autofill feature	Autofill field name and related tokens*
+autofocus	button; input; keygen; select; textarea	 Automatically focus the form control when the page is loaded	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+autoplay	audio; video	 Hint that the media resource can be started automatically when the page is loaded	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+challenge	keygen	 String to package with the generated and signed public key	Text
+charset	meta	Character encoding declaration	Encoding label*
+charset	script	 Character encoding of the external script resource	Encoding label*
+checked	menuitem; input	 Whether the command or control is checked	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+cite	blockquote; del; ins; q	 Link to the source of the quotation or more information about the edit	Valid URL potentially surrounded by spaces
+class	HTML elements	 Classes to which the element belongs	Set of space-separated tokens
+cols	textarea	 Maximum number of characters per line	Valid non-negative integer greater than zero
+colspan	td; th	 Number of columns that the cell is to span	Valid non-negative integer greater than zero
+command	menuitem	 Command definition	ID*
+content	meta	 Value of the element	Text*
+contenteditable	HTML elements	 Whether the element is editable	 "true"; "false"
+contextmenu	HTML elements	 The element's context menu	ID*
+controls	audio; video	 Show user agent controls	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+coords	area	 Coordinates for the shape to be created in an image map	Valid list of integers*
+crossorigin	audio; img; link; script; video	 How the element handles crossorigin requests	 "anonymous"; "use-credentials"
+data	object	 Address of the resource	Valid non-empty URL potentially surrounded by spaces
+datetime	del; ins	 Date and (optionally) time of the change	Valid date string with optional time
+datetime	time	 Machine-readable value	Valid month string, valid date string, valid yearless date string, valid time string, valid local date and time string, valid time-zone offset string, valid global date and time string, valid week string, valid non-negative integer, or valid duration string
+default	menuitem	 Mark the command as being a default command	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+default	track	 Enable the track if no other text track is more suitable	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+defer	script	 Defer script execution	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+dir	HTML elements	The text directionality of the element	 "ltr"; "rtl"; "auto"
+dir	bdo	The text directionality of the element	 "ltr"; "rtl"
+dirname	input; textarea	 Name of form field to use for sending the element's directionality in form submission	Text*
+disabled	button; menuitem; fieldset; input; keygen; optgroup; option; select; textarea	 Whether the form control is disabled	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+download	a; area	 Whether to download the resource instead of navigating to it, and its file name if so	 Text
+draggable	HTML elements	 Whether the element is draggable	 "true"; "false"
+dropzone	HTML elements	 Accepted item types for drag-and-drop	Unordered set of unique space-separated tokens,<abbr class="asciiBold"></abbr>case-insensitive, consisting of accepted types and drag feedback*
+enctype	form	 Form data set encoding type to use for form submission	 "application/x-www-form-urlencoded"; "multipart/form-data"; "text/plain"
+for	label	 Associate the label with form control	ID*
+for	output	 Specifies controls from which the output was calculated	Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs*
+form	button; fieldset; input; keygen; label; object; output; select; textarea	 Associates the control with a form element	ID*
+formaction	button; input	URL to use for form submission	Valid non-empty URL potentially surrounded by spaces
+formenctype	button; input	 Form data set encoding type to use for form submission	 "application/x-www-form-urlencoded"; "multipart/form-data"; "text/plain"
+formmethod	button; input	 HTTP method to use for form submission	 "GET"; "POST"
+formnovalidate	button; input	 Bypass form control validation for form submission	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+formtarget	button; input	Browsing context for form submission	Valid browsing context name or keyword
+headers	td; th	 The header cells for this cell	Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs*
+height	canvas; embed; iframe; img; input; object; video	 Vertical dimension	Valid non-negative integer
+hidden	HTML elements	 Whether the element is relevant	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+high	meter	 Low limit of high range	Valid floating-point number*
+href	a; area	 Address of the hyperlink	Valid URL potentially surrounded by spaces
+href	link	 Address of the hyperlink	Valid non-empty URL potentially surrounded by spaces
+href	base	Document base URL	Valid URL potentially surrounded by spaces
+hreflang	a; area; link	 Language of the linked resource	 Valid BCP 47 language tag
+http-equiv	meta	 Pragma directive	Text*
+icon	menuitem	 Icon for the command	Valid non-empty URL potentially surrounded by spaces
+id	HTML elements	 The element's ID	Text*
+inputmode	input; textarea	 Hint for selecting an input modality	 "verbatim"; "latin"; "latin-name"; "latin-prose"; "full-width-latin"; "kana"; "kana-name"; "katakana"; "numeric"; "tel"; "email"; "url"
+ismap	img	 Whether the image is a server-side image map	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+itemid	HTML elements	Global identifier for a microdata item	Valid URL potentially surrounded by spaces
+itemprop	HTML elements	Property names of a microdata item	Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URLs, defined property names, or text*
+itemref	HTML elements	 Referenced elements	Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs*
+itemscope	HTML elements	 Introduces a microdata item	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+itemtype	HTML elements	Item types of a microdata item	Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URL*
+keytype	keygen	 The type of cryptographic key to generate	Text*
+kind	track	 The type of text track	 "subtitles"; "captions"; "descriptions"; "chapters"; "metadata"
+label	menuitem; menu; optgroup; option; track	 User-visible label	Text
+lang	HTML elements	Language of the element	 Valid BCP 47 language tag or the empty string
+list	input	 List of autocomplete options	ID*
+loop	audio; video	 Whether to loop the media resource	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+low	meter	 High limit of low range	Valid floating-point number*
+manifest	html	Application cache manifest	Valid non-empty URL potentially surrounded by spaces
+max	input	 Maximum value	 Varies*
+max	meter; progress	 Upper bound of range	Valid floating-point number*
+maxlength	input; textarea	 Maximum length of value	Valid non-negative integer
+media	link; style	 Applicable media	Valid media query
+mediagroup	audio; video	 Groups media elements together with an implicit MediaController	Text
+menu	button	 Specifies the element's designated pop-up menu	ID*
+method	form	 HTTP method to use for form submission	 "GET"; "POST"; "dialog"
+min	input	 Minimum value	 Varies*
+min	meter	 Lower bound of range	Valid floating-point number*
+minlength	input; textarea	 Minimum length of value	Valid non-negative integer
+multiple	input; select	 Whether to allow multiple values	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+muted	audio; video	 Whether to mute the media resource by default	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+name	button; fieldset; input; keygen; output; select; textarea	 Name of form control to use for form submission and in the form.elements API	Text*
+name	form	 Name of form to use in the document.forms API	Text*
+name	iframe; object	 Name of nested browsing context	Valid browsing context name or keyword
+name	map	 Name of image map to reference from the usemap attribute	Text*
+name	meta	 Metadata name	Text*
+name	param	 Name of parameter	Text
+novalidate	form	 Bypass form control validation for form submission	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+open	details	 Whether the details are visible	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+open	dialog	 Whether the dialog box is showing	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+optimum	meter	 Optimum value in gauge	Valid floating-point number*
+pattern	input	 Pattern to be matched by the form control's value	 Regular expression matching the JavaScript Pattern production
+ping	a; area	URLs to ping	Set of space-separated tokens consisting of valid non-empty URLs
+placeholder	input; textarea	 User-visible label to be placed within the form control	Text*
+poster	video	 Poster frame to show prior to video playback	Valid non-empty URL potentially surrounded by spaces
+preload	audio; video	 Hints how much buffering the media resource will likely need	 "none"; "metadata"; "auto"
+radiogroup	menuitem	 Name of group of commands to treat as a radio button group	Text
+readonly	input; textarea	 Whether to allow the value to be edited by the user	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+rel	a; area; link	 Relationship between the document containing the hyperlink and the destination resource	Set of space-separated tokens*
+required	input; select; textarea	 Whether the control is required for form submission	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+reversed	ol	 Number the list backwards	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+rows	textarea	 Number of lines to show	Valid non-negative integer greater than zero
+rowspan	td; th	 Number of rows that the cell is to span	Valid non-negative integer
+sandbox	iframe	 Security rules for nested content	Unordered set of unique space-separated tokens,<abbr class="asciiBold"></abbr>case-insensitive, consisting of "allow-forms", "allow-pointer-lock", "allow-popups", "allow-same-origin", "allow-scripts and "allow-top-navigation"
+spellcheck	HTML elements	 Whether the element is to have its spelling and grammar checked	 "true"; "false"
+scope	th	 Specifies which cells the header cell applies to	 "row"; "col"; "rowgroup"; "colgroup"
+scoped	style	 Whether the styles apply to the entire document or just the parent subtree	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+seamless	iframe	 Whether to apply the document's styles to the nested content	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+selected	option	 Whether the option is selected by default	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+shape	area	 The kind of shape to be created in an image map	 "circle"; "default"; "poly"; "rect"
+size	input; select	 Size of the control	Valid non-negative integer greater than zero
+sizes	link	 Sizes of the icons (for rel="icon")	Unordered set of unique space-separated tokens,<abbr class="asciiBold"></abbr>case-insensitive, consisting of sizes*
+sortable	table	 Enables a sorting interface for the table	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+sorted	th	Column sort direction and ordinality	Set of space-separated tokens,<abbr class="asciiBold"></abbr>case-insensitive, consisting of neither, one, or both of "reversed" and a valid non-negative integer greater than zero
+span	col; colgroup	 Number of columns spanned by the element	Valid non-negative integer greater than zero
+src	audio; embed; iframe; img; input; script; source; track; video	 Address of the resource	Valid non-empty URL potentially surrounded by spaces
+srcdoc	iframe	 A document to render in the iframe	 The source of an iframe srcdoc document*
+srclang	track	 Language of the text track	 Valid BCP 47 language tag
+srcset	img	 Images to use in different situations (e.g. high-resolution displays, small monitors, etc)	 Comma-separated list of image candidate strings
+start	ol	Ordinal value of the first item	Valid integer
+step	input	 Granularity to be matched by the form control's value	Valid floating-point number greater than zero, or "any"
+style	HTML elements	 Presentational and formatting instructions	 CSS declarations*
+tabindex	HTML elements	 Whether the element is focusable, and the relative order of the element for the purposes of sequential focus navigation	Valid integer
+target	a; area	Browsing context for hyperlink navigation	Valid browsing context name or keyword
+target	base	 Default browsing context for hyperlink navigation and form submission	Valid browsing context name or keyword
+target	form	Browsing context for form submission	Valid browsing context name or keyword
+title	HTML elements	 Advisory information for the element	Text
+title	abbr; dfn	 Full term or expansion of abbreviation	Text
+title	input	 Description of pattern (when used with pattern attribute)	Text
+title	menuitem	 Hint describing the command	Text
+title	link	 Title of the link	Text
+title	link; style	 Alternative style sheet set name	Text
+translate	HTML elements	 Whether the element is to be translated when the page is localized	 "yes"; "no"
+type	a; area; link	 Hint for the type of the referenced resource	Valid MIME type
+type	button	 Type of button	 "submit"; "reset"; "button"; "menu"
+type	embed; object; script; source; style	 Type of embedded resource	Valid MIME type
+type	input	 Type of form control	input type keyword
+type	menu	 Type of menu	 "popup"; "toolbar"
+type	menuitem	 Type of command	 "command"; "checkbox"; "radio"
+type	ol	 Kind of list marker	 "1"; "a"; "A"; "i"; "I"
+typemustmatch	object	 Whether the type attribute and the Content-Type value need to match for the resource to be used	<a class="textLink" href="../terminology.html#booleanAttributes">boolean attribute<span class="tipZoomInCaps">terminology<span>an <abbr class="htmlBold"></abbr> zone document</span></span></a>
+usemap	img; object	 Name of image map to use	Valid hash-name reference*
+value	button; option	 Value to be used for form submission	Text
+value	data	 Machine-readable value	Text*
+value	input	 Value of the form control	 Varies*
+value	li	Ordinal value of the list item	Valid integer
+value	meter; progress	 Current value of the element	Valid floating-point number
+value	param	 Value of parameter	Text
+width	canvas; embed; iframe; img; input; object; video	 Horizontal dimension	Valid non-negative integer
+wrap	textarea	 How the value of the form control is to be wrapped for form submission	 "soft"; "hard"
+An asterisk (*) in a cell indicates that the actual rules are more complicated than indicated in the table above.
+
+</section>
+	<!-- Usage Summary -->
+            <section id="usageSummarySectioningContent" class="articleContainer">
+                <header class="articleHeaderContainer">
+                    <h2 class="descriptionHeader">Usage Summary&#58;</h2>
+                    <h3 id="sectioningContentH3" class="paragraphHeading">sectioning content</h3>
+                    <button class="hiddenBackButton" onClick="document.getElementById('sectioningContentElements').className='tableOfContentsHidden'" type="button">Element List<span class="tipZoomInCaps">opens list</span></button>
+                    <nav id="sectioningContentElements" class="tableOfContentsHidden displayNone">
+                        <h3 class="sectionSubHeading3">sectioning content Elements</h3>
+                        <ul class="elementColumnsLinks80">
+                            <li><a class="elementLink" href="#body">body<span class="tipZoomInCaps">element description</span></a></li>
+                            <li><a class="elementLink" href="#article">article<span class="tipZoomInCaps">element description</span></a></li>
+                            <li><a class="elementLink" href="#section">section<span class="tipZoomInCaps">element description</span></a></li>
+                            <li><a class="elementLink" href="#nav">nav<span class="tipZoomInCaps">element description</span></a></li>
+                            <li><a class="elementLink" href="#aside">aside<span class="tipZoomInCaps">element description</span></a></li>
+                            <li><a class="elementLink" href="#h1-h6">h1&gt; &mdash; &lt;h6<span class="tipZoomInCaps">element description</span></a></li>
+                            <li><a class="elementLink" href="#hgroup">hgroup<span class="tipZoomInCaps">element description</span></a></li>
+                            <li><a class="elementLink" href="#header">header<span class="tipZoomInCaps">element description</span></a></li>
+                            <li><a class="elementLink" href="#footer">footer<span class="tipZoomInCaps">element description</span></a></li>
+                            <li><a class="elementLink" href="#address">address<span class="tipZoomInCaps">element description</span></a></li>
+                            <li><button class="hiddenBackButton" onClick="document.getElementById('sectioningContentElements').className='tableOfContentsHiddenReverse'" type="button">&emsp;close&emsp;</button></li>
+                        </ul>
+                    </nav>
+                </header>
+This section is non-normative.
+
+Element	Purpose
+Example
+                <figure id="summary-body" class="descriptionText">
+                	<dl class="dfnChangeUp">
+                        <dt id=""><p><span class="topLeftH5Border"><code class="element"></code></span><code class="element"></code></p></dt>
+                        <dd id="dfn-">
+                        	<div class="dfn-bold">
+                            	<p><b>&#46;</b></p>
+                                <ul class="shortBlockCode">
+                                    <li class="editorCodeLine"><code class="codeDOCTYPE"> html</code></li>
+									<li class="editorCodeLine"><code class="openingTag">html <code class="codeAttributeEditor">lang</code><code class="codeValueEditor">en-US</code></code></li>
+                                    <li class="editorCodeLine"><code class="openingTag">body</code></li>
+                                	<li class="editorCodeLine"></li>
+                                	<li class="editorCodeLine"></li>
+                                    <li class="editorCodeLine"></li>
+                                    <li class="editorCodeLine"><code class="closingTag">body</code></li>
+									<li class="editorCodeLine"><code class="closingTag">html</code></li>
+                                    <li class="editorCodeLine">&ensp;<!-- nothing --></li>
+                                </ul>
+                                <nav class="hiddenDefinitionNav">
+                                    <a class="ddSiteMap" onClick="javascript:history.back(1)">Previous Location&thinsp;&#33;</a>
+                                    <a class="ddSiteMap" onClick="siteNavSpecialDisplay(); location.href='terminology.html#terminology-page'">site map</a><hr class="hr-noLine-spacer1pt5">
+                                </nav>
+                            </div>
+                        </dd>
+                    </dl>
+                </figure>
+body	The main content of the document<b>&#46;</b>
+<code class="codeDOCTYPE"> HTML</code>
+<code class="openingTag">html</code>
+ <code class="openingTag">head</code> <code class="openingTag">title</code>Steve Hill's Home Page<code class="closingTag">title</code> <code class="closingTag">head</code>
+ <code class="openingTag">body</code> <p>Hard Trance is My Life<b>&#46;</b><code class="closingTag">p</code> <code class="closingTag">body</code>
+<code class="closingTag">html</code>
+article	A complete<b>&#44;</b> or self-contained<b>&#44;</b> composition in a document<b>&#44;</b> page<b>&#44;</b> application<b>&#44;</b> or site and that is<b>&#44;</b> in principle<b>&#44;</b> independently distributable or reusable<b>&#44;</b> e<b>&#46;</b>g<b>&#46;</b> in syndication<b>&#46;</b> This could be a forum post<b>&#44;</b> a magazine or newspaper article<b>&#44;</b> a blog entry<b>&#44;</b> a user-submitted comment<b>&#44;</b> an interactive widget or gadget<b>&#44;</b> or any other independent item of content<b>&#46;</b>
+<code class="openingTag">article</code>
+ <code class="openingTag">img src="/tumblr_masqy2s5yn1rzfqbpo1_500<b>&#46;</b>jpg" alt="Yellow smiley face with the caption 'masif'"</code>
+ <code class="openingTag">p</code>My fave Masif tee so far!<code class="closingTag">p</code>
+ <code class="openingTag">footer</code>Posted 2 days ago<code class="closingTag">footer</code>
+<code class="closingTag">article</code>
+<code class="openingTag">article</code>
+ <code class="openingTag">img src="/tumblr_m9tf6wSr6W1rzfqbpo1_500<b>&#46;</b>jpg" alt=""</code>
+ <code class="openingTag">p</code>Happy 2nd birthday Masif Saturdays!!!<code class="closingTag">p</code>
+ <code class="openingTag">footer</code>Posted 3 weeks ago<code class="closingTag">footer</code>
+<code class="closingTag">article</code>
+section	A generic section of a document or application<b>&#46;</b> A section<b>&#44;</b> in this context<b>&#44;</b> is a thematic grouping of content<b>&#44;</b> typically with a heading<b>&#46;</b>
+<code class="openingTag">h1</code>Biography<code class="closingTag">h1</code>
+<code class="openingTag">section</code>
+ <code class="openingTag">h1</code>The facts<code class="closingTag">h1</code>
+ <code class="openingTag">p</code>1500+ shows<b>&#44;</b> 14+ countries<code class="closingTag">p</code>
+<code class="closingTag">section</code>
+<code class="openingTag">section</code>
+ <code class="openingTag">h1</code>2010/2011 figures per year<code class="closingTag">h1</code>
+ <code class="openingTag">p</code>100+ shows<b>&#44;</b> 8+ countries<code class="closingTag">p</code>
+<code class="closingTag">section</code>
+nav	A section of a page that links to other pages or to parts within the page: a section with navigation links<b>&#46;</b>
+<code class="openingTag">nav</code>
+ <code class="openingTag">p</code><code class="openingTag">a href="/"</code>Home<code class="closingTag">a</code>
+ <code class="openingTag">p</code><code class="openingTag">a href="/biog<b>&#46;</b>html"</code>Bio<code class="closingTag">a</code>
+ <code class="openingTag">p</code><code class="openingTag">a href="/discog<b>&#46;</b>html"</code>Discog<code class="closingTag">a</code>
+<code class="closingTag">nav</code>
+aside	A section of a page that consists of content that is tangentially related to the content around the aside element<b>&#44;</b> and which could be considered separate from that content<b>&#46;</b> Such sections are often represented as sidebars in printed typography<b>&#46;</b>
+<code class="openingTag">h1</code>Music<code class="closingTag">h1</code>
+<code class="openingTag">p</code>As any burner can tell you<b>&#44;</b> the event has a lot of trance<b>&#46;</b><code class="closingTag">p</code>
+<code class="openingTag">aside</code>You can buy the music we played at our <code class="openingTag">a href="buy<b>&#46;</b>html"</code>playlist page<code class="closingTag">a</code><b>&#46;</b><code class="closingTag">aside</code>
+<code class="openingTag">p</code>This year we played a kind of trance that originated in Belgium<b>&#44;</b> Germany<b>&#44;</b> and the Netherlands in the mid 90s<b>&#46;</b><code class="closingTag">p</code>
+h1–h6	A section heading
+<code class="openingTag">h1</code>The Guide To Music On The Playa<code class="closingTag">h1</code>
+<code class="openingTag">h2</code>The Main Stage<code class="closingTag">h2</code>
+<code class="openingTag">p</code>If you want to play on a stage<b>&#44;</b> you should bring one<b>&#46;</b><code class="closingTag">p</code>
+<code class="openingTag">h2</code>Amplified Music<code class="closingTag">h2</code>
+<code class="openingTag">p</code>Amplifiers up to 300W or 90dB are welcome<b>&#46;</b><code class="closingTag">p</code>
+hgroup	The heading of a section<b>&#44;</b> which consists of all the h1–h6 element children of the hgroup element<b>&#46;</b> The element is used to group a set of h1–h6 elements when the heading has multiple levels<b>&#44;</b> such as subheadings<b>&#44;</b> alternative titles<b>&#44;</b> or taglines<b>&#46;</b>
+<code class="openingTag">hgroup</code>
+ <code class="openingTag">h1</code>Burning Music<code class="closingTag">h1</code>
+ <code class="openingTag">h2</code>The Guide To Music On The Playa<code class="closingTag">h2</code>
+<code class="closingTag">hgroup</code>
+<code class="openingTag">section</code>
+ <code class="openingTag">hgroup</code>
+  <code class="openingTag">h1</code>Main Stage<code class="closingTag">h1</code>
+  <code class="openingTag">h2</code>The Fiction Of A Music Festival<code class="closingTag">h2</code>
+ <code class="closingTag">hgroup</code>
+ <code class="openingTag">p</code>If you want to play on a stage<b>&#44;</b> you should bring one<b>&#46;</b><code class="closingTag">p</code>
+<code class="closingTag">section</code>
+<code class="openingTag">section</code>
+ <code class="openingTag">hgroup</code>
+  <code class="openingTag">h1</code>Loudness!<code class="closingTag">h1</code>
+  <code class="openingTag">h2</code>Questions About Amplified Music<code class="closingTag">h2</code>
+ <code class="closingTag">hgroup</code>
+ <code class="openingTag">p</code>Amplifiers up to 300W or 90dB are welcome<b>&#46;</b><code class="closingTag">p</code>
+<code class="closingTag">section</code>
+header	A group of introductory or navigational aids<b>&#46;</b>
+<code class="openingTag">article</code>
+ <code class="openingTag">header</code>
+  <code class="openingTag">h1</code>Hard Trance is My Life<code class="closingTag">h1</code>
+  <code class="openingTag">p</code>By DJ Steve Hill and Technikal<code class="closingTag">p</code>
+ <code class="closingTag">header</code>
+ <code class="openingTag">p</code>The album with the amusing punctuation has red artwork<b>&#46;</b><code class="closingTag">p</code>
+<code class="closingTag">article</code>
+footer	A footer for its nearest ancestor sectioning content or sectioning root element<b>&#46;</b> A footer typically contains information about its section such as who wrote it<b>&#44;</b> links to related documents<b>&#44;</b> copyright data<b>&#44;</b> and the like<b>&#46;</b>
+<code class="openingTag">article</code>
+ <code class="openingTag">h1</code>Hard Trance is My Life<code class="closingTag">h1</code>
+ <code class="openingTag">p</code>The album with the amusing punctuation has red artwork<b>&#46;</b><code class="closingTag">p</code>
+ <code class="openingTag">footer</code>
+  <code class="openingTag">p</code>Artists: DJ Steve Hill and Technikal<code class="closingTag">p</code>
+ <code class="closingTag">footer</code>
+<code class="closingTag">article</code>
+            </section>
+<!-- Text-Level Semantics Usage Summary -->
+            <article id="textLevelUsageSummary">
+            	<h3 class="myH3">Text<b class="enemDash">&#45;</b>Level Semantics Usage Summary</h3>
+				<figure class="scrollingTableContainer">
+                    <table class="scrollingTableHeader">
+                    	<colgroup>
+                        	<col span="1" style="width:5em;">
+                        	<col span="1" style="width:5em;">
+                        	<col span="1" style="width:25em;">
+                        </colgroup>
+                        <thead>
+                            <tr class="tblTop tblColBackground basicTableHeaderText">
+                                <th>Element</th>
+                                <th>Purpose</th>
+                                <th>Example </th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="scrollingDiv">
+                        <table class="scrollingTableBody">
+                    	<colgroup>
+                        	<col span="1" style="width:5em;">
+                        	<col span="1" style="width:5em;">
+                        	<col span="1" style="width:15em;">
+                        </colgroup>
+                            <tbody class="scrollingTableBodyText">
+                                <tr>
+                                    <td><code class="openingTag">a</code></td>
+                                    <td class="emSpecial">Hyperlinks</td>
+                                    <td style="text-align:left">Visit my <span class="tagUsage"><code class="openingTag">a <code class="attributeCode">href</code><code class="codeValue">drinks.html</code></code></span>drinks<span class="tagUsage"><code class="openingTagClosing">a</code></span> page<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="openingTag">em</code></td>
+                                    <td class="emSpecial">Stress emphasis</td>
+                                    <td style="text-align:left">I must say I <span class="tagUsage"><code class="openingTag">em</code></span>adore<span class="tagUsage"><code class="openingTagClosing">em</code></span> lemonade<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="openingTag">strong</code></td>
+                                    <td class="emSpecial">Importance</td>
+                                    <td style="text-align:left">This tea is <span class="tagUsage"><code class="openingTag">strong</code></span>very hot<span class="tagUsage"><code class="openingTagClosing">strong</code></span><b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="openingTag">small</code></td>
+                                    <td class="emSpecial">Side Comments</td>
+                                    <td style="text-align:left">These grapes are made into wine<b>&#46;</b>&ensp;<span class="tagUsage"><code class="openingTag">small</code></span>Alcohol is addictive<b>&#46;</b><span class="tagUsage"><code class="openingTagClosing">small</code></span></td>
+                                </tr>
+                                <tr>
+                                    <td><code class="openingTag">s</code></td>
+                                    <td class="emSpecial">Inaccurate Text</td>
+                                    <td style="text-align:left">Price: <span class="tagUsage"><code class="openingTag">s</code></span>&#36;4.50<span class="tagUsage"><code class="openingTagClosing">s</code></span> &#36;2.00<b>&#33;</b>&ensp;</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="openingTag">cite</code></td>
+                                    <td class="emSpecial">Titles of works</td>
+                                    <td style="text-align:left">The case <span class="tagUsage"><code class="openingTag">cite</code></span>Hugo v. Danielle<span class="tagUsage"><code class="openingTagClosing">cite</code></span> is relevant here<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="openingTag">q</code></td>
+                                    <td class="emSpecial">Quotations</td>
+                                    <td style="text-align:left">The judge said <span class="tagUsage"><code class="openingTag">q</code></span>You can drink water from the fish tank<span class="tagUsage"><code class="openingTagClosing">q</code></span> but advised against it<b>&#46;</b>&ensp;</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="openingTag">ELEMENT</code></td>
+                                    <td class="emSpecial">PURPOSE</td>
+                                    <td style="text-align:left">EXAMPLE<b>&#46;</b>&ensp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</figure>
+		
+.
+dfn	Defining instance	The term dfnorganic food/dfn refers to food produced without synthetic chemicals.
+abbr	Abbreviations	Organic food in Ireland is certified by the abbr title="Irish Organic Farmers and Growers Association"IOFGA/abbr.
+ruby, rt, rp	Ruby annotations	ruby OJ rp(rtOrange Juicerp)/ruby
+data	Machine-readable equivalent	Available starting today! data value="UPC:022014640201"North Coast Organic Apple Cider/data
+time	Machine-readable equivalent of date- or time-related data	Available starting on time datetime="2011-11-12"November 12th/time!
+code	Computer code	The codefruitdb/code program can be used for tracking fruit production.
+var	Variables	If there are varn/var fruit in the bowl, at least varn/var÷2 will be ripe.
+samp	Computer output	The computer said sampUnknown error -3/samp.
+kbd	User input	Hit kbdF1/kbd to continue.
+sub	Subscripts	Water is Hsub2/subO.
+sup	Superscripts	The Hydrogen in heavy water is usually sup2/supH.
+i	Alternative voice	Lemonade consists primarily of iCitrus limon/i.
+b	Keywords	Take a blemon/b and squeeze it with a bjuicer/b.
+u	Annotations	The mixture of apple juice and u class="spelling"eldeflower/u juice is very pleasant.
+mark	Highlight	Elderflower cordial, with one markpart/mark cordial to ten markpart/marks water, stands amarkpart/mark from the rest.
+bdi	Text directionality isolation	The recommended restaurant is bdi lang=""My Juice Café (At The Beach)/bdi.
+bdo	Text directionality formatting	The proposal is to write English, but in reverse order. "Juice" would become "bdo dir=rtlJuice/bdo"
+span	Other	In French we call it span lang="fr"sirop de sureau/span.
+br	Line break	Simply Orange Juice CompanybrApopka, FL 32703brU.S.A.
+wbr	Line breaking opportunity	www.simplywbrorangewbrjuice.com
+            </article>
+		</section>
+<section class="sectionWrapper">
+List of event handler content attributes
+Attribute	 Element(s)	 Description	 Value
+onabort	HTML elements	abort event handler	Event handler content attribute
+onautocomplete	HTML elements	autocomplete event handler	Event handler content attribute
+onautocompleteerror	HTML elements	autocompleteerror event handler	Event handler content attribute
+onafterprint	body	afterprint event handler for Window object	Event handler content attribute
+onbeforeprint	body	beforeprint event handler for Window object	Event handler content attribute
+onbeforeunload	body	beforeunload event handler for Window object	Event handler content attribute
+onblur	HTML elements	blur event handler	Event handler content attribute
+oncancel	HTML elements	cancel event handler	Event handler content attribute
+oncanplay	HTML elements	canplay event handler	Event handler content attribute
+oncanplaythrough	HTML elements	canplaythrough event handler	Event handler content attribute
+onchange	HTML elements	change event handler	Event handler content attribute
+onclick	HTML elements	click event handler	Event handler content attribute
+onclose	HTML elements	close event handler	Event handler content attribute
+oncontextmenu	HTML elements	contextmenu event handler	Event handler content attribute
+oncuechange	HTML elements	cuechange event handler	Event handler content attribute
+ondblclick	HTML elements	dblclick event handler	Event handler content attribute
+ondrag	HTML elements	drag event handler	Event handler content attribute
+ondragend	HTML elements	dragend event handler	Event handler content attribute
+ondragenter	HTML elements	dragenter event handler	Event handler content attribute
+ondragexit	HTML elements	dragexit event handler	Event handler content attribute
+ondragleave	HTML elements	dragleave event handler	Event handler content attribute
+ondragover	HTML elements	dragover event handler	Event handler content attribute
+ondragstart	HTML elements	dragstart event handler	Event handler content attribute
+ondrop	HTML elements	drop event handler	Event handler content attribute
+ondurationchange	HTML elements	durationchange event handler	Event handler content attribute
+onemptied	HTML elements	emptied event handler	Event handler content attribute
+onended	HTML elements	ended event handler	Event handler content attribute
+onerror	HTML elements	error event handler	Event handler content attribute
+onfocus	HTML elements	focus event handler	Event handler content attribute
+onhashchange	body	hashchange event handler for Window object	Event handler content attribute
+oninput	HTML elements	input event handler	Event handler content attribute
+oninvalid	HTML elements	invalid event handler	Event handler content attribute
+onkeydown	HTML elements	keydown event handler	Event handler content attribute
+onkeypress	HTML elements	keypress event handler	Event handler content attribute
+onkeyup	HTML elements	keyup event handler	Event handler content attribute
+onlanguagechange	body	languagechange event handler for Window object	Event handler content attribute
+onload	HTML elements	load event handler	Event handler content attribute
+onloadeddata	HTML elements	loadeddata event handler	Event handler content attribute
+onloadedmetadata	HTML elements	loadedmetadata event handler	Event handler content attribute
+onloadstart	HTML elements	loadstart event handler	Event handler content attribute
+onmessage	body	message event handler for Window object	Event handler content attribute
+onmousedown	HTML elements	mousedown event handler	Event handler content attribute
+onmouseenter	HTML elements	mouseenter event handler	Event handler content attribute
+onmouseleave	HTML elements	mouseleave event handler	Event handler content attribute
+onmousemove	HTML elements	mousemove event handler	Event handler content attribute
+onmouseout	HTML elements	mouseout event handler	Event handler content attribute
+onmouseover	HTML elements	mouseover event handler	Event handler content attribute
+onmouseup	HTML elements	mouseup event handler	Event handler content attribute
+onmousewheel	HTML elements	mousewheel event handler	Event handler content attribute
+onoffline	body	offline event handler for Window object	Event handler content attribute
+ononline	body	online event handler for Window object	Event handler content attribute
+onpagehide	body	pagehide event handler for Window object	Event handler content attribute
+onpageshow	body	pageshow event handler for Window object	Event handler content attribute
+onpause	HTML elements	pause event handler	Event handler content attribute
+onplay	HTML elements	play event handler	Event handler content attribute
+onplaying	HTML elements	playing event handler	Event handler content attribute
+onpopstate	body	popstate event handler for Window object	Event handler content attribute
+onprogress	HTML elements	progress event handler	Event handler content attribute
+onratechange	HTML elements	ratechange event handler	Event handler content attribute
+onreset	HTML elements	reset event handler	Event handler content attribute
+onresize	HTML elements	resize event handler	Event handler content attribute
+onscroll	HTML elements	scroll event handler	Event handler content attribute
+onseeked	HTML elements	seeked event handler	Event handler content attribute
+onseeking	HTML elements	seeking event handler	Event handler content attribute
+onselect	HTML elements	select event handler	Event handler content attribute
+onshow	HTML elements	show event handler	Event handler content attribute
+onsort	HTML elements	sort event handler	Event handler content attribute
+onstalled	HTML elements	stalled event handler	Event handler content attribute
+onstorage	body	storage event handler for Window object	Event handler content attribute
+onsubmit	HTML elements	submit event handler	Event handler content attribute
+onsuspend	HTML elements	suspend event handler	Event handler content attribute
+ontimeupdate	HTML elements	timeupdate event handler	Event handler content attribute
+ontoggle	HTML elements	toggle event handler	Event handler content attribute
+onunload	body	unload event handler for Window object	Event handler content attribute
+onvolumechange	HTML elements	volumechange event handler	Event handler content attribute
+onwaiting	HTML elements	waiting event handler	Event handler content attribute
+</section>
+<section class="sectionWrapper">
+Element Interfaces
+List of interfaces for elements
+Element(s)	 Interface(s)
+a	HTMLAnchorElement : HTMLElement
+abbr	HTMLElement
+address	HTMLElement
+area	HTMLAreaElement : HTMLElement
+article	HTMLElement
+aside	HTMLElement
+audio	HTMLAudioElement : HTMLMediaElement : HTMLElement
+b	HTMLElement
+base	HTMLBaseElement : HTMLElement
+bdi	HTMLElement
+bdo	HTMLElement
+blockquote	HTMLQuoteElement : HTMLElement
+body	HTMLBodyElement : HTMLElement
+br	HTMLBRElement : HTMLElement
+button	HTMLButtonElement : HTMLElement
+canvas	HTMLCanvasElement : HTMLElement
+caption	HTMLTableCaptionElement : HTMLElement
+cite	HTMLElement
+code	HTMLElement
+col	HTMLTableColElement : HTMLElement
+colgroup	HTMLTableColElement : HTMLElement
+menuitem	HTMLMenuItemElement : HTMLElement
+data	HTMLDataElement : HTMLElement
+datalist	HTMLDataListElement : HTMLElement
+dd	HTMLElement
+del	HTMLModElement : HTMLElement
+details	HTMLDetailsElement : HTMLElement
+dfn	HTMLElement
+dialog	HTMLDialogElement : HTMLElement
+div	HTMLDivElement : HTMLElement
+dl	HTMLDListElement : HTMLElement
+dt	HTMLElement
+em	HTMLElement
+embed	HTMLEmbedElement : HTMLElement
+fieldset	HTMLFieldSetElement : HTMLElement
+figcaption	HTMLElement
+figure	HTMLElement
+footer	HTMLElement
+form	HTMLFormElement : HTMLElement
+h1	HTMLHeadingElement : HTMLElement
+h2	HTMLHeadingElement : HTMLElement
+h3	HTMLHeadingElement : HTMLElement
+h4	HTMLHeadingElement : HTMLElement
+h5	HTMLHeadingElement : HTMLElement
+h6	HTMLHeadingElement : HTMLElement
+head	HTMLHeadElement : HTMLElement
+header	HTMLElement
+hgroup	HTMLElement
+hr	HTMLHRElement : HTMLElement
+html	HTMLHtmlElement : HTMLElement
+i	HTMLElement
+iframe	HTMLIFrameElement : HTMLElement
+img	HTMLImageElement : HTMLElement
+input	HTMLInputElement : HTMLElement
+ins	HTMLModElement : HTMLElement
+kbd	HTMLElement
+keygen	HTMLKeygenElement : HTMLElement
+label	HTMLLabelElement : HTMLElement
+legend	HTMLLegendElement : HTMLElement
+li	HTMLLIElement : HTMLElement
+link	HTMLLinkElement : HTMLElement
+main	HTMLElement
+map	HTMLMapElement : HTMLElement
+mark	HTMLElement
+menu	HTMLMenuElement : HTMLElement
+meta	HTMLMetaElement : HTMLElement
+meter	HTMLMeterElement : HTMLElement
+nav	HTMLElement
+noscript	HTMLElement
+object	HTMLObjectElement : HTMLElement
+ol	HTMLOListElement : HTMLElement
+optgroup	HTMLOptGroupElement : HTMLElement
+option	HTMLOptionElement : HTMLElement
+output	HTMLOutputElement : HTMLElement
+p	HTMLParagraphElement : HTMLElement
+param	HTMLParamElement : HTMLElement
+pre	HTMLPreElement : HTMLElement
+progress	HTMLProgressElement : HTMLElement
+q	HTMLQuoteElement : HTMLElement
+rp	HTMLElement
+rt	HTMLElement
+ruby	HTMLElement
+s	HTMLElement
+samp	HTMLElement
+script	HTMLScriptElement : HTMLElement
+section	HTMLElement
+select	HTMLSelectElement : HTMLElement
+small	HTMLElement
+source	HTMLSourceElement : HTMLElement
+span	HTMLSpanElement : HTMLElement
+strong	HTMLElement
+style	HTMLStyleElement : HTMLElement
+sub	HTMLElement
+summary	HTMLElement
+sup	HTMLElement
+table	HTMLTableElement : HTMLElement
+tbody	HTMLTableSectionElement : HTMLElement
+td	HTMLTableDataCellElement : HTMLTableCellElement : HTMLElement
+template	HTMLTemplateElement : HTMLElement
+textarea	HTMLTextAreaElement : HTMLElement
+tfoot	HTMLTableSectionElement : HTMLElement
+th	HTMLTableHeaderCellElement : HTMLTableCellElement : HTMLElement
+thead	HTMLTableSectionElement : HTMLElement
+time	HTMLTimeElement : HTMLElement
+title	HTMLTitleElement : HTMLElement
+tr	HTMLTableRowElement : HTMLElement
+track	HTMLTrackElement : HTMLElement
+u	HTMLElement
+ul	HTMLUListElement : HTMLElement
+var	HTMLElement
+video	HTMLVideoElement : HTMLMediaElement : HTMLElement
+wbr	HTMLElement
+All Interfaces
+</section>
+<section>
+All Interfaces
+
+Events
+
+List of events
+Event	 Interface	 Interesting targets	 Description
+abort	Event	Window	 Fired at the Window when the download was aborted by the user
+autocomplete	Event	form elements	 Fired at a form element when it is autofilled
+autocompleteerror	Event	form elements	 Fired at a form element when a bulk autofill fails
+DOMContentLoaded	Event	Document	 Fired at the Document once the parser has finished
+afterprint	Event	Window	 Fired at the Window after printing
+afterscriptexecute	Event	script elements	 Fired at script elements after the script runs (just before the corresponding load event)
+beforeprint	Event	Window	 Fired at the Window before printing
+beforescriptexecute	Event	script elements	 Fired at script elements just before the script runs; canceling the event cancels the running of the script
+beforeunload	BeforeUnloadEvent	Window	 Fired at the Window when the page is about to be unloaded, in case the page would like to show a warning prompt
+blur	Event	Window, elements	 Fired at nodes when they stop being focused
+cancel	Event	dialog elements	 Fired at dialog elements when they are canceled by the user (e.g. by pressing the Escape key)
+change	Event	 Form controls	 Fired at controls when the user commits a value change (see also the change event of input elements)
+click	MouseEvent	 Elements	 Normally a mouse event; also synthetically fired at an element before its activation behavior is run, when an element is activated from a non-pointer input device (e.g. a keyboard)
+close	Event	dialog elements, WebSocket	 Fired at dialog elements when they are closed, and at WebSocket elements when the connection is terminated
+connect	MessageEvent	SharedWorkerGlobalScope	 Fired at a shared worker's global scope when a new client connects
+<a id="contextmenuEvent"></a>contextmenu	Event	 Elements	 Fired at elements when the user requests their context menu
+<a id="error"></a>error	Event	 Global scope objects, Worker objects, elements, networking-related objects	 Fired when unexpected errors occur (e.g. networking errors, script errors, decoding errors)
+focus	Event	Window, elements	 Fired at nodes gaining focus
+hashchange	HashChangeEvent	Window	 Fired at the Window when the fragment identifier part of the document's address changes
+input	Event	 Form controls	 Fired at controls when the user changes the value (see also the change event of input elements)
+invalid	Event	 Form controls	 Fired at controls during form validation if they do not satisfy their constraints
+languagechange	Event	 Global scope objects	 Fired at the global scope object when the user's preferred languages change
+load	Event	Window, elements	 Fired at the Window when the document has finished loading; fired at an element containing a resource (e.g. img, embed) when its resource has finished loading
+loadend	Event or ProgressEvent	img elements	 Fired at img elements after a successful load (see also media element events)
+loadstart	ProgressEvent	img elements	 Fired at img elements when a load begins (see also media element events)
+message	MessageEvent	Window, EventSource, WebSocket, MessagePort, BroadcastChannel, DedicatedWorkerGlobalScope, Worker	 Fired at an object when it receives a message
+offline	Event	 Global scope objects	 Fired at the global scope object when the network connections fails
+online	Event	 Global scope objects	 Fired at the global scope object when the network connections returns
+open	Event	EventSource, WebSocket	 Fired at networking-related objects when a connection is established
+pagehide	PageTransitionEvent	Window	 Fired at the Window when the page's entry in the session history stops being the current entry
+pageshow	PageTransitionEvent	Window	 Fired at the Window when the page's entry in the session history becomes the current entry
+popstate	PopStateEvent	Window	 Fired at the Window when the user navigates the session history
+progress	ProgressEvent	img elements	 Fired at img elements during a CORS-same-origin image load (see also media element events)
+readystatechange	Event	Document	 Fired at the Document when it finishes parsing and again when all its subresources have finished loading
+reset	Event	form elements	 Fired at a form element when it is reset
+select	Event	 Form controls	 Fired at form controls when their text selection is adjusted (whether by an API or by the user)
+<a id="showEvent"></a>show	RelatedEvent	menu elements	 Fired at a menu element when it is shown as a context menu
+sort	Event	table elements	 Fired at table elements before it is sorted; canceling the event cancels the sorting of the table
+storage	StorageEvent	Window	 Fired at Window event when the corresponding localStorage or sessionStorage storage areas change
+submit	Event	form elements	 Fired at a form element when it is submitted
+toggle	Event	details element	 Fired at details elements when they open or close
+unload	Event	Window	 Fired at the Window object when the page is going away
+See also media element events, application cache events, and drag-and-drop events.
+	</section>
+		<footer class="pgFooter">
+            <hr class="codingZone">
+            This Web Site has been created using the latest in <img src="../images/HTML5Logo.png" style="width: 25px; heigth: 20px; vertical-align: middle;" alt="Valid HTML5!"> Technology<hr class="hr-noLine-spacer1">
+            Copyright <b>&copy;</b> 2014&thinsp;<b>&ndash;</b>&thinsp;<span id="copyright">...</span><hr class="hr-noLine-spacer1"><span class="sava">Bear<span class="footerSmall">Z</span> &thinsp;Web &thinsp;&amp; &thinsp;Gra<small class="footerSmall">F&thinsp;X</small> &thinsp;De<small class="footerSmall">Z</small>ign</span>&ensp;All rights reserved<b>&#46;</b><hr class="hr-noLine-spacer1">
+            <span class="italics">Resource<span class="letterBraces">s</span> <b>&#58;</b></span>&ensp;<a class="footerLink" href="https://whatwg.org" target="_blank" rel="external"><abbr class="whatwgFooter">whatwg&thinsp;</abbr><span class="tipZoomIn"><mark>W</mark>eb <mark>H</mark>ypertext <mark>A</mark>pplication <mark>T</mark>echnology<br><mark>W</mark>orking <mark>G</mark>roup<br>whatwg.org</span></a>  and  <a class="footerLink" href="http://www.w3.org" target="_blank" rel="external"><img class="w3cLogo" src="../images/w3cLogo.png" style="width: 44px; heigth:20px;" alt="W3C Logo"><span class="tipZoomIn"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium<br>www.w3.org</span></a> <span class="regMark">&reg;</span><hr class="hr-noLine-spacer1">
+            This work is licensed under<hr class="hr-noLine-spacer1"><a class="textLinkBottom ccTarget" rel="license external" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><samp class="tipZoomIn">https://creativecommons.org/licenses/by/4.0/</samp>Creative Commons Attribution 4.0 International License</a>
+            <hr class="hr-noLine-spacer1">
+            <script type="text/javascript">
+            function copyDate() {
+              var cpyrt = document.getElementById("copyright")
+              if (cpyrt) {
+                 cpyrt.firstChild.nodeValue = (new Date()).getFullYear();
+              }
+            }
+            window.onload = copyDate;
+            </script><hr class="hr-noLine-spacer1">
+			<script> 
+				months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; 
+				var d=new Date();
+				var weekday=new Array(7); weekday[0]="Sunday"; weekday[1]="Monday"; weekday[2]="Tuesday"; weekday[3]="Wednesday"; weekday[4]="Thursday"; weekday[5]="Friday"; weekday[6]="Saturday";
+				var d = new Date();
+				(d.getFullYear());
+				var theDate = new Date(document.lastModified); 
+				theDate.setTime((theDate.getTime()+(60*60)) ) 
+				with (theDate) { 
+				document.write("<span class='italicsBold'>Last Modified<b>&#58;</b></span> <time class='modifiedDate'>"+weekday[getDay()]+'<b>&#44;&thinsp;</b>'+months[getMonth()]+'&thinsp;'+getDate()+'<b>&#44;&thinsp;</b>'+d.getFullYear()+'<b class=libSerifBold>&thinsp; &ensp;&#64;&ensp;</b>'+getHours()+'&#58;'+getMinutes()+"</time>&thinsp;&ensp;<span class='italicsBold'>EST</span>") 
+				} 
+			</script><hr class="hr-noLine-spacer2"><hr class="footerBottom">
+        </footer>
+    
+</body>
+</html>

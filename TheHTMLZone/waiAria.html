@@ -1,0 +1,495 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<!--
+	Website: Bearz Design Concepts, The HTML Zone
+    URL: www.bearzdesignconcepts.net/waiaria.html
+    File Name: waiaria.html
+    Author: Barry Smith
+    resources: WHATWG and W3C Specifications
+-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="Barry Smith, Bearz Design Concepts, Bears Design Concepts, 
+    	Bearz Design, Bears Design, Bears Web and Graphics, Bearz Web and Graphics, The Coding Zone, HTML Elements, 
+        HTML5 Elements, HTML Tags, HTML Tag Use, Typography, HTML Syntax, CSS Default Display Settings, 
+        Coding, Validation, HTML, HTHL5, CSS3, Coding Zone">
+	<meta name="description" content="An HTML5/CSS3 Instructional web site with the student in mind">
+    <title>
+    	WAI-ARIA - The HTML Zone
+	</title>
+			<!-- supporting CSS and JavaScript and favicon files -->
+	<link href="../css3/MainLayout.css" rel="stylesheet" type="text/css">
+	<link href="../css3/banner_Logo.css" rel="stylesheet" type="text/css">
+	<link href="../css3/nav.css" rel="stylesheet" type="text/css">
+	<link href="../css3/textStyles.css" rel="stylesheet" type="text/css">
+	<link href="../css3/myAlerts.css" rel="stylesheet" type="text/css">
+	<link href="../css3/cssToolTip.css" rel="stylesheet" type="text/css">
+	<link href="../css3/specialEffects.css" rel="stylesheet" type="text/css">
+	<link href="../css3/targetSelectors.css" rel="stylesheet" type="text/css">
+	<link href="../css3/myAnimations.css" rel="stylesheet" type="text/css">
+	<link href="../css3/responsiveCSS.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/embeddedFonts.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/inconsolata/inconsolata.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/alluraWebReady/allura.css" rel="stylesheet" type="text/css">
+	<link href="embeddedFonts/fontSavatage/savatage.css" rel="stylesheet" type="text/css">
+    <link href="../icon/apple-icon-57X57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="../icon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="../icon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../icon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="../icon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../icon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="../icon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="../icon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="../icon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="../icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="../icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="../icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="../icon/manifest.json" rel="manifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="../scripts/siteFunctions.js" type="text/javascript"></script>
+    <script src="../scripts/jquery_v2.0.0.js" type="text/javascript"></script>
+    <!-- used for my floating back button in lower right corner -->
+	<script>
+		$(document).ready(function () {  $('.backToTopScroll').hide();//Check to see if the window is top if not then display button
+		$(window).scroll(function () {  if ($(this).scrollTop() > 650) {    $('.backToTopScroll').fadeIn();  } else {    $('.backToTopScroll').fadeOut();  }}); //Click event to scroll to top
+		$('.backToTopScroll').click(function () {  $('html, body').animate({ scrollTop: 0 }, 900);  return false;  });});
+    </script>
+</head>
+<body><a class="topLeftBackButton" href="javascript:history.back()"><span class="slideRightSmallCaps">previous location</span></a><a class="topLeftRefresh" onClick="window.location.reload()"><span class="slideRightSmallCaps">reload current page</span></a><a class="backToTopScroll" onClick="scrollToTopClose()">Page Top</a>
+        <h1 class="siteName siteNameFadeIn displayNone">BearZ Coding Zone</h1>
+        <div class="landscapeView colGradient"><!-- backNameFadeIn  -->
+            <div class="phoneHeader">
+                <p><span class="bearzLogoBody"><span class="bearzCap">B</span>ear<span class="bearzCapZ">Z</span></span></p>
+                <p><span class="bearzCap2">C</span><span class="bearzLogoPlainText">oding</span></p>
+                <p><span class="bearzLogoBody"><span class="bearzCap2Z">Z</span>one</span></p>
+            </div>
+            <div class="articleRepeatingRadial">
+                <p><span class="landscapeViewFirstLetter">m</span>y Apologizes&#44;</p>
+                <p><span class="landscapeViewFirstLetter">p</span>lease view this site in landscape view&#46;</p>
+                <p><span class="landscapeViewFirstLetter">t</span>his site is not optimized for less than <span class="landscapeViewNumber">575</span> pixel width&#46;&ensp;</p>
+                <p><span class="landscapeViewFirstLetter">f</span>or devices with a maximum width <span class="parentheses mySmall andadaBoldItalic" style="color:inherit;">landscape view</span>&#44; of less than 575 pixels&#44; slight horizontal scrolling is necessary&#46;&ensp;</p>
+            </div><!--    -->
+            <div class="phoneHeaderLower">
+                <p><span class="bearzLogoBody"><span class="bearzCap">B</span>ear<span class="bearzCapZ">Z</span></span></p>
+                <p><span class="bearzCap2">C</span><span class="bearzLogoPlainText">oding</span></p>
+                <p><span class="bearzLogoBody"><span class="bearzCap2Z">Z</span>one</span></p>
+            </div>
+        </div>
+    <section id="wrapper" class="gradient pageFadeIn">
+        <h2 class="backName backNameFadeIn displayNone">The HTML Zone</h2>
+		<header id="Banner/Logo" class="myHeader"><!--  -->
+            <div class="siteName siteNameFadeIn"><!--  -->
+            	<p class="htmlHeader-The"><span class="htmlHeader-T">t</span><span class="borderT-he"><span class="htmlHeaderT-he">he</span></span></p>
+                <p class="htmlHeader-HTML"><span class="htmlHeader-H">h</span><span class="borderH-tml"><span class="htmlHeaderH-tml">tml</span></span></p> 
+                <p class="htmlHeader-Zone"><span class="htmlHeader-Z">z</span><span class="borderZ-one"><span class="htmlHeaderZ-oneSava">one</span></span></p><!--  -->
+            </div>
+        </header><!-- end of header -->
+		<nav id="topNavBar" class="topNav navBarGradient">
+			<a class="navBlur" href="../siteMap.html">Topics</a>
+            <a class="navBlur" href="../contactInfo.html">Contact</a>
+            <a class="navBlur" href="../index.php">Bearz Home</a>
+            <a class="navBlur lowercase" href="http://www.codingzone.org" target="_blank" rel="external">codingzone<b>&#46;</b>org</a>
+			<hr class="fadingStyle">
+        </nav>
+		<nav id="breadCrumbLinks" class="speedInLeft">
+			<script type="text/javascript">breadcrumbsHTMLZone()</script>
+		</nav><a id="pageTableOfContents"></a>
+        <section id="rolesDefinition" class="sectionWrapper">
+        	<h2 class="myH2">WAI-ARIA Role Attributes</h2>
+            ARIA (tabindex) http://www.section508.va.gov/support/webdev/3_2.asp
+
+The Accessible Rich Internet Applications (ARIA) specification also provides a mechanism to indicate focus on the parts of a compound control, such as a tree control. This property is the aria-activedescendantproperty. Browsers will use this property when combined with other proper ARIA elements and an ARIA-supported browser to indicate programmatic focus on the correct child node of the tree. For an example of aria-activedescendant, refer to Module 4, User Interface Controls.
+
+In the example below, the aria-activedescendant attribute is set on the parent tree item and contains the ID of the active (focused) tree node. This property must be dynamically updated when the tree node changes either by the user pressing arrow keys to change nodes or when the user selects a tree node with the mouse pointer. Tabindex="0" is set on the container with the role of tree to allow the user to tab to the tree structure. The checkKeyUp function is called when keystrokes are pressed to focus the correct node and performAction function is called when a click is detected within the tree container.
+
+<ul tabindex="0" role="tree " onkeyup="checkKeyUp();" onclick="performAction();">
+ <li role="treeitem">Online Courses
+  <ul role="group">
+   <li role="treeitem" aria-activedescendant="true">Accessibility Concepts</li>
+   <li role="treeitem">Web Accessibility Basics</li>
+   <li role="treeitem">Web Accessibility Advanced</li>
+  </ul>
+ </li>
+ <li role="treeitem">On-site courses</li>
+</ul>
+
+Select Next to continue.
+
+
+			<article class="sectionContainer">
+                <h2 class="myH2">Definition of Roles</h2>
+Below is an alphabetical list of WAI-ARIA roles to be used by rich internet application authors.
+
+Abstract roles are used for the ontology. Authors MUST NOT use abstract roles in content.
+
+alert
+    A message with important, and usually time-sensitive, information. See related alertdialog and status.
+alertdialog
+    A type of dialog that contains an alert message, where initial focus goes to an element within the dialog. See related alert and dialog.
+application
+    A region declared as a web application, as opposed to a web document.
+article
+    A section of a page that consists of a composition that forms an independent part of a document, page, or site.
+banner
+    A region that contains mostly site-oriented content, rather than page-specific content.
+button
+    An input that allows for user-triggered actions when clicked or pressed. See related link.
+checkbox
+    A checkable input that has three possible values: true, false, or mixed.
+columnheader
+    A cell containing header information for a column.
+combobox
+    A presentation of a select; usually similar to a textbox where users can type ahead to select an option, or type to enter arbitrary text as a new item in the list. See related listbox.
+command (abstract role)
+    A form of widget that performs an action but does not receive input data.
+complementary
+    A supporting section of the document, designed to be complementary to the main content at a similar level in the DOM hierarchy, but remains meaningful when separated from the main content.
+composite (abstract role)
+    A widget that may contain navigable descendants or owned children.
+contentinfo
+    A large perceivable region that contains information about the parent document.
+definition
+    A definition of a term or concept.
+dialog
+    A dialog is an application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response. See related alertdialog.
+directory
+    A list of references to members of a group, such as a static table of contents.
+document
+    A region containing related information that is declared as document content, as opposed to a web application.
+form
+    A landmark region that contains a collection of items and objects that, as a whole, combine to create a form. See related search.
+grid
+    A grid is an interactive control which contains cells of tabular data arranged in rows and columns, like a table.
+gridcell
+    A cell in a grid or treegrid.
+group
+    A set of user interface objects which are not intended to be included in a page summary or table of contents by assistive technologies.
+heading
+    A heading for a section of the page.
+img
+    A container for a collection of elements that form an image.
+input (abstract role)
+    A generic type of widget that allows user input.
+landmark (abstract role)
+    A region of the page intended as a navigational landmark.
+link
+    An interactive reference to an internal or external resource that, when activated, causes the user agent to navigate to that resource. See related button.
+list
+    A group of non-interactive list items. See related listbox.
+listbox
+    A widget that allows the user to select one or more items from a list of choices. See related combobox and list.
+listitem
+    A single item in a list or directory.
+log
+    A type of live region where new information is added in meaningful order and old information may disappear. See related marquee.
+main
+    The main content of a document.
+marquee
+    A type of live region where non-essential information changes frequently. See related log.
+math
+    Content that represents a mathematical expression. 
+menu
+    A type of widget that offers a list of choices to the user.
+menubar
+    A presentation of menu that usually remains visible and is usually presented horizontally.
+menuitem
+    An option in a set of choices contained by a menu or menubar.
+menuitemcheckbox
+    A menuitem with a checkable state whose possible values are true, false, or mixed.
+menuitemradio
+    A checkable menuitem in a set of elements with role menuitemradio, only one of which can be checked at a time.
+navigation
+    A collection of navigational elements (usually links) for navigating the document or related documents.
+note
+    A section whose content is parenthetic or ancillary to the main content of the resource.
+option
+    A selectable item in a select list.
+presentation
+    An element whose implicit native role semantics will not be mapped to the accessibility API.
+progressbar
+    An element that displays the progress status for tasks that take a long time.
+radio
+    A checkable input in a group of radio roles, only one of which can be checked at a time.
+radiogroup
+    A group of radio buttons.
+range (abstract role)
+    An input representing a range of values that can be set by the user.
+region
+    A large perceivable section of a web page or document, that is important enough to be included in a page summary or table of contents, for example, an area of the page containing live sporting event statistics.
+roletype (abstract role)
+    The base role from which all other roles in this taxonomy inherit.
+row
+    A row of cells in a grid.
+rowgroup
+    A group containing one or more row elements in a grid.
+rowheader
+    A cell containing header information for a row in a grid.
+scrollbar
+    A graphical object that controls the scrolling of content within a viewing area, regardless of whether the content is fully displayed within the viewing area.
+search
+    A landmark region that contains a collection of items and objects that, as a whole, combine to create a search facility. See related form.
+section (abstract role)
+    A renderable structural containment unit in a document or application.
+sectionhead (abstract role)
+    A structure that labels or summarizes the topic of its related section.
+select (abstract role)
+    A form widget that allows the user to make selections from a set of choices.
+separator
+    A divider that separates and distinguishes sections of content or groups of menuitems.
+slider
+    A user input where the user selects a value from within a given range.
+spinbutton
+    A form of range that expects the user to select from among discrete choices.
+status
+    A container whose content is advisory information for the user but is not important enough to justify an alert, often but not necessarily presented as a status bar. See related alert.
+structure (abstract role)
+    A document structural element.
+tab
+    A grouping label providing a mechanism for selecting the tab content that is to be rendered to the user.
+tablist
+    A list of tab elements, which are references to tabpanel elements.
+tabpanel
+    A container for the resources associated with a tab, where each tab is contained in a tablist.
+textbox
+    Input that allows free-form text as its value.
+timer
+    A type of live region containing a numerical counter which indicates an amount of elapsed time from a start point, or the time remaining until an end point.
+toolbar
+    A collection of commonly used function buttons or controls represented in compact visual form.
+tooltip
+    A contextual popup that displays a description for an element.
+tree
+    A type of list that may contain sub-level nested groups that can be collapsed and expanded.
+treegrid
+    A grid whose rows can be expanded and collapsed in the same manner as for a tree.
+treeitem
+    An option item of a tree. This is an element within a tree that may be expanded or collapsed if it contains a sub-level group of treeitem elements.
+widget (abstract role)
+    An interactive component of a graphical user interface (GUI).
+window (abstract role)
+    A browser or application window.
+    		</article>
+            <article id="" class="sectionContainer">
+            	<h3 class="myH3">Classification of of WAI-ARIA States and Properties</h3>
+
+States and properties are categorized as follows:
+
+Widget Attributes
+Live Region Attributes
+Drag-and-Drop Attributes
+Relationship Attributes
+
+6.5.1. Widget Attributes
+
+This section contains attributes specific to common user interface elements found on GUI systems or in rich internet applications which receive user input and process user actions. These attributes are used to support the widget roles.
+
+aria-autocomplete
+aria-checked (state)
+aria-disabled (state)
+aria-expanded (state)
+aria-haspopup
+aria-hidden (state)
+aria-invalid (state)
+aria-label
+aria-level
+aria-multiline
+aria-multiselectable
+aria-orientation
+aria-pressed (state)
+aria-readonly
+aria-required
+aria-selected (state)
+aria-sort
+aria-valuemax
+aria-valuemin
+aria-valuenow
+aria-valuetext
+Widget attributes might be mapped by a user agent to platform accessibility API states, for access by assistive technologies, or they might be accessed directly from the DOM. User agents MUST provide a way for assistive technologies to be notified when states change, either through DOM attribute change events or platform accessibility API events.
+
+6.5.2. Live Region Attributes
+
+#
+This section contains attributes specific to live regions in rich internet applications. These attributes may be applied to any element. The purpose of these attributes is to indicate that content changes may occur without the element having focus, and to provide assistive technologies with information on how to process those content updates. Some roles specify a default value for the aria-live attribute specific to that role. An example of a live region is a ticker section that lists updating stock quotes.
+
+aria-atomic
+aria-busy (state)
+aria-live
+aria-relevant
+6.5.3. Drag-and-Drop Attributes
+
+#
+This section lists attributes which indicate information about drag-and-drop interface elements, such as draggable elements and their drop targets. Drop target information will be rendered visually by the author and provided to assistive technologies through an alternate modality.
+
+aria-dropeffect
+aria-grabbed (state)
+For more information about using drag-and-drop, see Drag-and-Drop Support in the WAI-ARIA Authoring Practices ([ARIA-PRACTICES]).
+
+6.5.4. Relationship Attributes
+
+#
+This section lists attributes that indicate relationships or associations between elements which cannot be readily determined from the document structure.
+
+aria-activedescendant
+aria-controls
+aria-describedby
+aria-flowto
+aria-labelledby
+aria-owns
+aria-posinset
+aria-setsize
+            </article>
+        	<article id="statesAndProperties" class="sectionContainer">
+            	<h2 class="myH2">Definitions of States and Properties (all aria-* attributes)</h2>
+                
+Below is an alphabetical list of WAI-ARIA states and properties to be used by rich internet application authors. A detailed definition of each WAI-ARIA state and property follows this compact list.
+
+aria-activedescendant
+    Identifies the currently active descendant of a composite widget.
+aria-atomic
+    Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute. See related aria-relevant.
+aria-autocomplete
+    Indicates whether user input completion suggestions are provided.
+aria-busy (state)
+    Indicates whether an element, and its subtree, are currently being updated.
+aria-checked (state)
+    Indicates the current "checked" state of checkboxes, radio buttons, and other widgets. See related aria-pressed and aria-selected.
+aria-controls
+    Identifies the element (or elements) whose contents or presence are controlled by the current element. See related aria-owns.
+aria-describedby
+    Identifies the element (or elements) that describes the object. See related aria-labelledby.
+aria-disabled (state)
+    Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. See related aria-hidden and aria-readonly.
+aria-dropeffect
+    Indicates what functions can be performed when the dragged object is released on the drop target. This allows assistive technologies to convey the possible drag options available to users, including whether a pop-up menu of choices is provided by the application. Typically, drop effect functions can only be provided once an object has been grabbed for a drag operation as the drop effect functions available are dependent on the object being dragged.
+aria-expanded (state)
+    Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+aria-flowto
+    Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion, allows assistive technology to override the general default of reading in document source order.
+aria-grabbed (state)
+    Indicates an element's "grabbed" state in a drag-and-drop operation.
+aria-haspopup
+    Indicates that the element has a popup context menu or sub-level menu.
+aria-hidden (state)
+    Indicates that the element and all of its descendants are not visible or perceivable to any user as implemented by the author. See related aria-disabled.
+aria-invalid (state)
+    Indicates the entered value does not conform to the format expected by the application.
+aria-label
+    Defines a string value that labels the current element. See related aria-labelledby.
+aria-labelledby
+    Identifies the element (or elements) that labels the current element. See related aria-label and aria-describedby.
+aria-level
+    Defines the hierarchical level of an element within a structure.
+aria-live
+    Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
+aria-multiline
+    Indicates whether a text box accepts multiple lines of input or only a single line.
+aria-multiselectable
+    Indicates that the user may select more than one item from the current selectable descendants.
+aria-orientation
+    Indicates whether the element and orientation is horizontal or vertical.
+aria-owns
+    Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship between DOM elements where the DOM hierarchy cannot be used to represent the relationship. See related aria-controls.
+aria-posinset
+    Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize.
+aria-pressed (state)
+    Indicates the current "pressed" state of toggle buttons. See related aria-checked and aria-selected.
+aria-readonly
+    Indicates that the element is not editable, but is otherwise operable. See related aria-disabled.
+aria-relevant
+    Indicates what user agent change notifications (additions, removals, etc.) assistive technologies will receive within a live region. See related aria-atomic.
+aria-required
+    Indicates that user input is required on the element before a form may be submitted.
+aria-selected (state)
+    Indicates the current "selected" state of various widgets. See related aria-checked and aria-pressed.
+aria-setsize
+    Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset.
+aria-sort
+    Indicates if items in a table or grid are sorted in ascending or descending order.
+aria-valuemax
+    Defines the maximum allowed value for a range widget.
+aria-valuemin
+    Defines the minimum allowed value for a range widget.
+aria-valuenow
+    Defines the current value for a range widget. See related aria-valuetext.
+aria-valuetext
+    Defines the human readable text alternative of aria-valuenow for a range widget.
+            </article>
+        </section>
+        <section class="sectionWrapper">
+        	<article id="globalStatesAndProperties" class="sectionContainer">
+            	<h3 class="myH3">Global States and Properties</h3>
+                <p class="bodyText">
+Some states and properties are applicable to all host language elements regardless of whether a role is applied. The following global states and properties are supported by all roles and by all base markup elements.
+
+aria-atomic
+aria-busy (state)
+aria-controls
+aria-describedby
+aria-disabled (state)
+aria-dropeffect
+aria-flowto
+aria-grabbed (state)
+aria-haspopup
+aria-hidden (state)
+aria-invalid (state)
+aria-label
+aria-labelledby
+aria-live
+aria-owns
+aria-relevant
+Global states and properties are applied to the role roletype, which is the base role, and therefore inherit into all roles. To facilitate reading, they are not explicitly identified as either supported or inherited states and properties in the specification. Instead, the inheritance is indicated by a link to this section.
+                </p>
+            </article>
+        	<article id="strongNativeSemantics" class="sectionContainer">
+            	<h3 class="myH3">Strong Native Semantics</h3>
+                <p class="bodyText">
+                    The following table defines the <a href="#strongNativeSemantics">strong native semantics</a> and corresponding
+                    <a href="#default-implicit-aria-semantics">default implicit <abbr class="abbrBold">aria</abbr> semantics</a> that apply to <a href="#html-elements">HTML elements</a>. Each
+                    language feature (element or attribute) in a cell in the first column implies the <abbr class="abbrBold">aria</abbr> semantics
+                    (any role, states, and properties) given in the cell in the second column of the same row. <span class="impl">When multiple rows apply to an element, the role from the last row to define a role
+                    must be applied, and the states and properties from all the rows must be combined.</span>
+                </p>
+                
+                <p class="bodyText">
+                    Documents must not use any <code data-anolis-xref="attr-aria-role"><a href="#attr-aria-role">role</a></code> values with elements 
+                    in the following table other than the corresponding role value (if any) as listed for that element in the second column, 
+                    or the <code data-anolis-xref="attr-aria-role"><a href="#attr-aria-role">role</a></code> value "<code>presentation</code>", if the second column indicates that element's 
+                    semantics can be removed by using the "<code>presentation</code>" <code data-anolis-xref="attr-aria-role"><a href="#attr-aria-role">role</a></code> value.
+                </p>
+            </article>
+        </section>
+		<footer class="pgFooter">
+            <hr class="codingZone">
+            <p>This Web Site has been created using the latest in <img class="footerImage" src="../images/HTML5Logo.png" alt="Valid HTML5!"> Technology</p>
+            <p>Copyright <b>&copy;</b> 2014&thinsp;<b>&ndash;</b>&thinsp;<span id="copyright">...</span></p><p><span class="bearzLogoFooter">Bear<span class="footerSmall">Z</span> &thinsp;Web <span class="bearzAmpersand"></span> Gra<small class="footerSmall">F&thinsp;X</small> &thinsp;De<small class="footerSmall">Z</small>ign</span>&ensp;All rights reserved<b>&#46;</b></p>
+            <p><span class="italics">Resource<span class="letterBraces">s</span> <b>&#58;</b></span>&ensp;<a class="textLink" href="https://whatwg.org" target="_blank" rel="external"><abbr class="whatwgFooter">whatwg&thinsp;</abbr><span class="tipZoomIn"><mark>W</mark>eb <mark>H</mark>ypertext <mark>A</mark>pplication <mark>T</mark>echnology<br><mark>W</mark>orking <mark>G</mark>roup<br>whatwg.org</span></a>  and  <a class="textLink" href="http://www.w3.org" target="_blank" rel="external"><img class="w3cLogo" src="../images/w3cLogo.png" alt="W3C Logo"><span class="tipZoomIn"><mark>w</mark>orld <mark>w</mark>ide <mark>w</mark>eb<br><mark>c</mark>onsortium<br>www.w3.org</span></a> <span class="regMark">&reg;</span></p>
+            <p>This work is licensed under</p><p><a class="footerLink" rel="license external" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><span class="tipZoomIn">https://creativecommons.org/licenses/by/4.0/</span>Creative Commons Attribution 4.0 International License</a></p>
+            <script type="text/javascript">
+				function copyDate() {
+				  var cpyrt = document.getElementById("copyright")
+				  if (cpyrt) {
+					 cpyrt.firstChild.nodeValue = (new Date()).getFullYear();
+				  }
+				}
+				window.onload = copyDate;
+            </script>
+			<script> 
+				months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; 
+				var d=new Date();
+				var weekday=new Array(7); weekday[0]="Sunday"; weekday[1]="Monday"; weekday[2]="Tuesday"; weekday[3]="Wednesday"; weekday[4]="Thursday"; weekday[5]="Friday"; weekday[6]="Saturday";
+				var d = new Date();
+				(d.getFullYear());
+				var theDate = new Date(document.lastModified); 
+				theDate.setTime((theDate.getTime()+(60*60)) ) 
+				with (theDate) { 
+				document.write("<span class='italicsBold'>Last Modified<b>&#58;</b></span> <time class='modifiedDate'>"+weekday[getDay()]+'<b>&#44;&thinsp;</b>'+months[getMonth()]+'&thinsp;'+getDate()+'<b>&#44;&thinsp;</b>'+d.getFullYear()+'<b>&emsp;<span>&#64;</span>&ensp;</b>'+getHours()+':'+getMinutes()+"</time>&thinsp;&ensp;<span class='italicsBold'>EST</span>") 
+				} 
+			</script><hr class="footerBottom">
+        </footer>
+	</section><!-- end of wrapper -->
+</body>
+</html>
