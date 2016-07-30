@@ -1,0 +1,899 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*************** generic rules *********************/
+input {
+    display:none;
+}
+
+span.contentDropDown {
+    display:none;
+}
+/************** Kinds of Content section ********************/
+
+input#showFlow:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideFlow:checked ~ span.contentDropDown
+{	display:none;}
+/*
+input#showHTML:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideHTML:checked ~ span.contentDropDown
+{	display:none;}
+
+input#showHTML:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideHTML:checked ~ span.contentDropDown
+{	display:none;}
+
+input#showHTML:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideHTML:checked ~ span.contentDropDown
+{	display:none;}
+
+input#showHTML:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideHTML:checked ~ span.contentDropDown
+{	display:none;}
+
+input#showHTML:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideHTML:checked ~ span.contentDropDown
+{	display:none;}
+
+input#showHTML:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideHTML:checked ~ span.contentDropDown
+{	display:none;}
+
+input#showHTML:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideHTML:checked ~ span.contentDropDown
+{	display:none;}
+
+input#showHTML:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideHTML:checked ~ span.contentDropDown
+{	display:none;}
+*/
+/************** Attributes section  *********************/
+
+input#showCSS:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideCSS:checked ~ span.contentDropDown
+{	display:none;}
+
+/**************  section Animation **************/
+
+input#showTYPO:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTYPO:checked ~ span.contentDropDown
+{	display:none;}
+
+/*
+	********************* index page animated show/ hide content*******************************
+*/
+/*************** generic rules *********************/
+input {
+    display:none;
+}
+
+span.contentDropDown {
+    display:none;
+	font-size:100%;
+}
+
+/************** HTML section Animation ********************/
+
+input#showHTML:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideHTML:checked ~ span.contentDropDown
+{	display:none;}
+
+/************** CSS section Animation *********************/
+
+input#showCSS:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideCSS:checked ~ span.contentDropDown
+{	display:none;}
+
+/************** Typography section Animation **************/
+
+input#showTYPO:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTYPO:checked ~ span.contentDropDown
+{	display:none;}
+
+/************** JavaScript section Animation **************/
+
+input#showJS:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideJS:checked ~ span.contentDropDown
+{	display:none;}
+
+/*
+	*************************** HTML Content Page ********************************
+*/
+/************ Normative **************/
+
+input#showNorm:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideNorm:checked ~ span.contentDropDown
+{	display:none;}
+
+/********* Metadata Content ***********/
+
+input#showMeta:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideMeta:checked ~ span.contentDropDown
+{	display:none;}
+
+/********* Flow Content ***********/
+
+input#showFlow:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideFlow:checked ~ span.contentDropDown
+{	display:none;}
+
+/******** Sectioning Content ************/
+
+input#showSect:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideSect:checked ~ span.contentDropDown
+{	display:none;}
+
+/********* Heading Content ***********/
+
+input#showHead:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideHead:checked ~ span.contentDropDown
+{	display:none;}
+
+/********* Pharsing Content ***********/
+
+input#showPhrasing:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hidePhrasing:checked ~ span.contentDropDown
+{	display:none;}
+
+/********* Embedded Content ***********/
+
+input#showEmbed:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideEmbed:checked ~ span.contentDropDown
+{	display:none;}
+
+/********* InterActive Content ***********/
+
+input#showActive:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideActive:checked ~ span.contentDropDown
+{	display:none;}
+
+/*********Palpable Content ***********/
+
+input#showPalp:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hidePalp:checked ~ span.contentDropDown
+{	display:none;}
+
+/********* Script-Supporting ***********/
+
+input#showScript:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideScript:checked ~ span.contentDropDown
+{	display:none;}
+
+/********** Contexts Elements **********/
+
+input#showContext:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideContext:checked ~ span.contentDropDown
+{	display:none;}
+
+/********* Content Model***********/
+
+input#showModel:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideModel:checked ~ span.contentDropDown
+{	display:none;}
+
+input#showTransModel:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTransModel:checked ~ span.contentDropDown
+{	display:none;}
+
+/************** Attributes *******************/
+
+input#showAttr:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideAttr:checked ~ span.contentDropDown
+{	display:none;}
+
+/**************  Void Elements **************/
+
+
+input#showVoid:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideVoid:checked ~ span.contentDropDown
+{	display:none;}
+
+		/************** END HTML Content Page *******************/
+/*
+	*************************** Tag Usage Page ********************************
+*/
+/************ html tag **************/
+
+input#showTag-html:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-html:checked ~ span.contentDropDown
+{	display:none;}
+
+/************ head tag **************/
+
+input#showTag-head:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-head:checked ~ span.contentDropDown
+{	display:none;}
+/************ meta tag **************/
+
+input#showTag-meta:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-meta:checked ~ span.contentDropDown
+{	display:none;}
+
+/************ title tag **************/
+
+input#showTag-title:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-title:checked ~ span.contentDropDown
+{	display:none;}
+/************ base tag **************/
+
+input#showTag-base:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-base:checked ~ span.contentDropDown
+{	display:none;}
+/************ link tag **************/
+
+input#showTag-link:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-link:checked ~ span.contentDropDown
+{	display:none;}
+/************ style tag **************/
+
+input#showTag-style:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-style:checked ~ span.contentDropDown
+{	display:none;}
+/************ body tag **************/
+
+input#showTag-body:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-body:checked ~ span.contentDropDown
+{	display:none;}
+/************ article tag **************/
+
+input#showTag-article:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-article:checked ~ span.contentDropDown
+{	display:none;}
+/************ section tag **************/
+
+input#showTag-section:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-section:checked ~ span.contentDropDown
+{	display:none;}
+/************ nav tag **************/
+
+input#showTag-nav:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-nav:checked ~ span.contentDropDown
+{	display:none;}
+/************ aside tag **************/
+
+input#showTag-aside:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-aside:checked ~ span.contentDropDown
+{	display:none;}
+/************ h1-h6 tag **************/
+
+input#showTag-h1-h6:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-h1-h6:checked ~ span.contentDropDown
+{	display:none;}
+/************ header tag **************/
+
+input#showTag-header:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-header:checked ~ span.contentDropDown
+{	display:none;}
+/************ hgroup tag **************/
+
+input#showTag-hgroup:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-hgroup:checked ~ span.contentDropDown
+{	display:none;}
+/************ footer tag **************/
+
+input#showTag-footer:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-footer:checked ~ span.contentDropDown
+{	display:none;}
+/************ address tag **************/
+
+input#showTag-address:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-address:checked ~ span.contentDropDown
+{	display:none;}
+/************ p tag **************/
+
+input#showTag-p:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-p:checked ~ span.contentDropDown
+{	display:none;}
+/************ hr tag **************/
+
+input#showTag-hr:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-hr:checked ~ span.contentDropDown
+{	display:none;}
+/************ pre tag **************/
+
+input#showTag-pre:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-pre:checked ~ span.contentDropDown
+{	display:none;}
+/************ blockquote tag **************/
+
+input#showTag-blockquote:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-blockquote:checked ~ span.contentDropDown
+{	display:none;}
+/************ ol tag **************/
+
+input#showTag-ol:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-ol:checked ~ span.contentDropDown
+{	display:none;}
+/************ ul tag **************/
+
+input#showTag-ul:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-ul:checked ~ span.contentDropDown
+{	display:none;}
+/************ li tag **************/
+
+input#showTag-li:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-li:checked ~ span.contentDropDown
+{	display:none;}
+/************ dl tag **************/
+
+input#showTag-dl:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-dl:checked ~ span.contentDropDown
+{	display:none;}
+/************ dt tag **************/
+
+input#showTag-dt:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-dt:checked ~ span.contentDropDown
+{	display:none;}
+/************ dd tag **************/
+
+input#showTag-dd:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-dd:checked ~ span.contentDropDown
+{	display:none;}
+/************ figure tag **************/
+
+input#showTag-figure:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-figure:checked ~ span.contentDropDown
+{	display:none;}
+/************ figcaption tag **************/
+
+input#showTag-figcaption:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-figcaption:checked ~ span.contentDropDown
+{	display:none;}
+/************ div tag **************/
+
+input#showTag-div:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-div:checked ~ span.contentDropDown
+{	display:none;}
+/************ a tag **************/
+
+input#showTag-a:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-a:checked ~ span.contentDropDown
+{	display:none;}
+/************ em tag **************/
+
+input#showTag-em:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-em:checked ~ span.contentDropDown
+{	display:none;}
+/************ strong tag **************/
+
+input#showTag-strong:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-strong:checked ~ span.contentDropDown
+{	display:none;}
+/************ small tag **************/
+
+input#showTag-small:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-small:checked ~ span.contentDropDown
+{	display:none;}
+/************ s tag **************/
+
+input#showTag-s:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-s:checked ~ span.contentDropDown
+{	display:none;}
+/************ cite tag **************/
+
+input#showTag-cite:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-cite:checked ~ span.contentDropDown
+{	display:none;}
+/************ q tag **************/
+
+input#showTag-q:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-q:checked ~ span.contentDropDown
+{	display:none;}
+/************ dfn tag **************/
+
+input#showTag-dfn:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-dfn:checked ~ span.contentDropDown
+{	display:none;}
+/************ abbr tag **************/
+
+input#showTag-abbr:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-abbr:checked ~ span.contentDropDown
+{	display:none;}
+/************ ruby tag **************/
+
+input#showTag-ruby:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-ruby:checked ~ span.contentDropDown
+{	display:none;}
+/************ data tag **************/
+
+input#showTag-data:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-data:checked ~ span.contentDropDown
+{	display:none;}
+/************ time tag **************/
+
+input#showTag-time:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-time:checked ~ span.contentDropDown
+{	display:none;}
+/************ code tag **************/
+
+input#showTag-code:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-code:checked ~ span.contentDropDown
+{	display:none;}
+/************ var tag **************/
+
+input#showTag-var:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-var:checked ~ span.contentDropDown
+{	display:none;}
+/************ samp tag **************/
+
+input#showTag-samp:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-samp:checked ~ span.contentDropDown
+{	display:none;}
+/************ kbd tag **************/
+
+input#showTag-kbd:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-kbd:checked ~ span.contentDropDown
+{	display:none;}
+/************ sub-sup tag **************/
+
+input#showTag-sub-sup:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-sub-sup:checked ~ span.contentDropDown
+{	display:none;}
+/************ i tag **************/
+
+input#showTag-i:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-i:checked ~ span.contentDropDown
+{	display:none;}
+/************ b tag **************/
+
+input#showTag-b:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-b:checked ~ span.contentDropDown
+{	display:none;}
+/************ u tag **************/
+
+input#showTag-u:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-u:checked ~ span.contentDropDown
+{	display:none;}
+/************ mark tag **************/
+
+input#showTag-mark:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-mark:checked ~ span.contentDropDown
+{	display:none;}
+/************ bdi tag **************/
+
+input#showTag-bdi:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-bdi:checked ~ span.contentDropDown
+{	display:none;}
+/************ bdo tag **************/
+
+input#showTag-bdo:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-bdo:checked ~ span.contentDropDown
+{	display:none;}
+/************ span tag **************/
+
+input#showTag-span:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-span:checked ~ span.contentDropDown
+{	display:none;}
+/************ br tag **************/
+
+input#showTag-br:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-br:checked ~ span.contentDropDown
+{	display:none;}
+/************ wbr tag **************/
+
+input#showTag-wbr:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-wbr:checked ~ span.contentDropDown
+{	display:none;}
+/************ ins tag **************/
+
+input#showTag-ins:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-ins:checked ~ span.contentDropDown
+{	display:none;}
+/************ del tag **************/
+
+input#showTag-del:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-del:checked ~ span.contentDropDown
+{	display:none;}
+/************ img tag **************/
+
+input#showTag-img:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-img:checked ~ span.contentDropDown
+{	display:none;}
+/************ iframe tag **************/
+
+input#showTag-iframe:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-iframe:checked ~ span.contentDropDown
+{	display:none;}
+/************ embed tag **************/
+
+input#showTag-embed:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-embed:checked ~ span.contentDropDown
+{	display:none;}
+/************ object tag **************/
+
+input#showTag-object:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-object:checked ~ span.contentDropDown
+{	display:none;}
+/************ param tag **************/
+
+input#showTag-param:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-param:checked ~ span.contentDropDown
+{	display:none;}
+/************ video tag **************/
+
+input#showTag-video:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-video:checked ~ span.contentDropDown
+{	display:none;}
+/************ audio tag **************/
+
+input#showTag-audio:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-audio:checked ~ span.contentDropDown
+{	display:none;}
+/************ source tag **************/
+
+input#showTag-source:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-source:checked ~ span.contentDropDown
+{	display:none;}
+/************ track tag **************/
+
+input#showTag-track:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-track:checked ~ span.contentDropDown
+{	display:none;}
+/************ canvas tag **************/
+
+input#showTag-canvas:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-canvas:checked ~ span.contentDropDown
+{	display:none;}
+/************ map tag **************/
+
+input#showTag-map:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-map:checked ~ span.contentDropDown
+{	display:none;}
+/************ math tag **************/
+
+input#showTag-math:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-math:checked ~ span.contentDropDown
+{	display:none;}
+/************ svg tag **************/
+
+input#showTag-svg:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-svg:checked ~ span.contentDropDown
+{	display:none;}
+/************ table tag **************/
+
+input#showTag-table:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-table:checked ~ span.contentDropDown
+{	display:none;}
+/************ caption tag **************/
+
+input#showTag-caption:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-caption:checked ~ span.contentDropDown
+{	display:none;}
+/************ colgroup tag **************/
+
+input#showTag-colgroup:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-colgroup:checked ~ span.contentDropDown
+{	display:none;}
+/************ col tag **************/
+
+input#showTag-col:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-col:checked ~ span.contentDropDown
+{	display:none;}
+
+/************ tbody tag **************/
+
+input#showTag-col:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-col:checked ~ span.contentDropDown
+{	display:none;}
+/************ tbody tag **************/
+
+input#showTag-tbody:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-tbody:checked ~ span.contentDropDown
+{	display:none;}
+/************ thead tag **************/
+
+input#showTag-thead:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-thead:checked ~ span.contentDropDown
+{	display:none;}
+/************ tfoot tag **************/
+
+input#showTag-tfoot:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-tfoot:checked ~ span.contentDropDown
+{	display:none;}
+/************ tr tag **************/
+
+input#showTag-tr:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-tr:checked ~ span.contentDropDown
+{	display:none;}
+/************ td tag **************/
+
+input#showTag-td:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-td:checked ~ span.contentDropDown
+{	display:none;}
+
+
+
+
+
+
+/************  tag **************/
+
+input#showTag-col:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-col:checked ~ span.contentDropDown
+{	display:none;}
+/************ col tag **************/
+
+input#showTag-col:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-col:checked ~ span.contentDropDown
+{	display:none;}
+/************ col tag **************/
+
+input#showTag-col:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-col:checked ~ span.contentDropDown
+{	display:none;}
+/************ col tag **************/
+
+input#showTag-col:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-col:checked ~ span.contentDropDown
+{	display:none;}
+/************ col tag **************/
+
+input#showTag-col:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-col:checked ~ span.contentDropDown
+{	display:none;}
+/********************** Special Content Page **********************/
+/************ ins-del-attr tag **************/
+
+input#showTag-ins-del-attr:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-ins-del-attr:checked ~ span.contentDropDown
+{	display:none;}
+
+/************ edits-para tag **************/
+
+input#showTag-edits-para:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-edits-para:checked ~ span.contentDropDown
+{	display:none;}
+
+/************ edits-lists tag **************/
+
+input#showTag-edits-lists:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-edits-lists:checked ~ span.contentDropDown
+{	display:none;}
+
+/************ edits-tables tag **************/
+
+input#showTag-edits-tables:checked ~ span.contentDropDown
+{	display:block;}
+
+input#hideTag-edits-tables:checked ~ span.contentDropDown
+{	display:none;}
+	
+		/**************END*******************/

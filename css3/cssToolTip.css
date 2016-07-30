@@ -1,0 +1,1061 @@
+@charset "utf-8";
+/*	CSS Document
+	Website: BearZ Coding Zone
+	link: bearzdesignconcepts.net
+    File Name: cssToolTips.html - all tool tip styles
+    Author: Barry Smith
+*/
+/****************  My Tool Tip animation  ***********************/
+a#HTMLNamespace:target ~ ul#namespaceList li#htmlNamespace span.tipZoomInCaps,
+a#mathMLNamespace:target ~ ul#namespaceList li#mathmlNamespace span.tipZoomInCaps,
+a#SVGNamespace:target ~ ul#namespaceList li#svgNamespace span.tipZoomInCaps,
+a#XLinkNamespace:target ~ ul#namespaceList li#xlinkNamespace span.tipZoomInCaps,
+a#XMLNamespace:target ~ ul#namespaceList li#xmlNamespace span.tipZoomInCaps,
+a#XMLNSNamespace:target ~ ul#namespaceList li#xmlnsNamespace span.tipZoomInCaps,
+.tipZoomIn,.tipZoomInCaps,.tipZoomInSmall,.tipZoomInLowercase, .toolTip
+{
+	font-family: 'liberation_serifregular';
+	text-align:center;
+	color:rgba(20,20,50,1) !important;
+	text-shadow: 1px 1px 2px rgba(30,75,30,1) !important;
+	line-height:1.25rem;
+	letter-spacing:.105rem;
+	white-space:nowrap;
+    padding:7px 10px;
+	border-radius:10px;
+	border-bottom:5px solid rgba(51,51,102,1);
+	border-right:5px solid rgba(51,51,102,1);
+	box-shadow:7px 7px 7px rgba(51,51,102,.8);
+	background:-webkit-linear-gradient(rgba(240,230,140,1) 0%, rgba(170,127,85,1) 100%);
+    background:linear-gradient(rgba(240,230,140,1) 0%, rgba(170,127,85,1) 100%);
+	-webkit-animation: tipZoomIn .35s 1 ease-in-out;
+	-moz-animation: tipZoomIn .35s 1 ease-in-out;
+	animation: tipZoomIn .35s 1 ease-in-out;
+}
+.tipZoomIn abbr.html5:before,
+.tipZoomInCaps abbr.html5:before,
+.tipZoomInSmall abbr.html5:before,
+.tipZoomIn abbr.html5:after,
+.tipZoomInCaps abbr.html5:after,
+.tipZoomInSmall abbr.html5:after,
+.slideInTipSmall abbr.html5:before,
+.slideInTipSmallCaps abbr.html5:before,
+.slideInTipSmall abbr.html5:after,
+.slideInTipSmallCaps abbr.html5:after
+{
+	color:rgba(20,20,50,1) !important;
+	text-shadow: 1px 1px 2px rgba(30,75,30,1) !important;
+}
+.tipZoomIn abbr.html5:before,
+.tipZoomInCaps abbr.html5:before,
+.tipZoomInSmall abbr.html5:before,
+.slideInTipSmall abbr.html5:before,
+.slideInTipSmallCaps abbr.html5:before
+{	font-size:1.1rem !important;}
+.tipZoomIn abbr.html5:after,
+.tipZoomInCaps abbr.html5:after,
+.tipZoomInSmall abbr.html5:after,
+.slideInTipSmall abbr.html5:after,
+.slideInTipSmallCaps abbr.html5:after
+{	font-size:.8rem !important;}
+.tipZoomIn abbr.htmlBold,
+.tipZoomIn abbr.cssBold,
+.tipZoomIn abbr.css3,
+.tipZoomIn abbr.abbrBold,
+.tipZoomInCaps abbr.htmlBold,
+.tipZoomInCaps abbr.cssBold,
+.tipZoomInCaps abbr.css3,
+.tipZoomInCaps abbr.abbrBold,
+.tipZoomInSmall abbr.htmlBold,
+.tipZoomInSmall abbr.cssBold,
+.tipZoomInSmall abbr.css3,
+.tipZoomInSmall abbr.abbrBold,
+.slideInTipSmall abbr.htmlBold,
+.slideInTipSmall abbr.abbrBold,
+.slideInTipSmall abbr.css3,
+.slideInTipSmall abbr.cssBold,
+.slideInTipSmallCaps abbr.htmlBold,
+.slideInTipSmallCaps abbr.cssBold,
+.slideInTipSmallCaps abbr.css3,
+.slideInTipSmallCaps abbr.abbrBold
+{
+	font-size:110% !important;
+	color:rgba(20,20,50,1) !important;
+	text-shadow: 1px 1px 2px rgba(30,75,30,1) !important;
+}
+.tipZoomIn,.tipZoomInCaps
+{	font-size:1rem !important;}
+.tipZoomInSmall
+{	font-size:.85rem !important;}
+.tipZoomInCaps
+{	text-transform:capitalize;}
+.tipZoomInLowercase
+{	text-transform:lowercase;}
+@-webkit-keyframes tipZoomIn 
+{
+	from { -webkit-transform: rotate(0deg) scale(0) skew(-90deg) translate(0px); }
+	to { -webkit-transform: rotate(0deg) scale(1.0) skew(0deg) translate(0px); }
+}
+@-moz-keyframes tipZoomIn 
+{
+	from { -moz-transform: rotate(0deg) scale(0) skew(-90deg) translate(0px); }
+	to { -moz-transform: rotate(0deg) scale(1.0) skew(0deg) translate(0px); }
+}
+@keyframes tipZoomIn 
+{
+	from { transform: rotate(0deg) scale(0) skew(-90deg) translate(0px); }
+	to { transform: rotate(0deg) scale(1.0) skew(0deg) translate(0px); }
+}
+/******************************** My Tool Tips ********************************
+************** class="tip"**************/
+.tip
+{
+	text-decoration:none;
+	font-size:95%;
+	font-weight:700;
+	margin:0 auto;
+	white-space:pre-wrap;
+	text-shadow:-1px 1px 3px rgba(95,158,160,0);
+	box-shadow:5px 5px 5px rgba(51,51,102,.1);
+	border-radius:8px;
+	color:rgba(0,0,90,1);
+	border-bottom:1px dashed rgba(0,0,30,.8);
+	border-right:3px solid rgba(0,0,30,0);
+	padding:0px .25rem;
+	white-space:nowrap;
+	position:relative;
+	transition:all .75s;
+}
+.tip:visited
+{	color:rgb(30,15,15);}
+.tip:hover 
+{
+    cursor:help;
+	font-size:95%;
+	font-style:italic;
+	color:rgba(30,60,30,1);
+	text-shadow:0 0 .01rem rgba(30,60,30,1);
+	color:rgba(30,60,30,1);
+	text-shadow:1px 1px 1px rgba(200,117,51,1);
+	border-bottom:1px solid rgba(0,0,30,.8);
+	border-right:3px solid rgba(0,0,30,.8);
+	border-radius:8px;
+	padding:0px .25rem;
+	box-shadow:5px 5px 5px rgba(51,51,102,.5);
+	text-decoration:none;
+	white-space:nowrap;
+	transition:all .75s;
+}
+.tip:hover span
+{
+	display:block;
+	white-space:nowrap;
+	letter-spacing:normal;
+    left:-2rem;
+	top:1.55rem;
+    position:absolute;
+    z-index: 10020;
+    text-decoration:none;
+}
+/************* class="textLink" class="footerLink" class="textLinkBottom" class="textLinkListBottom" ****************/
+.textLink,
+.globalAttributesLink,
+.eventAttributesLink,
+.codeLink,
+.textLinkTop,
+.textLinkTop3,
+.textLinkBottom,
+.textLinkListBottom,
+.footerLink
+{
+	text-decoration:none;
+	font-size:100%;
+	font-weight:400;
+	margin:0 auto;
+	white-space:pre-wrap;
+	text-shadow:-1px 1px 3px rgba(95,158,160,1);
+	box-shadow:5px 5px 5px rgba(51,51,102,0);
+	border-radius:8px;
+	color:rgba(0,0,90,1);
+	border-bottom:1px dashed rgba(0,0,30,.8);
+	border-right:1px solid rgba(0,0,30,0);
+	padding:0px .25rem;
+	margin-right:-.25rem;
+	position:relative;
+	white-space:nowrap;
+	transition:all .75s;
+}
+.textLink,
+.globalAttributesLink,
+.eventAttributesLink,
+.textLinkTop,
+.textLinkTop3,
+.textLinkBottom,
+.textLinkListBottom,
+.footerLink
+{    font-family: 'liberation_serifregular';
+}
+.codeLink
+{    font-family: 'courier_primeregular';
+}
+.textLink:visited,
+.globalAttributesLink:visited,
+.eventAttributesLink:visited,
+.codeLink:visited,
+.codeLinkDoctype:visited,
+.textLinkTop:visited,
+.textLinkTop3:visited,
+.textLinkBottom:visited,
+.textLinkListBottom:visited,
+.footerLink:hover
+{	color:rgba(50,15,15,1);}
+.textLink:hover,
+.globalAttributesLink:hover,
+.eventAttributesLink:hover,
+.codeLink:hover,
+.textLinkTop:hover,
+.textLinkTop3:hover,
+.textLinkBottom:hover,
+.textLinkListBottom:hover,
+.footerLink:hover
+{
+    cursor:help;
+	font-size:100%;
+	font-style:italic;
+	color:rgba(60,30,30,1);
+	transition:all .75s;
+	background-color:rgba(24,139,34,.5);
+	text-shadow:0 0 .02rem rgba(60,30,30,1), -1px 1px 3px rgba(255,255,125,1);
+	border-bottom:1px solid rgba(0,0,30,.8);
+	border-right:1px solid rgba(0,0,30,.8);
+	border-radius:8px;
+	padding:0px .25rem;
+	margin-right:-.25rem;
+	box-shadow:5px 5px 5px rgba(51,51,102,.5);
+    position: relative;
+	text-decoration:none;
+	white-space:nowrap;
+}
+.codeLink:hover
+{	background-color:rgba(24,139,34,.2);
+}
+.textLink:hover span,
+.globalAttributesLink:hover span,
+.eventAttributesLink:hover span,
+.codeLink:hover span,
+.codeLinkDoctype:hover span,
+.codeLinkComment:hover span,
+.textLink:focus span,
+.textLinkTop:hover span,
+.textLinkTop3:hover span
+{
+	display:block;
+	font-size:100%;
+	color:rgba(30,60,30,1);
+	text-shadow:0 0 .01rem rgba(30,60,30,1);
+    left:-1.5rem;
+	right:auto;
+    width:auto;
+	top:1.5rem !important;
+    position:absolute;
+    z-index:10;
+    text-decoration:none;
+	cursor:pointer;
+}
+.tip:hover span.textEditorTip,
+.textLink:hover span.textEditorTip,
+{
+    position:absolute;
+    z-index:11000;
+	top:-2.75rem !important;
+	left:6rem;
+}
+/*.textLink:hover abbr,
+.textLinkTop:hover abbr,
+.textLinkTop3:hover abbr
+{	color:rgba(30,60,30,1);text-shadow:0 0 .02rem rgba(30,60,30,1), -1px 1px 3px rgba(255,255,125,1);}*/
+/************************* class="footerLink" *****************************/
+.footerLink:hover span
+{
+	display:block;
+    left:-1rem;
+    width:auto;
+	bottom:1rem;
+    position:absolute;
+    z-index:10;
+    text-decoration:none;
+}
+.footerLink span.tipZoomIn,
+.footerLink span.tipZoomInCaps,
+.footerLink span.tipZoomInSmall
+{	font-size:.75rem !important;
+}
+/************************* class="textLinkBottom" *****************************/
+.textLinkBottom:hover span
+{
+	display:block;
+    left:-2rem;
+	right:auto;
+    width:auto;
+	top:-3.5rem;
+    position:absolute;
+    text-decoration:none;
+}
+/************************* class="textLinkListBottom" *****************************/
+.textLinkListBottom:hover span
+{
+	display:block;
+    left:3rem;
+	top:-4rem;
+    position:absolute;
+    text-decoration:none;
+}
+/************************* class="tocLinks" *****************************/
+.tocLinks
+{
+	font-family: 'courier_primeregular';
+	font-size:110%;
+	text-transform:capitalize;
+	color:rgba(0,0,100,1);
+	padding-left:3px;
+	padding-right:3px;
+	line-height:1.5rem;
+	text-decoration:none;
+	border-bottom:2px solid rgba(0,0,40,0);
+	border-right:2px solid rgba(0,0,40,0);
+	box-shadow:5px 5px 5px 5px rgba(51,51,102,0);
+	border-radius:7px;
+	text-shadow:0px 0px 3px rgba(255,255,125,0);
+	position:relative;
+}
+.tocLinks abbr
+{
+    font-family: 'courier_primeregular';
+	font-size:95%;
+	text-transform:uppercase;
+}
+.tocLinks:visited
+{	color:rgb(50,10,10);}
+.tocLinks:visited:hover
+{	color:rgb(120,51,51);}
+.tocLinks:hover
+{
+	font-family: 'courier_primeregular';
+	font-style:italic;
+	font-size:110%;
+	color: rgba(0,0,40,1);
+	padding-left:3px;
+	padding-right:3px;
+	letter-spacing:.005rem;
+	line-height:1.45rem;
+	border-bottom:2px solid rgba(0,0,40,.8);
+	border-right:2px solid rgba(0,0,40,.8);
+	box-shadow:3px 3px 3px rgba(51,51,102,.5);
+	border-radius:7px;
+	text-shadow:0px 0px 3px rgba(255,255,125,1);
+	cursor:pointer;
+}
+.tocLinks:hover abbr
+{
+    font-family: 'courier_primeregular';
+	font-size:97%;
+	text-transform:uppercase;
+}
+.tocLinks:hover span
+{
+	display:block;
+    left:-2.75rem;
+	color:rgba(30,60,30,1);
+	text-shadow:0 0 .01rem rgba(30,60,30,1);
+	top:2.5rem;
+    position:absolute;
+    z-index: 10024;
+    text-decoration:none;
+}
+/*********************** Site Wide Navigation Tips *****************************/
+.tocLinksSWN span,.tableLink span,.tocLinksSWN:hover span:hover, .tableLink:hover span:hover
+{	display:none}
+.tocLinksSWN:hover span, .tableLink:hover span
+{
+	display:block;
+    width:auto;
+	right:auto;
+    left:-2rem;
+	top:-2.5rem;
+    position:absolute;
+    z-index: 10020;
+}
+/********* class="listLinks" *********************/
+.listLinks:hover span
+{
+	display:block;
+    left:-2.75rem;
+	top:2.5rem;
+    position:absolute;
+    z-index:10025;
+    text-decoration:none;
+}
+
+
+/*********  used in body text ***************/
+.elementLink
+{
+	font-family: 'courier_primeregular';
+	font-size:100%;
+	color:rgba(20,20,50,1);
+	padding:0px .25rem;
+	text-shadow:none;
+	text-transform:lowercase;
+	text-decoration:none;
+	border-radius:7px;
+	background-color:rgba(193,203,193,.3);
+	border-right:1px dashed rgba(20,20,30,0);
+	border-bottom:1px dashed rgba(20,20,50,.8);
+	box-shadow:5px 5px 5px rgba(51,51,102,0);
+	position:relative;
+	transition:all 500ms;
+}
+.elementLink:before
+{
+	content:"\003c";
+	font-family: 'courier_primeregular';
+	font-size:100%;
+	color:rgba(0,0,60,1);
+	text-shadow:none;
+}
+.elementLink:after
+{
+	content:"\003e";
+	font-family: 'courier_primeregular';
+	font-size:100%;
+	color:rgba(0,0,60,1);
+	text-shadow:none;
+}
+.elementLink:visited
+{	color:rgb(50,15,15);}
+.elementLink:visited:hover
+{	color:rgb(20,50,20);}
+.elementLink:hover
+{
+	color:rgba(30,60,30,1);
+	text-shadow:0 0 .01rem rgba(30,60,30,1);
+	padding:0px .25rem;
+	border-radius:7px;
+	background-color:rgba(102,205,170,.4);
+	border-right:1px solid rgba(20,20,50,.7);
+	border-bottom:1px solid rgba(20,20,50,1);
+	box-shadow:5px 5px 5px rgba(51,51,102,.6);
+	transition:all 1000ms;
+	cursor:help;
+}
+/************************* class="attrLinks" *****************************/
+.attrLinks:hover span, .elementLink:hover span
+{
+	display:block;
+    text-decoration:none;
+    position:absolute;
+    z-index:10;
+    left:1rem;
+	top:2rem;
+}
+/*********************** class="hiddenBackButton"  class="hiddenBackButton2"*******************************/
+.hiddenBackButton span,.hiddenBackButton2 span,
+.hiddenBackButton span:hover,.hiddenBackButton2 span:hover
+{	display:none;}
+.hiddenBackButton:hover span,.hiddenBackButton2:hover span
+{
+	display:block;
+	font-size:115% !important;
+	position:absolute;
+	z-index:10025;
+	top:-3.5rem;
+	left:1rem;
+}
+a:focus {background-color:rgba(24,139,34,.3);}
+/*********************** class="navigationCellLeft" class="navigationCellMidLeft" class="navigationCellMid"
+						class="navigationCellMidExtras" class="navigationCellMidRight" class="navigationCellRight" *******************************/
+.navigationCellLeft a:hover span,
+.navigationCellMidLeft a:hover span,
+.navigationCellMid a:hover span,
+.navigationCellMidExtras a:hover span,
+.navigationCellMidRight a:hover span,
+.navigationCellRight a:hover span
+{	font-size:100%;;
+}
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.html2Bold,
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.html2Bold:after,
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.htmlBold,
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.html5,
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.html5:after,
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.cssBold,
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.css2Bold,
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.css2Bold:after,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.html2Bold,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.html2Bold:after,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.htmlBold,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.html5,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.html5:after,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.cssBold,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.css2Bold,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.css2Bold:after,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.html2Bold,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.html2Bold:after,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.htmlBold,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.html5,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.html5:after,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.cssBold,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.css2Bold,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.css2Bold:after,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.html2Bold,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.html2Bold:after,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.htmlBold,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.html5,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.html5:after,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.cssBold,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.css2Bold,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.css2Bold:after,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.html2Bold,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.html2Bold:after,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.htmlBold,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.html5,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.html5:after,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.cssBold,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.css2Bold,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.css2Bold:after
+{
+	font-size:120% !important;
+	color:rgba(20,20,50,1) !important;
+	text-shadow: 1px 1px 2px rgba(30,75,30,1) !important;
+}
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.html2Bold:after,
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.html5:after,
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.css2Bold:after,
+.navigationCellLeft a:hover span.tipZoomInSmall abbr.css3:after,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.html2Bold:after,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.html5:after,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.css2Bold:after,
+.navigationCellMidLeft a:hover span.tipZoomInSmall abbr.css3:after,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.html2Bold:after,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.html5:after,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.css2Bold:after,
+.navigationCellMid a:hover span.tipZoomInSmall abbr.css3:after,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.html2Bold:after,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.html5:after,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.css2Bold:after,
+.navigationCellMidRight a:hover span.tipZoomInSmall abbr.css3:after,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.html2Bold:after,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.html5:after,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.css2Bold:after,
+.navigationCellRight a:hover span.tipZoomInSmall abbr.css3:after
+{	font-size:75% !important;}
+.navigationCellLeft:hover a span
+{	top:2rem; left:2rem;}
+.navigationCellMidLeft:hover a span
+{	top:-3.5rem; left:.5rem;}
+.navigationCellMid:hover a span
+{	top:2rem; left:-2rem;}
+.navigationCellMidExtras:hover a span
+{	top:2rem; left:-5rem;}
+.navigationCellMidRight:hover a span
+{	top:-2.5rem; left:-.5rem;}
+.navigationCellRight:hover a span
+{	top:2rem; left:auto;}
+.navigationRow4Cell p.navigationCellLeft:hover a span
+{	top:-2.35rem; left:2rem;}
+.navigationRow4Cell p.navigationCellMidLeft:hover a span
+{	top:-4rem; left:-1.5rem;}
+.navigationRow4Cell p.navigationCellMidRight:hover a span
+{	top:-2.35rem; left:-1.5rem;}
+.navigationRow4Cell p.navigationCellRight:hover a span
+{	top:-2.35rem;}
+/************************* applies to all tooltips *************************/
+.tip span,.tip:hover span:hover,
+.textLink span,.textLink:hover span:hover,
+.globalAttributesLink span,.globalAttributesLink:hover span:hover,
+.eventAttributesLink span,.eventAttributesLink:hover span:hover,
+.codeLink span,.codeLink:hover span:hover,
+.codeLinkDoctype span,.codeLinkDoctype:hover span:hover,
+.footerLink span,.footerLink:hover span:hover,
+.textLinkBottom span,.textLinkBottom:hover span:hover,
+.textLinkListBottom span,.textLinkListBottom:hover span:hover
+.tocLinks span,.tocLinks:hover span:hover,
+.elementLink span, .elementLink:hover span:hover,
+.attrLinks span,.attrLinks:hover span:hover,
+.listLinks span,.listLinks:hover span:hover
+{	display: none;}
+.textLink:hover span span:nth-last-child(1),
+.textLink:focus span span:nth-last-child(1),
+.globalAttributesLink:hover span span:nth-last-child(1),
+.globalAttributesLink:focus span span:nth-last-child(1),
+.eventAttributesLink:hover span span:nth-last-child(1),
+.eventAttributesLink:focus span span:nth-last-child(1),
+.codeLink:hover span span:nth-last-child(1),
+.codeLink:focus span span:nth-last-child(1),
+.codeLinkDoctype:hover span span:nth-last-child(1),
+.codeLinkDoctype:focus span span:nth-last-child(1),
+.textLinkBottom:hover span span:nth-last-child(1),
+.textLinkBottom:focus span span:nth-last-child(1),
+.textLinkListBottom:hover span span:nth-last-child(1),
+.textLinkListBottom:focus span span:nth-last-child(1),
+.tocLinks:hover span span:nth-last-child(1),
+.tocLinks:focus span span:nth-last-child(1),
+.tocLinkLeft:hover span span:nth-last-child(1),
+.tocLinkLeft:focus span span:nth-last-child(1),
+.tocLinkMiddle:hover span span:nth-last-child(1),
+.tocLinkMiddle:focus span span:nth-last-child(1),
+.tocLinkRight:hover span span:nth-last-child(1),
+.tocLinkRight:focus span span:nth-last-child(1),
+.tocLinksSWN:hover span span:nth-last-child(1),
+.tocLinksSWN:focus span span:nth-last-child(1),
+.elementLink:hover span span:nth-last-child(1),
+.elementLink:focus span span:nth-last-child(1),
+.tableLink:hover span span:nth-last-child(1),
+.tableLink:focus span span:nth-last-child(1),
+.attrLinks:hover span span:nth-last-child(1),
+.attrLinks:focus span span:nth-last-child(1),
+.footerLink:hover span span:nth-last-child(1),
+.footerLink:hover span span:nth-last-child(1),
+.footerLink:focus span span:nth-last-child(1),
+.listLinks:hover span:nth-last-child(1),
+.listLinks:focus span:nth-last-child(1),
+.navigationCellLeft a:hover span span:nth-last-child(1),
+.navigationCellLeft a:focus span span:nth-last-child(1),
+.navigationCellMidLeft a:hover span span:nth-last-child(1),
+.navigationCellMidLeft a:focus span span:nth-last-child(1),
+.navigationCellMid a:hover span span:nth-last-child(1),
+.navigationCellMid a:focus span span:nth-last-child(1),
+.navigationCellMidExtras a:hover span span:nth-last-child(1),
+.navigationCellMidExtras a:focus span span:nth-last-child(1),
+.navigationCellMidRight a:hover span span:nth-last-child(1),
+.navigationCellMidRight a:focus span span:nth-last-child(1),
+.navigationCellRight a:hover span span:nth-last-child(1),
+.navigationCellRight a:focus span span:nth-last-child(1),
+.imgTipSquare:hover span span:nth-last-child(1),
+.hiddenBackButton:hover span span:nth-last-child(1),
+.hiddenBackButton:focus span span:nth-last-child(1),
+.hiddenBackButton2:hover span span:nth-last-child(1),
+.hiddenBackButton2:focus span span:nth-last-child(1),
+.navigationLinks:hover span span:nth-last-child(1),
+.innerPageNavigation ul li a:hover span span:nth-last-child(1)
+{
+	position:static;
+	color:rgba(20,20,50,1) !important;
+	text-shadow: 1px 1px 2px rgba(30,75,30,1) !important;
+    padding:3px 0 !important;
+	border-bottom:none !important;
+	border-right:none !important;
+	background:none!important;
+}
+/************ used in tooltips ****************/
+.tipBold
+{
+	font-family: 'andadaregular';
+	color:rgba(30,60,30,1);
+	text-shadow:.05rem 0 .01rem rgba(30,50,30,1);
+	font-style:italic;
+	text-transform:capitalize;
+	font-size:95%;
+}
+.tipSubSec
+{
+	font-size:80% !important;
+	font-family: 'andadaregular';
+	font-style:italic;
+	text-transform:inherit;
+}
+.tipSmall
+{
+	font-size:80% !important;
+	font-family: 'liberation_serifregular';
+	font-variant:normal;
+	text-transform:capitalize;
+}
+.tip mark,
+.textLink mark,
+.codeLink mark,
+.footerLink mark,
+.textLinkBottom mark,
+.imgTipSquare mark,
+.textLinkListBottom mark,
+.tipTableLeft mark,
+.tipTableMid mark,
+.tipTableRight mark
+{
+	font-family: 'liberation_serifregular';
+	font-size:110%;
+	text-transform:uppercase;
+	padding:0 3px;
+	border:1px solid rgba(0,0,60,.2);
+	border-radius:10px;
+	position:relative;
+}
+.tip mark
+{
+	background-color:rgba(181,166,66,.5);
+	color:rgba(30,75,30,1) !important;
+	text-shadow:.05rem .05rem .2rem rgba(30,75,30,1) .0005rem 0 0 rgba(30,60,30,1) !important;
+}
+.textLink mark,
+.codeLink mark,
+.footerLink mark,
+.textLinkBottom mark,
+.imgTipSquare mark,
+.textLinkListBottom mark,
+.tipTableLeft mark,
+.tipTableMid mark,
+.tipTableRight mark
+{
+	background-color:rgba(207,172,8,.3);
+	color:rgba(30,60,30,1) !important;
+	text-shadow:.05rem .05rem .2rem rgba(30,75,30,1) .0005rem 0 0 rgba(30,60,30,1) !important;
+}
+/*********  used in tables of content ***************/
+.codeLinkDoctype,.codeLinkComment
+{
+	font-family: 'courier_primeregular';
+	font-size:100%;
+	color:rgba(20,20,100,1);
+	font-weight:700;
+	text-decoration:none;
+	margin:0 auto;
+	text-shadow:0px 0px 3px rgba(225,225,125,0);
+	border-radius:5px;
+	border-bottom:1px dashed rgba(0,0,30,.7);
+	border-right:1px solid rgba(0,0,30,0);
+	box-shadow:5px 5px 5px rgba(51,51,102,0);
+	padding:0px .25rem;
+	position:relative;
+	white-space:nowrap;
+	transition:all 500ms;
+}
+.codeLinkDoctype:before,.codeLinkComment:before
+{
+	font-family: 'courier_primeregular';
+	font-size:105%;
+	color:rgba(20,20,100,1);
+	margin-right:.1rem;
+	text-shadow:none;
+}
+.codeLinkDoctype:before
+{	content:"\3c\21 doctype\3e"; font-weight:700; text-transform:uppercase;}
+.codeLinkComment:before
+{	content:"\3c\21\2d\2d\2009\2e\2009\2e\2009\2e\2009\2d\2d\3e"; font-weight:700;}
+.codeLinkDoctype:hover:before,.codeLinkComment:hover:before
+{	text-shadow:0px 0px 5px rgba(255,255,125,1); font-weight:700;}
+.codeLinkDoctype:hover,.codeLinkComment:hover
+{
+	color:rgba(30,75,30,1);
+	text-shadow:0px 0px 3px rgba(225,225,125,.5);
+	border-bottom:2px solid rgba(0,0,30,.5);
+	border-right:2px solid rgba(0,0,30,.5);
+	box-shadow:5px 5px 5px rgba(51,51,102,.5);
+	position:relative;
+	transition:all 500ms;
+}
+.singleCodeLink
+{
+	font-family: 'courier_primeregular';
+	font-size:102%;
+	border-radius:5px;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-bottom:2px solid rgba(10,40,10,.0);
+	background-color:rgba(193,203,193,.0);
+	text-shadow:none;
+	text-transform:lowercase;
+	text-decoration:none;
+	padding:0px .25rem;
+	position:relative;
+	z-index:9998;
+}
+.singleCodeLink::before
+{
+	content:"\003c";
+	font-family: 'courier_primeregular';
+	font-size:110%;	text-shadow:none;
+}
+.singleCodeLink::after
+{
+	content:"\003e";
+	font-family: 'courier_primeregular';
+	font-size:110%;
+	text-shadow:none;
+}
+.singleCodeLink:visited
+{	color:rgb(50,15,15);}
+.singleCodeLink:visited::before
+{	color:rgb(50,15,15);}
+.singleCodeLink:visited::after
+{	color:rgb(50,15,15);}
+.singleCodeLink:visited:hover
+{	color:rgb(150,51,0);}
+.singleCodeLink:visited:hover::before
+{	color:rgb(150,51,0);}
+.singleCodeLink:visited:hover::after
+{	color:rgb(150,51,0);}
+.singleCodeLink:hover
+{
+	font-size:102%;
+	font-style:italic;
+	font-weight:700;
+	color:rgba(10,40,10,1);
+	background-color:rgba(193,203,193,.4);
+	border-bottom:2px solid rgba(10,40,10,.7);
+	border-radius:7px;
+	box-shadow:3px 3px 3px rgba(51,102,51,.6);
+	cursor:help;
+}
+.singleCodeLink:hover::before
+{
+	content:"\003c";
+	font-family: 'courier_primeregular';
+	font-size:110%;
+	color:2px solid rgba(10,40,10,1);
+	text-shadow:none;
+}
+.singleCodeLink:hover::after
+{
+	content:"\003e";
+	font-family: 'courier_primeregular';
+	font-size:110%;
+	color:2px solid rgba(10,40,10,1);
+	text-shadow:none;
+}
+/************** Table of Contents **********************
+*******************Table Left ***********/
+.tocLinkLeft:hover 
+{
+    cursor:help;
+    position: relative;
+	z-index:9999;
+	color:rgba(60,0,0,1);
+	text-shadow:0px 0px 3px rgba(255,255,125,1);
+	border-bottom:3px solid rgba(0,0,30,.8);
+	border-right:3px solid rgba(0,0,30,.8);
+	border-radius:10px;
+	padding:0px .25rem;
+	box-shadow:5px 5px 5px rgba(51,51,102,.7);
+}
+.tocLinkLeft span,.tocLinkLeft:hover span:hover
+{	display: none;}
+.tocLinkLeft:hover span
+{
+	display:block;
+	font-size:
+    left:2rem;
+	right:auto;
+    width:auto;
+	top:1.75rem;
+    position:absolute;
+    z-index: 10024;
+    text-decoration:none;
+}
+/************** Table Middle ***********/
+.tocLinkMiddle:hover 
+{
+    cursor:help;
+    position: relative;
+	z-index:9999;
+	color:rgba(60,0,0,1);
+	text-shadow:0px 0px 3px rgba(255,255,125,1);
+	border-bottom:3px solid rgba(0,0,30,.8);
+	border-right:3px solid rgba(0,0,30,.8);
+	border-radius:10px;
+	padding:0px .25rem;
+	box-shadow:5px 5px 5px rgba(51,51,102,.7);
+}
+.tocLinkMiddle span
+{	display: none;}
+.tocLinkMiddle:hover span
+{
+	display:block;
+    left:-1rem;
+	right:auto;
+    width:auto;
+	top:1.75rem;
+    position:absolute;
+    z-index: 10024;
+    text-decoration:none;
+}
+/************** Table Right ***********/
+.tocLinkRight:hover 
+{
+    cursor:help;
+    position: relative;
+	z-index:9999;
+	color:rgba(60,0,0,1);
+	text-shadow:0px 0px 3px rgba(255,255,125,1);
+	border-bottom:3px solid rgba(0,0,30,.8);
+	border-right:3px solid rgba(0,0,30,.8);
+	border-radius:10px;
+	padding:0px .25rem;
+	box-shadow:5px 5px 5px rgba(51,51,102,.7);
+}
+.tocLinkRight span
+{	display: none;}
+.tocLinkRight:hover span
+{
+	display:block;
+    left:-2.5rem;
+	right:auto;
+    width:auto;
+	top:1.75rem;
+    position:absolute;
+    z-index: 10024;
+    text-decoration:none;
+}
+/******************* Image Tool Tips *****************/
+.imgTipSquare:hover img 
+{
+	text-decoration: none;
+	color: rgba(0,0,40,1);
+    cursor:help;
+	box-shadow:5px 5px 5px rgba(51,51,102,.7);
+}
+.imgTipSquare span,.imgTipSquare:hover span:hover
+{	display: none;}
+.imgTipSquare:hover span
+{
+	display:block;
+    width:auto;
+    left:40%;
+	top:3rem;
+    position:absolute;
+    z-index: 9999;
+    text-decoration:none;
+}
+.imgTipSquare span.tipZoomInSmall
+{	font-size:.7rem !important;}
+
+
+.browserImage:hover
+{	cursor:help;}
+.imgTip
+{
+	text-decoration: none;
+	color: rgba(0,0,40,1);
+	transition:all 500ms;
+}
+.imgTip:hover 
+{
+    cursor:help;
+    position: relative;
+	transition:all 500ms;
+	box-shadow:inset 0px 0px 1rem rgba(51,51,102,.9), inset 5px 5px 1.5rem rgba(51,51,102,.5);
+	border-radius:10px 7px 0px 0px;
+}
+.imgTip i
+{
+    font-family: 'andadaregular';
+	font-size:90%;
+	font-style:normal;
+	font-weight:700;
+	text-transform:capitalize;
+	text-decoration: none;
+	color: rgba(10,10,30,1) !important;
+	border-radius:7px;
+	padding:2px 5px;
+	border-right:1px solid rgba(10,10,50,0);
+	border-bottom:1px dashed rgba(10,10,50,1);
+}
+.imgTip:hover i 
+{
+	font-family:'andadaregular';
+	font-size:90%;
+	font-style:italic;
+	font-weight:700;
+    cursor:help;
+    position: relative;
+	transition:all 700ms;
+	border-radius:7px;
+	padding:2px 5px;
+	border-right:1px solid rgba(10,10,50,.7);
+	border-bottom:1px solid rgba(10,10,50,1);
+	box-shadow:5px 5px 5px rgba(51,51,102,.5);
+}
+.imgTip span,.imgTip:hover span:hover
+{	display: none;}
+.imgTip:hover span
+{
+	display:block;
+	font-family: 'galatia_silregular';
+	font-weight:700;
+	font-size:90%;
+	text-align:center;
+    width:7rem;
+	white-space:normal;
+    position:absolute;
+	z-index:10025;
+    text-decoration:none;
+    left:2rem;
+	top:5rem;
+}
+.imgTipRight
+{
+	text-decoration: none;
+	color: rgba(0,0,40,1);
+}
+.imgTipRight:hover 
+{
+    cursor:help;
+    position: relative;
+	transition:all .5s;
+	box-shadow:inset 0px 0px 15px rgba(51,51,102,.9);
+}
+.imgTipRight i
+{
+    font-family: 'andadaregular';
+	font-size:95%;
+	font-style:normal;
+	font-weight:700;
+	text-transform:capitalize;
+	text-decoration: none;
+	color: rgba(10,10,30,1) !important;
+	border-radius:7px;
+	padding:2px 5px;
+	border-right:1px solid rgba(10,10,50,0);
+	border-bottom:1px dashed rgba(10,10,50,1);
+}
+.imgTipRight:hover i 
+{
+	font-family:'andadaregular';
+	font-size:95%;
+	font-style:italic;
+	font-weight:700;
+    cursor:help;
+    position: relative;
+	transition:all 700ms;
+	border-radius:7px;
+	padding:2px 5px;
+	border-right:1px solid rgba(10,10,50,.7);
+	border-bottom:1px solid rgba(10,10,50,1);
+	box-shadow:5px 5px 5px rgba(51,51,102,.5);
+}
+.imgTipRight span,.imgTipRight:hover span:hover
+{	display: none;}
+.imgTipRight:hover span
+{
+	display:block;
+	font-family: 'andadaregular';
+	font-weight:700;
+	font-size:90%;
+	text-align:center;
+    width:7rem;
+	white-space:normal;
+    position:absolute;
+	z-index:10025;
+    text-decoration:none;
+    left:-2rem;
+	top:5rem;
+}
+
+
+
+
+
+
+
+
+
+

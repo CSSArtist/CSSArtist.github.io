@@ -1,0 +1,670 @@
+@charset "utf-8";
+/* CSS Document
+	File Information: very "Selector Heavy" as the :target pseudo-class works best on an elements id attribute
+*/
+span:target,
+p:target span.target,
+p span:target,
+div:target span.target,
+div:target h5.displayNone span,
+div:target p.target span.target,
+a:target ~ h3 span,
+div:target > p:nth-child(1) > span.target,
+ul:target li.target,
+ol:target li.target,
+ul:target li span.target,
+ol:target li span.target,
+dl:target dd span.target,
+dd:target span.target,
+div:target p:nth-child(1) span.target,
+div:target p.target-p span.target,
+#dialogGroup:target #dialogManager #span-dialogGroup,
+#dialogManager:target #span-Manager,
+h2:target ~ article div.target-p p span.target
+{
+	background:rgba(250,250,20,.4);
+	border-radius:5px;
+	padding:0 3px;
+	font-weight:700;
+	font-size:97%;
+	text-transform:capitalize;
+}
+/********************** targets span looks like tipZoomIn ******************************/
+div:target p span.target-bold
+div:target dfn.target-bold,
+#dialogManager:target #span-Manager,
+#parentBrowsingContext:target #dfn-parentBrowsingContext #span-ParentBrowsingContext,
+#childBrowsingContext:target #dfn-childBrowsingContext #span-ChildBrowsingContext,
+#editingHost:target ~ #dfnEditingHost div:first-child p:first-child span.target-bold,
+dd a#imageSources:target ~ div p#imageSource span.target-bold,
+#embeddedFallbackContent:target ~ article.target div p span#fallbackContent span.target-bold,
+#xml:target div p#XMLCompatible span.target-bold,
+a#mediaData:target ~ div div#mediaData-Resource p#mediaDataTerm span.target dfn.target-bold,
+#mediaElements:target ~ div p#mediaElementsTerm dfn.target-bold,
+#mediaResource:target ~ div div#mediaData-Resource p#mediaResourceTerm dfn.target-bold,
+a#validBrowsingContextName:target ~ div#validBrowsingContextName-p #dfnValidBrowsingContextName,
+#browsingContextNames:target ~ div p#browsingContextNames-p #dfnBrowsingContextNames
+{
+	background:-webkit-linear-gradient(rgba(240,230,140,.5) 0%, rgba(170,127,85,.9) 100%);
+    background:linear-gradient(rgba(240,230,140,.5) 0%, rgba(170,127,85,.9) 100%);
+	box-shadow:3px 3px 3px rgba(109,64,49,1);
+	border-radius:5px;
+	padding:0 3px;
+	font-weight:700;
+	font-style:italic;
+	text-transform:capitalize;
+	text-shadow:1px -1px 1px rgba(150,150,20,1), -1px 1px 0 rgba(207,135,6,1);
+}
+/***************************** light yellow background fading out to right ********************************/
+ul.shortBlockCode:target li,
+ol.shortBlockCode:target li,
+div:target ul.target li,
+div:target ol.target li
+{
+	padding:0 3px;
+	font-weight:700;
+	background: -webkit-linear-gradient(left, rgba(225,225,100,.4), rgba(225,225,100,.2), rgba(225,225,100,0));
+	background:    -moz-linear-gradient(left, rgba(225,225,100,.4), rgba(225,225,100,.2), rgba(225,225,100,0));
+	background:     -ms-linear-gradient(left, rgba(225,225,100,.4), rgba(225,225,100,.2), rgba(225,225,100,0));
+	background:      -o-linear-gradient(left, rgba(225,225,100,.4), rgba(225,225,100,.2), rgba(225,225,100,0));
+	background:	   linear-gradient(to right,  rgba(225,225,100,.4), rgba(225,225,100,.2), rgba(225,225,100,0));
+}
+/************************************** animated highlight orange ********************************/
+a#childOnly-caption:target ~ figure div p#child-caption code,
+a#childOnly-caption:target ~ figure div p#parent-caption code,
+a#childOnly-col:target ~ figure div p#child-col code,
+a#childOnly-col:target ~ figure div p#parent-col code,
+a#childOnly-colgroup:target ~ figure div p#child-colgroup code,
+a#childOnly-colgroup:target ~ figure div p#parent-colgroup code,
+a#childOnly-dd:target ~ figure div p#child-dd code,
+a#childOnly-dd:target ~ figure div p#parent-dd code,
+a#childOnly-dt:target ~ figure div p#child-dt code,
+a#childOnly-dt:target ~ figure div p#parent-dt code,
+a#childOnly-figcaption:target ~ figure div p#child-figcaption code,
+a#childOnly-figcaption:target ~ figure div p#parent-figcaption code,
+a#childOnly-legend:target ~ figure div p#child-legend code,
+a#childOnly-legend:target ~ figure div p#parent-legend code,
+a#childOnly-li:target ~ figure div p#child-li code,
+a#childOnly-li:target ~ figure div p#parent-li code,
+a#childOnly-menuitem:target ~ figure div p#child-menuitem code,
+a#childOnly-menuitem:target ~ figure div p#parent-menuitem code,
+a#childOnly-optgroup:target ~ figure div p#child-optgroup code,
+a#childOnly-optgroup:target ~ figure div p#parent-optgroup code,
+a#childOnly-option:target ~ figure div p#child-option code,
+a#childOnly-option:target ~ figure div p#parent-option code,
+a#childOnly-param:target ~ figure div p#child-param code,
+a#childOnly-param:target ~ figure div p#parent-param code,
+a#childOnly-rp:target ~ figure div p#child-rp code,
+a#childOnly-rp:target ~ figure div p#parent-rp code,
+a#childOnly-rt:target ~ figure div p#child-rt code,
+a#childOnly-rt:target ~ figure div p#parent-rt code,
+a#childOnly-rtc:target ~ figure div p#child-rtc code,
+a#childOnly-rtc:target ~ figure div p#parent-rtc code,
+a#childOnly-source:target ~ figure div p#child-source code,
+a#childOnly-source:target ~ figure div p#parent-source code,
+a#childOnly-summary:target ~ figure div p#child-summary code,
+a#childOnly-summary:target ~ figure div p#parent-summary code,
+a#childOnly-tbody:target ~ figure div p#child-tbody code,
+a#childOnly-tbody:target ~ figure div p#parent-tbody code,
+a#childOnly-td:target ~ figure div p#child-td code,
+a#childOnly-td:target ~ figure div p#parent-td code,
+a#childOnly-tfoot:target ~ figure div p#child-tfoot code,
+a#childOnly-tfoot:target ~ figure div p#parent-tfoot code,
+a#childOnly-th:target ~ figure div p#child-th code,
+a#childOnly-th:target ~ figure div p#parent-th code,
+a#childOnly-thead:target ~ figure div p#child-thead code,
+a#childOnly-thead:target ~ figure div p#parent-thead code,
+a#childOnly-tr:target ~ figure div p#child-tr code,
+a#childOnly-tr:target ~ figure div p#parent-tr code,
+a#childOnly-track:target ~ figure div p#child-track code,
+a#childOnly-track:target ~ figure div p#parent-track code,
+a#childOnly-area:target ~ figure div p#child-area code,
+a#childOnly-area:target ~ figure div p#parent-area code,
+ul.elementColumns10A li code:target
+{
+	-webkit-animation-delay:.35s;
+    animation-delay:.35s; 
+	-webkit-animation-duration:1s;
+    animation-duration:1s; 
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-name:elementListTarget;
+    animation-name:elementListTarget;
+}
+@-webkit-keyframes elementListTarget {
+	from {	background:none; box-shadow:0px 0px 3px rgba(51,51,102,.3);}
+	to {	background:rgba(255,127,80,.6); box-shadow:5px 5px 5px rgba(51,51,102,.5);}
+}
+@keyframes elementListTarget {
+	from {	background:none; box-shadow:0px 0px 3px rgba(51,51,102,.3);}
+	to {	background:rgba(255,127,80,.6); box-shadow:5px 5px 5px rgba(51,51,102,.5);}
+}
+/************************************ gives my back button text color ************************************/
+div:target a.displayNone,
+div:target a.inlinePreviousLocation,
+div:target p a.displayNone,
+figure:target a.inlinePreviousLocation,
+p:target a.displayNone,
+p:target a.inlinePreviousLocation,
+div:target p.target a.inlinePreviousLocation
+ul.shortBlockCode:target li a,
+ol.shortBlockCode:target li a,
+section:target article.target a.inlinePreviousLocation,
+a#rank:target ~ div.descriptionText > p#ranking a.inlinePreviousLocation,
+h2:target~article div.target-p a.inlinePreviousLocation,
+h3:target~div div.target_p1 a.inlinePreviousLocation,
+a#mediaData:target ~ div div#mediaData-Resource a.inlinePreviousLocation,
+#mediaElements:target ~ div nav.hiddenNav2 a.hiddenBackButton,
+#validBrowsingContextName ~ #validBrowsingContextName-p a.inlinePreviousLocation,
+#browsingContextNames:target ~ div#browsingContextNames-p a.inlinePreviousLocation,
+a#headElement:target ~ dl dd.second-child p#headContentModel a.inlinePreviousLocation,
+#head-element:target dl dd.first-child p#headZeroCategory a.inlinePreviousLocation,
+a:target ~ figure a.inlinePreviousLocation
+{
+	text-shadow:0 1px 1px rgba(255,255,55,.5);
+	color:rgba(50,75,75,1);
+}
+/********************** brings target area down 3 rem from top of screen **********************************/
+*:target,
+a:target ~ figure
+{
+	padding-top:3rem;
+}
+section:target article.target nav.displayNone,
+section:target article.target a.inlinePreviousLocation,
+article:target nav.displayNone,
+article:target nav.hiddenNav2,
+#toc-focus:target #focus a.inlinePreviousLocation,
+figure:target a.inlinePreviousLocation,
+figure:target figcaption.topLeftFadingBorder,
+#controlGroup:target ul#controlGroupOwners li span.topLeftH5Border,
+#controlGroupOwners:target,
+#controlGroupOwners:target li span.topLeftH5Border,
+#dialogGroupOwner:target,
+#dialogGroupOwner:target li span.topLeftH5Border,
+div:target a.displayNone,
+div:target a.inlinePreviousLocation,
+div:target p.target-p dfn:first-child.topLeftH5Border,
+div:target p.target-p a.inlinePreviousLocation,
+div a:target ~  p.target_p1 a.inlinePreviousLocation,
+div:target p a.displayNone,
+div.fadingBordersParagraph:target p.topLeftH5Border,
+div:target p.topLeftH5Border,
+div.attrUse:target dfn.topLeftH5Border,
+div:target p:first-child dfn.topLeftFadingBorder,
+div:target p:first-child dfn.topLeftH5Border,
+div:target h5.displayNone,
+div:target nav,
+ul:target li a.inlinePreviousLocation, 
+ul:target li.target_p1 span.displayNone,
+ul:target li.target_p1 p.topLeftH5Border,
+p:target a.inlinePreviousLocation, 
+p:target span.displayNone, 
+p:target span.topLeftH5Border, 
+p:target span.topLeftH5Border,
+p:target > dfn.myH5.displayNone,
+dt:target p dfn.topLeftH5Border,
+dd:target p:first-child dfn.topLeftFadingBorder,
+dd:focus p:first-child dfn.topLeftFadingBorder,
+#dfnXML:target h3:first-child dfn.topLeftFadingBorder,
+#dfnXML:target ~ nav.hiddenNav2,
+dd:target div nav,
+a:target ~ nav.displayNone,
+a:target ~ ul li:last-child a.inlinePreviousLocation,
+span:target ~ a.inlinePreviousLocation,
+.focusExample:target iframe,
+#dialogManager:target a.inlinePreviousLocation,
+#dialogManager:target span.topLeftH5Border,
+a#rank:target ~ div.descriptionText > p#ranking a.inlinePreviousLocation,
+h4:target ~ a.inlinePreviousLocation,
+h3:target ~ nav.displayNone,
+h2:target ~ article div div.target-p a.inlinePreviousLocation,
+h3:target~div div.target_p1 a.inlinePreviousLocation,
+dd a#imageSources:target ~ div nav,
+#embeddedFallbackContent:target ~ article.target nav.displayNone,
+#altAttributeTextRequirements ~ div nav.hiddenNav2,
+#mediaElements:target ~ div nav.hiddenNav2,
+a#mediaData:target ~ div div#mediaData-Resource a.inlinePreviousLocation,
+#validBrowsingContextName ~ #validBrowsingContextName-p a.inlinePreviousLocation,
+#browsingContextNames:target ~ div#browsingContextNames-p a.inlinePreviousLocation,
+a#mediaData:target ~ div p#mediaDataTerm span.target,
+a#headElement:target ~ dl dd.second-child p#headContentModel a.inlinePreviousLocation,
+#head-element:target dl dd.first-child p#headZeroCategory a.inlinePreviousLocation,
+.header:target > p.topLeftH2Border
+{
+	display:block;
+}
+article:target nav.displayNone a.inlinePreviousLocation,
+#controlGroup:target ul li span.topLeftH5Border:nth-last-child(1),
+div:target ul.target li.displayNone a.displayNone,
+div:target ol.target li.displayNone a.displayNone,
+dl:target dd a.displayNone,
+dl:target dd button.displayNone,
+ul.shortBlockCode:target li.displayNone a.displayNone,
+ol.shortBlockCode:target li.displayNone a.displayNone,
+a:target ~ div a.displayNone,
+details:target a.displayNone
+{
+	display:inline-block;
+}
+a#childOnly-caption:target ~ figure div p#child-caption a.displayNone,
+a#childOnly-col:target ~ figure div p#child-col a.displayNone,
+a#childOnly-colgroup:target ~ figure div p#child-colgroup a.displayNone,
+a#childOnly-dd:target ~ figure div p#child-dd a.displayNone,
+a#childOnly-dt:target ~ figure div p#child-dt a.displayNone,
+a#childOnly-figcaption:target ~ figure div p#child-figcaption a.displayNone,
+a#childOnly-legend:target ~ figure div p#child-legend a.displayNone,
+a#childOnly-li:target ~ figure div p#child-li a.displayNone,
+a#childOnly-menuitem:target ~ figure div p#child-menuitem a.displayNone,
+a#childOnly-optgroup:target ~ figure div p#child-optgroup a.displayNone,
+a#childOnly-option:target ~ figure div p#child-option a.displayNone,
+a#childOnly-param:target ~ figure div p#child-param a.displayNone,
+a#childOnly-rp:target ~ figure div p#child-rp a.displayNone,
+a#childOnly-rt:target ~ figure div p#child-rt a.displayNone,
+a#childOnly-rtc:target ~ figure div p#child-rtc a.displayNone,
+a#childOnly-source:target ~ figure div p#child-source a.displayNone,
+a#childOnly-summary:target ~ figure div p#child-summary a.displayNone,
+a#childOnly-tbody:target ~ figure div p#child-tbody a.displayNone,
+a#childOnly-td:target ~ figure div p#child-td a.displayNone,
+a#childOnly-tfoot:target ~ figure div p#child-tfoot a.displayNone,
+a#childOnly-th:target ~ figure div p#child-th a.displayNone,
+a#childOnly-thead:target ~ figure div p#child-thead a.displayNone,
+a#childOnly-tr:target ~ figure div p#child-tr a.displayNone,
+a#childOnly-track:target ~ figure div p#child-track a.displayNone,
+a#childOnly-area:target ~ figure div p#child-area a.displayNone
+{
+	display:inline;
+}
+div:target ul.target li.displayNone,
+div:target ol.target li.displayNone,
+ul.shortBlockCode:target li.displayNone,
+ul.elementColumns10A li code:target li.displayNone,
+a:target ~ ul#namespaceList li:last-child,
+ol.shortBlockCode:target li.displayNone
+{
+	display:list-item;
+}
+ul:target li.target_p1.myBullet:before,
+a:target ~ ul#namespaceList li:last-child:before,
+a#HTMLNamespace:target ~ ul#namespaceList li#htmlNamespace:before,
+a#mathMLNamespace:target ~ ul#namespaceList li#mathmlNamespace:before,
+a#SVGNamespace:target ~ ul#namespaceList li#svgNamespace:before,
+a#XLinkNamespace:target ~ ul#namespaceList li#xlinkNamespace:before,
+a#XMLNamespace:target ~ ul#namespaceList li#xmlNamespace:before,
+a#XMLNSNamespace:target ~ ul#namespaceList li#xmlnsNamespace:before,
+figure a:target ul li.target-dialogGroupOwner,
+#controlGroup:target p a.inlinePreviousLocation,
+#controlGroup:target ul li a.inlinePreviousLocation,
+#dialogGroup:target p a.inlinePreviousLocation,
+div:target p a.inlinePreviousLocation,
+div:target p:first-child dfn:last-child,
+dt:target p dfn.definitionHeaderH5:last-child,
+dd:target p:first-child dfn:last-child,
+#dfnXML:target h3:first-child dfn:last-child,
+#altAttributeTextRequirements ~ nav.displayNone,
+.header:target h2,
+.header:target h3,
+.header:target ~ nav div.navigationTableElement,
+#startTag:target #startTagStep6 a.inlinePreviousLocation
+{	display:none;}
+dd:target div.fadingBordersTextContainer2,
+dd:focus div.fadingBordersTextContainer2
+{	background-image:none;}
+.header:target ~ nav div.navigationRow4Cell
+{	margin-top:1rem; padding-top:1rem;}
+/*********************** green inset shadow, light blue to darker blue background *****************************/
+h2:target~article div div.target-p,
+h3:target~div div.target_p1,
+figure:target ul,
+#controlGroup:target,
+#controlGroupOwners:target,
+#dialogGroup:target,
+#dialogGroupOwner:target,
+div:target>p.target,
+div.greenFadingBorders:target,
+p:target,
+div:target,
+ul:target,
+ol:target,
+dd:target p.target,
+dl:target,
+dl:target dd.target,
+details:target div,dd:focus,
+#dialogManager:target,
+a#rank:target ~ div.descriptionText > p#ranking,
+#mediaElements:target ~ div,
+a#mediaData:target ~ div div#mediaData-Resource
+{
+	font-family:'andadaregular';
+	font-weight:700;
+	letter-spacing:.02rem;
+	word-spacing:.065rem;
+	text-shadow:0 1px 1px rgba(255,255,55,.5);
+	width:95%;
+	margin:.5rem auto;
+	padding:1.25rem 1rem 1rem;
+	border-radius:7px;
+	border:2px solid rgba(125,100,30,1);
+	box-shadow:inset 0 0 5rem .5rem rgba(30,75,30,.7), .5rem .375rem .5rem rgba(51,51,102,.5);
+	background:-webkit-linear-gradient(rgba(130,206,250,.5) 20%, rgba(51,51,150,.3) 100%);
+	background:	  -moz-linear-gradient(rgba(130,206,250,.5) 20%, rgba(51,51,150,.3) 100%);
+	background:		   linear-gradient(rgba(130,206,250,.5) 20%, rgba(51,51,150,.3) 100%);
+}
+.dt-dd-target,
+a#HTMLNamespace:target ~ ul#namespaceList li#htmlNamespace span,
+a#mathMLNamespace:target ~ ul#namespaceList li#mathmlNamespace span,
+a#SVGNamespace:target ~ ul#namespaceList li#svgNamespace span,
+a#XLinkNamespace:target ~ ul#namespaceList li#xlinkNamespace span,
+a#XMLNamespace:target ~ ul#namespaceList li#xmlNamespace span,
+a#XMLNSNamespace:target ~ ul#namespaceList li#xmlnsNamespace span,
+#rootElement:target ~ #htmlDefinition #htmlZeroCategory ~ dd p.first-child,
+a#headElement:target ~ dl dd.second-child p#headContentModel,
+#head-element:target dl dd.first-child p#headZeroCategory,
+dd a#imageSources:target ~ div p#imageSource,
+#embeddedFallbackContent:target ~ article.target div p span#fallbackContent,
+#xml:target div p#XMLCompatible,
+#mediaElements:target ~ div p#mediaElementsTerm,
+a#mediaData:target ~ div div#mediaData-Resource p#mediaDataTerm span.target
+{
+	font-style:italic;
+	border-radius:7px;
+	text-shadow:0 1px 1px rgba(255,255,55,.5);
+	padding:.25rem 1rem;
+	border:2px solid rgba(225,225,150,.5);
+	box-shadow:inset 0 0 3rem .25rem rgba(30,75,30,.7), .25rem .25rem .25rem rgba(51,51,102,.5);
+	background:-webkit-linear-gradient(rgba(130,206,250,.6) 20%, rgba(51,51,150,.4) 100%);
+	background:	  -moz-linear-gradient(rgba(130,206,250,.6) 20%, rgba(51,51,150,.4) 100%);
+	background:		   linear-gradient(rgba(130,206,250,.6) 20%, rgba(51,51,150,.4) 100%);
+}
+a#headElement:target ~ dl dd.second-child p#headContentModel,
+#head-element:target dl dd.first-child p#headZeroCategory
+{	margin-left:-1.5rem;}
+a#childOnly-caption:target ~ figure div p#parent-caption,
+a#childOnly-col:target ~ figure div p#parent-col,
+a#childOnly-colgroup:target ~ figure div p#parent-colgroup,
+a#childOnly-dd:target ~ figure div p#parent-dd,
+a#childOnly-dt:target ~ figure div p#parent-dt,
+a#childOnly-figcaption:target ~ figure div p#parent-figcaption,
+a#childOnly-legend:target ~ figure div p#parent-legend,
+a#childOnly-li:target ~ figure div p#parent-li,
+a#childOnly-menuitem:target ~ figure div p#parent-menuitem,
+a#childOnly-optgroup:target ~ figure div p#parent-optgroup,
+a#childOnly-option:target ~ figure div p#parent-option,
+a#childOnly-param:target ~ figure div p#parent-param,
+a#childOnly-rp:target ~ figure div p#parent-rp,
+a#childOnly-rt:target ~ figure div p#parent-rt,
+a#childOnly-rtc:target ~ figure div p#parent-rtc,
+a#childOnly-source:target ~ figure div p#parent-source,
+a#childOnly-summary:target ~ figure div p#parent-summary,
+a#childOnly-tbody:target ~ figure div p#parent-tbody,
+a#childOnly-td:target ~ figure div p#parent-td,
+a#childOnly-tfoot:target ~ figure div p#parent-tfoot,
+a#childOnly-th:target ~ figure div p#parent-th,
+a#childOnly-thead:target ~ figure div p#parent-thead,
+a#childOnly-tr:target ~ figure div p#parent-tr,
+a#childOnly-track:target ~ figure div p#parent-track,
+a#childOnly-area:target ~ figure div p#parent-area,
+a#validBrowsingContextName:target ~ div#validBrowsingContextName-p,
+#browsingContextNames:target ~ div#browsingContextNames-p
+{
+	padding: .5rem 0 .5rem 1rem;
+	border:2px solid rgba(225,225,150,.5);
+	box-shadow:inset 0 0 3rem .25rem rgba(30,75,30,.7), .25rem .25rem .25rem rgba(51,51,102,.5);
+	background:-webkit-linear-gradient(rgba(130,206,250,.6) 20%, rgba(51,51,150,.4) 100%);
+	background:	  -moz-linear-gradient(rgba(130,206,250,.6) 20%, rgba(51,51,150,.4) 100%);
+	background:		   linear-gradient(rgba(130,206,250,.6) 20%, rgba(51,51,150,.4) 100%);
+}
+div:target ul li a.textLink code.codeElement,
+div:target div ul.navInlineList li a.textLink code.codeElement
+{	color:rgba(20,20,50,1); font-size:2rem; z-index:10025}
+#focusExample:target
+{
+	font-family:'andadaregular';
+	font-weight:400;
+	width:50%;
+	margin:1rem auto;
+	border-radius:7px;
+	letter-spacing:.02rem;
+	word-spacing:.065rem;
+	text-shadow:0 1px 1px rgba(255,255,55,0);
+	padding:1.25rem 1rem 1rem;
+	box-shadow:inset 0 0 3rem .25rem rgba(30,75,30,0), .25rem .25rem .25rem rgba(51,51,102,0);
+	background:-webkit-linear-gradient(rgba(130,206,250,0) 20%, rgba(51,51,150,0) 100%);
+	background:	  -moz-linear-gradient(rgba(130,206,250,0) 20%, rgba(51,51,150,0) 100%);
+	background:		   linear-gradient(rgba(130,206,250,0) 20%, rgba(51,51,150,0) 100%);
+}
+div.greenFadingBorders:target div,
+div.greenFadingBorders:focus div,
+a#rank:target ~ div.descriptionText
+{
+	box-shadow:inset 0 0 3rem .25rem rgba(30,75,30,0), .25rem .25rem .25rem rgba(51,51,102,0);
+	background:-webkit-linear-gradient(rgba(130,206,250,0) 20%, rgba(51,51,150,0) 100%);
+	background:	  -moz-linear-gradient(rgba(130,206,250,0) 20%, rgba(51,51,150,0) 100%);
+	background:		   linear-gradient(rgba(130,206,250,0) 20%, rgba(51,51,150,0) 100%);
+}
+summary::-webkit-details-marker
+{	display:none}
+summary:before
+{
+	content: " ";
+	background:url(../images/pointer.png) no-repeat;
+	padding:5px 10px;
+	float:left;
+	margin-right:.5rem;
+	height: 1rem;
+	width: 1rem;
+	transform:rotate(-180deg);
+	transition:all 1000ms;
+}
+details[open] summary:before
+{
+	background: url(../images/pointer.png) no-repeat;
+	transform:rotate(-115deg);
+	transition:all 500ms;
+}
+
+#editingHost:target ~ #dfn-EditingHost div:first-child,
+#contenteditableTrue:target ~ #dfn-contenteditableTrue div:first-child,
+#contenteditableFalse:target ~ #dfn-contenteditableFalse div:first-child,
+#inlineElements:target ~ #dfn-inlineElements div:first-child,
+#blockElements:target ~ #dfn-blockElements div:first-child,
+#stubElements:target ~ #dfn-stubElements div:first-child,
+#invisibleElements:target ~ #dfn-invisibleElements div:first-child,
+#caret:target ~ #dfn-caret div:first-child
+{
+	-moz-background-size: 2px 100%;
+	background-size: 2px 100%;
+	background-position: 0 0, 100% 0;
+	background-repeat: no-repeat;
+	padding-top:1rem;
+	width:90%;
+	border-radius:0 0 .5rem .5rem;
+	margin:-1rem auto 1rem;
+	border-bottom:3px solid rgba(255,255,55,.6);
+	box-shadow:5px 5px 5px rgba(30,75,30,.4), 7px 7px 7px rgba(255,255,55,.2);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent,transparent,transparent), to(rgba(255,255,55,1)));
+	background-image: -webkit-linear-gradient(transparent,transparent,transparent, rgba(255,255,55,1));
+	background-image: 
+	  linear-gradient(transparent,transparent,rgba(255,255,55,.3), rgba(255,255,55,1)),
+	  linear-gradient(transparent, rgba(255,255,55,.3), rgba(255,255,55,1));
+}
+dt#editingHost:target ~ dd#dfn-EditingHost div nav,
+dt#contenteditableTrue:target ~ dd#dfn-contenteditableTrue div nav,
+dt#contenteditableFalse:target ~ dd#dfn-contenteditableFalse div nav,
+dt#inlineElements:target ~ dd#dfn-inlineElements div nav,
+dt#blockElements:target ~ dd#dfn-blockElements div nav,
+dt#stubElements:target ~ dd#dfn-stubElements div nav,
+dt#invisibleElements:target ~ dd#dfn-invisibleElements div nav,
+dt#caret:target ~ dd#dfn-caret div nav
+{	display:block;
+}
+/***************** Used for spans to make Block element ***********************/
+#parentBrowsingContext:target #dfn-parentBrowsingContext,
+#childBrowsingContext:target #dfn-childBrowsingContext
+{
+	display:block;
+	font-family:'andadaregular';
+	font-weight:400 !important;
+	text-transform:none!important;
+	letter-spacing:.02rem;
+	word-spacing:.065rem;
+	text-shadow:0 1px 1px rgba(255,255,55,.5);
+	padding:.25rem .5rem;
+	margin:.25rem auto !important;
+	border-radius:7px;
+	box-shadow:inset 0 0 .5rem .15rem rgba(30,75,30,.7), .15rem .15rem .15rem rgba(51,51,102,.7);
+	background:-webkit-linear-gradient(rgba(130,206,250,.6) 10%, rgba(200,200,100,.6) 100%);
+	background:	  -moz-linear-gradient(rgba(130,206,250,.6) 10%, rgba(200,200,100,.6) 100%);
+	background:		   linear-gradient(rgba(130,206,250,.6) 10%, rgba(200,200,100,.6) 100%);
+}
+/**********************************************************************************************************
+span:target, p:target>span.target, div:target>span.target, div:target>p.target span.target,
+article:target h3 span,article:target div p span.target,
+ul:target li.target, ol:target li.target,
+ul:target li span.target, ol:target li span.target,
+dl:target dd span.target, dd:target span.target, dd:target dfn
+
+{
+	background:rgba(250,250,150,.5);
+	border-radius:5px;
+	padding:0 3px;
+	font-weight:700;
+	font-size:97%;
+}
+ul.shortBlockCode:target li, ol.shortBlockCode:target li,
+div:target ul.target li, div:target ol.target li
+{
+	padding:0 3px;
+	font-weight:700;
+	background: -webkit-linear-gradient(left, rgba(225,225,100,.4), rgba(225,225,100,.2), rgba(225,225,100,0));
+	background:    -moz-linear-gradient(left, rgba(225,225,100,.4), rgba(225,225,100,.2), rgba(225,225,100,0));
+	background:     -ms-linear-gradient(left, rgba(225,225,100,.4), rgba(225,225,100,.2), rgba(225,225,100,0));
+	background:      -o-linear-gradient(left, rgba(225,225,100,.4), rgba(225,225,100,.2), rgba(225,225,100,0));
+	background:	   linear-gradient(to right,  rgba(225,225,100,.4), rgba(225,225,100,.2), rgba(225,225,100,0));
+}
+ul.elementColumns10A li code:target
+{
+	-webkit-animation-delay:.35s;
+    animation-delay:.35s; 
+	-webkit-animation-duration:1s;
+    animation-duration:1s; 
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-name:elementListTarget;
+    animation-name:elementListTarget;
+}
+@-webkit-keyframes elementListTarget {
+	from {	background:none; box-shadow:0px 0px 3px rgba(51,51,102,.3);}
+	to {	background:rgba(255,127,80,.6); box-shadow:5px 5px 5px rgba(51,51,102,.5);}
+}
+@keyframes elementListTarget {
+	from {	background:none; box-shadow:0px 0px 3px rgba(51,51,102,.3);}
+	to {	background:rgba(255,127,80,.6); box-shadow:5px 5px 5px rgba(51,51,102,.5);}
+}
+div:target a.displayNone, div:target p a.displayNone, p:target a.displayNone,
+p:target a.inlinePreviousLocation, div:target p.target a.inlinePreviousLocation,
+ul.shortBlockCode:target li a, ol.shortBlockCode:target li a
+{
+	text-shadow:0 1px 1px rgba(255,255,55,.5);
+	color:rgba(50,75,50,1);
+}
+article:target a.displayNone,div:target a.displayNone, div:target p a.displayNone, p:target a.displayNone,
+article:target div a.displayNone,dl:target dd a.displayNone,dl:target dd button.displayNone,
+ul.shortBlockCode:target li.displayNone a.displayNone, ol.shortBlockCode:target li.displayNone a.displayNone,
+div:target ul.target li.displayNone a.displayNone, div:target ol.target li.displayNone a.displayNone,
+details:target a.displayNone
+{
+	display:inline-block;
+}
+p:target a.inlinePreviousLocation, div:target p.target a.inlinePreviousLocation,
+article:target nav, article:target nav.displayNone, article:target p a.inlinePreviousLocation, article:target a.inlinePreviousLocation,
+div:target p.target-p a.inlinePreviousLocation,
+p:target a.displayNone span.target, dd:target nav
+{
+	display:block;
+}
+ul.shortBlockCode:target li.displayNone, ol.shortBlockCode:target li.displayNone,
+div:target ul.target li.displayNone, div:target ol.target li.displayNone,
+ul.elementColumns10A li code:target li.displayNone
+{
+	display:list-item;
+}
+p:target, div:target, ul:target, ol:target, dd:target p.target,
+dl:target, dl:target dd.target, div:target>p.target,
+details:target div
+{
+	font-family:'andadaregular';
+	font-weight:700;
+	width:95%;
+	margin:.5rem auto;
+	border-radius:7px;
+	letter-spacing:.02rem;
+	word-spacing:.065rem;
+	text-shadow:0 1px 1px rgba(255,255,55,.5);
+	padding:1.25rem 1rem 1rem;
+	box-shadow:inset 0 0 3rem .25rem rgba(30,75,30,.7), .25rem .25rem .25rem rgba(51,51,102,.5);
+	background:-webkit-linear-gradient(rgba(130,206,250,.6) 20%, rgba(51,51,150,.4) 100%);
+	background:	  -moz-linear-gradient(rgba(130,206,250,.6) 20%, rgba(51,51,150,.4) 100%);
+	background:		   linear-gradient(rgba(130,206,250,.6) 20%, rgba(51,51,150,.4) 100%);
+}
+p:target a, div:target a, ul:target a, ol:target a, dd:target p.target a,
+dl:target a, dl:target dd.target a, div:target>p.target a, dd:target div nav a,
+details:target a.displayNone
+{
+	font-family:'andadaregular';
+	color:rgba(30,30,75,.6);
+	font-weight:700;
+	letter-spacing:.075rem;
+	word-spacing:.05rem;
+	text-shadow:-1px 2px 1px rgba(255,255,55,.5);
+}
+**********************************************************************************************************/
+.navigationContainer-4
+{
+	display:table;
+	table-layout:fixed;
+	border-collapse:separate;
+	border-spacing:.75rem;
+	border-radius:5rem;
+	width:20rem;
+	margin:1.5rem auto 1rem;
+	padding:.25rem 1rem;
+	border-right:2px solid rgba(51,51,102,0);
+	border-bottom:2px solid rgba(51,51,102,0);
+	box-shadow:.5rem .35rem .25rem rgba(51,51,105,0), inset 0 0 .75rem .25rem rgba(51,51,105,0);
+	transition:all 700ms;
+}
+.navigationContainer-4:hover .navigationLinks
+{
+	color:rgba(60,135,179,.7);
+	text-shadow:2px 2px 2px rgba(60,135,179,.8);}
+.navigationRow-4
+{
+	display:table-row;
+	text-align:center;
+	width:98%;
+	margin:0 auto;
+	line-height:2rem;
+}
+.navigationCell-4
+{
+	display:table-cell;
+/*	border:1px solid green;   **************************/
+}
+.navigationLinks span
+{	display:none;}
+.attrUse dfn
+{	text-transform:capitalize;}
+
+
+
+
+
+
+
+
+
