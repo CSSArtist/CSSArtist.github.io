@@ -21,46 +21,60 @@
 			<!-- supporting CSS and JavaScript and favicon files -->
 	<link href="../css3/MainLayout.css" rel="stylesheet" type="text/css">
 	<link href="../css3/banner_Logo.css" rel="stylesheet" type="text/css">
-	<link href="../css3/nav.css" rel="stylesheet" type="text/css">
 	<link href="../css3/textStyles.css" rel="stylesheet" type="text/css">
+	<link href="../css3/nav.css" rel="stylesheet" type="text/css">
 	<link href="../css3/myAlerts.css" rel="stylesheet" type="text/css">
 	<link href="../css3/cssToolTip.css" rel="stylesheet" type="text/css">
-	<link href="../css3/responsiveCSS.css" rel="stylesheet" type="text/css">
-	<link href="../css3/specialEffects.css" rel="stylesheet" type="text/css">
+	<!--<link href="http://bearzdesignconcepts.net/css3/cssToolTip.css" rel="stylesheet" type="text/css">-->
+    <link href="../css3/specialEffects.css" rel="stylesheet" type="text/css">
 	<link href="../css3/targetSelectors.css" rel="stylesheet" type="text/css">
 	<link href="../css3/myAnimations.css" rel="stylesheet" type="text/css">
+	<link href="../css3/responsiveCSS.css" rel="stylesheet" type="text/css">
 	<link href="embeddedFonts/embeddedFonts.css" rel="stylesheet" type="text/css">
 	<link href="embeddedFonts/inconsolata/inconsolata.css" rel="stylesheet" type="text/css">
 	<link href="embeddedFonts/alluraWebReady/allura.css" rel="stylesheet" type="text/css">
 	<link href="embeddedFonts/fontSavatage/savatage.css" rel="stylesheet" type="text/css">
-    <link href="../icon/apple-icon-57X57.png" rel="apple-touch-icon" sizes="57x57">
-    <link href="../icon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
-    <link href="../icon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="../icon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
-    <link href="../icon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
-    <link href="../icon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
-    <link href="../icon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
-    <link href="../icon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
-    <link href="../icon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="../icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
-    <link href="../icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="../icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
-    <link href="../icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-    <link href="../icon/manifest.json" rel="manifest">
+    <link href="../icon/iconCZ/apple-icon-57X57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="../icon/iconCZ/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="../icon/iconCZ/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../icon/iconCZ/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="../icon/iconCZ/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../icon/iconCZ/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="../icon/iconCZ/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="../icon/iconCZ/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="../icon/iconCZ/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../icon/iconCZ/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="../icon/iconCZ/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="../icon/iconCZ/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="../icon/iconCZ/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="../icon/iconCZ/manifest.json" rel="manifest">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="../icon/iconCZ/ms-icon-70x70.png">
+    <meta name="msapplication-TileImage" content="../icon/iconCZ/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script src="../scripts/siteFunctions.js" type="text/javascript"></script>
     <script src="../scripts/jquery_v2.0.0.js" type="text/javascript"></script>
-    <script>document.createElement("tooltip")</script><!-- satisfies IE for a my custom element-->
     <!-- used for my floating back button in lower right corner -->
-	<script>
+	<script type="text/javascript">
 		$(document).ready(function () {  $('.backToTopScroll').hide();//Check to see if the window is top if not then display button
 		$(window).scroll(function () {  if ($(this).scrollTop() > 650) {    $('.backToTopScroll').fadeIn();  } else {    $('.backToTopScroll').fadeOut();  }}); //Click event to scroll to top
 		$('.backToTopScroll').click(function () {  $('html, body').animate({ scrollTop: 0 }, 900);  return false;  });});
-    </script>
+	</script>
+	<script type="text/javascript">
+		$(function() {
+			var drop=$('.drop'); menu=$('nav ul'); menuHeight=menu.height();
+			$(drop).on('click', function(e) {	e.preventDefault(); menu.slideToggle();});
+			$(window).resize(function(){	var w = $(window).width();
+				if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');}
+			});});
+    	function openPageNav()
+			{document.getElementById('open-PageNav').style.display='none';document.getElementById('close-PageNav').style.display='block';document.getElementById('elements').style.opacity='.3';}
+		function closePageNav()
+			{document.getElementById('close-PageNav').style.display='none';document.getElementById('open-PageNav').style.display='block';document.getElementById('elements').style.opacity='1';}
+	</script>
 </head>
-<body id="tagsAndAttributes-page">
+<body id="quickRefs-page">
     <section id="siteNavSpecsPage" class="wrapperPopupNav displayNone myAppearIn">
         <h1 class="czSiteMap2 pointerFadeIn courierPrimeBoldItalic">The Coding Zone<br>General Topics</h1>
         <nav id="siteMap" class="siteWideContainer">
@@ -96,10 +110,11 @@
                         <td><a href="tagsAndAttributes.html">Tags &amp; Attributes</a></td>
                         <td><a href="../TheCSSZone/index.html#mediaQueries">Media Queries</a></td>
                     </tr>
+                    <tr>
                         <td><a href="browserSupport.html">Browser Support</a></td>
                         <td><a href="#" hidden>PLACEHOLDER</a></td>
                     </tr>
-                
+                </tbody>
             </table>
             <table class="topicsTableNav" style="margin:.5rem auto 1rem;">
                 <caption class="czSiteMapHeader2">general topics</caption>
@@ -133,7 +148,7 @@
         </div>
     <section id="wrapper" class="gradient pageFadeIn">
 		<header id="Banner/Logo" class="myHeader"><!--  -->
-        	<h1 class="backName backNameFadeIn displayNone">The<br>Coding Zone</h1>
+        	<h1 class="backName backNameFadeIn displayNone">Bearz Coding Zone</h1>
             <div class="siteName siteNameFadeIn"><!--  -->
             	<p class="htmlHeader-The"><span class="htmlHeader-T">t</span><span class="borderT-he"><span class="htmlHeaderT-he">he</span></span></p>
                 <p class="htmlHeader-HTML"><span class="htmlHeader-H">h</span><span class="borderH-tml"><span class="htmlHeaderH-tml">tml</span></span></p> 
@@ -141,199 +156,455 @@
             </div>
         </header><!-- end of header -->
 		<nav id="topNavBar" class="topNav navBarGradient">
+			<h3 class="navHeader displayNone">Menu</h3>
 			<a class="navBlur" href="../siteMap.html">Topics</a>
-            <a class="navBlur" href="../contact.php">Contact</a>
-            <a class="navBlur" href="../index.php">Bearz Home</a>
-            <a class="navBlur" href="http://www.codingzone.org" target="_blank" rel="external">codingzone<b>&#46;</b>org</a>
-			<hr class="fadingStyle">
+            <a class="navBlur" href="http://bearzdesignconcepts.net/index.php">Bearz Home</a>
+            <a class="navBlur" href="http://bearzdesignconcepts.net/contact.php">Contact</a>
+            <a class="navBlur" onClick="location.href='#'; lightbox_open();">About</a>
+			<hr class="topNavBorder">
         </nav>
 		<nav id="breadCrumbLinks" class="speedInLeft">
 			<script type="text/javascript">breadcrumbs()</script>
 		</nav>
 <section class="sectionWrapper">
-<nav style="display: block;
-color: rgb(34, 34, 34);
-font-family: 'Droid Serif', Georgia, serif;
-font-size: 14px;
-font-style: normal;
-font-variant: normal;
-font-weight: normal;
-letter-spacing: normal;
-line-height: 20.29947853088379px;
-orphans: auto;
-text-align: start;
-text-indent: 0px;
-text-transform: none;
-white-space: normal;
-widows: auto;
-word-spacing: 0px;
--webkit-text-stroke-width: 0px;">
-<button id="toc-toggle" class="active" 
-style="border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;
-border-bottom-left-radius: 10px;
-box-shadow: rgb(255, 255, 255) 0px -1px 0px;
--webkit-box-shadow: rgb(255, 255, 255) 0px -1px 0px; background-color: rgb(238, 238, 238);
-background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(254, 254, 254)), to(rgb(238, 238, 238)));
-font-family: 'Droid Serif';
-font-style: italic;
-text-align: center;
-margin: 0.5em auto;
-font-size: 0.9em;
-padding: 0.3em 1.8em 0.3em 0.8em;
-color: rgb(102, 102, 102);
-cursor: pointer;
-text-shadow: rgb(255, 255, 255) 0em 0.1em 0em;
-border: 0.1em outset buttonface;
-background-position: initial initial;
-background-repeat: initial initial;">In this section…</button>
-<ol class="toc" style="font-weight: normal;
-margin: 0px 0px 1em;
-padding: 0px;
-color: inherit;
-display: block;">
-<li style="list-style: none;"><a href="https://developers.whatwg.org/section-index.html#index" class="no-num" style="font-weight: normal;
-margin: 0px;
-padding: 0px;
-color: rgb(3, 59, 104);
-text-decoration: none;
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: rgb(238, 238, 238);">Index</a>
-<ol style="font-weight: normal;
-margin: 0px 0px 1em;
-padding: 0px;
-color: inherit;">
-<li style="margin-left: 1.2em;
-list-style: none;"><a href="https://developers.whatwg.org/section-index.html#elements-1" class="no-num" style="font-weight: normal;
-margin: 0px;
-padding: 0px;
-color: rgb(3, 59, 104);
-text-decoration: none;
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: rgb(238, 238, 238);">Elements</a></li>
-<li style="margin-left: 1.2em;
-list-style: none;"><a href="https://developers.whatwg.org/section-index.html#element-content-categories" class="no-num" style="font-weight: normal;
-margin: 0px;
-padding: 0px;
-color: rgb(0, 0, 0);
-text-decoration: none;
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: rgb(0, 0, 0);">Element content categories</a></li>
-<li style="margin-left: 1.2em;
-list-style: none;"><a href="https://developers.whatwg.org/section-index.html#attributes-1" class="no-num" style="font-weight: normal;
-margin: 0px;
-padding: 0px;
-color: rgb(3, 59, 104);
-text-decoration: none;
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: rgb(238, 238, 238);">Attributes</a></li>
-<li style="margin-left: 1.2em;
-list-style: none;"><a href="https://developers.whatwg.org/section-index.html#element-interfaces" class="no-num" style="font-weight: normal;
-margin: 0px;
-padding: 0px;
-color: rgb(3, 59, 104);
-text-decoration: none;
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: rgb(238, 238, 238);">Element Interfaces</a></li>
-<li style="margin-left: 1.2em;
-list-style: none;"><a href="https://developers.whatwg.org/section-index.html#all-interfaces" class="no-num" style="font-weight: normal;
-margin: 0px;
-padding: 0px;
-color: rgb(3, 59, 104);
-text-decoration: none;
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: rgb(238, 238, 238);">All Interfaces</a></li>
-<li style="margin-left: 1.2em;
-		list-style: none;">
-<a href="https://developers.whatwg.org/section-index.html#events-0" class="no-num" style="font-weight: normal;
-        margin: 0px;
-        padding: 0px;
-        color: rgb(3, 59, 104);
-        text-decoration: none;
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: rgb(238, 238, 238);">
-Events</a></li>
-</ol>
-</li>
-</ol>
-</nav>
-<h2 class="no-num" id="index" style="font-weight: normal;
-        margin: 2em 0px;
-        padding: 0px;
-        color: rgb(34, 34, 34);
-        font-size: 22.399999618530273px;
-        position: relative;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        line-height: 1.5em;
-        font-family: 'M+2pheavy', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        font-style: normal;
-        font-variant: normal;
-        orphans: auto;
-        text-align: start;
-        text-indent: 0px;
-        white-space: normal;
-        widows: auto;
-        word-spacing: 0px;
-        -webkit-text-stroke-width: 0px;">
-INDEX</h2>
-
-<h2>Elements</h2>
-
-List of elements
-Element	 Description	 Categories	 Parents†	 Children	 Attributes	 Interface
-a	Hyperlink	flow; phrasing*; interactive	phrasing	transparent*	globals; href; target; download; ping; rel; hreflang; type	HTMLAnchorElement
-abbr	Abbreviation	flow; phrasing	phrasing	phrasing	globals	HTMLElement
-address	Contact information for a page or article element	flow	flow	flow*	globals	HTMLElement
-area	Hyperlink or dead area on an image map	flow; phrasing	phrasing*	empty	globals; alt; coords; shape; href; target; download; ping; rel; hreflang; type	HTMLAreaElement
-article	Self-contained syndicatable or reusable composition	flow; sectioning	flow	flow	globals	HTMLElement
-aside	Sidebar for tangentially related content	flow; sectioning	flow	flow	globals	HTMLElement
-audio	Audio player	flow; phrasing; embedded; interactive	phrasing	source*; transparent*	globals; src; crossorigin; preload; autoplay; mediagroup; loop; muted; controls	HTMLAudioElement
-b	Keywords	flow; phrasing	phrasing	phrasing	globals	HTMLElement
-base	Base URL and default target browsing context for hyperlinks and forms	metadata	head; template	empty	globals; href; target	HTMLBaseElement
-bdi	Text directionality isolation	flow; phrasing	phrasing	phrasing	globals	HTMLElement
-bdo	Text directionality formatting	flow; phrasing	phrasing	phrasing	globals	HTMLElement
-blockquote	A section quoted from another source	flow; sectioning root	flow	flow	globals; cite	HTMLQuoteElement
-body	Document body	sectioning root	html	flow	globals; onafterprint; onbeforeprint; onbeforeunload; onhashchange; onlanguagechange; onmessage; onoffline; ononline; onpagehide; onpageshow; onpopstate; onstorage; onunload	HTMLBodyElement
-br	Line break, e.g. in poem or postal address	flow; phrasing	phrasing	empty	globals	HTMLBRElement
-button	Button control	flow; phrasing; interactive; listed; labelable; submittable; reassociateable; form-associated	phrasing	phrasing*	globals; autofocus; disabled; form; formaction; formenctype; formmethod; formnovalidate; formtarget; menu; name; type; value	HTMLButtonElement
-canvas	Scriptable bitmap canvas	flow; phrasing; embedded	phrasing	transparent	globals; width; height	HTMLCanvasElement
-caption	Table caption	none	table; template	flow*	globals	HTMLTableCaptionElement
-cite	Title of a work	flow; phrasing	phrasing	phrasing	globals	HTMLElement
-code	Computer code	flow; phrasing	phrasing	phrasing	globals	HTMLElement
-col	Table column	none	colgroup; template	empty	globals; span	HTMLTableColElement
-colgroup	Group of columns in a table	none	table; template	col*; template*	globals; span	HTMLTableColElement
-data	Machine-readable equivalent	flow; phrasing	phrasing	phrasing	globals; value	HTMLDataElement
-datalist	Container for options for combo box control	flow; phrasing	phrasing	phrasing; option	globals	HTMLDataListElement
-dd	Content for corresponding dt element(s)	none	dl; template	flow	globals	HTMLElement
-del	A removal from the document	flow; phrasing*	phrasing	transparent	globals; cite; datetime	HTMLModElement
-details	Disclosure control for hiding details	flow; sectioning root; interactive	flow	summary*; flow	globals; open	HTMLDetailsElement
-dfn	Defining instance	flow; phrasing	phrasing	phrasing*	globals	HTMLElement
-dialog	Dialog box or window	flow; sectioning root	flow	flow	globals; open	HTMLDialogElement
-div	Generic flow container	flow	flow	flow	globals	HTMLDivElement
-dl	Association list consisting of zero or more name-value groups	flow	flow	dt*; dd*; script-supporting elements	globals	HTMLDListElement
-dt	Legend for corresponding dd element(s)	none	dl; template	flow*	globals	HTMLElement
-em	Stress emphasis	flow; phrasing	phrasing	phrasing	globals	HTMLElement
-embed	Plugin	flow; phrasing; embedded; interactive	phrasing	empty	globals; src; type; width; height; any*	HTMLEmbedElement
-fieldset	Group of form controls	flow; sectioning root; listed; reassociateable; form-associated	flow	legend*; flow	globals; disabled; form; name	HTMLFieldSetElement
-figcaption	Caption for figure	none	figure; template	flow	globals	HTMLElement
-figure	Figure with optional caption	flow; sectioning root	flow	figcaption*; flow	globals	HTMLElement
-footer	Footer for a page or section	flow	flow	flow*	globals	HTMLElement
-form	User-submittable form	flow	flow	flow*	globals; accept-charset; action; autocomplete; enctype; method; name; novalidate; target	HTMLFormElement
-h1, h2, h3, h4, h5, h6	Section heading	flow; heading	hgroup; flow	phrasing	globals	HTMLHeadingElement
-head	Container for document metadata	none	html	metadata content*	globals	HTMLHeadElement
-header	Introductory or navigational aids for a page or section	flow	flow	flow*	globals	HTMLElement
-hgroup	heading group	flow; heading	flow	One or more h1, h2, h3, h4, h5, h6, and script-supporting elements	globals	HTMLElement
-hr	Thematic break	flow	flow	empty	globals	HTMLHRElement
-html	Root element	none	none*	head*; body*	globals; manifest	HTMLHtmlElement
+    <header>
+        <h2 class="sectionHeaderContainer"><span class="myH2 uppercase">index</span></h2>
+        <p class="bodyText">The following sections only cover conforming <abbr class="html5"></abbr> elements and features<b class="period"></b></p>
+        <p class="bodyText">The following sections are also non<span class="wordBreak"></span>normative<b class="period"></b></p>
+        <p class="bodyText">Below are very condensed<span class="enDash"></span>general informational sections<b class="semi"></b> meant as a quick reference <em class="underline">only</em><b class="period"></b></p>
+    </header>
+    <nav class="sectionNav">
+        <h5 class="myH5Header"><span id="open-PageNav" class="openMenu drop" onClick="openPageNav()">In this section<b class="ellipsis"></b></span>
+        <span id="close-PageNav" class="closeMenu drop" onClick="closePageNav()" style="display:none;">Close</span></h5>
+        <ul class="sectionNavList">
+            <li class="fadingBordersParagraph firstChild"><a class="textLink capitalize drop" onClick="closePageNav(); location.href='terminology.html#elements'">Elements<span class="tipZoomIn">List of Elements<span>section below</span></span></a></li>
+            <li class="fadingBordersParagraph"><a class="textLink capitalize drop" onClick="closePageNav(); location.href='terminology.html#elementContentCategories'">Element content categories<span class="tipZoomInCaps">List of Element content categories<span>section below</span></span></a></li>
+            <li class="fadingBordersParagraph"><a class="textLink capitalize drop" onClick="closePageNav(); location.href='terminology.html#attributes'">Attributes<span class="tipZoomInCaps">List of Attributes<span>section below</span></span></a></li>
+            <li class="fadingBordersParagraph"><a class="textLink capitalize drop" onClick="closePageNav(); location.href='terminology.html#elementInterfaces'">Element Interfaces<span class="tipZoomInCaps">List of Element Interfaces<span>section below</span></span></a></li>
+            <li class="fadingBordersParagraph"><a class="textLink capitalize drop" onClick="closePageNav(); location.href='terminology.html#allInterfaces'">All Interfaces<span class="tipZoomIn">List of All Interfaces<span>section below</span></span></a></li>
+            <li class="fadingBordersParagraph"><a class="textLink capitalize drop" onClick="closePageNav(); location.href='terminology.html#events'">Events<span class="tipZoomIn">List of Events<span>sections below</span></span></a></li>
+            <li class="fadingBordersParagraph"><a class="textLink capitalize drop" onClick="closePageNav(); location.href='terminology.html#MIMETypes'"><abbr class="abbrBold">mime</abbr> Types<span class="tipZoomIn">List of <abbr class="abbrBold">mime</abbr> Types<span>section below</span></span></a></li>
+            <li class="fadingBordersParagraph"><a class="textLink capitalize drop" onClick="closePageNav(); location.href='terminology.html#prohibitedChildElements'">prohibited <code class="codeElement">p</code> child elements<span class="tipZoomIn">List of prohibited <span><code class="codeElement">p</code> child elements<span>section below</span></span></span></a></li>
+            <li class="fadingBordersParagraph"><a class="textLink capitalize drop" onClick="closePageNav(); location.href='terminology.html#'">usage summaries<span class="tipZoomIn">category usage summaries<span>section below</span></span></a></li>
+            <li class="fadingBordersParagraph"><a class="hiddenBackButton drop" onClick="closePageNav(); siteNavSpecialDisplay(); location.href='quickHTMLReference.html#quickRefs-page'">site map</a></li>
+        </ul>
+    </nav>
+	<article id="elements" class="articleSubContainer">
+    	<h3 class="articleH3">List of Elements</h3>
+        <p class="paragraphNote">
+            <span class="icon"></span><span class="myNote"></span><span class="bodyText">An asterisk <span class="codeInBrace"><b class="ast"></b></span> in a cell indicates that the actual rules are more complicated than indicated<b class="period"></b></span>
+			<span class="bodyText">Categories in the <span class="dQuo italicsBoldCaps">Parents</span> column refer to parents that list the given categories in their <span class="italicsBoldCaps">content model</span><b class="comma"></b> not to elements that themselves are in those categories<b class="periodSP"></b>For example<b class="comma"></b> the <code class="codeElement">a</code> element<b class="apos"></b>s <span class="dQuo italicsBoldCaps">Parents</span> column says <span class="dQuo italicsBoldCaps">phrasing</span><b class="comma"></b> so any element whose <span class="italicsBoldCaps">content model</span> contains the <span class="dQuo italicsBoldCaps">phrasing</span> category could be a parent of an <code class="codeElement">a</code> element<b class="periodSP"></b>Since the <span class="dQuo italicsBoldCaps">flow</span> category includes all the <span class="dQuo italicsBoldCaps">phrasing</span> elements<b class="comma"></b> that means the <code class="codeElement">th</code> element could be a 
+            	parent to an <code class="codeElement">a</code> element<b class="period"></b></span>
+            <span class="authorParagraphNote"><span class="icon"></span><span class="authorSpecialNote"></span><span class="bodyText">Where you see a dagger <span class="codeInBrace"><b class="dagger"></b></span> in a <span class="dQuo italicsBoldCaps">category</span> cell<b class="comma"></b> indicates that the element is in what I call a <span class="dQuo italicsBoldCaps"><a class="textLink" href="html5Content.html#childOnly">child only<span class="tipZoomInCaps"><abbr class="html5"></abbr> Content<span>An <abbr class="htmlBold"></abbr> Zone Document</span></span></a></span> categories<b class="periodSP"></b><em class="emSpecial">This is my <span class="dQuo">designation</span> <strong class="underline">only</strong> and <strong class="underline">not</strong> found in any specifications<b class="period"></b></em></span></span>
+        </p>
+        <div class="responsiveTable">
+            <div class="responsiveTableRow thead">
+                <p class="displayTableCell"><span class="th">Element</span></p>
+                <p class="displayTableCell"><span class="th">Description</span></p>
+                <p class="displayTableCell"><span class="th">Categories</span></p>
+                <p class="displayTableCell"><span class="th">Parents<span class="hr"></span> Children</span></p>
+                <p class="displayTableCell"><span class="th">Children</span></p>
+                <p class="displayTableCell"><span class="th">Attributes</span></p>
+                <p class="displayTableCell"><span class="th">Interface</span></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">a</code></p>
+                <p class="responsiveTableCell capitalize" data-label="Description&thinsp;&#58;">hyperlink</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> <b class="ast">phrasing</b><b class="semi"></b> interactive<b class="semi"></b> palpable</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">transparent</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">transparent</p>
+                <p class="responsiveTableCell" data-label="Attributes&thinsp;&#58;">Globals<b class="semi"></b> <code class="codeAttribute">href</code> <code class="codeAttribute semi">target</code> <code class="codeAttribute semi">download</code> <code class="codeAttribute semi">ping</code> <code class="codeAttribute semi">rel</code> <code class="codeAttribute semi">hreflang</code> <code class="codeAttribute semi">type</code> <code class="codeAttribute semi">referrerpolicy</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> anchor </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">abbr</code></p>
+                <p class="responsiveTableCell capitalize" data-label="Description&thinsp;&#58;">Abbreviation</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">phrasing</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">address</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;"><b class="ast">Contact information</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow<span class="hr"> <b class="ast">flow</b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast">flow</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">area</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Hyperlink or dead area on an image map</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow; phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><b class="ast">phrasing</b> <span class="hr">empty</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">empty</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute">alt</code> <code class="codeAttribute semi">coords</code> <code class="codeAttribute semi">shape</code> <code class="codeAttribute semi">href</code> <code class="codeAttribute semi">target</code> <code class="codeAttribute semi">download</code> <code class="codeAttribute semi">ping</code> <code class="codeAttribute semi">rel</code> <code class="codeAttribute semi">hreflang</code> <code class="codeAttribute semi">type</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> area </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">article</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Self<span class="wordBreak"></span>contained syndicatable or reusable composition</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> sectioning</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr">flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">aside</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Sidebar for tangentially related content</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> sectioning</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr">flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">audio</code></p>
+                <p class="responsiveTableCell capitalize" data-label="Description&thinsp;&#58;">Audio player</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> phrasing<b class="semi"></b> embedded<b class="semi"></b> interactive</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr"><b class="ast"><code class="element">source</code></b><b class="semi"></b> <b class="ast">transparent</b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast"><code class="element">source</code></b><b class="semi"></b> <b class="ast">transparent</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute">src</code> <code class="codeAttribute semi">crossorigin</code> <code class="codeAttribute semi">preload</code> <code class="codeAttribute semi">autoplay</code> <code class="codeAttribute semi">mediagroup</code> <code class="codeAttribute semi">loop</code> <code class="codeAttribute semi">muted</code> <code class="codeAttribute semi">controls</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> audio </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">b</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Keywords</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow; phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">phrasing</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">base</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Base <abbr class="urlBold"></abbr> and default target browsing context for hyperlinks and forms</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">metadata</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><code class="element">head</code><b class="semi"></b> <code class="element">template</code> <span class="hr">empty</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">empty</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute">href</code> <code class="codeAttribute semi">target</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> base </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">bdi</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Text directionality isolation</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow; phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">phrasing</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">bdo</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Text directionality isolation</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow; phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">phrasing</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">blockquote</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">A section quoted from another source</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> sectioning root</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr">flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute">cite</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> quote </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">body</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Document body</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">sectioning root</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><code class="element">html</code> <span class="hr">flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute">onafterprint</code> <code class="codeAttribute semi">onbeforeprint</code> <code class="codeAttribute semi">onbeforeunload</code> <code class="codeAttribute semi">onhashchange</code> <code class="codeAttribute semi">onlanguagechange</code> <code class="codeAttribute semi">onmessage</code> <code class="codeAttribute semi">onoffline</code> <code class="codeAttribute semi">ononline</code> <code class="codeAttribute semi">onpagehide</code> <code class="codeAttribute semi">onpageshow</code> <code class="codeAttribute semi">onpopstate</code> <code class="codeAttribute semi">onstorage</code><b class="semi"></b> <code class="codeAttribute">onunload</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> body </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">br</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Line break, e.g. in poem or postal address</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow; phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">empty</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">empty</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> b r </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">button</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Button control</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> phrasing<b class="semi"></b> interactive<b class="semi"></b> listed<b class="semi"></b> labelable<b class="semi"></b> submittable<b class="semi"></b> reassociateable<b class="semi"></b> form-associated</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr"><b class="ast">phrasing</b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast">phrasing</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute semi">autofocus</code> <code class="codeAttribute semi">disabled</code> <code class="codeAttribute semi">form</code> <code class="codeAttribute semi">formaction</code> <code class="codeAttribute semi">formenctype</code> <code class="codeAttribute semi">formmethod</code> <code class="codeAttribute semi">formnovalidate</code> <code class="codeAttribute semi">formtarget</code> <code class="codeAttribute semi">menu</code> <code class="codeAttribute semi">name</code> <code class="codeAttribute semi">type</code> <code class="codeAttribute semi">value</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> button </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">canvas</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Scriptable bitmap canvas</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> phrasing<b class="semi"></b> embedded</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">transparent</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">transparent</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute semi">width</code> <code class="codeAttribute">height</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> canvas </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">caption</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Table caption</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;"><span class="dagger">none</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><code class="element">table</code><b class="semi"></b> <code class="element">template</code> <span class="hr"><b class="ast">flow</b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast">flow</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> caption </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">cite</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Title of a work</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">phrasing</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">code</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Computer code</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">phrasing</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">col</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Table column</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;"><b class="dagger">none</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><code class="element">colgroup</code><b class="semi"></b> <code class="element">template</code> <span class="hr">empty</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">empty</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals <code class="codeAttribute semi">span</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> table col </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">colgroup</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Group of columns in a table</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;"><b class="dagger">none</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><code class="element">table</code><b class="semi"></b> <code class="element">template</code> <span class="hr"><b class="ast"><code class="element">col</code></b><b class="semi"></b> <b class="ast"><code class="element">template</code></b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast"><code class="element">col</code></b><b class="semi"></b> <b class="ast"><code class="element">template</code></b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals <code class="codeAttribute semi">span</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> table col </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">data</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Machine<span class="wordBreak"></span>readable equivalent</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">phrasing</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute">value</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> data </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">datalist</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Container for options for combo box control</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">phrasing<b class="semi"></b> <code class="element">option</code></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">phrasing<b class="semi"></b> <code class="element">option</code></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> data list</code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">dd</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Content for corresponding <code class="element">dt</code> element<span class="letterBraces">s</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;"><b class="dagger">none</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><code class="element">dl</code><b class="semi"></b> <code class="element">template</code> <span class="hr">flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">del</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">A removal from the document</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> <b class="ast">phrasing</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">transparent</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">transparent</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute semi">cite</code> <code class="codeAttribute">datetime</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> mod </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">details</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Disclosure control for hiding details</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> sectioning root<b class="semi"></b> interactive</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr"><b class="ast"><code class="element">summary</code></b><b class="semi"></b> flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast"><code class="element">summary</code></b><b class="semi"></b> flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute">open</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> details </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">dfn</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Defining instance</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr"><b class="ast">phrasing</b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast">phrasing</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">dialog</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Dialog box or window</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> sectioning root</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr">flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute">open</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> dialog </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">div</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Generic flow container</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr">flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> div </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">dl</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Association list consisting of zero or more name<span class="wordBreak"></span>value groups</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr"><b class="ast"><code class="element">dt</code></b><b class="semi"></b> <b class="ast"><code class="element">dd</code></b><b class="semi"></b> script<b class="wordBreak"></b>supporting elements</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast"><code class="element">dt</code></b><b class="semi"></b> <b class="ast"><code class="element">dd</code></b><b class="semi"></b> script<b class="wordBreak"></b>supporting elements</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> d list </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">dt</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Legend for corresponding <code class="element">dd</code> element<b class="letterBraces">s</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;"><b class="dagger">none</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><code class="element">dl</code><b class="semi"></b> <code class="element">template</code> <span class="hr"><b class="ast">flow</b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast">flow</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">em</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Stress emphasis</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow; phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">phrasing</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement">  </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">embed</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Plugin</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> phrasing<b class="semi"></b> embedded<b class="semi"></b> interactive</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">phrasing <span class="hr">empty</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">empty</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute semi">src</code> <code class="codeAttribute semi">type</code> <code class="codeAttribute semi">width</code> <code class="codeAttribute semi">height</code> any*</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> embed </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">fieldset</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Group of form controls</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> sectioning root<b class="semi"></b> listed<b class="semi"></b> reassociateable<b class="semi"></b> form-associated</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr"><b class="ast"><code class="element">legend</code></b><b class="semi"></b> flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast"><code class="element">legend</code></b><b class="semi"></b> flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b><code class="codeAttribute semi">disabled</code> <code class="codeAttribute semi">form</code> <code class="codeAttribute semi">name</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> field set </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">figcaption</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Caption for figure</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;"><b class="dagger">none</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><code class="element">figure</code><b class="semi"></b> <code class="element">template</code> <span class="hr">flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">figure</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Figure with optional caption</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> sectioning root</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr"><b class="ast"><code class="element">figcaption</code></b><b class="semi"></b> flow</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast"><code class="element">figcaption</code></b><b class="semi"></b> flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">footer</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Footer for a page or section</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr"><b class="ast">flow</b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast">flow</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">form</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">User<b class="wordBreak"></b>submittable form</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr"><b class="ast">flow</b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast">flow</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute semi">accept<b class="wordBreak"></b>charset</code> <code class="codeAttribute semi">action</code> <code class="codeAttribute semi">autocomplete</code> <code class="codeAttribute semi">enctype</code> <code class="codeAttribute semi">method</code> <code class="codeAttribute semi">name</code> <code class="codeAttribute semi">novalidate</code> <code class="codeAttribute semi">target</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> form </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><span class="tip">Heading Elements<span class="slideInTipCaps">this is includes the<span><code class="element">h1</code> thru <code class="element">h6</code> elements</span></span></span></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Section heading</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow<b class="semi"></b> heading<b class="semi"></b> palpable</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><code class="element">hgroup</code><b class="semi"></b> flow <span class="hr">phrasing</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">phrasing</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> heading </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">head</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Container for document metadata</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">none</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><code class="element">html</code> <span class="hr"><b class="ast">metadata <wbr>content</b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast">metadata content</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> head </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">header</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Introductory or navigational aids for a page or section</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr"><b class="ast">flow</b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast">flow</b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">hgroup</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Heading group</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow; heading</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr">One or more of the <span class="tip">Heading Elements<span class="slideInTipCaps">this is includes the<span><code class="element">h1</code> thru <code class="element">h6</code> elements</span></span></span> and script<span class="wordBreak"></span>supporting elements</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">One or more of the <span class="tip">Heading Elements<span class="slideInTipCaps">this is includes the<span><code class="element">h1</code> thru <code class="element">h6</code> elements</span></span></span> and script<span class="wordBreak"></span>supporting elements</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"></code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">hr</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Thematic break</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">flow</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;">flow <span class="hr">empty</span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;">empty</p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals</p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> h r </code></p>
+            </div>
+            <div class="responsiveTableRow">
+                <p class="responsiveTableCell" data-label="Element&thinsp;&#58;"><code class="codeElement">html</code></p>
+                <p class="responsiveTableCell" data-label="Description&thinsp;&#58;">Root element</p>
+                <p class="responsiveTableCell capitalize" data-label="Categories&thinsp;&#58;">none</p>
+                <p class="responsiveTableCell capitalize" data-label="Parents&thinsp;&#58;"><b class="ast">none</b> <span class="hr"><b class="ast"><code class="element">head</code></b><b class="semi"></b> <b class="ast"><code class="element">body</code></b></span></p>
+                <p class="responsiveTableCell capitalize" data-label="Children&thinsp;&#58;"><b class="ast"><code class="element">head</code></b><b class="semi"></b> <b class="ast"><code class="element">body</code></b></p>
+                <p class="responsiveTableCell capitalize" data-label="Attributes&thinsp;&#58;">globals<b class="semi"></b> <code class="codeAttribute">manifest</code></p>
+                <p class="responsiveTableCell" data-label="Interface&thinsp;&#58;"><code class="htmlElement"> html </code></p>
+            </div>
+        </div>
+	
 i	Alternate voice	flow; phrasing	phrasing	phrasing	globals	HTMLElement
 iframe	Nested browsing context	flow; phrasing; embedded; interactive	phrasing	text*	globals; src; srcdoc; name; sandbox; seamless; allowfullscreen; width; height	HTMLIFrameElement
 img	Image	flow; phrasing; embedded; interactive*; form-associated	phrasing	empty	globals; alt; src; srcset; crossorigin; usemap; ismap; width; height	HTMLImageElement
@@ -397,10 +668,11 @@ ul	List	flow	flow	li; script-supporting elements	globals	HTMLUListElement
 var	Variable	flow; phrasing	phrasing	phrasing	globals	HTMLElement
 video	Video player	flow; phrasing; embedded; interactive	phrasing	source*; transparent*	globals; src; crossorigin; poster; preload; autoplay; mediagroup; loop; muted; controls; width; height	HTMLVideoElement
 wbr	Line breaking opportunity	flow; phrasing	phrasing	empty	globals	HTMLElement
+
 An asterisk (*) in a cell indicates that the actual rules are more complicated than indicated in the table above.
 
 † Categories in the "Parents" column refer to parents that list the given categories in their content model, not to elements that themselves are in those categories. For example, the a element's "Parents" column says "phrasing", so any element whose content model contains the "phrasing" category could be a parent of an a element. Since the "flow" category includes all the "phrasing" elements, that means the th element could be a parent to an a element.
-
+	</article>
 </section>
 <section class="sectionWrapper">
 Element content categories
@@ -429,7 +701,7 @@ Script-supporting elements	script; template	 —
 
                 <div id="prohibitedChildElements" class="paragraphList">
 <a href="https://w3c.github.io/editing/execCommand.html#common-definitions">resourse</a>
-                    <p class="definitionHeaderH5">prohibited <code class="codeElement">p</code> child elements are<b>&#58;</b></p>
+                    <p class="definitionHeaderH5">prohibited <code class="element">p</code> child elements are<b>&#58;</b></p>
                     <ul class="elementList">
                         <li><code class="element">address</code></li><li><code class="element">article</code></li><li><code class="element">aside</code></li><li><code class="element">blockquote</code></li>
                         <li><code class="element">caption</code></li><li><code class="element">col</code></li><li><code class="element">colgroup</code></li><li><code class="element">dd</code></li>
@@ -443,8 +715,9 @@ Script-supporting elements	script; template	 —
                         <li><code class="element">tbody</code></li><li><code class="element">td</code></li><li><code class="element">tfoot</code></li><li><code class="element">th</code></li>
                         <li><code class="element">thead</code></li><li><code class="element">tr</code></li><li><code class="element">ul</code></li>
                     </ul>
-                    <p class="simpleNoteContainer">
-                        <span class="myNote">author</span> <span class="italicsBold">As far as I have found&#44;</span> these are all the elements that will auto<span class="wordBreak"></span>close a <code class="codeElement">p</code> element when found as a descendant<b>&#46;</b>&ensp;Except <abbr class="htmlBold"></abbr> tables will not auto-close the <code class="codeElement">p</code> element<b>&#46;</b>
+                    <p class="paragraphNote">
+                        <span class="icon"></span><span class="authorSpecialNote"></span><span class="bodyText"><span class="italicsBold">As far as I have found&#44;</span> these are all the elements that will close out a <code class="codeElement">p</code> element when found as a descendant<b class="period"></b></span>
+                        <span class="bodyText">Except <abbr class="htmlBold"></abbr> tables will not close out the <code class="codeElement">p</code> element<b class="period"></b></span>
                     </p>
                 </div>
 </section>
